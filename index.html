@@ -14,15 +14,80 @@
 <script>
 document.addEventListener('DOMContentLoaded', () => {
 const results = {
-  newAgent: { title: "Start with Business Foundation.", body: "If you are newer, the best first step is clarity. We can focus on business planning, deal pillars, weekly schedule, revenue-producing time, and the basic systems that keep you from feeling scattered.", track: "Recommended track: Business Foundation Series", href: "training/real-wolf-pack-business-foundation-page.html", cta: "View Business Foundation", subject: "I am a new agent and want the right foundation" },
-  momentum: { title: "Build your 30-day momentum plan.", body: "If you have done some business but feel inconsistent, start with quick-win activities, clearer positioning, referral conversations, and a simple action plan you can actually follow.", track: "Recommended track: Fast Momentum Series", href: "training/fast-momentum-series.html", cta: "View Fast Momentum", subject: "I need momentum in my real estate business" },
-  techIntimidated: { title: "Take one simple tech step at a time.", body: "If AI and tech feel overwhelming, you do not need to become a coder. Start with one practical workflow that saves time or makes marketing easier, with patient guidance and no jargon.", track: "Recommended path: Business Foundation plus beginner AI support", href: "training/real-wolf-pack-business-foundation-page.html", cta: "Start simple", subject: "AI and tech feel overwhelming" },
-  techSavvy: { title: "Bring the idea you want to test.", body: "If you already enjoy tech, this can be a place to compare tools, brainstorm automations, test content systems, and bounce ideas off other modern agents.", track: "Recommended path: Organic Lead Gen plus AI/workflow collaboration", href: "training/organic-lead-gen-series.html", cta: "View Organic Lead Gen", subject: "I want to connect with tech-savvy agents" },
-  experienced: { title: "Explore leverage, systems, and long-term strategy.", body: "If you already produce, the conversation changes. The focus becomes leverage, cleaner systems, organization growth, training support, and how the eXp model may fit your bigger plan.", track: "Recommended path: Why partner with us and organization strategy", href: "#stack-title", cta: "Explore the support stack", subject: "I want to talk about leverage and organization strategy" },
-  local: { title: "Connect around local Florida support.", body: "If you are in Florida, especially Flagler or Volusia County, we can talk about local guidance, transaction questions, market familiarity, and how James may be able to support you more directly.", track: "Recommended path: Business Foundation plus local mentorship conversation", href: "#guide-title", cta: "Meet James", subject: "I am a Florida agent looking for local support" },
-  expCurious: { title: "Understand eXp and the organization before deciding.", body: "If you are curious about eXp or revenue share, start with a private conversation about the model, the organization support stack, and whether it fits your goals. No pressure and no income promises.", track: "Recommended path: Why partner with us", href: "#stack-title", cta: "Review partner benefits", subject: "I want to understand eXp and the organization" }
+  newAgent: {
+    hero: "You do not need to know everything on day one. Start with a clear foundation, patient support, and the right next step for building real momentum.",
+    support: "For newer agents, the support stack should simplify the business. Start with planning, schedule, deal pillars, transaction guidance, and people you can ask when you get stuck.",
+    title: "Start with Business Foundation.",
+    body: "If you are newer, the best first step is clarity. We can focus on business planning, deal pillars, weekly schedule, revenue-producing time, and the basic systems that keep you from feeling scattered.",
+    track: "Recommended track: Business Foundation Series",
+    href: "training/real-wolf-pack-business-foundation-page.html",
+    cta: "View Business Foundation",
+    subject: "I am a new agent and want the right foundation"
+  },
+  momentum: {
+    hero: "If your business feels inconsistent, the next step is not more noise. It is a focused plan, simple activity, and support that helps you create momentum.",
+    support: "For agents who feel stuck, the support stack should create action. Focus on positioning, quick-win conversations, follow-up, content, and a 30-day plan you can actually follow.",
+    title: "Build your 30-day momentum plan.",
+    body: "If you have done some business but feel inconsistent, start with quick-win activities, clearer positioning, referral conversations, and a simple action plan you can actually follow.",
+    track: "Recommended track: Fast Momentum Series",
+    href: "training/fast-momentum-series.html",
+    cta: "View Fast Momentum",
+    subject: "I need momentum in my real estate business"
+  },
+  techIntimidated: {
+    hero: "You do not need to become a tech expert. Start with one useful tool, one simple workflow, and a patient guide who can help you make sense of it.",
+    support: "For tech-intimidated agents, the support stack should remove pressure. AI and tools are introduced as practical helpers for marketing, planning, follow-up, and reducing overwhelm.",
+    title: "Take one simple tech step at a time.",
+    body: "If AI and tech feel overwhelming, you do not need to become a coder. Start with one practical workflow that saves time or makes marketing easier, with patient guidance and no jargon.",
+    track: "Recommended path: Business Foundation plus beginner AI support",
+    href: "training/real-wolf-pack-business-foundation-page.html",
+    cta: "Start simple",
+    subject: "AI and tech feel overwhelming"
+  },
+  techSavvy: {
+    hero: "Bring your ideas, automations, and experiments. This is a place for modern agents to compare tools, test workflows, and bounce ideas off people who get it.",
+    support: "For tech-savvy agents, the support stack should create collaboration. Compare tools, test AI workflows, build content systems, and share modern agent ideas with like-minded people.",
+    title: "Bring the idea you want to test.",
+    body: "If you already enjoy tech, this can be a place to compare tools, brainstorm automations, test content systems, and bounce ideas off other modern agents.",
+    track: "Recommended path: Organic Lead Gen plus AI/workflow collaboration",
+    href: "training/organic-lead-gen-series.html",
+    cta: "View Organic Lead Gen",
+    subject: "I want to connect with tech-savvy agents"
+  },
+  experienced: {
+    hero: "If you already produce, the opportunity is leverage. Better systems, better training depth, and a stronger organization can help you think beyond the next transaction.",
+    support: "For experienced agents, the support stack should respect your time. Focus on leverage, systems, organization growth, leadership, revenue share education, and long-term business strategy.",
+    title: "Explore leverage, systems, and long-term strategy.",
+    body: "If you already produce, the conversation changes. The focus becomes leverage, cleaner systems, organization growth, training support, and how the eXp model may fit your bigger plan.",
+    track: "Recommended path: Why partner with us and organization strategy",
+    href: "#stack-title",
+    cta: "Explore the support stack",
+    subject: "I want to talk about leverage and organization strategy"
+  },
+  local: {
+    hero: "If you are building in Florida, local context matters. Start with practical guidance, market familiarity, and a real person you can talk to when questions come up.",
+    support: "For Florida agents, the support stack can include local practical guidance, transaction perspective, Flagler and Volusia market familiarity, and James's Certified eXp Mentor support.",
+    title: "Connect around local Florida support.",
+    body: "If you are in Florida, especially Flagler or Volusia County, we can talk about local guidance, transaction questions, market familiarity, and how James may be able to support you more directly.",
+    track: "Recommended path: Business Foundation plus local mentorship conversation",
+    href: "#guide-title",
+    cta: "Meet James",
+    subject: "I am a Florida agent looking for local support"
+  },
+  expCurious: {
+    hero: "If you are curious about eXp, start with clarity. Understand the model, the organization support, and whether the path fits your goals before making a decision.",
+    support: "For eXp-curious agents, the support stack should explain the model without pressure. Review training access, organization support, mentorship, revenue share education, and next-step conversations.",
+    title: "Understand eXp and the organization before deciding.",
+    body: "If you are curious about eXp or revenue share, start with a private conversation about the model, the organization support stack, and whether it fits your goals. No pressure and no income promises.",
+    track: "Recommended path: Why partner with us",
+    href: "#stack-title",
+    cta: "Review partner benefits",
+    subject: "I want to understand eXp and the organization"
+  }
 };
 
+const heroDescription = document.querySelector("#hero-description");
+const supportIntro = document.querySelector("#support-intro");
 const title = document.querySelector("#result-title");
 const body = document.querySelector("#result-body");
 const link = document.querySelector("#contact-link");
@@ -32,6 +97,8 @@ const preview = document.querySelector("#preview-link");
 document.querySelectorAll('input[name="path"]').forEach((input) => {
   input.addEventListener("change", () => {
     const result = results[input.value];
+    heroDescription.textContent = result.hero;
+    supportIntro.textContent = result.support;
     title.textContent = result.title;
     body.textContent = result.body;
     track.textContent = result.track;
@@ -55,13 +122,13 @@ document.querySelectorAll('input[name="path"]').forEach((input) => {
 <section class="top-question wrap" aria-labelledby="top-question-title">
 <p class="eyebrow" style="color:#ffd0a3">START HERE</p>
 <h2 id="top-question-title">Where are you <em>right now?</em></h2>
-<p>Choose your agent type and the page will recommend the best course preview, message, and next step.</p>
+<p>Choose your agent type and the page will change the message, support-stack explanation, course preview, and next step.</p>
 <a class="button orange" href="#start">Choose your starting point <span aria-hidden="true">↗</span></a>
 </section>
 <section class="hero wrap" aria-labelledby="hero-title">
 <div class="hero-copy"><p class="eyebrow"><span class="dot"></span> A LITTLE GUIDANCE. A WHOLE NEW POSSIBILITY.</p>
 <h1 id="hero-title">Build the real estate business you can <span class="ai-word">see <svg viewBox="0 0 120 16" aria-hidden="true"><path d="M3 12 Q55 0 116 9"/></svg></span><br><em>for yourself.</em></h1>
-<p class="hero-description">You do not need to figure out AI, marketing, systems, content, or growth alone. Step into an organization built around patient guidance, practical tools, and real agent support.</p>
+<p class="hero-description" id="hero-description">You do not need to know everything on day one. Start with a clear foundation, patient support, and the right next step for building real momentum.</p>
 <a class="button orange" href="#start">Tell us where you are <span aria-hidden="true">↗</span></a>
 <p class="micro">For agents who want to grow without feeling overwhelmed.</p>
 </div>
@@ -80,7 +147,7 @@ document.querySelectorAll('input[name="path"]').forEach((input) => {
 <a class="button blue" id="contact-link" href="mailto:james@jamesjestes.com?subject=I%20am%20a%20new%20agent%20and%20want%20the%20right%20foundation">Talk it through with James <span aria-hidden="true">↗</span></a><p class="micro">Opens your email app. Nothing is sent automatically.</p><noscript><p>Interactive recommendations need JavaScript. You can still email James to find your starting point.</p></noscript></div></div></section>
 
 <section class="section wrap" id="approach">
-<div class="section-heading"><p class="eyebrow">MORE THAN AI. MORE THAN A BROKERAGE PITCH.</p><h2>The support stack<br><span class="muted">agents wish they had.</span></h2><p>AI is one piece. The bigger opportunity is surrounding yourself with coaching, modern marketing, practical systems, transaction experience, and people who actually want to help.</p></div>
+<div class="section-heading"><p class="eyebrow">MORE THAN AI. MORE THAN A BROKERAGE PITCH.</p><h2>The support stack<br><span class="muted">agents wish they had.</span></h2><p id="support-intro">For newer agents, the support stack should simplify the business. Start with planning, schedule, deal pillars, transaction guidance, and people you can ask when you get stuck.</p></div>
 <div class="steps"><article><span class="step-number">01</span><h3>Bring your ambition.</h3><p>Maybe you want better marketing, more listings, stronger content, cleaner systems, or simply a better path forward.</p><span class="pill">Big goals are welcome</span></article><article><span class="step-number">02</span><h3>Get real guidance.</h3><p>Learn from James, Mike Sherrard's training ecosystem, Agent Wolf Pack Sales and Marketing Training, Social Agent Academy, AI Agent Accelerator, eXp Realty training, and a practical support system.</p><span class="pill">Training plus implementation</span></article><article><span class="step-number">03</span><h3>Grow with support.</h3><p>You can ask questions, build skills, improve your marketing, and keep moving without feeling like you are doing it alone.</p><span class="pill">Community matters</span></article></div>
 </section>
 <section class="section wrap value-stack" aria-labelledby="stack-title">
