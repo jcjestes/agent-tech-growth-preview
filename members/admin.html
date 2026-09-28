@@ -131,7 +131,11 @@ async function loadLeads() {
         <td><span class="badge ${d.status === 'new' ? 'new' : 'contacted'}">${d.audienceType || "General"}</span></td>
         <td style="max-width:240px;font-size:13px;color:#475569">${d.message || "No message"}</td>
         <td>
-          <button class="btn sand" onclick="window.markContacted('${docSnap.id}')">Contacted</button>
+          <div style="display:flex;flex-direction:column;gap:4px">
+            ${d.phone ? `<a class="btn sand" href="sms:${d.phone.replace(/[^0-9]/g, '')}?&body=Hi%20${encodeURIComponent((d.fullName || 'there').split(' ')[0])},%20this%20is%20James%20Jestes%20with%20Real%20Wolf%20Pack!%20Got%20your%20inquiry%20and%20would%20love%20to%20connect.%20Are%20you%20free%20for%20a%20quick%20chat?">1-Click Text</a>` : ''}
+            <a class="btn blue" href="mailto:${d.email}?subject=Connecting%20regarding%20Real%20Wolf%20Pack%20%26%20eXp%20Realty&body=Hi%20${encodeURIComponent((d.fullName || 'there').split(' ')[0])},%0D%0A%0D%0AThank%20you%20for%20reaching%20out%20through%20RealWolfPack.com!%20I%20received%20your%20inquiry%20regarding%20our%20organization%20at%20eXp%20Realty.%0D%0A%0D%0AI%20would%20love%20to%20connect%20for%2015%20minutes,%20answer%20your%20questions,%20and%20see%20how%20we%20can%20support%20your%20business.%0D%0A%0D%0AAre%20you%20free%20for%20a%20quick%20call%20sometime%20this%20week?%0D%0A%0D%0ABest%20regards,%0D%0AJames%20Jestes%0D%0ABroker%20Associate%20%7C%20eXp%20Realty%0D%0ARealWolfPack.com">1-Click Email</a>
+            <button class="btn" style="background:#f1f5f9;color:#334155;box-shadow:none" onclick="window.markContacted('${docSnap.id}')">✓ Contacted</button>
+          </div>
         </td>
       `;
       tbody.appendChild(tr);
