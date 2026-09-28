@@ -36,35 +36,6 @@
 .hero-overlay-pill.accent strong{color:#f5821f}
 
 
-@media (min-width: 900px) {
-  .hero {
-    grid-template-columns: 1.05fr 0.95fr;
-    align-items: stretch;
-    gap: 3rem;
-  }
-  .hero-copy {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .hero-stage-card {
-    height: 100%;
-    min-height: 680px;
-    display: flex;
-    flex-direction: column;
-  }
-  .hero-stage-media {
-    flex: 1;
-    height: 100%;
-    min-height: 100%;
-  }
-  .hero-stage-image {
-    height: 100%;
-    max-height: none;
-    object-fit: cover;
-    object-position: center 20%;
-  }
-}
 
 
 .guide-portrait-card{position:relative;border-radius:36px;overflow:hidden;box-shadow:0 25px 60px rgba(16,47,108,.25);border:2px solid rgba(245,130,31,.35);background:#090d16;display:flex;flex-direction:column}
@@ -75,6 +46,90 @@
 .guide-portrait-badge{position:absolute;bottom:0;left:0;right:0;padding:24px 20px 20px;background:linear-gradient(to top,rgba(9,13,22,.95) 0%,rgba(9,13,22,.65) 60%,transparent 100%);display:flex;flex-direction:column;gap:2px}
 .guide-portrait-badge strong{color:#fff;font-size:1.15rem;letter-spacing:-.01em}
 .guide-portrait-badge small{color:#f5821f;font-size:.82rem;font-weight:700;letter-spacing:.04em}
+
+
+
+
+@media (min-width: 900px) {
+  .hero {
+    grid-template-columns: 1.05fr 0.95fr !important;
+    align-items: stretch !important;
+    gap: 3rem !important;
+  }
+  .hero-copy {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  .hero-stage-card {
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 640px !important;
+    display: block !important;
+  }
+  .hero-stage-media {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+  }
+  .hero-stage-image {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    object-position: center 20% !important;
+  }
+
+  .guide-section {
+    grid-template-columns: 0.95fr 1.05fr !important;
+    align-items: stretch !important;
+    gap: 3.5rem !important;
+  }
+  .guide-portrait-card {
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 560px !important;
+    display: block !important;
+  }
+  .guide-portrait-media {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+  }
+  .guide-portrait-image {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+  .guide-copy {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+}
+
+
+.community-layout{display:grid;grid-template-columns:1fr;gap:2.5rem}
+@media (min-width:900px){
+  .community-layout{grid-template-columns:1.05fr .95fr!important;align-items:stretch!important;gap:3.5rem!important}
+  .community-copy{display:flex!important;flex-direction:column!important;justify-content:center!important}
+  .community-stage-card{position:relative!important;width:100%!important;height:100%!important;min-height:480px!important;border-radius:36px!important;overflow:hidden!important;border:2px solid rgba(245,130,31,.45)!important;box-shadow:0 25px 60px rgba(0,0,0,.4),0 0 40px rgba(245,130,31,.2)!important;display:block!important}
+  .community-stage-media{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;min-height:0!important}
+  .community-stage-image{width:100%!important;height:100%!important;max-height:none!important;object-fit:cover!important;object-position:center!important;transition:transform .6s cubic-bezier(.16,1,.3,1)!important}
+  .community-stage-card:hover .community-stage-image{transform:scale(1.03)!important}
+}
+.community-network-tag{position:absolute;top:18px;left:18px;background:rgba(9,13,22,.88);backdrop-filter:blur(10px);border:1px solid rgba(0,230,118,.5);border-radius:999px;padding:6px 14px;display:flex;align-items:center;gap:8px;color:#00e676;font-size:11px;font-weight:800;letter-spacing:.08em;box-shadow:0 10px 25px rgba(0,0,0,.4);z-index:2}
+.community-stage-badge{position:absolute;bottom:0;left:0;right:0;padding:24px 20px 20px;background:linear-gradient(to top,rgba(9,13,22,.95) 0%,rgba(9,13,22,.65) 60%,transparent 100%);display:flex;flex-direction:column;gap:2px;z-index:2}
+.community-stage-badge strong{color:#fff;font-size:1.15rem;letter-spacing:-.01em}
+.community-stage-badge small{color:#f5821f;font-size:.82rem;font-weight:700;letter-spacing:.04em}
 
 </style>
 <script>
@@ -291,7 +346,33 @@ document.querySelectorAll('input[name="path"]').forEach((input) => {
     </div>
   </div>
 </div><div class="guide-copy"><p class="eyebrow">MEET YOUR GUIDE</p><h2>Real estate, technology,<br><span class="muted">and a heart for helping agents.</span></h2><p>I’m James Jestes, a Broker Associate and Certified eXp Mentor with eXp Realty. I have been a licensed real estate agent for 15 years and have been buying, selling, and investing in real estate property for over 25 years, consistently ranking in the top 3% of Realtors nationwide by transaction volume. Having served our country in the U.S. Army and U.S. Marine Corps, and having previously owned and operated an international digital marketing agency training hundreds of team members in online marketing skills, I bring selfless service, seasoned negotiation, and real-world digital mastery to every agent I mentor.</p><p>AI and marketing matter, but they are only part of the story. Agents also need transaction experience, patient mentorship, clear systems, modern sales and marketing training, social media training, live calls, and a tech-friendly group where ideas can be shared and improved. That is what I want to help create for agents in our organization.</p><div class="credentials"><span>Top 3% Realtor Nationwide</span><span>15 Yrs Licensed · 25+ Yrs Investing</span><span>Former Digital Agency Owner</span><span>Trained 100s in Marketing</span><span>Certified eXp Mentor</span><span>U.S. Army & Marines Veteran</span><span>STR & Condotel Specialist</span></div></div></section>
-<section class="community"><div class="wrap"><p class="eyebrow">LEARNING IS BETTER WITH PEOPLE IN YOUR CORNER</p><h2>A place to ask.<br>A place to learn.<br><span>A place to belong.</span></h2><div class="community-bottom"><p>Our guidance is free to agents in our eXp organization. You can get free access to Agent Wolf Pack Sales and Marketing Training, Social Agent Academy, AI Agent Accelerator, multiple live training calls each week, eXp Realty training, and the practical day-to-day support of James and team. Let’s talk about what support fits your goals.</p><a class="button white" href="mailto:james@jamesjestes.com?subject=Learning%20about%20your%20eXp%20organization">Get to know our organization <span aria-hidden="true">↗</span></a></div><p class="community-note">Free access and benefits should be confirmed against current program availability before publication. Guidance does not mean software subscriptions or custom development are included at no charge. Local one-on-one coaching may be available in Flagler and Volusia counties.</p></div></section>
+<section class="community">
+  <div class="wrap community-layout">
+    <div class="community-copy">
+      <p class="eyebrow" style="color:#ffd0a3">● 3,300+ AGENTS NATIONWIDE</p>
+      <h2>A massive network in your corner <span style="color:var(--orange)">every single day.</span></h2>
+      <p>Most real estate agents build in complete isolation, competing with the agent at the desk next to them. When you partner with our organization, you step directly into the Agent Wolf Pack Ecosystem: over 3,300+ forward-thinking agents collaborating, sharing active listings, and trading what is working right now.</p>
+      <p>Get free access to weekly live tactical masterminds, our complete AI and social media training vaults, and direct mentorship from James Jestes. The fact that it operates on eXp Realty with an 80/20 split and $16,000 cap is simply the high-octane bonus that powers your business.</p>
+      <div style="margin-top:24px">
+        <a class="button orange" href="/request-access.html">Apply to Join Our Organization <span aria-hidden="true">↗</span></a>
+      </div>
+      <p class="community-note" style="margin-top:20px;opacity:.75">All training, masterminds, and templates are included for agents partnering directly with James Jestes inside Agent Wolf Pack.</p>
+    </div>
+    <div class="community-stage-card" aria-label="Agent Wolf Pack Global Network Grid">
+      <div class="community-stage-media">
+        <img src="/img/wolf-pack-network-grid.webp" alt="Agent Wolf Pack 3,300+ Agent Global Network Grid" class="community-stage-image" width="2752" height="1536" loading="lazy">
+        <div class="community-network-tag">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          <span>AGENT WOLF PACK GLOBAL NETWORK</span>
+        </div>
+        <div class="community-stage-badge">
+          <strong>3,300+ Connected Agents</strong>
+          <small>Weekly Live Masterminds · Nationwide Collaboration</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="section wrap faq"><div><p class="eyebrow">GOOD QUESTIONS. STRAIGHT ANSWERS.</p><h2>You can ask<br><span class="muted">the simple questions.</span></h2></div><div><details><summary>Do I need to be good with technology?</summary><p>No. We start with what you already understand and connect new tools to familiar tasks. You don’t need a technical background.</p></details><details><summary>Do I have to join eXp to watch your videos?</summary><p>No. The educational videos are intended to be useful on their own. Ongoing organization guidance is a separate conversation, not a condition for watching.</p></details><details><summary>What’s included in the free guidance?</summary><p>Guidance for agents in our organization can cover AI, marketing ideas, CRM workflows, business systems, and how to take advantage of the training stack. We’ll clarify availability and scope together. Paid software and custom builds are not automatically included.</p></details><details><summary>What if I am already tech-savvy?</summary><p>Great. This is also for agents who already like technology and want like-minded agents to bounce ideas off of. We can talk about tools, automations, content systems, AI workflows, and what you are trying to build.</p></details></div></section>
 <section class="wrap final-cta"><p class="eyebrow">NO NEED TO HAVE THE PERFECT QUESTION.</p><h2>“Can you help me with this?”<br><span class="muted">is a great place to start.</span></h2><a class="button orange" href="#start">Let’s find your first step <span aria-hidden="true">↗</span></a><a class="watch-link" href="https://www.youtube.com/@JamesJestesAgentCoach" target="_blank" rel="noopener noreferrer">Visit the agent education channel ↗</a> · <a class="watch-link" href="https://www.youtube.com/@JamesJestes" target="_blank" rel="noopener noreferrer">Watch Salt Air Sessions (Airbnbs & Condotels) ↗</a><p class="micro">Channel launch in progress. Lessons are being prepared.</p></section>
 </main>
