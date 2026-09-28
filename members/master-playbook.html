@@ -54,6 +54,30 @@
     </div>
     <p>All stages adhere to the <strong>Absolute-Inset Stretch Architecture</strong> ensuring 100% vertical balance between copy and imagery across all desktop and mobile viewports.</p>
   </section>
+
+  <section class="card" style="margin-top:28px">
+    <h2>15. Backend Infrastructure & Dual-Write Speed-to-Lead Engine</h2>
+    <p>The platform runs on an enterprise Google Cloud and Firebase architecture designed for high-availability, instant mobile alerts, and client-side data protection:</p>
+    
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:20px 0">
+      <div style="background:#f8fafc;padding:18px;border-radius:18px;border:1px solid #e2e8f0">
+        <strong style="color:var(--dark);display:block;margin-bottom:6px">Firebase Authentication</strong>
+        <p style="font-size:14px;color:var(--muted);margin:0">Native Email/Password authentication active on project <code>agent-wolf-pack</code>. Client SDK handles session persistence and role gating.</p>
+      </div>
+      <div style="background:#f8fafc;padding:18px;border-radius:18px;border:1px solid #e2e8f0">
+        <strong style="color:var(--dark);display:block;margin-bottom:6px">Cloud Firestore Database</strong>
+        <p style="font-size:14px;color:var(--muted);margin:0">Native <code>nam5</code> multi-region database. Deployed security rules allow public lead submissions while restricting management to James.</p>
+      </div>
+      <div style="background:#f8fafc;padding:18px;border-radius:18px;border:1px solid #e2e8f0">
+        <strong style="color:var(--dark);display:block;margin-bottom:6px">Dual-Write Real-Time Alerts</strong>
+        <p style="font-size:14px;color:var(--muted);margin:0">Dual-dispatch on form submission: saves permanently to Firestore and alerts James's phone via instant email within 3 seconds.</p>
+      </div>
+      <div style="background:#f8fafc;padding:18px;border-radius:18px;border:1px solid #e2e8f0">
+        <strong style="color:var(--dark);display:block;margin-bottom:6px">Admin Speed-to-Lead Panel</strong>
+        <p style="font-size:14px;color:var(--muted);margin:0">Private command center at <code>/members/admin.html</code> with 1-click SMS (<code>sms:</code>), 1-click email (<code>mailto:</code>), and 1-click member approval.</p>
+      </div>
+    </div>
+  </section>
 </main><footer class="wrap"><p>RealWolfPack.com | James Jestes, Broker Associate with eXp Realty · Agent Wolf Pack Organization</p></footer><script type="module">
 import { initContentGate } from "../js/content-gate.js";
 initContentGate();
