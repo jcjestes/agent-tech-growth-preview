@@ -35,6 +35,37 @@
 .hero-overlay-pill.accent{border-color:rgba(245,130,31,.5)}
 .hero-overlay-pill.accent strong{color:#f5821f}
 
+
+@media (min-width: 900px) {
+  .hero {
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: stretch;
+    gap: 3rem;
+  }
+  .hero-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero-stage-card {
+    height: 100%;
+    min-height: 680px;
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-stage-media {
+    flex: 1;
+    height: 100%;
+    min-height: 100%;
+  }
+  .hero-stage-image {
+    height: 100%;
+    max-height: none;
+    object-fit: cover;
+    object-position: center 20%;
+  }
+}
+
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
