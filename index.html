@@ -20,26 +20,6 @@
 .stat-cell.highlight strong{color:var(--orange)}
 .stat-cell span{display:block;font-size:.8rem;color:#5a6c82;font-weight:700;line-height:1.35}
 
-
-.hero-tech-stage{position:relative;min-height:580px;background:radial-gradient(circle at 60% 30%,#19469D 0%,#102f6c 50%,#090d16 100%);border:2px solid rgba(245,130,31,.4);border-radius:36px;padding:1.5rem;box-shadow:0 30px 80px rgba(16,47,108,.35);overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end}
-.tech-grid-bg{position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:28px 28px;transform:perspective(500px) rotateX(20deg);transform-origin:bottom center}
-.tech-glow-circle{position:absolute;top:14%;left:50%;transform:translateX(-50%);width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(245,130,31,.3) 0%,rgba(25,70,157,.45) 55%,transparent 75%);filter:blur(16px)}
-.tech-accent-ring{position:absolute;top:10%;left:50%;transform:translateX(-50%);width:340px;height:340px;border-radius:50%;border:1.5px dashed rgba(245,130,31,.55);animation:spinRing 40s linear infinite}
-@keyframes spinRing{from{transform:translateX(-50%) rotate(0deg)}to{transform:translateX(-50%) rotate(360deg)}}
-.cutout-wrapper{position:absolute;bottom:64px;left:50%;transform:translateX(-50%);width:100%;max-width:440px;text-align:center;z-index:2;pointer-events:none}
-.cutout-img{width:100%;height:auto;display:block;margin:0 auto;filter:drop-shadow(0 20px 30px rgba(0,0,0,.75))}
-.tech-floating-chip{position:absolute;z-index:3;background:rgba(16,47,108,.85);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.25);border-radius:18px;padding:10px 14px;display:flex;align-items:center;gap:10px;box-shadow:0 14px 35px rgba(0,0,0,.4)}
-.tech-floating-chip strong{display:block;color:#fff;font-size:13px;line-height:1.2}
-.tech-floating-chip small{display:block;color:#ffd0a3;font-size:11px}
-.chip-icon{font-size:18px}
-.chip-top-left{top:20px;left:16px}
-.chip-top-right{top:24px;right:16px}
-.chip-bottom-left{bottom:86px;left:16px}
-.tech-stage-footer{position:relative;z-index:4;background:rgba(9,13,22,.88);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.16);border-radius:20px;padding:12px 18px;display:flex;justify-content:space-between;align-items:center;color:#fff}
-.footer-agent-info strong{display:block;font-size:15px;color:#fff}
-.footer-agent-info small{display:block;font-size:12px;color:#cbd5e1}
-.footer-badge{background:var(--orange);color:#2f1700;font-weight:900;font-size:11px;padding:4px 10px;border-radius:999px;letter-spacing:.08em}
-
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -166,47 +146,15 @@ document.querySelectorAll('input[name="path"]').forEach((input) => {
 <a class="button orange" href="#start">Tell us where you are <span aria-hidden="true">↗</span></a>
 <p class="micro">For agents who want to grow without feeling overwhelmed.</p>
 </div>
-<div class="hero-tech-stage" aria-label="James Jestes Real Wolf Pack Mentor">
-  <div class="tech-grid-bg" aria-hidden="true"></div>
-  <div class="tech-glow-circle" aria-hidden="true"></div>
-  <div class="tech-accent-ring" aria-hidden="true"></div>
-  
-  <div class="tech-floating-chip chip-top-left">
-    <span class="chip-icon">⚡</span>
-    <div>
-      <strong>Top 3% Realtor</strong>
-      <small>15 Yrs Licensed · 25+ Yrs Investing</small>
-    </div>
-  </div>
-  
-  <div class="tech-floating-chip chip-top-right">
-    <span class="chip-icon">🚀</span>
-    <div>
-      <strong>Agent Wolf Pack</strong>
-      <small>3,300+ Modern Agents</small>
-    </div>
-  </div>
-  
-  <div class="cutout-wrapper">
-    <img src="/img/james-cutout-tight.png" alt="James Jestes Certified eXp Mentor" class="cutout-img">
-  </div>
-  
-  <div class="tech-floating-chip chip-bottom-left">
-    <span class="chip-icon">🤖</span>
-    <div>
-      <strong>AI & Automation Stack</strong>
-      <small>Prompts, Video & Funnels</small>
-    </div>
-  </div>
-  
-  <div class="tech-stage-footer">
-    <div class="footer-agent-info">
-      <strong>James Jestes</strong>
-      <small>Certified eXp Mentor · Former Agency Owner</small>
-    </div>
-    <span class="footer-badge">SEMPER FI</span>
-  </div>
-</div></section>
+<div class="hero-art" aria-label="Illustration of turning a marketing idea into a manageable first step">
+<div class="art-grid" aria-hidden="true"></div><div class="sun" aria-hidden="true"></div>
+<div class="art-heading">SUPPORT.<br><strong>Systems.</strong><br>Momentum.</div>
+<div class="idea-card"><span class="card-label">YOUR IDEA</span><p>“I know there is another level for my business. I need the right people and systems around me.”</p><span class="idea-note">That is exactly why the right organization matters.</span></div>
+<div class="connector" aria-hidden="true">↓</div>
+<div class="plan-card"><div class="plan-top"><span class="spark" aria-hidden="true">✳</span><span>THE RIGHT SUPPORT<small>Training, coaching, tools, and people.</small></span></div><div class="task"><span aria-hidden="true">✓</span> Free access to modern sales, marketing, social, and AI training.</div><div class="task"><span aria-hidden="true">✓</span> Multiple live training calls each week.</div><div class="task"><span aria-hidden="true">✓</span> A tech-friendly group to bounce ideas off of.</div>
+<div class="art-footer"><span class="mini-mark">JJ.</span> Real experience. Human guidance.</div>
+</div>
+</section>
 <div class="reassurance"><div class="wrap"><span>Training that meets you where you are.</span><span>Support beyond the brokerage logo.</span><strong>A modern organization for modern agents.</strong></div></div>
 
 <div class="wrap">
