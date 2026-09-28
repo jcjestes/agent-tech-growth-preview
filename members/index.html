@@ -1,6 +1,41 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Member Dashboard Preview | RealWolfPack.com</title><style>:root{--blue:#19469D;--dark:#102f6c;--orange:#F5821F;--sand:#F5E9D0;--text:#333}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff}.wrap{width:min(1120px,calc(100% - 32px));margin:auto}.top{padding:18px 0;display:flex;justify-content:space-between;gap:16px;align-items:center}.brand,.top a{font-weight:900;color:var(--dark);text-decoration:none}.hero{background:linear-gradient(135deg,var(--blue),var(--dark));color:white;padding:48px 0;border-radius:0 0 36px 36px}.hero h1{font-size:clamp(42px,9vw,84px);line-height:.9;letter-spacing:-.07em;margin:0 0 12px}.hero p{font-size:19px;color:#e8f0ff;max-width:720px}.grid{display:grid;grid-template-columns:1fr;gap:18px;padding:34px 0}.card{background:#fff;border:1px solid rgba(25,70,157,.14);border-radius:26px;padding:22px;box-shadow:0 18px 45px rgba(16,47,108,.08)}.card h2{color:var(--dark);margin-top:0}.card p{color:#5d6d82;line-height:1.55}.btn{display:inline-block;background:var(--orange);color:#2f1700;border-radius:999px;padding:12px 16px;text-decoration:none;font-weight:900}.list a{display:block;padding:12px 0;border-bottom:1px solid #edf0f5;color:var(--dark);text-decoration:none;font-weight:800}.badge{display:inline-block;background:var(--sand);color:var(--dark);border-radius:999px;padding:7px 10px;font-weight:900;font-size:13px;margin-bottom:10px}@media(min-width:800px){.grid{grid-template-columns:1.2fr .8fr}.wide{grid-column:1/-1}.three{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}}</style><link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Member Dashboard Preview | RealWolfPack.com</title><style>:root{--blue:#19469D;--dark:#102f6c;--orange:#F5821F;--sand:#F5E9D0;--text:#333}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff}.wrap{width:min(1120px,calc(100% - 32px));margin:auto}.top{padding:18px 0;display:flex;justify-content:space-between;gap:16px;align-items:center}.brand,.top a{font-weight:900;color:var(--dark);text-decoration:none}.hero{background:linear-gradient(135deg,var(--blue),var(--dark));color:white;padding:48px 0;border-radius:0 0 36px 36px}.hero h1{font-size:clamp(42px,9vw,84px);line-height:.9;letter-spacing:-.07em;margin:0 0 12px}.hero p{font-size:19px;color:#e8f0ff;max-width:720px}.grid{display:grid;grid-template-columns:1fr;gap:18px;padding:34px 0}.card{background:#fff;border:1px solid rgba(25,70,157,.14);border-radius:26px;padding:22px;box-shadow:0 18px 45px rgba(16,47,108,.08)}.card h2{color:var(--dark);margin-top:0}.card p{color:#5d6d82;line-height:1.55}.btn{display:inline-block;background:var(--orange);color:#2f1700;border-radius:999px;padding:12px 16px;text-decoration:none;font-weight:900}.list a{display:block;padding:12px 0;border-bottom:1px solid #edf0f5;color:var(--dark);text-decoration:none;font-weight:800}.badge{display:inline-block;background:var(--sand);color:var(--dark);border-radius:999px;padding:7px 10px;font-weight:900;font-size:13px;margin-bottom:10px}@media(min-width:800px){.grid{grid-template-columns:1.2fr .8fr}.wide{grid-column:1/-1}.three{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}}
+.member-welcome-banner{grid-column:1/-1;background:linear-gradient(135deg,#102f6c 0%,#090d16 100%);border:2px solid rgba(245,130,31,.4);border-radius:32px;padding:32px 36px;color:#fff;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;box-shadow:0 25px 60px rgba(16,47,108,.25);margin-bottom:8px}
+.welcome-copy h1{color:#fff;font-size:clamp(26px,4vw,38px);margin:10px 0 8px;letter-spacing:-.03em}
+.welcome-copy p{color:#cbd5e1;font-size:15px;max-width:620px;margin:0;line-height:1.5}
+.welcome-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:5px 12px;font-size:11px;font-weight:800;letter-spacing:.08em;color:#ffd0a3}
+.live-dot{width:8px;height:8px;border-radius:50%;background:#00e676;box-shadow:0 0 8px #00e676}
+.welcome-stats{display:flex;gap:14px;flex-wrap:wrap}
+.stat-box{background:rgba(255,255,255,.06);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:14px 20px;text-align:center;min-width:105px}
+.stat-box strong{display:block;font-size:24px;color:#fff;line-height:1.1}
+.stat-box small{display:block;font-size:11px;color:#94a3b8;margin-top:4px}
+
+</style><link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="/site.webmanifest">
 </head><body><header class="wrap top"><a class="brand" href="../index.html">REALWOLFPACK.COM</a><nav><a href="../training/index.html">Training</a> &nbsp; <a href="training-library.html">Library</a> &nbsp; <span id="auth-user-badge" style="display:none;font-weight:900;color:var(--orange)"></span> &nbsp; <button id="logout-btn" style="border:0;background:var(--sand);color:var(--dark);padding:6px 12px;border-radius:999px;font-weight:900;cursor:pointer">Sign Out</button></nav></header><section class="hero"><div class="wrap"><span class="badge">MEMBER DASHBOARD PREVIEW</span><h1>Welcome back.</h1><p>This is the future protected dashboard for agents in the organization. It will hold training, announcements, support requests, and important links.</p></div></section><main class="wrap grid">
+<section class="member-welcome-banner" aria-label="Member Command Base">
+  <div class="welcome-copy">
+    <div class="welcome-pill">
+      <span class="live-dot" aria-hidden="true"></span>
+      <span>AGENT WOLF PACK · PRIVATE COMMAND BASE</span>
+    </div>
+    <h1>Welcome to Your Headquarters.</h1>
+    <p>Access your complete marketing suites, AI prompt vaults, weekly live mastermind replays, and direct mentorship tools all in one central hub.</p>
+  </div>
+  <div class="welcome-stats">
+    <div class="stat-box">
+      <strong>3,300+</strong>
+      <small>Wolf Pack Agents</small>
+    </div>
+    <div class="stat-box">
+      <strong>40+</strong>
+      <small>Canva Templates</small>
+    </div>
+    <div class="stat-box">
+      <strong>108</strong>
+      <small>AI Prompts</small>
+    </div>
+  </div>
+</section>
 
 <section class="card wide" style="background:#fff;border:1.5px solid rgba(25,70,157,.15);padding:24px">
   <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:12px">
