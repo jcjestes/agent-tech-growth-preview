@@ -1,124 +1,89 @@
 import { auth, db, onAuthStateChanged, signOut, doc, getDoc } from "./firebase-init.js";
 
+// Protected training resource vault (unlocked only after Firebase Auth verification)
+const PROTECTED_RESOURCES = {
+  // Cold Calling
+  "cold-calling-replay": {
+    url: "https://drive.google.com/file/d/1N_vH4OwsgbZ2iRT-HNxWpONvEVyAUeEo/view",
+    label: "Watch Google Drive Replay"
+  },
+  "cold-calling-slides": {
+    url: "https://drive.google.com/file/d/11amZTpi_b2bpXbIgUlpj9VBRNgfFKGoS/view?usp=sharing",
+    label: "Download Presentation Slides"
+  },
+  // Moving Faster With AI
+  "moving-faster-ai": {
+    url: "https://drive.google.com/file/d/1VqGeUTsFG8Ag7eyMV0WDOkpGKa4vsGYR/view?usp=sharing",
+    label: "Watch Google Drive Replay"
+  },
+  // Business Foundation Series
+  "foundation-01": {
+    url: "https://drive.google.com/file/d/1iC_pSVK_qdfZMwQ9UQsL2MUZSre7M_ft/view?usp=sharing",
+    label: "Watch Training 01"
+  },
+  "foundation-02": {
+    url: "https://drive.google.com/file/d/1ADWwQw--jC-SwYUb57rO02zdB-5x4pa5/view?usp=sharing",
+    label: "Watch Training 02"
+  },
+  "foundation-03": {
+    url: "https://drive.google.com/file/d/1t7U_Qj77uFDxuUTJBsXg0YBUD8_MgtAi/view?usp=sharing",
+    label: "Watch Training 03"
+  },
+  "foundation-04": {
+    url: "https://drive.google.com/file/d/1GzxFswdJRzG5MoS_3twTn_VFxzdA5xMu/view?usp=sharing",
+    label: "Watch Training 04"
+  },
+  // Fast Momentum Series
+  "momentum-01": {
+    url: "https://drive.google.com/file/d/1RRbOCPM-uC5ps_PEmSmwTlNBQYFLDqCy/view?usp=sharing",
+    label: "Watch Training 01"
+  },
+  "momentum-02": {
+    url: "https://drive.google.com/file/d/1NMU3NAgcGHof_yZUvGmrHL8TAewLPNGw/view?usp=sharing",
+    label: "Watch Training 02"
+  },
+  "momentum-03": {
+    url: "https://drive.google.com/file/d/1ia_9bkot-fQAnVjRqJPYL0ksiQxfHhoJ/view?usp=sharing",
+    label: "Watch Training 03"
+  },
+  "momentum-04": {
+    url: "https://drive.google.com/file/d/1z7T-bwfKvWdH_WzvUtj1GhJ_rbwZUDmE/view?usp=sharing",
+    label: "Watch Training 04"
+  },
+  // Organic Lead Gen Series
+  "organic-01": {
+    url: "https://drive.google.com/file/d/1Ha3H7KyMOLQEvqfgbY4Xgwm7NFLkFgBd/view?usp=sharing",
+    label: "Watch Training 01"
+  },
+  "organic-02": {
+    url: "https://drive.google.com/file/d/1vUSudyB5arbx8VcrNCp08N-RK661Aneh/view?usp=sharing",
+    label: "Watch Training 02"
+  },
+  "organic-03": {
+    url: "https://drive.google.com/file/d/1iQ-OJDPngPmvJasZIRuSBg85MhtalrLy/view?usp=sharing",
+    label: "Watch Training 03"
+  },
+  "organic-04": {
+    url: "https://drive.google.com/file/d/1m1YFEy3QA0e6MgpYWN3zzvl1bkdGCIgM/view?usp=sharing",
+    label: "Watch Training 04"
+  }
+};
+
 /**
  * Universal content gate for RealWolfPack pages.
- * Handles showing the pitch overlay to unauthenticated visitors
- * and seamlessly revealing actual member assets (Drive links, Canva templates) to active members.
+ * Ensures zero raw Google Drive or proprietary links exist in public HTML.
+ * Dynamically unlocks and injects links only for verified organization members.
  */
 export function initContentGate(options = {}) {
-  // Inject gating CSS if not already present
-  if (!document.getElementById("content-gate-styles")) {
-    const style = document.createElement("style");
-    style.id = "content-gate-styles";
-    style.textContent = `
-      .gate-overlay {
-        background: linear-gradient(145deg, #102f6c, #19469D);
-        border: 2px solid #F5821F;
-        border-radius: 28px;
-        padding: 32px 24px;
-        text-align: center;
-        color: #ffffff;
-        box-shadow: 0 24px 60px rgba(16, 47, 108, 0.25);
-        margin: 24px 0;
-        position: relative;
-        overflow: hidden;
-      }
-      .gate-overlay:before {
-        content: "";
-        position: absolute;
-        inset: -20% -20% auto auto;
-        width: 14rem;
-        height: 14rem;
-        background: #F5821F;
-        opacity: 0.18;
-        border-radius: 50%;
-      }
-      .gate-overlay h3 {
-        color: #ffffff;
-        font-size: clamp(24px, 5vw, 36px);
-        line-height: 1;
-        letter-spacing: -0.05em;
-        margin: 10px 0 12px;
-      }
-      .gate-overlay h3 em {
-        color: #ffd0a3;
-        font-style: normal;
-      }
-      .gate-overlay p {
-        color: #e8f0ff;
-        font-size: 16px;
-        max-width: 600px;
-        margin: 0 auto 20px;
-        line-height: 1.55;
-      }
-      .gate-actions {
-        display: flex;
-        gap: 12px;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-      .gate-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: #F5821F;
-        color: #2f1700;
-        border-radius: 999px;
-        padding: 13px 22px;
-        font-weight: 900;
-        text-decoration: none;
-        box-shadow: 0 10px 25px rgba(245, 130, 31, 0.3);
-        transition: transform 0.18s ease;
-      }
-      .gate-btn:hover {
-        transform: translateY(-2px);
-      }
-      .gate-btn.ghost {
-        background: #F5E9D0;
-        color: #102f6c;
-        box-shadow: none;
-      }
-      .member-unlocked-card {
-        background: #f0fdf4;
-        border: 2px solid #86efac;
-        border-radius: 24px;
-        padding: 24px;
-        margin: 20px 0;
-      }
-      .member-unlocked-card h4 {
-        color: #166534;
-        font-size: 20px;
-        margin: 0 0 8px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .member-unlocked-card p {
-        color: #15803d;
-        margin: 0 0 16px;
-        font-size: 15px;
-      }
-      [data-member-content] {
-        display: none;
-      }
-      [data-pitch-overlay] {
-        display: block;
-      }
-      .authed [data-member-content] {
-        display: block !important;
-      }
-      .authed [data-pitch-overlay] {
-        display: none !important;
-      }
-    `;
-    document.head.appendChild(style);
-  }
+  // Ensure default locked state on initial load
+  lockAllProtectedLinks();
 
   onAuthStateChanged(auth, async (user) => {
     const nav = document.querySelector("header nav");
 
     if (!user) {
       document.body.classList.remove("authed");
+      lockAllProtectedLinks();
       updateNavForPublic(nav);
       return;
     }
@@ -126,18 +91,51 @@ export function initContentGate(options = {}) {
     try {
       const userDoc = await getDoc(doc(db, "users", user.uid));
       const data = userDoc.exists() ? userDoc.data() : { role: "pending" };
-      const isAuthorized = data.role === "member" || data.role === "admin";
+      const isAuthorized = (data.role === "member" || data.role === "admin") && data.status === "active";
 
       if (isAuthorized) {
         document.body.classList.add("authed");
+        unlockAllProtectedLinks();
         updateNavForMember(nav, user, data);
       } else {
         document.body.classList.remove("authed");
+        lockAllProtectedLinks();
         updateNavForPending(nav, user);
       }
     } catch (err) {
-      console.warn("Gate auth error:", err);
+      console.warn("Gate auth verification failed:", err);
       document.body.classList.remove("authed");
+      lockAllProtectedLinks();
+    }
+  });
+}
+
+function lockAllProtectedLinks() {
+  document.querySelectorAll("[data-resource-key]").forEach((el) => {
+    const isInsideMemberOnlySection = el.closest("[data-member-content]");
+    if (isInsideMemberOnlySection) {
+      el.removeAttribute("href");
+      el.style.display = "none";
+      return;
+    }
+    el.href = "/access-preview.html";
+    el.target = "_self";
+    el.rel = "";
+    el.innerHTML = `Member access required to watch <span aria-hidden="true">↗</span>`;
+  });
+}
+
+function unlockAllProtectedLinks() {
+  document.querySelectorAll("[data-resource-key]").forEach((el) => {
+    const key = el.dataset.resourceKey;
+    const item = PROTECTED_RESOURCES[key];
+    if (item) {
+      el.href = item.url;
+      el.target = "_blank";
+      el.rel = "noopener noreferrer";
+      el.style.display = "inline-flex";
+      const customLabel = el.dataset.unlockLabel || item.label;
+      el.innerHTML = `${customLabel} <span aria-hidden="true">↗</span>`;
     }
   });
 }
