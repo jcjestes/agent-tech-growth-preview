@@ -20,15 +20,6 @@
 .stat-cell.highlight strong{color:var(--orange)}
 .stat-cell span{display:block;font-size:.8rem;color:#5a6c82;font-weight:700;line-height:1.35}
 
-
-.hero-stage-wrapper{position:relative;border-radius:28px;overflow:hidden;box-shadow:0 25px 60px rgba(16,47,108,.4),0 0 40px rgba(245,130,31,.25);border:2px solid rgba(245,130,31,.45);background:#0a0f1e;transition:transform .3s ease,box-shadow .3s ease}
-.hero-stage-wrapper:hover{transform:translateY(-4px);box-shadow:0 35px 80px rgba(16,47,108,.5),0 0 55px rgba(245,130,31,.4)}
-.stage-frame{position:relative;width:100%}
-.stage-img{width:100%;height:auto;display:block}
-.stage-live-tag{position:absolute;top:16px;right:16px;background:rgba(10,15,30,.88);backdrop-filter:blur(8px);border:1px solid rgba(0,230,118,.5);color:#00e676;font-size:11px;font-weight:800;letter-spacing:.08em;padding:6px 12px;border-radius:999px;display:flex;align-items:center;gap:6px}
-.pulse-dot{width:8px;height:8px;border-radius:50%;background:#00e676;box-shadow:0 0 8px #00e676;animation:livePulse 2s infinite}
-@keyframes livePulse{0%{transform:scale(.95);opacity:.8}50%{transform:scale(1.3);opacity:1}100%{transform:scale(.95);opacity:.8}}
-
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -155,14 +146,15 @@ document.querySelectorAll('input[name="path"]').forEach((input) => {
 <a class="button orange" href="#start">Tell us where you are <span aria-hidden="true">↗</span></a>
 <p class="micro">For agents who want to grow without feeling overwhelmed.</p>
 </div>
-<div class="hero-stage-wrapper" aria-label="Real Wolf Pack Growth Stage">
-  <div class="stage-frame">
-    <img src="/img/hero-youtube-stage.png" alt="Real Wolf Pack Modern Agent Growth Stage" class="stage-img">
-    <div class="stage-live-tag">
-      <span class="pulse-dot"></span> LIVE PLATFORM
-    </div>
-  </div>
-</div></section>
+<div class="hero-art" aria-label="Illustration of turning a marketing idea into a manageable first step">
+<div class="art-grid" aria-hidden="true"></div><div class="sun" aria-hidden="true"></div>
+<div class="art-heading">SUPPORT.<br><strong>Systems.</strong><br>Momentum.</div>
+<div class="idea-card"><span class="card-label">YOUR IDEA</span><p>“I know there is another level for my business. I need the right people and systems around me.”</p><span class="idea-note">That is exactly why the right organization matters.</span></div>
+<div class="connector" aria-hidden="true">↓</div>
+<div class="plan-card"><div class="plan-top"><span class="spark" aria-hidden="true">✳</span><span>THE RIGHT SUPPORT<small>Training, coaching, tools, and people.</small></span></div><div class="task"><span aria-hidden="true">✓</span> Free access to modern sales, marketing, social, and AI training.</div><div class="task"><span aria-hidden="true">✓</span> Multiple live training calls each week.</div><div class="task"><span aria-hidden="true">✓</span> A tech-friendly group to bounce ideas off of.</div>
+<div class="art-footer"><span class="mini-mark">JJ.</span> Real experience. Human guidance.</div>
+</div>
+</section>
 <div class="reassurance"><div class="wrap"><span>Training that meets you where you are.</span><span>Support beyond the brokerage logo.</span><strong>A modern organization for modern agents.</strong></div></div>
 
 <div class="wrap">
