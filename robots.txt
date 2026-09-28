@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /members/admin
+Disallow: /members/admin.html
+
+Sitemap: https://real-wolf-pack.web.app/sitemap.xml
+Sitemap: https://realwolfpack.com/sitemap.xml

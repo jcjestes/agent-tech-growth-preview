@@ -1,0 +1,16 @@
+{
+  "name": "Real Wolf Pack",
+  "short_name": "RealWolfPack",
+  "description": "Agent attraction website and protected member hub for James Jestes's organization at eXp Realty.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#19469D",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
