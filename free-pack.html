@@ -66,16 +66,32 @@ form.onsubmit = async (e) => {
   submitBtn.disabled = true;
   submitBtn.textContent = "Unlocking...";
 
+  const fullName = document.querySelector("#name").value.trim();
+  const email = document.querySelector("#email").value.trim();
+
   try {
     const payload = {
-      fullName: document.querySelector("#name").value.trim(),
-      email: document.querySelector("#email").value.trim(),
+      fullName,
+      email,
       type: "free-starter-pack",
       status: "new",
       createdAt: serverTimestamp()
     };
 
     await addDoc(collection(db, "accessRequests"), payload);
+
+    fetch("https://formsubmit.co/ajax/james@jamesjestes.com", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify({
+        _subject: `New Free Starter Pack Download: ${fullName}`,
+        _template: "table",
+        "Full Name": fullName,
+        "Email": email,
+        "Type": "Free Modern Agent Starter Pack",
+        "Source": "RealWolfPack.com"
+      })
+    }).catch(err => console.warn("Background email alert:", err));
 
     alertBox.className = "alert success";
     alertBox.textContent = "Success! Your starter pack is ready below.";
