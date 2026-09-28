@@ -131,6 +131,25 @@
 .community-stage-badge strong{color:#fff;font-size:1.15rem;letter-spacing:-.01em}
 .community-stage-badge small{color:#f5821f;font-size:.82rem;font-weight:700;letter-spacing:.04em}
 
+
+.bento-media-card{padding:0!important;display:flex!important;flex-direction:column!important;overflow:hidden!important;border-radius:28px!important;border:1px solid rgba(25,70,157,.16)!important;box-shadow:0 20px 50px rgba(16,47,108,.08)!important;background:#fff!important;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease!important}
+.bento-media-card:hover{transform:translateY(-5px)!important;box-shadow:0 30px 65px rgba(16,47,108,.16)!important;border-color:rgba(245,130,31,.45)!important}
+.card-thumb-wrapper{position:relative;width:100%;height:180px;overflow:hidden;background:#090d16}
+.card-thumb-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.bento-media-card:hover .card-thumb-img{transform:scale(1.05)}
+.card-thumb-tag{position:absolute;top:12px;left:12px;background:rgba(9,13,22,.88);backdrop-filter:blur(8px);border:1px solid rgba(245,130,31,.5);color:#f5821f;font-size:10px;font-weight:900;letter-spacing:.08em;padding:4px 10px;border-radius:999px}
+.card-body{padding:1.4rem;display:flex;flex-direction:column;flex:1}
+.card-body h3{margin:0 0 8px;font-size:1.22rem;color:var(--blue-dark)}
+.card-body p{font-size:.95rem;line-height:1.55;color:#53657b;margin:0 0 16px;flex:1}
+.card-body .watch-link{font-weight:800;color:var(--orange);font-size:.95rem}
+
+.bento-vip-card{background:linear-gradient(135deg,#102f6c 0%,#090d16 100%)!important;color:#fff!important;border:2px solid rgba(245,130,31,.4)!important;box-shadow:0 25px 60px rgba(16,47,108,.3)!important;padding:2rem!important;display:flex!important;flex-direction:column!important;justify-content:space-between!important;border-radius:28px!important}
+.bento-vip-card h3{color:#fff!important;font-size:1.6rem!important;margin:14px 0 10px!important}
+.bento-vip-card p{color:#cbd5e1!important;font-size:1.02rem!important;line-height:1.6!important;margin:0 0 18px!important}
+.vip-card-badge-row{display:flex;justify-content:space-between;align-items:center}
+.vip-pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.vip-pill-row span{background:rgba(255,255,255,.1);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.2);color:#f1f5f9;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px}
+
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -314,17 +333,86 @@ document.querySelectorAll('input[name="path"]').forEach((input) => {
 <section class="section wrap value-stack" aria-labelledby="stack-title">
 <div class="stack-intro"><p class="eyebrow">WHY PARTNER WITH US</p><h2 id="stack-title">A bigger support system for agents who want more.</h2><p>This is not just about learning a few AI prompts. Every agent who partners with us gets free access to modern sales, marketing, social media, and AI training, plus multiple live training calls each week and the training provided by eXp Realty.</p></div>
 <div class="stack-grid">
-<article class="feature-card primary-feature"><span class="card-label">JAMES + TEAM</span><h3>Certified eXp Mentor guidance</h3><p>James is a Certified eXp Mentor for new agents getting into the business. He brings decades of real estate experience, technology trade experience since the early 1990s, and a genuine love of helping agents understand the next step.</p></article>
-<article class="feature-card"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><span class="card-label" style="margin:0">MIKE SHERRARD</span><img src="/img/agent-wolf-pack-logo.png" alt="Agent Wolf Pack" style="width:38px;height:auto"></div><h3>Agent Wolf Pack Sales and Marketing</h3><p>Agents who partner with us get free access to Agent Wolf Pack Sales and Marketing Training connected to Mike Sherrard's modern agent growth ecosystem.</p></article>
-<article class="feature-card"><span class="card-label">SOCIAL GROWTH</span><h3>Social Agent Academy</h3><p>Free access to modern content, social media, and attraction strategies designed for agents who want to build visibility and trust.</p></article>
-<article class="feature-card"><span class="card-label">AI + MODERN TOOLS</span><h3>AI Agent Accelerator</h3><p>Free access to AI training that helps agents use modern tools for marketing, content, follow-up, and productivity without feeling overwhelmed.</p></article>
-<article class="feature-card"><span class="card-label">LOCAL SUPPORT</span><h3>Florida guidance when it matters</h3><p>For agents in Florida, especially Flagler and Volusia counties, local one-on-one support may be available for agents in the organization.</p></article>
-<article class="feature-card"><span class="card-label">LIVE TRAINING</span><h3>Multiple calls each week</h3><p>This is not just a dusty video library. Agents can plug into multiple live training calls each week, on top of the training provided by eXp Realty.</p></article>
-<article class="feature-card"><span class="card-label">STR & CONDOTELS</span><h3>Short-Term Rental Mastery</h3><p>Experienced in the sale, purchase, and management of short-term rental properties and condotels, featured extensively in James's Salt Air Sessions on YouTube.</p><a class="watch-link" href="/airbnb-agent">Explore STR & Condotels ↗</a></article>
-<article class="feature-card"><span class="card-label">FINANCIAL LEVERAGE</span><h3>$16,000 Annual Cap Math</h3><p>Keep 100% of your commission after paying $16k, with zero royalty or desk fees. Calculate your annual savings compared to your current split.</p><a class="watch-link" href="/calculator">Run the Cap Calculator ↗</a></article>
-<article class="feature-card"><span class="card-label">TECH-SAVVY AGENTS</span><h3>A place to bounce ideas</h3><p>If you are already comfortable with technology, this is also a place to collaborate with like-minded agents who enjoy testing ideas, sharing tools, and building modern systems.</p></article>
-</div>
-</section>
+<article class="feature-card primary-feature bento-vip-card">
+  <div>
+    <div class="vip-card-badge-row">
+      <span class="card-thumb-tag" style="position:static">DIRECT MENTORSHIP</span>
+      <span style="background:rgba(245,130,31,.2);color:#ffd0a3;font-size:11px;font-weight:800;padding:4px 10px;border-radius:999px;border:1px solid rgba(245,130,31,.4)">SEMPER FI</span>
+    </div>
+    <h3>Certified eXp Mentor Guidance from James Jestes</h3>
+    <p>James is a Certified eXp Mentor for agents building modern production. He combines 15 years as a licensed Realtor ranking in the top 3% nationwide, 25+ years investing in real estate, military veteran discipline, and previous ownership of an international digital marketing agency training hundreds in online growth.</p>
+    <div class="vip-pill-row">
+      <span>Top 3% Realtor Nationwide</span>
+      <span>15 Yrs Licensed · 25+ Yrs Investing</span>
+      <span>Former Digital Agency Owner</span>
+      <span>U.S. Army & Marines Veteran</span>
+    </div>
+  </div>
+  <div>
+    <a class="button orange" href="/request-access.html">Apply for Mentorship ↗</a>
+  </div>
+</article>
+
+<article class="feature-card bento-media-card">
+  <div class="card-thumb-wrapper">
+    <img src="/img/str-penthouse-balcony.webp" alt="Short-Term Rental & Condotel Mastery" class="card-thumb-img" loading="lazy">
+    <span class="card-thumb-tag">STR & CONDOTELS</span>
+  </div>
+  <div class="card-body">
+    <h3>Short-Term Rental Mastery</h3>
+    <p>Experienced in the sale, purchase, and management of coastal short-term rentals and condotels, featured in Salt Air Sessions on YouTube.</p>
+    <a class="watch-link" href="/airbnb-agent.html">Explore STR & Condotels ↗</a>
+  </div>
+</article>
+
+<article class="feature-card bento-media-card">
+  <div class="card-thumb-wrapper">
+    <img src="/img/canva-marketing-boxes.webp" alt="40+ Canva Marketing Template Packs" class="card-thumb-img" loading="lazy">
+    <span class="card-thumb-tag">MARKETING PACKS</span>
+  </div>
+  <div class="card-body">
+    <h3>40+ Plug-and-Play Canva Packs</h3>
+    <p>Complete marketing suites ready to customize: Listing Launch, Seller Conversion, Organic Lead Gen, and Buyer Education.</p>
+    <a class="watch-link" href="/free-pack.html">Get the Free Starter Pack ↗</a>
+  </div>
+</article>
+
+<article class="feature-card bento-media-card">
+  <div class="card-thumb-wrapper">
+    <img src="/img/commission-cap-gauge.webp" alt="$16,000 Annual Cap Math" class="card-thumb-img" loading="lazy">
+    <span class="card-thumb-tag">CAP & SPLIT MATH</span>
+  </div>
+  <div class="card-body">
+    <h3>$16,000 Annual Cap Math</h3>
+    <p>Keep 100% of your commission after paying $16k, with zero royalty or desk fees. Calculate your annual savings compared to your current split.</p>
+    <a class="watch-link" href="/calculator.html">Run the Cap Calculator ↗</a>
+  </div>
+</article>
+
+<article class="feature-card bento-media-card">
+  <div class="card-thumb-wrapper">
+    <img src="/img/tech-audit-matrix.webp" alt="AI Agent Accelerator" class="card-thumb-img" loading="lazy">
+    <span class="card-thumb-tag">AI & AUTOMATION</span>
+  </div>
+  <div class="card-body">
+    <h3>AI Agent Accelerator</h3>
+    <p>Turnkey real estate AI prompts, speed-to-lead workflows, automated follow-up sequences, and content generators built for busy agents.</p>
+    <a class="watch-link" href="/audit.html">Free 15-Minute Tech Audit ↗</a>
+  </div>
+</article>
+
+<article class="feature-card bento-media-card">
+  <div class="card-thumb-wrapper">
+    <img src="/img/mastermind-studio-stage.webp" alt="Multiple Live Masterminds Weekly" class="card-thumb-img" loading="lazy">
+    <span class="card-thumb-tag">LIVE MASTERMINDS</span>
+  </div>
+  <div class="card-body">
+    <h3>Weekly Live Tactical Masterminds</h3>
+    <p>Plug into multiple live interactive training calls each week with 3,300+ Wolf Pack agents, plus on-demand replay archives.</p>
+    <a class="watch-link" href="/training/index.html">Explore Training Hub ↗</a>
+  </div>
+</article>
+</div></section>
 <section class="section wrap training-tracks" aria-labelledby="training-title">
 <div class="section-heading"><p class="eyebrow">TRAINING THAT MEETS AGENTS WHERE THEY ARE</p><h2 id="training-title">Three starting tracks.<br><span class="muted">Real substance behind the support.</span></h2><p>Agents can start with the track that fits their current season, whether they need foundation, momentum, or organic lead generation.</p></div>
 <div class="track-grid">
