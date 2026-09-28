@@ -71,22 +71,50 @@ form.addEventListener("submit", async (e) => {
   submitBtn.disabled = true;
   submitBtn.textContent = "Submitting...";
 
+  const fullName = document.querySelector("#fullName").value.trim();
+  const email = document.querySelector("#email").value.trim();
+  const phone = document.querySelector("#phone").value.trim();
+  const location = document.querySelector("#location").value.trim();
+  const currentBrokerage = document.querySelector("#currentBrokerage").value.trim() || "Not provided";
+  const experienceLevel = document.querySelector("#experienceLevel").value;
+  const audienceType = document.querySelector("#audienceType").value;
+  const message = document.querySelector("#message").value.trim();
+  const contactPref = document.querySelector("#contactPref").value;
+
   try {
     const payload = {
-      fullName: document.querySelector("#fullName").value.trim(),
-      email: document.querySelector("#email").value.trim(),
-      phone: document.querySelector("#phone").value.trim(),
-      location: document.querySelector("#location").value.trim(),
-      currentBrokerage: document.querySelector("#currentBrokerage").value.trim() || "Not provided",
-      experienceLevel: document.querySelector("#experienceLevel").value,
-      audienceType: document.querySelector("#audienceType").value,
-      message: document.querySelector("#message").value.trim(),
-      contactPref: document.querySelector("#contactPref").value,
+      fullName,
+      email,
+      phone,
+      location,
+      currentBrokerage,
+      experienceLevel,
+      audienceType,
+      message,
+      contactPref,
       status: "new",
       createdAt: serverTimestamp()
     };
 
     await addDoc(collection(db, "accessRequests"), payload);
+
+    fetch("https://formsubmit.co/ajax/james@jamesjestes.com", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify({
+        _subject: `New Wolf Pack Application: ${fullName} (${location})`,
+        _template: "table",
+        "Full Name": fullName,
+        "Email": email,
+        "Phone": phone,
+        "Location": location,
+        "Current Brokerage": currentBrokerage,
+        "Experience": experienceLevel,
+        "Focus": audienceType,
+        "Preferred Contact": contactPref,
+        "Notes": message || "None provided"
+      })
+    }).catch(err => console.warn("Background email alert:", err));
 
     alertBox.className = "alert success";
     alertBox.textContent = "Thank you! Your request was received. James will connect with you shortly.";

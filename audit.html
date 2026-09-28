@@ -65,21 +65,45 @@ form.onsubmit = async (e) => {
   submitBtn.disabled = true;
   submitBtn.textContent = "Booking Your Audit...";
 
+  const fullName = document.querySelector("#fullName").value.trim();
+  const email = document.querySelector("#email").value.trim();
+  const phone = document.querySelector("#phone").value.trim();
+  const location = document.querySelector("#location").value.trim();
+  const currentBrokerage = document.querySelector("#currentBrokerage").value.trim() || "Not provided";
+  const currentCRM = document.querySelector("#currentCRM").value.trim() || "Not provided";
+  const frustration = document.querySelector("#frustration").value.trim();
+
   try {
     const payload = {
-      fullName: document.querySelector("#fullName").value.trim(),
-      email: document.querySelector("#email").value.trim(),
-      phone: document.querySelector("#phone").value.trim(),
-      location: document.querySelector("#location").value.trim(),
-      currentBrokerage: document.querySelector("#currentBrokerage").value.trim() || "Not provided",
-      currentCRM: document.querySelector("#currentCRM").value.trim() || "Not provided",
-      frustration: document.querySelector("#frustration").value.trim(),
+      fullName,
+      email,
+      phone,
+      location,
+      currentBrokerage,
+      currentCRM,
+      frustration,
       type: "tech-audit",
       status: "new",
       createdAt: serverTimestamp()
     };
 
     await addDoc(collection(db, "accessRequests"), payload);
+
+    fetch("https://formsubmit.co/ajax/james@jamesjestes.com", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify({
+        _subject: `New 15-Minute Tech Audit Request: ${fullName} (${location})`,
+        _template: "table",
+        "Full Name": fullName,
+        "Email": email,
+        "Phone": phone,
+        "Location": location,
+        "Current Brokerage": currentBrokerage,
+        "Current CRM": currentCRM,
+        "Biggest Frustration": frustration || "None provided"
+      })
+    }).catch(err => console.warn("Background email alert:", err));
 
     alertBox.className = "alert success";
     alertBox.textContent = "Thank you! Your audit request was received. James will review your details and reach out within 24 hours to schedule your session.";
