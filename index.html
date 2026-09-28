@@ -20,6 +20,21 @@
 .stat-cell.highlight strong{color:var(--orange)}
 .stat-cell span{display:block;font-size:.8rem;color:#5a6c82;font-weight:700;line-height:1.35}
 
+
+.hero-stage-card{position:relative;border-radius:36px;overflow:hidden;box-shadow:0 30px 80px rgba(16,47,108,.35),0 0 50px rgba(245,130,31,.25);border:2px solid rgba(245,130,31,.35);background:#090d16;display:flex;flex-direction:column}
+.hero-stage-media{position:relative;width:100%;height:100%;min-height:560px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-stage-image{width:100%;height:100%;max-height:620px;object-fit:cover;object-position:center;display:block;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.hero-stage-card:hover .hero-stage-image{transform:scale(1.03)}
+.hero-stage-badge{position:absolute;top:18px;right:18px;background:rgba(9,13,22,.85);backdrop-filter:blur(10px);border:1px solid rgba(0,230,118,.45);border-radius:999px;padding:6px 14px;display:flex;align-items:center;gap:8px;color:#00e676;font-size:11px;font-weight:800;letter-spacing:.08em;box-shadow:0 10px 25px rgba(0,0,0,.4)}
+.live-dot{width:8px;height:8px;border-radius:50%;background:#00e676;box-shadow:0 0 10px #00e676;animation:liveGlow 2s infinite}
+@keyframes liveGlow{0%{transform:scale(.9);opacity:.7}50%{transform:scale(1.3);opacity:1}100%{transform:scale(.9);opacity:.7}}
+.hero-stage-overlay{position:absolute;bottom:18px;left:18px;right:18px;display:flex;gap:10px;flex-wrap:wrap}
+.hero-overlay-pill{flex:1 1 calc(50% - 10px);background:rgba(9,13,22,.85);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:10px 14px;box-shadow:0 15px 30px rgba(0,0,0,.4)}
+.hero-overlay-pill strong{display:block;color:#fff;font-size:13px;font-weight:800}
+.hero-overlay-pill span{display:block;color:#cbd5e1;font-size:11px}
+.hero-overlay-pill.accent{border-color:rgba(245,130,31,.5)}
+.hero-overlay-pill.accent strong{color:#f5821f}
+
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -146,15 +161,25 @@ document.querySelectorAll('input[name="path"]').forEach((input) => {
 <a class="button orange" href="#start">Tell us where you are <span aria-hidden="true">↗</span></a>
 <p class="micro">For agents who want to grow without feeling overwhelmed.</p>
 </div>
-<div class="hero-art" aria-label="Illustration of turning a marketing idea into a manageable first step">
-<div class="art-grid" aria-hidden="true"></div><div class="sun" aria-hidden="true"></div>
-<div class="art-heading">SUPPORT.<br><strong>Systems.</strong><br>Momentum.</div>
-<div class="idea-card"><span class="card-label">YOUR IDEA</span><p>“I know there is another level for my business. I need the right people and systems around me.”</p><span class="idea-note">That is exactly why the right organization matters.</span></div>
-<div class="connector" aria-hidden="true">↓</div>
-<div class="plan-card"><div class="plan-top"><span class="spark" aria-hidden="true">✳</span><span>THE RIGHT SUPPORT<small>Training, coaching, tools, and people.</small></span></div><div class="task"><span aria-hidden="true">✓</span> Free access to modern sales, marketing, social, and AI training.</div><div class="task"><span aria-hidden="true">✓</span> Multiple live training calls each week.</div><div class="task"><span aria-hidden="true">✓</span> A tech-friendly group to bounce ideas off of.</div>
-<div class="art-footer"><span class="mini-mark">JJ.</span> Real experience. Human guidance.</div>
-</div>
-</section>
+<div class="hero-stage-card" aria-label="Real Wolf Pack Modern Agent Command Stage">
+  <div class="hero-stage-media">
+    <img src="/img/hero-tech-stage.webp" alt="Real Wolf Pack Modern Agent Technology Stage" class="hero-stage-image" width="944" height="1680" loading="eager" fetchpriority="high">
+    <div class="hero-stage-badge">
+      <span class="live-dot" aria-hidden="true"></span>
+      <span>AGENT TECH HUB · LIVE</span>
+    </div>
+    <div class="hero-stage-overlay">
+      <div class="hero-overlay-pill">
+        <strong>3,300+ Agents</strong>
+        <span>Agent Wolf Pack</span>
+      </div>
+      <div class="hero-overlay-pill accent">
+        <strong>80/20 · $16k Cap</strong>
+        <span>Zero Added Desk Fees</span>
+      </div>
+    </div>
+  </div>
+</div></section>
 <div class="reassurance"><div class="wrap"><span>Training that meets you where you are.</span><span>Support beyond the brokerage logo.</span><strong>A modern organization for modern agents.</strong></div></div>
 
 <div class="wrap">
