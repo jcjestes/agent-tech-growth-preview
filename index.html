@@ -261,12 +261,38 @@ document.querySelectorAll('input[name="path"]').forEach((input) => {
 <meta name="twitter:title" content="Real Wolf Pack | Modern Real Estate Training, Systems & Mentorship">
 <meta name="twitter:description" content="Partner with James Jestes into Agent Wolf Pack at eXp Realty. Free access to modern marketing, AI tools, and direct mentorship.">
 <meta name="twitter:image" content="https://real-wolf-pack.web.app/img/og-social-share.png">
+<link rel="stylesheet" href="/css/main.css">
+<script src="/js/site-nav.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="header wrap">
-<a class="brand" href="/" aria-label="James Jestes home"><span class="monogram">JJ<span>.</span></span><span>JAMES JESTES<small>REAL ESTATE. REAL POSSIBILITIES.</small></span></a>
-<nav aria-label="Main navigation"><a class="nav-about" href="training/index.html">Training</a><a class="nav-about" href="exp-explained.html">eXp Explained</a><a class="nav-about" href="request-access.html">Partner</a><a class="nav-about" href="members/index.html">Members</a><a class="nav-cta" href="login.html">Login <span aria-hidden="true">↗</span></a></nav>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand-link" href="/" aria-label="Real Wolf Pack Home">
+      <span class="brand-monogram">JJ<span>.</span></span>
+      <div class="brand-text">
+        <strong>REAL WOLF PACK</strong>
+        <small>JAMES JESTES · eXp REALTY</small>
+      </div>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation menu" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav">
+      <a href="/index.html">Home</a>
+      <a href="/exp-explained.html">eXp Explained</a>
+      <a href="/compare.html">Compare</a>
+      <a href="/calculator.html">Cap Calculator</a>
+      <a href="/airbnb-agent.html">STR & Condotels</a>
+      <a href="/free-pack.html">Free Pack</a>
+      <a href="/training/index.html">Training Hub</a>
+      <a href="/about.html">About</a>
+      <div class="nav-actions">
+        <a class="btn-nav-outline" href="/login.html">Member Login</a>
+        <a class="btn-nav-primary" href="/request-access.html">Join The Pack ↗</a>
+      </div>
+    </nav>
+  </div>
 </header>
 <main id="main">
 <section class="hero wrap" aria-labelledby="hero-title">
@@ -464,25 +490,62 @@ document.querySelectorAll('input[name="path"]').forEach((input) => {
 <section class="section wrap faq"><div><p class="eyebrow">GOOD QUESTIONS. STRAIGHT ANSWERS.</p><h2>You can ask<br><span class="muted">the simple questions.</span></h2></div><div><details><summary>Do I need to be good with technology?</summary><p>No. We start with what you already understand and connect new tools to familiar tasks. You don’t need a technical background.</p></details><details><summary>Do I have to join eXp to watch your videos?</summary><p>No. The educational videos are intended to be useful on their own. Ongoing organization guidance is a separate conversation, not a condition for watching.</p></details><details><summary>What’s included in the free guidance?</summary><p>Guidance for agents in our organization can cover AI, marketing ideas, CRM workflows, business systems, and how to take advantage of the training stack. We’ll clarify availability and scope together. Paid software and custom builds are not automatically included.</p></details><details><summary>What if I am already tech-savvy?</summary><p>Great. This is also for agents who already like technology and want like-minded agents to bounce ideas off of. We can talk about tools, automations, content systems, AI workflows, and what you are trying to build.</p></details></div></section>
 <section class="wrap final-cta"><p class="eyebrow">NO NEED TO HAVE THE PERFECT QUESTION.</p><h2>“Can you help me with this?”<br><span class="muted">is a great place to start.</span></h2><a class="button orange" href="#start">Let’s find your first step <span aria-hidden="true">↗</span></a><a class="watch-link" href="https://www.youtube.com/@JamesJestesAgentCoach" target="_blank" rel="noopener noreferrer">Visit the agent education channel ↗</a> · <a class="watch-link" href="https://www.youtube.com/@JamesJestes" target="_blank" rel="noopener noreferrer">Watch Salt Air Sessions (Airbnbs & Condotels) ↗</a><p class="micro">Channel launch in progress. Lessons are being prepared.</p></section>
 </main>
-<footer class="wrap">
-<div>
-  <strong>James Jestes</strong>
-  <p>eXp Realty | Broker Associate<br>Certified eXp Mentor<br>Greater Daytona Beach & Coastal Florida</p>
-</div>
-<div>
-  <strong>Real Wolf Pack Organization</strong>
-  <p>Attracting and developing modern real estate professionals in partnership with Agent Wolf Pack.</p>
-</div>
-<div>
-  <strong>Quick Links</strong>
-  <p>
-    <a href="/exp-explained" style="color:var(--dark);font-weight:700;text-decoration:none">eXp Explained</a> · <a href="/calculator" style="color:var(--dark);font-weight:700;text-decoration:none">Cap Calculator</a><br>
-    <a href="/audit" style="color:var(--dark);font-weight:700;text-decoration:none">Free Tech Audit</a> · <a href="/airbnb-agent" style="color:var(--dark);font-weight:700;text-decoration:none">STR & Condotels</a><br>
-    <a href="/request-access" style="color:var(--dark);font-weight:700;text-decoration:none">Partner with James</a><br>
-    <a href="/privacy" style="color:var(--dark);font-weight:700;text-decoration:none">Privacy Policy</a> · <a href="/terms" style="color:var(--dark);font-weight:700;text-decoration:none">Terms & Disclaimers</a>
-  </p>
-</div>
-<p class="footer-note" style="grid-column:1/-1">RealWolfPack.com is an independent agent attraction and member portal operated by James Jestes, an independent contractor affiliated with eXp Realty. Equal Opportunity Housing. No guaranteed business, income, or production outcomes.</p>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-col brand-col">
+      <div class="footer-brand">
+        <span class="brand-monogram">JJ<span>.</span></span>
+        <strong>REAL WOLF PACK</strong>
+      </div>
+      <p class="footer-bio">Personal agent attraction portal and member command base operated by James Jestes, Certified eXp Mentor and Top 3% Realtor nationwide. Connecting agents into Mike Sherrard's 3,300+ Agent Wolf Pack ecosystem with direct veteran mentorship and modern systems.</p>
+      <div class="footer-badges">
+        <span>Top 3% Nationwide</span>
+        <span>15 Yrs Licensed · 25+ Yrs Investing</span>
+        <span>U.S. Military Veteran</span>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore The Model</h4>
+      <ul>
+        <li><a href="/exp-explained.html">eXp Realty Explained</a></li>
+        <li><a href="/compare.html">Brokerage Comparison Matrix</a></li>
+        <li><a href="/calculator.html">Commission Split & Cap Calculator</a></li>
+        <li><a href="/airbnb-agent.html">Short-Term Rentals & Condotels</a></li>
+        <li><a href="/audit.html">15-Minute Tech & Marketing Audit</a></li>
+        <li><a href="/free-pack.html">Free Modern Agent Starter Pack</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Training & Systems</h4>
+      <ul>
+        <li><a href="/training/index.html">Curated Training Library</a></li>
+        <li><a href="/training/real-wolf-pack-business-foundation-page.html">Business Foundation Track</a></li>
+        <li><a href="/training/fast-momentum-series.html">Fast Momentum Track</a></li>
+        <li><a href="/training/organic-lead-gen-series.html">Organic Inbound Track</a></li>
+        <li><a href="/presentation.html">Interactive Zoom Presentation</a></li>
+        <li><a href="/faq.html">Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Organization & Access</h4>
+      <ul>
+        <li><a href="/request-access.html">Apply to Partner with James</a></li>
+        <li><a href="/login.html">Member Sign In / Register</a></li>
+        <li><a href="/privacy.html">Privacy Policy</a></li>
+        <li><a href="/terms.html">Terms of Service</a></li>
+        <li><a href="mailto:james@jamesjestes.com">james@jamesjestes.com</a></li>
+        <li><span style="color:#94a3b8;font-size:13px">Greater Daytona & Coastal Florida</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap footer-bottom">
+    <p class="disclaimer">RealWolfPack.com is an independent agent attraction and member resource portal operated by James Jestes, Broker Associate with eXp Realty. Agent Wolf Pack is an organization of 3,300+ independent real estate agents within eXp Realty founded by Mike Sherrard and Connor Steinbrook. eXp Realty is an Equal Housing Opportunity brokerage. All commission math, splits, and training access are subject to eXp Realty policies.</p>
+    <p class="copyright">© 2026 RealWolfPack.com. All rights reserved. Zero em dashes.</p>
+  </div>
 </footer>
 
 <script type="module">

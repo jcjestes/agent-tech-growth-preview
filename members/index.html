@@ -11,7 +11,34 @@
 
 </style><link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="/site.webmanifest">
-</head><body><header class="wrap top"><a class="brand" href="../index.html">REALWOLFPACK.COM</a><nav><a href="../training/index.html">Training</a> &nbsp; <a href="training-library.html">Library</a> &nbsp; <span id="auth-user-badge" style="display:none;font-weight:900;color:var(--orange)"></span> &nbsp; <button id="logout-btn" style="border:0;background:var(--sand);color:var(--dark);padding:6px 12px;border-radius:999px;font-weight:900;cursor:pointer">Sign Out</button></nav></header><section class="hero"><div class="wrap"><span class="badge">MEMBER DASHBOARD PREVIEW</span><h1>Welcome back.</h1><p>This is the future protected dashboard for agents in the organization. It will hold training, announcements, support requests, and important links.</p></div></section><main class="wrap grid">
+<link rel="stylesheet" href="/css/main.css">
+<script src="/js/site-nav.js" defer></script>
+</head><body><header class="site-header member-header">
+  <div class="wrap header-inner">
+    <a class="brand-link" href="/members/index.html" aria-label="Real Wolf Pack Member Portal">
+      <span class="brand-monogram">JJ<span>.</span></span>
+      <div class="brand-text">
+        <strong>REAL WOLF PACK</strong>
+        <small>MEMBER COMMAND BASE</small>
+      </div>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation menu" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav">
+      <a href="/members/index.html">Dashboard</a>
+      <a href="/training/index.html">Training Hub</a>
+      <a href="/members/downloads.html">Canva Packs</a>
+      <a href="/members/ai-prompts.html">AI Prompts</a>
+      <a href="/members/scripts.html">Toolkits</a>
+      <a href="/members/master-playbook.html">Playbook</a>
+      <div class="nav-actions">
+        <a class="btn-nav-outline" href="/members/admin.html" id="nav-admin-link">Admin Panel</a>
+        <a class="btn-nav-primary" href="/" style="background:#475569">Public Site</a>
+      </div>
+    </nav>
+  </div>
+</header><section class="hero"><div class="wrap"><span class="badge">MEMBER DASHBOARD PREVIEW</span><h1>Welcome back.</h1><p>This is the future protected dashboard for agents in the organization. It will hold training, announcements, support requests, and important links.</p></div></section><main class="wrap grid">
 <section class="member-welcome-banner" aria-label="Member Command Base">
   <div class="welcome-copy">
     <div class="welcome-pill">
