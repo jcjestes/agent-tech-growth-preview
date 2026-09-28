@@ -113,18 +113,11 @@ document.querySelectorAll('input[name="path"]').forEach((input) => {
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="preview">DESIGN PREVIEW <span>No sign-up. No information collected.</span></div>
 <header class="header wrap">
 <a class="brand" href="#" aria-label="James Jestes home"><span class="monogram">JJ<span>.</span></span><span>JAMES JESTES<small>REAL ESTATE. REAL POSSIBILITIES.</small></span></a>
-<nav aria-label="Main navigation"><a class="nav-about" href="training/index.html">Training</a><a class="nav-about" href="exp-explained.html">eXp Explained</a><a class="nav-about" href="members/index.html">Members</a><a class="nav-cta" href="login.html">Login <span aria-hidden="true">↗</span></a></nav>
+<nav aria-label="Main navigation"><a class="nav-about" href="training/index.html">Training</a><a class="nav-about" href="exp-explained.html">eXp Explained</a><a class="nav-about" href="request-access.html">Partner</a><a class="nav-about" href="members/index.html">Members</a><a class="nav-cta" href="login.html">Login <span aria-hidden="true">↗</span></a></nav>
 </header>
 <main id="main">
-<section class="top-question wrap" aria-labelledby="top-question-title">
-<p class="eyebrow" style="color:#ffd0a3">START HERE</p>
-<h2 id="top-question-title">Where are you <em>right now?</em></h2>
-<p>Choose your agent type and the page will change the message, support-stack explanation, course preview, and next step.</p>
-<a class="button orange" href="#start">Choose your starting point <span aria-hidden="true">↗</span></a>
-</section>
 <section class="hero wrap" aria-labelledby="hero-title">
 <div class="hero-copy"><p class="eyebrow"><span class="dot"></span> A LITTLE GUIDANCE. A WHOLE NEW POSSIBILITY.</p>
 <h1 id="hero-title">Build the real estate business you can <span class="ai-word">see <svg viewBox="0 0 120 16" aria-hidden="true"><path d="M3 12 Q55 0 116 9"/></svg></span><br><em>for yourself.</em></h1>
@@ -176,4 +169,8 @@ document.querySelectorAll('input[name="path"]').forEach((input) => {
 <section class="wrap final-cta"><p class="eyebrow">NO NEED TO HAVE THE PERFECT QUESTION.</p><h2>“Can you help me with this?”<br><span class="muted">is a great place to start.</span></h2><a class="button orange" href="#start">Let’s find your first step <span aria-hidden="true">↗</span></a><a class="watch-link" href="https://www.youtube.com/@JamesJestesAgentCoach" target="_blank" rel="noopener noreferrer">Visit the agent education channel ↗</a><p class="micro">Channel launch in progress. Lessons are being prepared.</p></section>
 </main>
 <footer class="wrap"><div><strong>James Jestes</strong><p>eXp Realty | Broker Associate<br>Greater Daytona Beach Area</p></div><div><strong>Salt Air. Smooth Deals. Luxury Living Made Easy.</strong><p>Patient guidance. Practical possibilities.</p></div><p class="footer-note">Private design prototype. No guaranteed business or income outcomes.<br>Original abstract illustrations. No simulated client testimonials.</p></footer>
-</body></html>
+
+<script type="module">
+import { initContentGate } from "./js/content-gate.js";
+initContentGate();
+</script></body></html>

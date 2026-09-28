@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Organization Announcements | RealWolfPack.com</title><style>:root{--blue:#19469D;--dark:#102f6c;--orange:#F5821F;--sand:#F5E9D0;--gray:#E2E3E4;--text:#333;--muted:#58697f}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#fff,#fbf7ef);color:var(--text);min-height:100vh}.wrap{width:min(980px,calc(100% - 32px));margin:auto}.top{padding:18px 0;display:flex;justify-content:space-between;gap:16px;align-items:center}.brand,.top a{font-weight:900;color:var(--dark);text-decoration:none}.hero{padding:48px 0 24px}.eyebrow{color:var(--orange);font-weight:900;letter-spacing:.13em;text-transform:uppercase;font-size:13px}h1{font-size:clamp(40px,7vw,68px);line-height:.92;letter-spacing:-.07em;color:var(--dark);margin:8px 0 12px}h1 em{font-style:normal;color:var(--orange)}p{font-size:18px;color:var(--muted);line-height:1.55}.feed{display:grid;gap:20px;margin:28px 0 70px}.post{background:#fff;border:1px solid rgba(25,70,157,.14);border-radius:26px;padding:26px;box-shadow:0 18px 45px rgba(16,47,108,.08)}.post-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.badge{background:var(--sand);color:var(--dark);padding:5px 10px;border-radius:999px;font-size:11px;font-weight:900;text-transform:uppercase}.date{font-size:13px;color:#94a3b8;font-weight:700}.post h2{color:var(--dark);font-size:24px;margin:0 0 12px;line-height:1.1}.post p{color:#475569;font-size:16px;line-height:1.6;margin:0 0 12px}.btn{display:inline-block;background:var(--orange);color:#2f1700;border-radius:999px;padding:12px 18px;text-decoration:none;font-weight:900;font-size:14px}</style></head><body><header class="wrap top"><a class="brand" href="../index.html">REALWOLFPACK.COM</a><nav><a href="index.html">Dashboard</a> &nbsp; <a href="training-library.html">Library</a> &nbsp; <a href="templates.html">Templates</a> &nbsp; <span id="nav-auth-section"></span></nav></header><main class="wrap"><section class="hero"><p class="eyebrow">Organization Communications</p><h1>Member <em>Announcements.</em></h1><p>Stay up to date with weekly live mastermind schedules, new training drops, Canva template releases, and coaching updates from James.</p></section><section class="feed" id="announcements-feed"><article class="post"><div class="post-meta"><span class="badge" style="background:#dbeafe;color:#1e40af">Agent Wolf Pack Live</span><span class="date">Weekly Ongoing</span></div><h2>Weekly Production Mastermind Calls</h2><p>As a reminder, all agents in our organization get access to multiple live mastermind calls each week hosted by Mike Sherrard and top 1% producers. Check the calendar in your Agent Wolf Pack member vault or message James for the Zoom dial-in details.</p></article><article class="post"><div class="post-meta"><span class="badge" style="background:#fef3c7;color:#92400e">Template Drop</span><span class="date">New Release</span></div><h2>Listing Launch & Seller Conversion Packs Live</h2><p>Original Real Wolf Pack Canva-style templates are now accessible in the Template Hub! Explore the 10-piece Listing Launch Pack, Seller Conversion Pack, and the Organic Lead Gen Pack to level up your social media marketing.</p><a class="btn" href="templates.html">Open Template Hub ↗</a></article></section></main><script type="module">
+import { initContentGate } from "../js/content-gate.js";
+import { db } from "../js/firebase-init.js";
+import { collection, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js";
+
+initContentGate();
+
+// Fetch live dynamic announcements from Firestore if any exist
+async function loadDynamicAnnouncements() {
+  const feed = document.querySelector("#announcements-feed");
+  try {
+    const q = query(collection(db, "announcements"), orderBy("createdAt", "desc"));
+    const snap = await getDocs(q);
+    if (!snap.empty) {
+      snap.forEach(d => {
+        const item = d.data();
+        const dateStr = item.createdAt ? new Date(item.createdAt.seconds * 1000).toLocaleDateString() : "Recent";
+        const art = document.createElement("article");
+        art.className = "post";
+        art.innerHTML = `
+          <div class="post-meta">
+            <span class="badge" style="background:#fee2e2;color:#991b1b">${item.audience || "All Members"}</span>
+            <span class="date">${dateStr}</span>
+          </div>
+          <h2>${item.title}</h2>
+          <p>${item.body.replace(/\n/g, '<br>')}</p>
+        `;
+        feed.prepend(art);
+      });
+    }
+  } catch (err) {
+    console.log("No dynamic announcements or loading offline:", err);
+  }
+}
+loadDynamicAnnouncements();
+</script></body></html>

@@ -1,30 +1,119 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Login Preview | RealWolfPack.com</title><style>:root{--blue:#19469D;--dark:#102f6c;--orange:#F5821F;--sand:#F5E9D0;--text:#333}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(135deg,#fff,#F5E9D0);color:var(--text);min-height:100vh}.wrap{width:min(980px,calc(100% - 32px));margin:auto}.top{padding:18px 0;display:flex;justify-content:space-between;gap:16px}.brand,a{font-weight:900;color:var(--dark);text-decoration:none}.shell{display:grid;grid-template-columns:1fr;gap:28px;align-items:center;padding:60px 0}.copy h1{font-size:clamp(46px,10vw,88px);line-height:.88;letter-spacing:-.07em;color:var(--dark);margin:0 0 18px}.copy p{font-size:19px;color:#56677d;line-height:1.55}.panel{background:white;border:1px solid rgba(25,70,157,.14);border-radius:30px;padding:24px;box-shadow:0 24px 70px rgba(16,47,108,.14)}label{font-weight:900;color:var(--dark);display:block;margin:14px 0 6px}input{width:100%;padding:14px;border:1px solid #d6dce5;border-radius:14px;font-size:16px}.btn{width:100%;border:0;border-radius:999px;background:var(--orange);font-weight:900;color:#2f1700;padding:15px 18px;margin-top:18px;font-size:16px}.note{font-size:14px;color:#64748b;margin-top:14px}@media(min-width:760px){.shell{grid-template-columns:1fr 420px}}.audience-strip{width:min(1120px,calc(100% - 32px));margin:18px auto;background:linear-gradient(135deg,#102f6c,#19469D);color:#fff;border-radius:28px;padding:18px;box-shadow:0 24px 60px rgba(16,47,108,.18)}.audience-strip p{color:#e8f0ff}.audience-strip .audience-title{font-size:clamp(28px,6vw,54px);line-height:.94;letter-spacing:-.06em;color:#fff;margin:.15rem 0 .7rem}.audience-strip .audience-title em{font-style:normal;color:#ffd0a3}.audience-grid{display:grid;grid-template-columns:1fr;gap:10px;margin:14px 0}.audience-choice{border:2px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);color:#fff;border-radius:18px;padding:12px;text-align:left;cursor:pointer}.audience-choice strong{display:block}.audience-choice span{display:block;color:#d8e6ff;margin-top:2px}.audience-choice.active{border-color:#F5821F;background:rgba(245,130,31,.18)}.audience-result{background:#fff;color:#333;border-radius:22px;padding:16px;margin-top:12px}.audience-result h3{color:#102f6c;margin:0 0 6px}.audience-result p{color:#53657b;margin:0 0 10px}.audience-result a{display:inline-block;background:#F5821F;color:#2f1700;border-radius:999px;padding:11px 14px;text-decoration:none;font-weight:900}@media(min-width:760px){.audience-grid{grid-template-columns:repeat(2,1fr)}}</style><script>
-document.addEventListener('DOMContentLoaded', () => {
-  const rootPrefix = '';
-  const data = {
-    newAgent: { title:'New agent starting point', body:'Start with a clear foundation, simple next steps, and patient support. The goal is confidence without overload.', url:'training/real-wolf-pack-business-foundation-page.html', cta:'Open Business Foundation' },
-    momentum: { title:'Momentum starting point', body:'Focus on quick-win activity, clearer positioning, referral conversations, and a 30-day plan you can follow.', url:'training/fast-momentum-series.html', cta:'Open Fast Momentum' },
-    techIntimidated: { title:'Simple tech starting point', body:'Start with one useful workflow. AI and tech should reduce overwhelm, not create more of it.', url:'training/real-wolf-pack-business-foundation-page.html', cta:'Start simple' },
-    techSavvy: { title:'Tech-savvy starting point', body:'Lean into workflows, automations, content systems, AI discoverability, and bouncing ideas off people who get it.', url:'training/organic-lead-gen-series.html', cta:'Open Organic Lead Gen' },
-    experienced: { title:'Experienced agent starting point', body:'Focus on leverage, systems, time, organization support, and long-term strategy instead of basic motivation.', url:'index.html#stack-title', cta:'Review the support stack' },
-    local: { title:'Florida/local starting point', body:'Start with practical guidance, local context, and a conversation about how James may be able to support you directly.', url:'index.html#guide-title', cta:'Meet James' },
-    expCurious: { title:'eXp curious starting point', body:'Start with clarity around the model, the organization support, and whether the path fits your goals. No pressure and no income promises.', url:'index.html#stack-title', cta:'Review partner support' }
-  };
-  const scope = document.querySelector('.audience-strip');
-  if (!scope) return;
-  const title = scope.querySelector('[data-audience-title]');
-  const body = scope.querySelector('[data-audience-body]');
-  const link = scope.querySelector('[data-audience-link]');
-  scope.querySelectorAll('[data-audience]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      scope.querySelectorAll('[data-audience]').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const item = data[btn.dataset.audience];
-      title.textContent = item.title;
-      body.textContent = item.body;
-      link.href = rootPrefix + item.url;
-      link.textContent = item.cta + ' ↗';
-    });
-  });
-});
-</script></head><body><header class="wrap top"><a class="brand" href="index.html">REALWOLFPACK.COM</a><a href="training/index.html">Training preview</a></header><section class="audience-strip" aria-label="Personalized starting point preview"><p class="eyebrow" style="color:#ffd0a3">PERSONALIZED PREVIEW</p><h2 class="audience-title">Where are you <em>right now?</em></h2><p>Choose an agent type and this page will recommend the best next step for that visitor.</p><div class="audience-grid"><button class="audience-choice active" data-audience="newAgent"><strong>New agent</strong><span>Needs foundation and support.</span></button><button class="audience-choice" data-audience="momentum"><strong>Needs momentum</strong><span>Wants consistency and quick wins.</span></button><button class="audience-choice" data-audience="techIntimidated"><strong>Tech feels overwhelming</strong><span>Needs simple steps.</span></button><button class="audience-choice" data-audience="techSavvy"><strong>Tech-savvy</strong><span>Wants workflows and peers.</span></button><button class="audience-choice" data-audience="experienced"><strong>Experienced</strong><span>Wants leverage and strategy.</span></button><button class="audience-choice" data-audience="local"><strong>Florida/local</strong><span>Wants local guidance.</span></button><button class="audience-choice" data-audience="expCurious"><strong>eXp curious</strong><span>Wants model clarity.</span></button></div><div class="audience-result"><h3 data-audience-title>New agent starting point</h3><p data-audience-body>Start with a clear foundation, simple next steps, and patient support. The goal is confidence without overload.</p><a data-audience-link href="training/real-wolf-pack-business-foundation-page.html">Open Business Foundation ↗</a></div></section><main class="wrap shell"><section class="copy"><h1>Member access, kept simple.</h1><p>Agents in the organization will sign in to view protected training links, updates, announcements, and support resources.</p><p>This is a preview only. No authentication is connected yet.</p></section><section class="panel"><h2 style="color:var(--dark);margin-top:0">Member Login Preview</h2><label>Email</label><input placeholder="agent@example.com"><label>Password</label><input type="password" placeholder="••••••••"><button class="btn" onclick="location.href='members/index.html'">Preview member dashboard</button><p class="note">Future behavior: approved members enter dashboard. Unapproved users see an access request page.</p></section></main></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Member Login | RealWolfPack.com</title><style>:root{--blue:#19469D;--dark:#102f6c;--orange:#F5821F;--sand:#F5E9D0;--text:#333;--muted:#56677d}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(135deg,#fff,#F5E9D0);color:var(--text);min-height:100vh}.wrap{width:min(980px,calc(100% - 32px));margin:auto}.top{padding:18px 0;display:flex;justify-content:space-between;gap:16px}.brand,a{font-weight:900;color:var(--dark);text-decoration:none}.shell{display:grid;grid-template-columns:1fr;gap:32px;align-items:center;padding:50px 0}.copy h1{font-size:clamp(44px,8vw,80px);line-height:.9;letter-spacing:-.07em;color:var(--dark);margin:0 0 16px}.copy p{font-size:18px;color:var(--muted);line-height:1.55}.panel{background:white;border:1px solid rgba(25,70,157,.14);border-radius:30px;padding:28px;box-shadow:0 24px 70px rgba(16,47,108,.14)}.tab-row{display:flex;gap:10px;margin-bottom:20px;border-bottom:2px solid #edf2f7;padding-bottom:10px}.tab-btn{border:0;background:transparent;font-weight:900;font-size:16px;color:#8a99ad;cursor:pointer;padding:6px 12px;border-radius:8px}.tab-btn.active{color:var(--dark);background:#f1f5f9}.field{margin-bottom:14px}label{font-weight:900;color:var(--dark);display:block;margin-bottom:6px;font-size:14px}input{width:100%;padding:14px;border:1.5px solid #d6dce5;border-radius:14px;font-size:16px;font-family:inherit}input:focus{outline:none;border-color:var(--orange)}.btn{width:100%;border:0;border-radius:999px;background:var(--orange);font-weight:900;color:#2f1700;padding:15px 18px;margin-top:14px;font-size:16px;cursor:pointer;box-shadow:0 12px 30px rgba(245,130,31,.25)}.btn:disabled{opacity:.6;cursor:not-allowed}.alert{display:none;padding:12px;border-radius:12px;font-weight:700;margin-bottom:16px;font-size:14px}.alert.error{display:block;background:#fef2f2;color:#991b1b;border:1px solid #fecaca}.alert.success{display:block;background:#ecfdf5;color:#065f46;border:1px solid #a7f3d0}.links{display:flex;justify-content:space-between;margin-top:16px;font-size:13px;font-weight:700}.links a{color:var(--blue)}@media(min-width:760px){.shell{grid-template-columns:1fr 430px}}</style></head><body><header class="wrap top"><a class="brand" href="index.html">REALWOLFPACK.COM</a><nav><a href="training/index.html">Training</a> &nbsp; <a href="exp-explained.html">eXp Explained</a></nav></header><main class="wrap shell"><section class="copy"><p class="eyebrow" style="color:var(--orange);font-weight:900;letter-spacing:.13em;text-transform:uppercase;font-size:13px">AUTHORIZED MEMBER PORTAL</p><h1>Member access, kept simple.</h1><p>Agents in our organization sign in to access full training replays, slide presentations, download links, template libraries, and direct mentorship resources.</p><p>Not an active member yet? <a href="request-access.html" style="color:var(--orange);font-weight:900;text-decoration:underline">Apply to partner with James here</a>.</p></section><section class="panel"><div class="tab-row"><button id="tab-login" class="tab-btn active">Sign In</button><button id="tab-signup" class="tab-btn">Register</button></div><div id="alert-msg" class="alert"></div><form id="auth-form"><div id="name-field" class="field" style="display:none"><label for="displayName">Full Name</label><input id="displayName" placeholder="Your name"></div><div class="field"><label for="email">Email Address</label><input id="email" type="email" required placeholder="agent@example.com"></div><div class="field"><label for="password">Password</label><input id="password" type="password" required placeholder="••••••••"></div><button id="auth-submit" class="btn" type="submit">Sign In to Dashboard</button></form><div class="links"><a href="#" id="forgot-pw">Forgot password?</a><a href="request-access.html">Need access?</a></div></section></main><script type="module">
+import { 
+  auth, 
+  db, 
+  signInWithEmailAndPassword, 
+  createUserWithEmailAndPassword, 
+  sendPasswordResetEmail,
+  doc, 
+  getDoc, 
+  setDoc, 
+  serverTimestamp 
+} from "./js/firebase-init.js";
+
+let mode = "login";
+const tabLogin = document.querySelector("#tab-login");
+const tabSignup = document.querySelector("#tab-signup");
+const nameField = document.querySelector("#name-field");
+const authForm = document.querySelector("#auth-form");
+const authSubmit = document.querySelector("#auth-submit");
+const alertMsg = document.querySelector("#alert-msg");
+const forgotPw = document.querySelector("#forgot-pw");
+
+tabLogin.onclick = () => {
+  mode = "login";
+  tabLogin.classList.add("active");
+  tabSignup.classList.remove("active");
+  nameField.style.display = "none";
+  authSubmit.textContent = "Sign In to Dashboard";
+  alertMsg.className = "alert";
+};
+
+tabSignup.onclick = () => {
+  mode = "signup";
+  tabSignup.classList.add("active");
+  tabLogin.classList.remove("active");
+  nameField.style.display = "block";
+  authSubmit.textContent = "Create Account";
+  alertMsg.className = "alert";
+};
+
+forgotPw.onclick = async (e) => {
+  e.preventDefault();
+  const email = document.querySelector("#email").value.trim();
+  if (!email) {
+    alertMsg.className = "alert error";
+    alertMsg.textContent = "Please enter your email address first.";
+    return;
+  }
+  try {
+    await sendPasswordResetEmail(auth, email);
+    alertMsg.className = "alert success";
+    alertMsg.textContent = "Password reset email sent. Check your inbox.";
+  } catch (err) {
+    alertMsg.className = "alert error";
+    alertMsg.textContent = err.message;
+  }
+};
+
+authForm.onsubmit = async (e) => {
+  e.preventDefault();
+  alertMsg.className = "alert";
+  authSubmit.disabled = true;
+
+  const email = document.querySelector("#email").value.trim();
+  const password = document.querySelector("#password").value;
+  const displayName = document.querySelector("#displayName").value.trim();
+
+  try {
+    if (mode === "login") {
+      authSubmit.textContent = "Signing in...";
+      const cred = await signInWithEmailAndPassword(auth, email, password);
+      
+      // Check user role
+      const userDoc = await getDoc(doc(db, "users", cred.user.uid));
+      const data = userDoc.exists() ? userDoc.data() : { role: "pending" };
+
+      if (data.role === "member" || data.role === "admin") {
+        window.location.href = "members/index.html";
+      } else {
+        window.location.href = "access-preview.html?status=pending";
+      }
+    } else {
+      authSubmit.textContent = "Creating account...";
+      const cred = await createUserWithEmailAndPassword(auth, email, password);
+
+      // Create pending user record in Firestore
+      await setDoc(doc(db, "users", cred.user.uid), {
+        uid: cred.user.uid,
+        email: email,
+        displayName: displayName || email.split("@")[0],
+        role: "pending",
+        status: "pending",
+        createdAt: serverTimestamp()
+      });
+
+      alertMsg.className = "alert success";
+      alertMsg.textContent = "Account created! Awaiting organization authorization.";
+      setTimeout(() => {
+        window.location.href = "access-preview.html?status=pending";
+      }, 1200);
+    }
+  } catch (err) {
+    console.error("Auth error:", err);
+    alertMsg.className = "alert error";
+    if (err.code === "auth/invalid-credential" || err.code === "auth/wrong-password") {
+      alertMsg.textContent = "Invalid email or password.";
+    } else if (err.code === "auth/email-already-in-use") {
+      alertMsg.textContent = "An account with this email already exists. Please sign in.";
+    } else if (err.code === "auth/weak-password") {
+      alertMsg.textContent = "Password should be at least 6 characters.";
+    } else {
+      alertMsg.textContent = err.message || "An authentication error occurred.";
+    }
+  } finally {
+    authSubmit.disabled = false;
+    authSubmit.textContent = mode === "login" ? "Sign In to Dashboard" : "Create Account";
+  }
+};
+</script></body></html>
