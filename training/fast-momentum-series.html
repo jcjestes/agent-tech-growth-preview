@@ -96,6 +96,24 @@
   .hero-copy{display:flex!important;flex-direction:column!important;justify-content:center!important}
 }
 
+
+.module-card{padding:0!important;display:flex!important;flex-direction:column!important;overflow:hidden!important;border-radius:28px!important;border:1px solid rgba(25,70,157,.16)!important;box-shadow:0 20px 50px rgba(16,47,108,.08)!important;background:#fff!important;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease!important}
+.module-card:hover{transform:translateY(-5px)!important;box-shadow:0 30px 65px rgba(16,47,108,.16)!important;border-color:rgba(245,130,31,.45)!important}
+.module-thumb-wrapper{position:relative;width:100%;height:220px;overflow:hidden;background:#090d16}
+.module-thumb-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.module-card:hover .module-thumb-img{transform:scale(1.05)}
+.module-play-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(9,13,22,.32);backdrop-filter:blur(2px);transition:background .3s ease}
+.module-card:hover .module-play-overlay{background:rgba(9,13,22,.12)}
+.play-circle{width:52px;height:52px;border-radius:50%;background:rgba(245,130,31,.95);color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;padding-left:3px;box-shadow:0 10px 25px rgba(0,0,0,.5),0 0 20px rgba(245,130,31,.5);transition:transform .3s ease,background .3s ease}
+.module-card:hover .play-circle{transform:scale(1.12);background:#f5821f}
+.module-duration-pill{position:absolute;top:14px;right:14px;background:rgba(9,13,22,.88);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);color:#ffd0a3;font-size:11px;font-weight:800;letter-spacing:.08em;padding:5px 12px;border-radius:999px;box-shadow:0 6px 16px rgba(0,0,0,.4)}
+.module-card-body{padding:1.6rem;display:flex;flex-direction:column;flex:1}
+.module-card-body h3{margin:6px 0 10px;font-size:1.35rem;color:var(--blue-dark)}
+.module-card-body p{font-size:.98rem;line-height:1.55;color:#53657b;margin:0 0 16px}
+.module-bullets{list-style:none;padding:0;margin:0 0 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.module-bullets li{position:relative;padding-left:22px;font-size:.92rem;color:#334155;line-height:1.45}
+.module-bullets li::before{content:"✓";position:absolute;left:0;color:var(--orange);font-weight:900}
+
 </style>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="/site.webmanifest">
@@ -118,7 +136,87 @@
 </div></section>
 <div class="reassurance"><div class="wrap"><span>Positioning made clearer.</span><span>Daily action made easier.</span><strong>Fast momentum for modern agents.</strong></div></div>
 <section class="section wrap" id="approach"><div class="section-heading"><p class="eyebrow">WHY FAST MOMENTUM MATTERS</p><h2>The focused action agents need<br><span class="muted">to create opportunity.</span></h2><p>Momentum usually comes from focused positioning, simple conversations, consistent outreach, and a clear plan for what to do each day. This series helps agents move from waiting to acting.</p></div><div class="steps"><article><span class="step-number">01</span><h3>Define your lane.</h3><p>Choose a niche or market position that helps people remember you and refer you more easily.</p><span class="pill">Specific gets remembered</span></article><article><span class="step-number">02</span><h3>Create fast activity.</h3><p>Use rentals, open houses, buyer conversations, and simple outreach to start creating real conversations now.</p><span class="pill">Conversations create momentum</span></article><article><span class="step-number">03</span><h3>Build referral leverage.</h3><p>Create agent-to-agent relationships and a 30-day plan that turns daily actions into appointments and opportunities.</p><span class="pill">Referrals compound</span></article></div></section>
-<section class="section wrap" id="trainings"><div class="section-heading"><p class="eyebrow">WHAT AGENTS CAN WATCH</p><h2>Four practical trainings<br><span class="muted">for faster agent momentum.</span></h2><p>This page gives agents and prospective agents a clear preview of the momentum-focused education available inside the Real Wolf Pack.</p></div><div class="training-grid"><article class="feature-card primary-feature"><span class="card-label">TRAINING 01 · TIMBERLY FENOGLIO</span><h3>Defining Your Niche</h3><p>Learn how to become known for something specific in your market so people understand who you help and why they should remember you.</p><ul><li>Clarify what you want to be known for</li><li>Position yourself more intentionally</li><li>Create stronger market recognition</li></ul><a class="watch-link" data-resource-key="momentum-01" href="/access-preview.html" >Member access required to watch ↗</a></article><article class="feature-card"><span class="card-label">TRAINING 02 · JAX CRERAR</span><h3>Quick Wins for New Agents</h3><p>Focus on practical activities that can create immediate conversations and opportunities, especially for agents who need momentum now.</p><ul><li>Use rentals as a business-building path</li><li>Leverage open houses for conversations</li><li>Create more buyer activity fast</li></ul><a class="watch-link" data-resource-key="momentum-02" href="/access-preview.html" >Member access required to watch ↗</a></article><article class="feature-card"><span class="card-label">TRAINING 03 · SHANNE CARVALHO</span><h3>Building a Referral Network</h3><p>Learn how to build agent-to-agent referral relationships that can expand your opportunity base beyond your immediate market.</p><ul><li>Create more agent-to-agent referral opportunities</li><li>Build relationships with intention</li><li>Use referral networking as a growth pillar</li></ul><a class="watch-link" data-resource-key="momentum-03" href="/access-preview.html" >Member access required to watch ↗</a></article><article class="feature-card"><span class="card-label">TRAINING 04 · JOSHUA SMITH</span><h3>Your 30-Day Momentum Plan</h3><p>Turn momentum into a daily plan with specific actions designed to generate conversations, appointments, and deals.</p><ul><li>Build a clear 30-day action plan</li><li>Generate more conversations consistently</li><li>Turn daily activity into appointments</li></ul><a class="watch-link" data-resource-key="momentum-04" href="/access-preview.html" >Member access required to watch ↗</a></article></div></section>
+<section class="section wrap" id="trainings"><div class="section-heading"><p class="eyebrow">WHAT AGENTS CAN WATCH</p><h2>Four practical trainings<br><span class="muted">for faster agent momentum.</span></h2><p>This page gives agents and prospective agents a clear preview of the momentum-focused education available inside the Real Wolf Pack.</p></div><div class="training-grid">
+<!-- Module 01 -->
+<article class="feature-card module-card">
+  <div class="module-thumb-wrapper">
+    <img src="/img/vip-welcome-stage.webp" alt="Module 01: Defining Your Niche" class="module-thumb-img" loading="lazy">
+    <div class="module-play-overlay"><span class="play-circle">▶</span></div>
+    <span class="module-duration-pill">31 MIN · TIMBERLY FENOGLIO</span>
+  </div>
+  <div class="module-card-body">
+    <span class="card-label">TRAINING 01</span>
+    <h3>Defining Your Niche</h3>
+    <p>Learn how to become known for something specific in your market so people understand who you help and why they should remember you.</p>
+    <ul class="module-bullets">
+      <li>Clarify what you want to be known for</li>
+      <li>Position yourself more intentionally</li>
+      <li>Create stronger market recognition</li>
+    </ul>
+    <a class="watch-link" data-resource-key="momentum-01" href="/access-preview.html">Watch the training ↗</a>
+  </div>
+</article>
+
+<!-- Module 02 -->
+<article class="feature-card module-card">
+  <div class="module-thumb-wrapper">
+    <img src="/img/str-penthouse-balcony.webp" alt="Module 02: Quick Wins for New Agents" class="module-thumb-img" loading="lazy">
+    <div class="module-play-overlay"><span class="play-circle">▶</span></div>
+    <span class="module-duration-pill">26 MIN · JAX CRERAR</span>
+  </div>
+  <div class="module-card-body">
+    <span class="card-label">TRAINING 02</span>
+    <h3>Quick Wins for Fast Momentum</h3>
+    <p>Focus on practical activities that can create immediate conversations and opportunities, especially for agents who need momentum now.</p>
+    <ul class="module-bullets">
+      <li>Use rentals as a business-building path</li>
+      <li>Leverage open houses for live conversations</li>
+      <li>Create more active buyer inquiries fast</li>
+    </ul>
+    <a class="watch-link" data-resource-key="momentum-02" href="/access-preview.html">Watch the training ↗</a>
+  </div>
+</article>
+
+<!-- Module 03 -->
+<article class="feature-card module-card">
+  <div class="module-thumb-wrapper">
+    <img src="/img/wolf-pack-network-grid.webp" alt="Module 03: Building a Referral Network" class="module-thumb-img" loading="lazy">
+    <div class="module-play-overlay"><span class="play-circle">▶</span></div>
+    <span class="module-duration-pill">39 MIN · SHANNE CARVALHO</span>
+  </div>
+  <div class="module-card-body">
+    <span class="card-label">TRAINING 03</span>
+    <h3>Building a Referral Network</h3>
+    <p>Learn how to build agent-to-agent referral relationships that can expand your opportunity base beyond your immediate market.</p>
+    <ul class="module-bullets">
+      <li>Create more agent-to-agent referral opportunities</li>
+      <li>Build relationships with intention</li>
+      <li>Use referral networking as a growth pillar</li>
+    </ul>
+    <a class="watch-link" data-resource-key="momentum-03" href="/access-preview.html">Watch the training ↗</a>
+  </div>
+</article>
+
+<!-- Module 04 -->
+<article class="feature-card module-card">
+  <div class="module-thumb-wrapper">
+    <img src="/img/commission-cap-gauge.webp" alt="Module 04: Your 30-Day Momentum Plan" class="module-thumb-img" loading="lazy">
+    <div class="module-play-overlay"><span class="play-circle">▶</span></div>
+    <span class="module-duration-pill">45 MIN · JOSHUA SMITH</span>
+  </div>
+  <div class="module-card-body">
+    <span class="card-label">TRAINING 04</span>
+    <h3>Your 30-Day Momentum Plan</h3>
+    <p>Turn momentum into a daily plan with specific actions designed to generate conversations, appointments, and deals.</p>
+    <ul class="module-bullets">
+      <li>Build a clear 30-day action plan</li>
+      <li>Generate more conversations consistently</li>
+      <li>Turn daily activity into closed appointments</li>
+    </ul>
+    <a class="watch-link" data-resource-key="momentum-04" href="/access-preview.html">Watch the training ↗</a>
+  </div>
+</article>
+</div></section>
 
 <div class="wrap" style="margin-top:24px">
   <div data-pitch-overlay class="gate-overlay">
