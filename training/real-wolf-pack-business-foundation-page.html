@@ -97,6 +97,24 @@
   .hero-copy{display:flex!important;flex-direction:column!important;justify-content:center!important}
 }
 
+
+.module-card{padding:0!important;display:flex!important;flex-direction:column!important;overflow:hidden!important;border-radius:28px!important;border:1px solid rgba(25,70,157,.16)!important;box-shadow:0 20px 50px rgba(16,47,108,.08)!important;background:#fff!important;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease!important}
+.module-card:hover{transform:translateY(-5px)!important;box-shadow:0 30px 65px rgba(16,47,108,.16)!important;border-color:rgba(245,130,31,.45)!important}
+.module-thumb-wrapper{position:relative;width:100%;height:220px;overflow:hidden;background:#090d16}
+.module-thumb-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.module-card:hover .module-thumb-img{transform:scale(1.05)}
+.module-play-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(9,13,22,.32);backdrop-filter:blur(2px);transition:background .3s ease}
+.module-card:hover .module-play-overlay{background:rgba(9,13,22,.12)}
+.play-circle{width:52px;height:52px;border-radius:50%;background:rgba(245,130,31,.95);color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;padding-left:3px;box-shadow:0 10px 25px rgba(0,0,0,.5),0 0 20px rgba(245,130,31,.5);transition:transform .3s ease,background .3s ease}
+.module-card:hover .play-circle{transform:scale(1.12);background:#f5821f}
+.module-duration-pill{position:absolute;top:14px;right:14px;background:rgba(9,13,22,.88);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);color:#ffd0a3;font-size:11px;font-weight:800;letter-spacing:.08em;padding:5px 12px;border-radius:999px;box-shadow:0 6px 16px rgba(0,0,0,.4)}
+.module-card-body{padding:1.6rem;display:flex;flex-direction:column;flex:1}
+.module-card-body h3{margin:6px 0 10px;font-size:1.35rem;color:var(--blue-dark)}
+.module-card-body p{font-size:.98rem;line-height:1.55;color:#53657b;margin:0 0 16px}
+.module-bullets{list-style:none;padding:0;margin:0 0 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.module-bullets li{position:relative;padding-left:22px;font-size:.92rem;color:#334155;line-height:1.45}
+.module-bullets li::before{content:"✓";position:absolute;left:0;color:var(--orange);font-weight:900}
+
 </style>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="/site.webmanifest">
@@ -134,12 +152,94 @@
 <section class="section wrap" id="trainings">
 <div class="section-heading"><p class="eyebrow">WHAT AGENTS CAN WATCH</p><h2>Four practical trainings<br><span class="muted">for a stronger foundation.</span></h2><p>This page gives agents and prospective agents a clear preview of the kind of business-building education available inside the Real Wolf Pack.</p></div>
 <div class="training-grid">
-<article class="feature-card primary-feature"><span class="card-label">TRAINING 01</span><h3>Build a Simple Business Plan</h3><p>Learn how to simplify your goals, clarify your priorities, and build a practical business plan you can actually follow.</p><ul><li>Reset your production goals</li><li>Identify the activities that matter most</li><li>Create a plan for consistent execution</li></ul><a class="watch-link" data-resource-key="foundation-01" href="/access-preview.html" >Watch the training ↗</a></article>
-<article class="feature-card"><span class="card-label">TRAINING 02</span><h3>Identify Your Core Pillars of Business</h3><p>Identify where your deals are most likely to come from so you can stop chasing random activity and build with intention.</p><ul><li>Understand your best opportunities</li><li>Choose pillars that fit your strengths</li><li>Build a predictable lead generation approach</li></ul><a class="watch-link" data-resource-key="foundation-02" href="/access-preview.html" >Watch the training ↗</a></article>
-<article class="feature-card"><span class="card-label">TRAINING 03</span><h3>Manage Your Weekly Schedule Like a Producer</h3><p>Your calendar is one of the clearest indicators of your future production. Learn how to structure the week around revenue activity.</p><ul><li>Time block effectively</li><li>Protect prospecting and follow-up time</li><li>Reduce distractions and build consistency</li></ul><a class="watch-link" data-resource-key="foundation-03" href="/access-preview.html" >Watch the training ↗</a></article>
-<article class="feature-card"><span class="card-label">TRAINING 04</span><h3>Use Claude as Your Daily Operations Assistant</h3><p>Use AI to organize tasks, create follow-up plans, support planning, and reduce the mental load of running your business.</p><ul><li>Organize tasks and priorities</li><li>Create follow-up workflows</li><li>Use AI to support better execution</li></ul><a class="watch-link" data-resource-key="foundation-04" href="/access-preview.html" >Watch the training ↗</a></article>
-</div>
-</section>
+<!-- Module 01 -->
+<article class="feature-card module-card">
+  <div class="module-thumb-wrapper">
+    <img src="/img/hero-tech-stage.webp" alt="Module 01: Build a Simple Business Plan" class="module-thumb-img" loading="lazy">
+    <div class="module-play-overlay">
+      <span class="play-circle">▶</span>
+    </div>
+    <span class="module-duration-pill">28 MIN · VIDEO MODULE</span>
+  </div>
+  <div class="module-card-body">
+    <span class="card-label">TRAINING 01</span>
+    <h3>Build a Simple Business Plan</h3>
+    <p>Learn how to simplify your goals, clarify your priorities, and build a practical business plan you can actually follow.</p>
+    <ul class="module-bullets">
+      <li>Reset your production goals with realistic math</li>
+      <li>Identify the highest-yield activities for your market</li>
+      <li>Create a 1-page roadmap for consistent execution</li>
+    </ul>
+    <a class="watch-link" data-resource-key="foundation-01" href="/access-preview.html">Watch the training ↗</a>
+  </div>
+</article>
+
+<!-- Module 02 -->
+<article class="feature-card module-card">
+  <div class="module-thumb-wrapper">
+    <img src="/img/financial-growth-engine.webp" alt="Module 02: Identify Your Core Pillars of Business" class="module-thumb-img" loading="lazy">
+    <div class="module-play-overlay">
+      <span class="play-circle">▶</span>
+    </div>
+    <span class="module-duration-pill">34 MIN · VIDEO MODULE</span>
+  </div>
+  <div class="module-card-body">
+    <span class="card-label">TRAINING 02</span>
+    <h3>Identify Your Core Deal Pillars</h3>
+    <p>Identify where your transactions are most likely to come from so you stop chasing random activity and build with intention.</p>
+    <ul class="module-bullets">
+      <li>Audit your past transactions and natural advantages</li>
+      <li>Select 2 to 3 core lead generation pillars</li>
+      <li>Build predictable client pipeline consistency</li>
+    </ul>
+    <a class="watch-link" data-resource-key="foundation-02" href="/access-preview.html">Watch the training ↗</a>
+  </div>
+</article>
+
+<!-- Module 03 -->
+<article class="feature-card module-card">
+  <div class="module-thumb-wrapper">
+    <img src="/img/creator-studio-desk.webp" alt="Module 03: Manage Your Weekly Schedule Like a Producer" class="module-thumb-img" loading="lazy">
+    <div class="module-play-overlay">
+      <span class="play-circle">▶</span>
+    </div>
+    <span class="module-duration-pill">42 MIN · MASTERCLASS</span>
+  </div>
+  <div class="module-card-body">
+    <span class="card-label">TRAINING 03</span>
+    <h3>Weekly Schedule Management</h3>
+    <p>Your calendar is the clearest indicator of your future production. Learn how top agents protect high-value working blocks.</p>
+    <ul class="module-bullets">
+      <li>Design a sustainable ideal weekly calendar</li>
+      <li>Block non-negotiable prospecting and client time</li>
+      <li>Eliminate administrative burnout and low-value tasks</li>
+    </ul>
+    <a class="watch-link" data-resource-key="foundation-03" href="/access-preview.html">Watch the training ↗</a>
+  </div>
+</article>
+
+<!-- Module 04 -->
+<article class="feature-card module-card">
+  <div class="module-thumb-wrapper">
+    <img src="/img/tech-audit-matrix.webp" alt="Module 04: Protect Your Revenue-Producing Time & AI" class="module-thumb-img" loading="lazy">
+    <div class="module-play-overlay">
+      <span class="play-circle">▶</span>
+    </div>
+    <span class="module-duration-pill">38 MIN · AI WORKSHOP</span>
+  </div>
+  <div class="module-card-body">
+    <span class="card-label">TRAINING 04</span>
+    <h3>Protect Revenue Time with AI</h3>
+    <p>Learn how to use modern AI and automation to handle marketing, follow-up, and routine tasks so you spend more time face-to-face.</p>
+    <ul class="module-bullets">
+      <li>Deploy copy-and-paste real estate AI prompts</li>
+      <li>Automate lead follow-up messages and listing copy</li>
+      <li>Scale your personal output without working weekends</li>
+    </ul>
+    <a class="watch-link" data-resource-key="foundation-04" href="/access-preview.html">Watch the training ↗</a>
+  </div>
+</article>
+</div></section>
 
 <div class="wrap" style="margin-top:24px">
   <div data-pitch-overlay class="gate-overlay">
