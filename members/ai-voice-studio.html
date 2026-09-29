@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Zero-Cost AI Voice Cloning & Dubbing | RealWolfPack.com</title><style>:root{--blue:#19469D;--dark:#102f6c;--orange:#F5821F;--sand:#F5E9D0;--gray:#E2E3E4;--text:#333;--muted:#58697f}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#fff,#fbf7ef);color:var(--text);min-height:100vh}.wrap{width:min(1080px,calc(100% - 32px));margin:auto}.top{padding:18px 0;display:flex;justify-content:space-between;gap:16px;align-items:center}.brand,.top a{font-weight:900;color:var(--dark);text-decoration:none}.hero{padding:54px 0 28px}.eyebrow{color:var(--orange);font-weight:900;letter-spacing:.13em;text-transform:uppercase;font-size:13px}h1{font-size:clamp(40px,7.5vw,72px);line-height:.92;letter-spacing:-.07em;color:var(--dark);margin:10px 0 14px}h1 em{font-style:normal;color:var(--orange)}p.lead{font-size:19px;color:var(--muted);line-height:1.55;max-width:760px;margin:0 0 24px}.guide-grid{display:grid;gap:24px;margin:32px 0 80px}.card{background:#fff;border:1px solid rgba(25,70,157,.14);border-radius:28px;padding:28px;box-shadow:0 14px 35px rgba(16,47,108,.06)}.card h2{color:var(--dark);font-size:24px;margin:0 0 14px;letter-spacing:-.04em}.card p{color:#475569;font-size:16px;line-height:1.6;margin:0 0 14px}.steps-box{display:grid;grid-template-columns:1fr;gap:16px;margin:20px 0}.step-item{display:flex;gap:16px;align-items:flex-start;background:#f8fafc;padding:18px;border-radius:20px;border:1.5px solid var(--gray)}.step-num{background:var(--orange);color:#2f1700;font-weight:900;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;flex-shrink:0;font-size:16px}.step-text strong{display:block;color:var(--dark);font-size:16px;margin-bottom:4px}.step-text span{color:#64748b;font-size:14px;line-height:1.5;display:block}.btn{display:inline-block;background:var(--orange);color:#2f1700;border-radius:999px;padding:12px 22px;text-decoration:none;font-weight:900;font-size:14px;box-shadow:0 8px 20px rgba(245,130,31,.25)}</style><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="manifest" href="/site.webmanifest"><link rel="stylesheet" href="/css/main.css">
-<script src="/js/site-nav.js" defer></script>
+<script src="/js/components.js" defer></script>
 </head><body><header class="site-header member-header">
   <div class="wrap header-inner">
     <a class="brand-link" href="/members/index.html" aria-label="Real Wolf Pack Member Portal">
@@ -9,16 +9,19 @@
         <small>MEMBER COMMAND BASE</small>
       </div>
     </a>
+    
     <button class="nav-toggle" aria-label="Toggle navigation menu" onclick="toggleMobileNav()">
       <span></span><span></span><span></span>
     </button>
+    
     <nav class="site-nav" id="site-nav">
-      <a href="/members/index.html">Dashboard</a>
-      <a href="/training/index.html">Training Hub</a>
-      <a href="/members/downloads.html">Canva Packs</a>
-      <a href="/members/ai-prompts.html">AI Prompts</a>
-      <a href="/members/scripts.html">Toolkits</a>
-      <a href="/members/master-playbook.html">Playbook</a>
+      <a class="nav-link-direct" href="/members/index.html">Dashboard</a>
+      <a class="nav-link-direct" href="/training/index.html">Training Hub</a>
+      <a class="nav-link-direct" href="/members/downloads.html">Canva Packs</a>
+      <a class="nav-link-direct" href="/members/ai-prompts.html">AI Prompts</a>
+      <a class="nav-link-direct" href="/members/scripts.html">Toolkits</a>
+      <a class="nav-link-direct" href="/members/master-playbook.html">Playbook</a>
+      
       <div class="nav-actions">
         <a class="btn-nav-outline" href="/members/admin.html" id="nav-admin-link">Admin Panel</a>
         <a class="btn-nav-primary" href="/" style="background:#475569">Public Site</a>

@@ -19,7 +19,7 @@
 .str-stage-badge small{color:#f5821f;font-size:.82rem;font-weight:700;letter-spacing:.04em}
 
 </style><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="manifest" href="/site.webmanifest"><meta property="og:type" content="website"><meta property="og:url" content="https://realwolfpack.com/airbnb-agent"><meta property="og:title" content="Short-Term Rentals & Condotels for Agents | Real Wolf Pack"><meta property="og:description" content="Experienced in the sale, purchase, and management of short-term rentals and condotels, featured in James's Salt Air Sessions on YouTube."><meta property="og:image" content="https://real-wolf-pack.web.app/favicon.svg"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Short-Term Rentals & Condotels for Agents | Real Wolf Pack"><meta name="twitter:description" content="Experienced in the sale, purchase, and management of short-term rentals and condotels, featured in James's Salt Air Sessions on YouTube."><meta name="twitter:image" content="https://real-wolf-pack.web.app/favicon.svg"><link rel="stylesheet" href="/css/main.css">
-<script src="/js/site-nav.js" defer></script>
+<script src="/js/components.js" defer></script>
 </head><body><header class="site-header">
   <div class="wrap header-inner">
     <a class="brand-link" href="/" aria-label="Real Wolf Pack Home">
@@ -35,6 +35,7 @@
     </button>
     
     <nav class="site-nav" id="site-nav">
+      <!-- The Model Dropdown -->
       <div class="nav-dropdown">
         <button class="nav-drop-btn" onclick="toggleDropdown(this)">
           The Model <span class="drop-arrow">▾</span>
@@ -64,6 +65,7 @@
         </div>
       </div>
 
+      <!-- Strategy & Niches Dropdown -->
       <div class="nav-dropdown">
         <button class="nav-drop-btn" onclick="toggleDropdown(this)">
           Strategy & Niches <span class="drop-arrow">▾</span>
@@ -93,9 +95,11 @@
         </div>
       </div>
 
+      <!-- Direct Links -->
       <a class="nav-link-direct" href="/training/index.html">Training Hub</a>
       <a class="nav-link-direct" href="/about.html">About James</a>
 
+      <!-- Action Buttons -->
       <div class="nav-actions">
         <a class="btn-nav-outline" href="/login.html">Member Login</a>
         <a class="btn-nav-primary" href="/request-access.html">Join The Pack ↗</a>

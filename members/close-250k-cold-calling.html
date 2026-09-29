@@ -26,7 +26,7 @@
 </style><link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="/css/main.css">
-<script src="/js/site-nav.js" defer></script>
+<script src="/js/components.js" defer></script>
 </head><body><header class="site-header member-header">
   <div class="wrap header-inner">
     <a class="brand-link" href="/members/index.html" aria-label="Real Wolf Pack Member Portal">
@@ -36,16 +36,19 @@
         <small>MEMBER COMMAND BASE</small>
       </div>
     </a>
+    
     <button class="nav-toggle" aria-label="Toggle navigation menu" onclick="toggleMobileNav()">
       <span></span><span></span><span></span>
     </button>
+    
     <nav class="site-nav" id="site-nav">
-      <a href="/members/index.html">Dashboard</a>
-      <a href="/training/index.html">Training Hub</a>
-      <a href="/members/downloads.html">Canva Packs</a>
-      <a href="/members/ai-prompts.html">AI Prompts</a>
-      <a href="/members/scripts.html">Toolkits</a>
-      <a href="/members/master-playbook.html">Playbook</a>
+      <a class="nav-link-direct" href="/members/index.html">Dashboard</a>
+      <a class="nav-link-direct" href="/training/index.html">Training Hub</a>
+      <a class="nav-link-direct" href="/members/downloads.html">Canva Packs</a>
+      <a class="nav-link-direct" href="/members/ai-prompts.html">AI Prompts</a>
+      <a class="nav-link-direct" href="/members/scripts.html">Toolkits</a>
+      <a class="nav-link-direct" href="/members/master-playbook.html">Playbook</a>
+      
       <div class="nav-actions">
         <a class="btn-nav-outline" href="/members/admin.html" id="nav-admin-link">Admin Panel</a>
         <a class="btn-nav-primary" href="/" style="background:#475569">Public Site</a>

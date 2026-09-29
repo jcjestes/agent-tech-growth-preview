@@ -1,7 +1,7 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Page Not Found | RealWolfPack.com</title><style>:root{--blue:#19469D;--dark:#102f6c;--orange:#F5821F;--sand:#F5E9D0;--gray:#E2E3E4;--text:#333;--muted:#58697f}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#fff,#fbf7ef);color:var(--text);min-height:100vh;display:flex;flex-direction:column;justify-content:space-between}.wrap{width:min(980px,calc(100% - 32px));margin:auto}.top{padding:18px 0;display:flex;justify-content:space-between;gap:16px;align-items:center}.brand,.top a{font-weight:900;color:var(--dark);text-decoration:none}.error-box{text-align:center;padding:80px 20px 100px}.code{font-size:clamp(80px,18vw,160px);font-weight:900;color:var(--orange);line-height:.85;letter-spacing:-.08em;margin:0 0 16px}.code span{color:var(--dark)}h1{font-size:clamp(32px,6vw,54px);color:var(--dark);line-height:1;margin:0 0 16px;letter-spacing:-.05em}p{font-size:18px;color:var(--muted);max-width:540px;margin:0 auto 28px;line-height:1.55}.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.btn{display:inline-block;background:var(--orange);color:#2f1700;border-radius:999px;padding:14px 24px;text-decoration:none;font-weight:900;font-size:15px}.btn.ghost{background:var(--sand);color:var(--dark)}footer{border-top:1px solid var(--gray);padding:24px 0;text-align:center;color:var(--muted);font-size:14px}</style><link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="/css/main.css">
-<script src="/js/site-nav.js" defer></script>
+<script src="/js/components.js" defer></script>
 </head><body><header class="site-header">
   <div class="wrap header-inner">
     <a class="brand-link" href="/" aria-label="Real Wolf Pack Home">
@@ -17,6 +17,7 @@
     </button>
     
     <nav class="site-nav" id="site-nav">
+      <!-- The Model Dropdown -->
       <div class="nav-dropdown">
         <button class="nav-drop-btn" onclick="toggleDropdown(this)">
           The Model <span class="drop-arrow">▾</span>
@@ -46,6 +47,7 @@
         </div>
       </div>
 
+      <!-- Strategy & Niches Dropdown -->
       <div class="nav-dropdown">
         <button class="nav-drop-btn" onclick="toggleDropdown(this)">
           Strategy & Niches <span class="drop-arrow">▾</span>
@@ -75,9 +77,11 @@
         </div>
       </div>
 
+      <!-- Direct Links -->
       <a class="nav-link-direct" href="/training/index.html">Training Hub</a>
       <a class="nav-link-direct" href="/about.html">About James</a>
 
+      <!-- Action Buttons -->
       <div class="nav-actions">
         <a class="btn-nav-outline" href="/login.html">Member Login</a>
         <a class="btn-nav-primary" href="/request-access.html">Join The Pack ↗</a>

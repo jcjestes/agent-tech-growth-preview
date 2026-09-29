@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Real Wolf Pack Master Playbook | RealWolfPack.com</title><style>:root{--blue:#19469D;--dark:#102f6c;--orange:#F5821F;--sand:#F5E9D0;--gray:#E2E3E4;--text:#333;--muted:#58697f}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f8fafc;color:var(--text);line-height:1.65;font-size:16px}.wrap{width:min(1080px,calc(100% - 32px));margin:auto}.top{padding:18px 0;display:flex;justify-content:space-between;gap:16px;align-items:center}.brand,.top a{font-weight:900;color:var(--dark);text-decoration:none}.hero{background:linear-gradient(135deg,var(--dark),var(--blue));color:white;padding:48px 0;border-radius:0 0 36px 36px}.hero h1{font-size:clamp(36px,6vw,60px);line-height:.95;margin:8px 0 12px;color:white}h2{font-size:26px;color:var(--dark);margin:36px 0 16px;border-bottom:2px solid var(--gray);padding-bottom:8px}h3{font-size:20px;color:var(--dark);margin:24px 0 10px}p{color:#334155;margin:0 0 16px}ul,ol{padding-left:22px;color:#334155;margin:0 0 20px}li{margin-bottom:8px}a{color:var(--blue);font-weight:700}a:hover{color:var(--orange)}.card{background:#fff;border:1px solid #e2e8f0;border-radius:24px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,.04);margin-bottom:28px}.badge{display:inline-block;background:var(--sand);color:var(--dark);padding:4px 12px;border-radius:999px;font-size:12px;font-weight:900;text-transform:uppercase}.btn{display:inline-block;background:var(--orange);color:#2f1700;border:0;border-radius:999px;padding:10px 20px;font-weight:900;font-size:13px;text-decoration:none;cursor:pointer}.table-wrap{overflow-x:auto;margin:20px 0}.playbook-table{width:100%;border-collapse:collapse;font-size:14px;background:#fff;border-radius:18px;overflow:hidden;border:1px solid #e2e8f0}.playbook-table th{background:#f1f5f9;padding:12px 16px;text-align:left;color:var(--dark);font-weight:900;border-bottom:2px solid #cbd5e1}.playbook-table td{padding:12px 16px;border-bottom:1px solid #edf2f7}footer{border-top:1px solid var(--gray);padding:28px 0;text-align:center;color:var(--muted);font-size:14px;margin-top:60px}@media print{header,footer,.top,.btn{display:none !important}.card{border:0;box-shadow:none;padding:0}}</style><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="manifest" href="/site.webmanifest"><link rel="stylesheet" href="/css/main.css">
-<script src="/js/site-nav.js" defer></script>
+<script src="/js/components.js" defer></script>
 </head><body><header class="site-header member-header">
   <div class="wrap header-inner">
     <a class="brand-link" href="/members/index.html" aria-label="Real Wolf Pack Member Portal">
@@ -9,16 +9,19 @@
         <small>MEMBER COMMAND BASE</small>
       </div>
     </a>
+    
     <button class="nav-toggle" aria-label="Toggle navigation menu" onclick="toggleMobileNav()">
       <span></span><span></span><span></span>
     </button>
+    
     <nav class="site-nav" id="site-nav">
-      <a href="/members/index.html">Dashboard</a>
-      <a href="/training/index.html">Training Hub</a>
-      <a href="/members/downloads.html">Canva Packs</a>
-      <a href="/members/ai-prompts.html">AI Prompts</a>
-      <a href="/members/scripts.html">Toolkits</a>
-      <a href="/members/master-playbook.html">Playbook</a>
+      <a class="nav-link-direct" href="/members/index.html">Dashboard</a>
+      <a class="nav-link-direct" href="/training/index.html">Training Hub</a>
+      <a class="nav-link-direct" href="/members/downloads.html">Canva Packs</a>
+      <a class="nav-link-direct" href="/members/ai-prompts.html">AI Prompts</a>
+      <a class="nav-link-direct" href="/members/scripts.html">Toolkits</a>
+      <a class="nav-link-direct" href="/members/master-playbook.html">Playbook</a>
+      
       <div class="nav-actions">
         <a class="btn-nav-outline" href="/members/admin.html" id="nav-admin-link">Admin Panel</a>
         <a class="btn-nav-primary" href="/" style="background:#475569">Public Site</a>

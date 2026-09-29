@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Agent Growth Diagnostic Report | RealWolfPack.com</title><style>:root{--blue:#19469D;--dark:#102f6c;--orange:#F5821F;--sand:#F5E9D0;--gray:#E2E3E4;--text:#333;--muted:#58697f}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#fff,#fbf7ef);color:var(--text);min-height:100vh}.wrap{width:min(940px,calc(100% - 32px));margin:auto}.top{padding:18px 0;display:flex;justify-content:space-between;gap:16px;align-items:center}.brand,.top a{font-weight:900;color:var(--dark);text-decoration:none}.report-card{background:#fff;border:2px solid var(--dark);border-radius:28px;padding:36px;box-shadow:0 24px 70px rgba(16,47,108,.12);margin:40px 0 80px}.rep-header{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:2px solid var(--dark);padding-bottom:18px;margin-bottom:24px;flex-wrap:wrap;gap:14px}.rep-header h1{font-size:28px;color:var(--dark);margin:0 0 4px;line-height:1.1}.rep-header p{color:#64748b;font-size:14px;margin:0}.score-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:24px 0}.score-box{background:#f8fafc;border:1.5px solid var(--gray);border-radius:18px;padding:16px;text-align:center}.score-num{font-size:28px;font-weight:900;color:var(--orange);display:block;line-height:1}.score-label{font-size:12px;font-weight:900;color:var(--dark);margin-top:6px;display:block}.leak-box{background:#fff9f2;border:1.5px solid #fed7aa;border-radius:20px;padding:20px;margin-bottom:20px}.leak-box h3{color:#9a3412;font-size:18px;margin:0 0 10px}.plan-box{background:#f0fdf4;border:1.5px solid #bbf7d0;border-radius:20px;padding:20px;margin-bottom:24px}.plan-box h3{color:#166534;font-size:18px;margin:0 0 10px}.comp-box{background:linear-gradient(145deg,var(--dark),var(--blue));color:white;border-radius:22px;padding:24px}.comp-box h3{color:white;font-size:18px;margin:0 0 8px}.comp-box p{color:#e2e8f0;font-size:14px;line-height:1.55;margin:0}.btn{display:inline-flex;align-items:center;gap:6px;background:var(--orange);color:#2f1700;border:0;border-radius:999px;padding:11px 22px;font-weight:900;font-size:14px;cursor:pointer;box-shadow:0 8px 20px rgba(245,130,31,.25)}@media print{body{background:#fff;color:#000}header,footer,.top,.btn{display:none !important}.report-card{border:1px solid #000;box-shadow:none;padding:20px;margin:0}}@media(max-width:640px){.score-grid{grid-template-columns:repeat(2,1fr)}}</style><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="manifest" href="/site.webmanifest"><link rel="stylesheet" href="/css/main.css">
-<script src="/js/site-nav.js" defer></script>
+<script src="/js/components.js" defer></script>
 </head><body><header class="site-header member-header">
   <div class="wrap header-inner">
     <a class="brand-link" href="/members/index.html" aria-label="Real Wolf Pack Member Portal">
@@ -9,16 +9,19 @@
         <small>MEMBER COMMAND BASE</small>
       </div>
     </a>
+    
     <button class="nav-toggle" aria-label="Toggle navigation menu" onclick="toggleMobileNav()">
       <span></span><span></span><span></span>
     </button>
+    
     <nav class="site-nav" id="site-nav">
-      <a href="/members/index.html">Dashboard</a>
-      <a href="/training/index.html">Training Hub</a>
-      <a href="/members/downloads.html">Canva Packs</a>
-      <a href="/members/ai-prompts.html">AI Prompts</a>
-      <a href="/members/scripts.html">Toolkits</a>
-      <a href="/members/master-playbook.html">Playbook</a>
+      <a class="nav-link-direct" href="/members/index.html">Dashboard</a>
+      <a class="nav-link-direct" href="/training/index.html">Training Hub</a>
+      <a class="nav-link-direct" href="/members/downloads.html">Canva Packs</a>
+      <a class="nav-link-direct" href="/members/ai-prompts.html">AI Prompts</a>
+      <a class="nav-link-direct" href="/members/scripts.html">Toolkits</a>
+      <a class="nav-link-direct" href="/members/master-playbook.html">Playbook</a>
+      
       <div class="nav-actions">
         <a class="btn-nav-outline" href="/members/admin.html" id="nav-admin-link">Admin Panel</a>
         <a class="btn-nav-primary" href="/" style="background:#475569">Public Site</a>

@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Frequently Asked Questions | RealWolfPack.com</title><style>:root{--blue:#19469D;--dark:#102f6c;--orange:#F5821F;--sand:#F5E9D0;--gray:#E2E3E4;--text:#333;--muted:#58697f}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#fff,#fbf7ef);color:var(--text);min-height:100vh}.wrap{width:min(980px,calc(100% - 32px));margin:auto}.top{padding:18px 0;display:flex;justify-content:space-between;gap:16px;align-items:center}.brand,.top a{font-weight:900;color:var(--dark);text-decoration:none}.hero{padding:54px 0 28px;text-align:center}.eyebrow{color:var(--orange);font-weight:900;letter-spacing:.13em;text-transform:uppercase;font-size:13px}h1{font-size:clamp(40px,7.5vw,76px);line-height:.92;letter-spacing:-.07em;color:var(--dark);margin:12px auto 16px;max-width:860px}h1 em{font-style:normal;color:var(--orange)}p.lead{font-size:20px;color:var(--muted);line-height:1.55;max-width:680px;margin:0 auto 28px}.faq-list{display:grid;gap:16px;margin:32px 0 70px}details{background:#fff;border:1px solid rgba(25,70,157,.14);border-radius:24px;padding:24px;box-shadow:0 12px 35px rgba(16,47,108,.06);transition:border-color .18s ease}details[open]{border-color:var(--orange)}summary{font-weight:900;color:var(--dark);font-size:20px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}summary::-webkit-details-marker{display:none}summary:after{content:"+";color:var(--orange);font-size:28px;font-weight:900}details[open] summary:after{content:"-"}details p{color:#475569;font-size:16px;line-height:1.65;margin:16px 0 0}details ul{margin:12px 0;padding-left:22px;color:#475569;font-size:16px;line-height:1.65}.btn{display:inline-block;background:var(--orange);color:#2f1700;border-radius:999px;padding:15px 28px;font-weight:900;font-size:16px;text-decoration:none;box-shadow:0 12px 30px rgba(245,130,31,.25)}footer{border-top:1px solid var(--gray);padding:28px 0;text-align:center;color:var(--muted);font-size:14px}</style><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="manifest" href="/site.webmanifest"><link rel="stylesheet" href="/css/main.css">
-<script src="/js/site-nav.js" defer></script>
+<script src="/js/components.js" defer></script>
 </head><body><header class="site-header">
   <div class="wrap header-inner">
     <a class="brand-link" href="/" aria-label="Real Wolf Pack Home">
@@ -15,6 +15,7 @@
     </button>
     
     <nav class="site-nav" id="site-nav">
+      <!-- The Model Dropdown -->
       <div class="nav-dropdown">
         <button class="nav-drop-btn" onclick="toggleDropdown(this)">
           The Model <span class="drop-arrow">▾</span>
@@ -44,6 +45,7 @@
         </div>
       </div>
 
+      <!-- Strategy & Niches Dropdown -->
       <div class="nav-dropdown">
         <button class="nav-drop-btn" onclick="toggleDropdown(this)">
           Strategy & Niches <span class="drop-arrow">▾</span>
@@ -73,9 +75,11 @@
         </div>
       </div>
 
+      <!-- Direct Links -->
       <a class="nav-link-direct" href="/training/index.html">Training Hub</a>
       <a class="nav-link-direct" href="/about.html">About James</a>
 
+      <!-- Action Buttons -->
       <div class="nav-actions">
         <a class="btn-nav-outline" href="/login.html">Member Login</a>
         <a class="btn-nav-primary" href="/request-access.html">Join The Pack ↗</a>

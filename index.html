@@ -262,7 +262,7 @@ document.querySelectorAll('input[name="path"]').forEach((input) => {
 <meta name="twitter:description" content="Partner with James Jestes into Agent Wolf Pack at eXp Realty. Free access to modern marketing, AI tools, and direct mentorship.">
 <meta name="twitter:image" content="https://real-wolf-pack.web.app/img/og-social-share.png">
 <link rel="stylesheet" href="/css/main.css">
-<script src="/js/site-nav.js" defer></script>
+<script src="/js/components.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -281,6 +281,7 @@ document.querySelectorAll('input[name="path"]').forEach((input) => {
     </button>
     
     <nav class="site-nav" id="site-nav">
+      <!-- The Model Dropdown -->
       <div class="nav-dropdown">
         <button class="nav-drop-btn" onclick="toggleDropdown(this)">
           The Model <span class="drop-arrow">▾</span>
@@ -310,6 +311,7 @@ document.querySelectorAll('input[name="path"]').forEach((input) => {
         </div>
       </div>
 
+      <!-- Strategy & Niches Dropdown -->
       <div class="nav-dropdown">
         <button class="nav-drop-btn" onclick="toggleDropdown(this)">
           Strategy & Niches <span class="drop-arrow">▾</span>
@@ -339,9 +341,11 @@ document.querySelectorAll('input[name="path"]').forEach((input) => {
         </div>
       </div>
 
+      <!-- Direct Links -->
       <a class="nav-link-direct" href="/training/index.html">Training Hub</a>
       <a class="nav-link-direct" href="/about.html">About James</a>
 
+      <!-- Action Buttons -->
       <div class="nav-actions">
         <a class="btn-nav-outline" href="/login.html">Member Login</a>
         <a class="btn-nav-primary" href="/request-access.html">Join The Pack ↗</a>

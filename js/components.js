@@ -1,8 +1,10 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Privacy Policy | RealWolfPack.com</title><style>:root{--blue:#19469D;--dark:#102f6c;--orange:#F5821F;--sand:#F5E9D0;--gray:#E2E3E4;--text:#333;--muted:#58697f}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#fff,#fbf7ef);color:var(--text);min-height:100vh}.wrap{width:min(920px,calc(100% - 32px));margin:auto}.top{padding:18px 0;display:flex;justify-content:space-between;gap:16px;align-items:center}.brand,.top a{font-weight:900;color:var(--dark);text-decoration:none}.content{background:#fff;border:1px solid rgba(25,70,157,.14);border-radius:32px;padding:36px;box-shadow:0 24px 70px rgba(16,47,108,.08);margin:40px 0 80px}h1{font-size:clamp(36px,6vw,56px);color:var(--dark);line-height:1;margin:0 0 12px;letter-spacing:-.05em}h2{color:var(--dark);font-size:22px;margin:28px 0 10px}p,li{font-size:16px;color:#475569;line-height:1.65}ul{padding-left:22px}footer{border-top:1px solid var(--gray);padding:24px 0;text-align:center;color:var(--muted);font-size:14px}</style><link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/css/main.css">
-<script src="/js/components.js" defer></script>
-</head><body><header class="site-header">
+/**
+ * RealWolfPack.com · Unified Component Loader & Navigation Engine
+ * Automatically hydrates Header, Dropdowns, Active States, and Footer across all pages.
+ * Ensures you never have to re-write header, footer, or navigation when creating new pages.
+ */
+
+const RWP_PUBLIC_HEADER = `<header class="site-header">
   <div class="wrap header-inner">
     <a class="brand-link" href="/" aria-label="Real Wolf Pack Home">
       <span class="brand-monogram">JJ<span>.</span></span>
@@ -88,7 +90,39 @@
       </div>
     </nav>
   </div>
-</header><main class="wrap"><article class="content"><h1>Privacy Policy</h1><p style="color:var(--orange);font-weight:900;font-size:14px">Last Updated: September 2026</p><p>RealWolfPack.com is operated by James Jestes, Broker Associate with eXp Realty. Your privacy is critically important to us. This Privacy Policy outlines the types of personal information we collect, how it is used, and the steps we take to protect your data.</p><h2>1. Information We Collect</h2><p>When you interact with RealWolfPack.com, we may collect personal information that you voluntarily provide, including:</p><ul><li>Contact Information: Full name, email address, phone number, and geographic market.</li><li>Professional Information: Current real estate brokerage, production level, years of experience, and business goals.</li><li>Inquiry Details: Questions, deal review notes, or messages submitted through our intake and mentorship forms.</li><li>Authentication Data: Email and account credentials created when registering for the member portal.</li></ul><h2>2. How We Use Your Information</h2><p>We use the information we collect solely for legitimate business purposes, including:</p><ul><li>Responding to inquiries and scheduling confidential partnership conversations with James Jestes.</li><li>Providing access to the Real Wolf Pack member hub, training tracks, and template resources.</li><li>Communicating updates regarding weekly mastermind calls, new training modules, and organization news.</li><li>Evaluating organization fit and supporting onboarding for agents who join our eXp organization.</li></ul><h2>3. Information Sharing and Selling</h2><p>We do not sell, rent, trade, or share your personal information with third-party marketers or external lead brokers under any circumstances. Information is kept confidential between you, James Jestes, and authorized leadership within our organization.</p><h2>4. Data Storage and Security</h2><p>Our website and member portal utilize Google Cloud and Firebase infrastructure with industry-standard encryption, SSL protocols, and role-based security rules to safeguard your information from unauthorized access, alteration, or disclosure.</p><h2>5. Third-Party Links and Resources</h2><p>Our training library and resources may contain links to external platforms, including Google Drive, Canva, YouTube, and official eXp Realty tools. We are not responsible for the privacy practices or content of external third-party websites.</p><h2>6. Contact Us</h2><p>If you have any questions about this Privacy Policy or wish to request the removal of your contact information, please contact James Jestes directly at james@jamesjestes.com.</p></article></main><footer class="site-footer">
+</header>`;
+
+const RWP_MEMBER_HEADER = `<header class="site-header member-header">
+  <div class="wrap header-inner">
+    <a class="brand-link" href="/members/index.html" aria-label="Real Wolf Pack Member Portal">
+      <span class="brand-monogram">JJ<span>.</span></span>
+      <div class="brand-text">
+        <strong>REAL WOLF PACK</strong>
+        <small>MEMBER COMMAND BASE</small>
+      </div>
+    </a>
+    
+    <button class="nav-toggle" aria-label="Toggle navigation menu" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </button>
+    
+    <nav class="site-nav" id="site-nav">
+      <a class="nav-link-direct" href="/members/index.html">Dashboard</a>
+      <a class="nav-link-direct" href="/training/index.html">Training Hub</a>
+      <a class="nav-link-direct" href="/members/downloads.html">Canva Packs</a>
+      <a class="nav-link-direct" href="/members/ai-prompts.html">AI Prompts</a>
+      <a class="nav-link-direct" href="/members/scripts.html">Toolkits</a>
+      <a class="nav-link-direct" href="/members/master-playbook.html">Playbook</a>
+      
+      <div class="nav-actions">
+        <a class="btn-nav-outline" href="/members/admin.html" id="nav-admin-link">Admin Panel</a>
+        <a class="btn-nav-primary" href="/" style="background:#475569">Public Site</a>
+      </div>
+    </nav>
+  </div>
+</header>`;
+
+const RWP_FOOTER = `<footer class="site-footer">
   <div class="wrap footer-grid">
     <div class="footer-col brand-col">
       <div class="footer-brand">
@@ -144,4 +178,66 @@
     <p class="disclaimer">RealWolfPack.com is an independent agent attraction and member resource portal operated by James Jestes, Broker Associate with eXp Realty. Agent Wolf Pack is an organization of 3,300+ independent real estate agents within eXp Realty founded by Mike Sherrard and Connor Steinbrook. eXp Realty is an Equal Housing Opportunity brokerage. All commission math, splits, and training access are subject to eXp Realty policies.</p>
     <p class="copyright">© 2026 RealWolfPack.com. All rights reserved. Zero em dashes.</p>
   </div>
-</footer></body></html>
+</footer>`;
+
+function initRWPComponents() {
+  const isPresentation = window.location.pathname.includes('presentation.html');
+  if (isPresentation) return;
+
+  const isMemberPage = window.location.pathname.includes('/members/');
+
+  // 1. Inject or verify Header
+  const existingHeader = document.querySelector('header.site-header');
+  if (!existingHeader) {
+    const headerHTML = isMemberPage ? RWP_MEMBER_HEADER : RWP_PUBLIC_HEADER;
+    document.body.insertAdjacentHTML('afterbegin', headerHTML);
+  }
+
+  // 2. Inject or verify Footer
+  const existingFooter = document.querySelector('footer.site-footer');
+  if (!existingFooter) {
+    document.body.insertAdjacentHTML('beforeend', RWP_FOOTER);
+  }
+
+  // 3. Highlight Active Navigation Links
+  const curPath = window.location.pathname.replace(/\/index\.html$/, '/').replace(/\.html$/, '');
+  document.querySelectorAll('.site-nav a').forEach(a => {
+    const href = a.getAttribute('href');
+    if (!href) return;
+    const aPath = href.replace(/\/index\.html$/, '/').replace(/\.html$/, '');
+    if ((curPath === '/' && aPath === '/') || (aPath !== '/' && aPath !== '#' && curPath.startsWith(aPath))) {
+      a.classList.add('active');
+      const drop = a.closest('.nav-dropdown');
+      if (drop) {
+        const btn = drop.querySelector('.nav-drop-btn');
+        if (btn) btn.style.color = 'var(--orange)';
+      }
+    }
+  });
+}
+
+function toggleMobileNav() {
+  const nav = document.querySelector('#site-nav');
+  if (nav) nav.classList.toggle('open');
+}
+
+function toggleDropdown(btn) {
+  if (window.innerWidth <= 1080) {
+    const menu = btn.nextElementSibling;
+    if (menu) {
+      const isVisible = menu.style.display === 'flex';
+      menu.style.display = isVisible ? 'none' : 'flex';
+      const arrow = btn.querySelector('.drop-arrow');
+      if (arrow) arrow.style.transform = isVisible ? 'none' : 'rotate(180deg)';
+    }
+  }
+}
+
+window.toggleMobileNav = toggleMobileNav;
+window.toggleDropdown = toggleDropdown;
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initRWPComponents);
+} else {
+  initRWPComponents();
+}
