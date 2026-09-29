@@ -72,8 +72,8 @@ const RWP_PUBLIC_HEADER = `<header class="site-header">
           <a class="drop-item" href="/free-pack.html">
             <span class="drop-icon">📦</span>
             <div>
-              <strong>Free Starter Pack</strong>
-              <small>40 Canva templates & 108 AI prompts</small>
+              <strong>Free AI Prompt Pack</strong>
+              <small>108 real estate AI prompts & playbooks</small>
             </div>
           </a>
         </div>
@@ -109,7 +109,7 @@ const RWP_MEMBER_HEADER = `<header class="site-header member-header">
     <nav class="site-nav" id="site-nav">
       <a class="nav-link-direct" href="/members/index.html">Dashboard</a>
       <a class="nav-link-direct" href="/training/index.html">Training Hub</a>
-      <a class="nav-link-direct" href="/members/downloads.html">Canva Packs</a>
+      <a class="nav-link-direct" href="/members/downloads.html">Resource Vault</a>
       <a class="nav-link-direct" href="/members/ai-prompts.html">AI Prompts</a>
       <a class="nav-link-direct" href="/members/scripts.html">Toolkits</a>
       <a class="nav-link-direct" href="/members/master-playbook.html">Playbook</a>
@@ -145,7 +145,7 @@ const RWP_FOOTER = `<footer class="site-footer">
         <li><a href="/calculator.html">Commission Split & Cap Calculator</a></li>
         <li><a href="/airbnb-agent.html">Short-Term Rentals & Condotels</a></li>
         <li><a href="/audit.html">15-Minute Tech & Marketing Audit</a></li>
-        <li><a href="/free-pack.html">Free Modern Agent Starter Pack</a></li>
+        <li><a href="/free-pack.html">Free Agent AI Prompt Pack</a></li>
       </ul>
     </div>
 
