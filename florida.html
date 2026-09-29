@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>The Florida Agent Inbound Engine | Real Wolf Pack</title>
+  <meta name="description" content="A step-by-step educational case study showing Florida real estate agents how to turn 1 hyperlocal video into an inbound lead machine across YouTube, Facebook, X, and LinkedIn.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="/js/components.js" defer></script>
+  <style>
+    .hero-2col {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      padding: 40px 0 50px;
+    }
+    .hero-2col h1 {
+      margin: 12px 0 16px;
+      font-size: clamp(38px, 6.5vw, 68px);
+      line-height: .95;
+      letter-spacing: -.04em;
+      color: var(--dark);
+    }
+    .hero-2col h1 em {
+      font-style: normal;
+      color: var(--orange);
+    }
+    .hero-2col p.lead {
+      font-size: 19px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0 0 24px;
+    }
+    @media (min-width: 900px) {
+      .hero-2col {
+        grid-template-columns: 1.05fr .95fr;
+        align-items: stretch;
+        gap: 3.5rem;
+      }
+      .hero-text-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .fl-hero-stage-card {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        min-height: 520px;
+        border-radius: 36px;
+        overflow: hidden;
+        border: 2px solid rgba(245, 130, 31, .4);
+        box-shadow: 0 25px 60px rgba(16, 47, 108, .25), 0 0 40px rgba(245, 130, 31, .15);
+        display: block;
+      }
+      .fl-hero-stage-media {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+      }
+      .fl-hero-stage-image {
+        width: 100%;
+        height: 100%;
+        max-height: none;
+        object-fit: cover;
+        object-position: center;
+        transition: transform .6s cubic-bezier(.16, 1, .3, 1);
+      }
+      .fl-hero-stage-card:hover .fl-hero-stage-image {
+        transform: scale(1.03);
+      }
+    }
+    .fl-tag {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      background: rgba(9, 13, 22, .88);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(0, 230, 118, .5);
+      border-radius: 999px;
+      padding: 6px 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #00e676;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, .4);
+      z-index: 2;
+    }
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #00e676;
+      box-shadow: 0 0 8px #00e676;
+      animation: livePulse 2s infinite;
+    }
+    @keyframes livePulse {
+      0% { transform: scale(.95); opacity: .8; }
+      50% { transform: scale(1.3); opacity: 1; }
+      100% { transform: scale(.95); opacity: .8; }
+    }
+    .fl-stage-badge {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 24px 20px 20px;
+      background: linear-gradient(to top, rgba(9, 13, 22, .95) 0%, rgba(9, 13, 22, .65) 60%, transparent 100%);
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      z-index: 2;
+    }
+    .fl-stage-badge strong {
+      color: #ffffff;
+      font-size: 1.15rem;
+      letter-spacing: -.01em;
+    }
+    .fl-stage-badge small {
+      color: #f5821f;
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+    .step-card {
+      background: #ffffff;
+      border: 1px solid rgba(25, 70, 157, .14);
+      border-radius: 28px;
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 14px 40px rgba(16, 47, 108, .06);
+    }
+    .step-card h3 {
+      font-size: 1.45rem;
+      color: var(--blue-dark);
+      margin: 12px 0 10px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .step-num {
+      background: var(--sand);
+      color: var(--blue-dark);
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .step-card p {
+      color: #475569;
+      font-size: 16px;
+      line-height: 1.65;
+      margin: 0 0 16px;
+    }
+    .callout-box {
+      background: #f8fafc;
+      border-left: 4px solid var(--orange);
+      border-radius: 0 18px 18px 0;
+      padding: 20px;
+      margin: 16px 0;
+    }
+    .callout-box strong {
+      color: var(--dark);
+      display: block;
+      font-size: 15.5px;
+      margin-bottom: 4px;
+    }
+    .callout-box p {
+      color: #475569;
+      font-size: 14.5px;
+      margin: 0;
+      line-height: 1.55;
+    }
+    .spoke-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
+    }
+    .spoke-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 20px;
+    }
+    .spoke-card strong {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--dark);
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    .spoke-card p {
+      color: #64748b;
+      font-size: 14px;
+      margin: 0;
+      line-height: 1.5;
+    }
+    .lead-panel {
+      background: linear-gradient(135deg, #102f6c 0%, #090d16 100%);
+      color: #ffffff;
+      border-radius: 32px;
+      padding: 44px 32px;
+      border: 2px solid rgba(245, 130, 31, .4);
+      margin-top: 48px;
+      box-shadow: 0 25px 60px rgba(16, 47, 108, .25);
+    }
+    .form-grid.two {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 680px) {
+      .form-grid.two {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .field label {
+      color: #cbd5e1;
+      font-size: 13px;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .field input, .field select {
+      width: 100%;
+      padding: 13px 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, .2);
+      background: rgba(255, 255, 255, .08);
+      color: #ffffff;
+      font-size: 15px;
+      outline: none;
+      font-family: inherit;
+    }
+    .field input:focus, .field select:focus {
+      border-color: var(--orange);
+    }
+    .field select option {
+      background: #090d16;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand-link" href="/" aria-label="Real Wolf Pack Home">
+      <span class="brand-monogram">JJ<span>.</span></span>
+      <div class="brand-text">
+        <strong>REAL WOLF PACK</strong>
+        <small>JAMES JESTES · eXp REALTY</small>
+      </div>
+    </a>
+    
+    <button class="nav-toggle" aria-label="Toggle navigation menu" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </button>
+    
+    <nav class="site-nav" id="site-nav">
+      <!-- The Model Dropdown -->
+      <div class="nav-dropdown">
+        <button class="nav-drop-btn" onclick="toggleDropdown(this)">
+          The Model <span class="drop-arrow">▾</span>
+        </button>
+        <div class="nav-drop-menu">
+          <a class="drop-item" href="/exp-explained.html">
+            <span class="drop-icon">📊</span>
+            <div>
+              <strong>eXp Realty Explained</strong>
+              <small>80/20 split, $16k cap & cloud model</small>
+            </div>
+          </a>
+          <a class="drop-item" href="/compare.html">
+            <span class="drop-icon">⚖️</span>
+            <div>
+              <strong>Brokerage Comparison</strong>
+              <small>Side-by-side vs traditional franchises</small>
+            </div>
+          </a>
+          <a class="drop-item" href="/calculator.html">
+            <span class="drop-icon">🧮</span>
+            <div>
+              <strong>Cap Calculator</strong>
+              <small>Calculate your exact annual savings</small>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Strategy & Niches Dropdown -->
+      <div class="nav-dropdown">
+        <button class="nav-drop-btn" onclick="toggleDropdown(this)">
+          Strategy & Niches <span class="drop-arrow">▾</span>
+        </button>
+        <div class="nav-drop-menu">
+          <a class="drop-item" href="/airbnb-agent.html">
+            <span class="drop-icon">🌊</span>
+            <div>
+              <strong>STR & Condotels</strong>
+              <small>Salt Air Sessions investor workflows</small>
+            </div>
+          </a>
+          <a class="drop-item" href="/audit.html">
+            <span class="drop-icon">⚡</span>
+            <div>
+              <strong>15-Minute Tech Audit</strong>
+              <small>Free 1-on-1 CRM & pipeline diagnostic</small>
+            </div>
+          </a>
+          <a class="drop-item" href="/free-pack.html">
+            <span class="drop-icon">📦</span>
+            <div>
+              <strong>Free AI Prompt Pack</strong>
+              <small>108 real estate AI prompts & playbooks</small>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Direct Links -->
+      <a class="nav-link-direct" href="/training/index.html">Training Hub</a>
+      <a class="nav-link-direct" href="/about.html">About James</a>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <a class="btn-nav-outline" href="/login.html">Member Login</a>
+        <a class="btn-nav-primary" href="/request-access.html">Join The Pack ↗</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- 2-Column Balanced Hero -->
+  <section class="hero hero-2col">
+    <div class="hero-text-col">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:#e9f3ff;border:1px solid rgba(25,70,157,.2);padding:6px 14px;border-radius:999px;font-size:11.5px;font-weight:900;letter-spacing:.08em;color:var(--blue-dark);margin-bottom:14px">
+        <span>● FOR ACTIVE FLORIDA AGENTS · FLAGLER, VOLUSIA &amp; ST. JOHNS COUNTIES</span>
+      </div>
+      <h1>How We Turn 1 Hyperlocal Video Into a <em>5-Platform Lead Machine.</em></h1>
+      <p class="lead">And never pay a single dime to Zillow or cold-call strangers. A step-by-step case study showing how Florida real estate agents use AI and a smartphone to attract out-of-state cash buyers on YouTube, Facebook, X, and LinkedIn in under 30 minutes.</p>
+      
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px">
+        <span class="badge" style="background:#e9f3ff;color:var(--blue-dark);font-weight:700;padding:6px 12px;border-radius:999px;font-size:12px">✓ Zero Ad Spend Required</span>
+        <span class="badge" style="background:#fff7ec;color:var(--orange);font-weight:700;padding:6px 12px;border-radius:999px;font-size:12px">✓ The 1-to-5 Multiplier System</span>
+        <span class="badge" style="background:#f1f5f9;color:var(--dark);font-weight:700;padding:6px 12px;border-radius:999px;font-size:12px">✓ Live Florida Case Study</span>
+      </div>
+      
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="button orange" href="#blueprint-form" style="background:var(--orange);color:#fff;padding:12px 24px;border-radius:999px;font-weight:900;text-decoration:none;display:inline-block">Download the 1-Page Blueprint ↓</a>
+        <a class="button" href="#case-study" style="background:#f1f5f9;color:var(--dark);padding:12px 24px;border-radius:999px;font-weight:800;text-decoration:none;display:inline-block">Watch The Walkthrough ↓</a>
+      </div>
+    </div>
+
+    <div class="fl-hero-stage-card" aria-label="Florida Inbound Video Engine">
+      <div class="fl-hero-stage-media">
+        <img src="/img/creator-studio-desk.webp" alt="Florida Agent Modern Inbound Creator Studio" class="fl-hero-stage-image" width="2752" height="1536" loading="eager" fetchpriority="high">
+        <div class="fl-tag">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          <span>FLORIDA INBOUND ENGINE</span>
+        </div>
+        <div class="fl-stage-badge">
+          <strong>The 1-to-5 Content Multiplier</strong>
+          <small>Hyperlocal Video · AI Scripting · Multi-Platform Leverage</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: The Florida Agent Dilemma -->
+  <section class="step-card" style="margin-top:20px">
+    <div style="max-width:760px">
+      <span class="eyebrow" style="color:var(--orange);font-weight:900;font-size:12px;letter-spacing:.1em">THE COASTAL REALITY CHECK</span>
+      <h2 style="color:var(--blue-dark);font-size:2rem;margin:8px 0 14px">Why Traditional Florida Prospecting Is Breaking Down</h2>
+      <p>If you have been selling real estate in coastal Florida for more than six months, you already know the ground has shifted:</p>
+      
+      <div class="callout-box">
+        <strong>1. Out-of-State Buyers Do Not Answer Cold Calls:</strong>
+        <p>The highest-net-worth buyers moving from New York, Ohio, California, and New Jersey are researching neighborhoods, tax rates, and coastal living on YouTube and Google months before they ever book a flight. If you do not have video authority online, you are invisible to them.</p>
+      </div>
+
+      <div class="callout-box">
+        <strong>2. Portal Leads Are a Low-Margin Trap:</strong>
+        <p>Paying $150 to $200 for a recycled Zillow lead where five other agents are calling the exact same consumer within 30 seconds is a race to the bottom. Inbound video brings buyers who call YOU pre-sold.</p>
+      </div>
+
+      <div class="callout-box">
+        <strong>3. Coastal Complexities Require Specialist Authority:</strong>
+        <p>Between SB 4-D condo milestone inspections, flood zones, roof age restrictions, and condotel lending rules, buyers want a seasoned local advisor who understands the Florida numbers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: The 1-to-5 Content Multiplier System -->
+  <section class="step-card" id="case-study">
+    <span class="eyebrow" style="color:var(--orange);font-weight:900;font-size:12px;letter-spacing:.1em">THE PROPRIETARY FRAMEWORK</span>
+    <h2 style="color:var(--blue-dark);font-size:2rem;margin:8px 0 14px">The 1-to-5 Content Multiplier Architecture</h2>
+    <p>The biggest reason agents avoid video is time: they think they have to produce five separate pieces of content for five different apps. In our organization, we teach the <strong>One-Anchor Multiplier Rule</strong>:</p>
+
+    <div class="spoke-grid">
+      <div class="spoke-card">
+        <strong><span>🎥</span> 1. The Anchor Video (YouTube)</strong>
+        <p>Film ONE 8 to 10 minute video on your smartphone addressing a specific coastal decision: "Moving to Palm Coast &amp; Flagler Beach: The Honest Truth."</p>
+      </div>
+
+      <div class="spoke-card">
+        <strong><span>🤖</span> 2. AI Script &amp; Extraction</strong>
+        <p>Drop your talking points into Play #33 of the 120 AI Prompt Vault to generate engaging hooks, timestamps, and multi-platform captions in 60 seconds.</p>
+      </div>
+
+      <div class="spoke-card">
+        <strong><span>📱</span> 3. Facebook Page &amp; Groups</strong>
+        <p>Post the native video snippet with local community discussion questions into local Florida homeowner and relocation groups.</p>
+      </div>
+
+      <div class="spoke-card">
+        <strong><span>⚡</span> 4. The X (Twitter) Thread</strong>
+        <p>Turn the 5 core bullet points into a punchy 5-tweet thread breaking down coastal property taxes, weather realities, and cost of living.</p>
+      </div>
+
+      <div class="spoke-card">
+        <strong><span>💼</span> 5. LinkedIn Executive Post</strong>
+        <p>Reframe the video for high-earning remote professionals and business owners looking for Florida tax advantages.</p>
+      </div>
+
+      <div class="spoke-card">
+        <strong><span>✉️</span> 6. 1-Click Past Client Email</strong>
+        <p>Send a friendly 1-paragraph update to your Sphere of Influence (SOI) linking the video as a helpful neighborhood resource.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: The Co-Broke Invitation -->
+  <section class="step-card">
+    <div style="max-width:780px">
+      <span class="eyebrow" style="color:var(--orange);font-weight:900;font-size:12px;letter-spacing:.1em">LOCAL PARTNERSHIP PERSPECTIVE</span>
+      <h2 style="color:var(--blue-dark);font-size:2rem;margin:8px 0 14px">Did We Just Close a Transaction Together in Florida?</h2>
+      <p>If you are an active real estate professional in Flagler, Volusia, St. Johns, or surrounding counties, you already know that who you surround yourself with determines your production velocity.</p>
+      
+      <p>Most local agents are stuck at traditional brick-and-mortar franchises paying 30% commission splits, paying monthly desk fees, and getting zero modern marketing support from brokers who have not sold a house in a decade.</p>
+
+      <div class="callout-box">
+        <strong>The Real Wolf Pack Advantage for Florida Agents:</strong>
+        <p>When you partner with James Jestes's organization inside Agent Wolf Pack, you get direct 1-on-1 veteran mentorship from a licensed Realtor ranking in the top 3% nationwide, free access to Mike Sherrard's 3,300+ agent YouTube and AI training ecosystem, and an 80/20 split with a $16,000 cap at eXp Realty with zero added desk fees. The brokerage is the financial foundation; our organization is why we scale.</p>
+      </div>
+
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:20px">
+        <a class="button orange" href="/request-access.html" style="background:var(--orange);color:#fff;padding:12px 26px;border-radius:999px;font-weight:900;text-decoration:none;display:inline-block">Schedule a Confidential Strategy Call ↗</a>
+        <a class="button" href="/about.html" style="background:#f1f5f9;color:var(--dark);padding:12px 26px;border-radius:999px;font-weight:800;text-decoration:none;display:inline-block">Meet James Jestes ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Lead Magnet Form -->
+  <section class="lead-panel" id="blueprint-form">
+    <div style="text-align:center;max-width:680px;margin:0 auto 28px">
+      <span class="badge" style="background:rgba(245,130,31,.2);color:#ffd0a3;font-size:11px;font-weight:800;padding:4px 12px;border-radius:999px">FREE INSTANT TAKEAWAY</span>
+      <h2 style="color:#ffffff;font-size:32px;margin:10px 0 12px;letter-spacing:-.03em">Download the 1-Page Florida Inbound Video Blueprint</h2>
+      <p style="color:#cbd5e1;font-size:16px;line-height:1.6;margin:0">Get the exact 5 YouTube video title formulas, hook scripts, and multi-platform distribution checklist to start attracting out-of-state Florida buyers in the next 30 days.</p>
+    </div>
+
+    <div id="alert-box" class="alert" style="display:none;padding:14px;border-radius:12px;margin-bottom:20px;text-align:center;font-weight:700"></div>
+
+    <form id="fl-inbound-form" style="max-width:680px;margin:0 auto">
+      <div class="form-grid two">
+        <div class="field">
+          <label for="fullName">Your Full Name *</label>
+          <input id="fullName" required placeholder="Full name">
+        </div>
+        <div class="field">
+          <label for="email">Email Address *</label>
+          <input id="email" type="email" required placeholder="agent@example.com">
+        </div>
+      </div>
+
+      <div class="form-grid two" style="margin-top:16px">
+        <div class="field">
+          <label for="phone">Phone Number (For Instant SMS Delivery)</label>
+          <input id="phone" type="tel" placeholder="(555) 000-0000">
+        </div>
+        <div class="field">
+          <label for="market">Primary Florida County / Market *</label>
+          <input id="market" required placeholder="e.g. Flagler / Volusia / St. Johns">
+        </div>
+      </div>
+
+      <div class="field" style="margin-top:16px">
+        <label for="currentBrokerage">Current Brokerage (Optional)</label>
+        <input id="currentBrokerage" placeholder="e.g. Current brokerage name">
+      </div>
+
+      <div style="margin-top:24px;text-align:center">
+        <button id="submit-btn" type="submit" style="background:var(--orange);color:#ffffff;border:none;border-radius:999px;padding:14px 32px;font-size:16px;font-weight:900;cursor:pointer;box-shadow:0 6px 20px rgba(245,130,31,.4);width:100%">Download the Free Inbound Blueprint ↗</button>
+        <small style="display:block;color:#94a3b8;font-size:12px;margin-top:10px">100% Free · No Spam · Immediate Access Unlocked on Next Screen</small>
+      </div>
+    </form>
+
+    <div id="unlocked-takeaway" style="display:none;margin-top:36px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.2);border-radius:24px;padding:28px">
+      <div style="text-align:center;margin-bottom:20px">
+        <span style="color:#00e676;font-size:24px;display:block;margin-bottom:4px">✓ ACCESS UNLOCKED</span>
+        <h3 style="color:#ffffff;font-size:22px;margin:0 0 6px">The 5 High-Intent Florida Relocation Video Hooks:</h3>
+        <p style="color:#cbd5e1;font-size:14.5px;margin:0">Film these 5 videos in order to start ranking on Google and YouTube for your primary Florida market:</p>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="background:#090d16;padding:16px;border-radius:14px;border:1px solid rgba(255,255,255,.1)">
+          <strong style="color:var(--orange);display:block;font-size:14px">Hook 1: The Honest Pros &amp; Cons</strong>
+          <span style="color:#ffffff;font-size:14px">&ldquo;Moving to [City], Florida in 2026: The Honest Truth (Pros, Cons &amp; Surprises)&rdquo;</span>
+        </div>
+        <div style="background:#090d16;padding:16px;border-radius:14px;border:1px solid rgba(255,255,255,.1)">
+          <strong style="color:var(--orange);display:block;font-size:14px">Hook 2: The Real Cost of Living</strong>
+          <span style="color:#ffffff;font-size:14px">&ldquo;What It ACTUALLY Costs to Live in [City/County], Florida (Taxes, Insurance &amp; HOA Breakdown)&rdquo;</span>
+        </div>
+        <div style="background:#090d16;padding:16px;border-radius:14px;border:1px solid rgba(255,255,255,.1)">
+          <strong style="color:var(--orange);display:block;font-size:14px">Hook 3: Neighborhood Tour &amp; Comparison</strong>
+          <span style="color:#ffffff;font-size:14px">&ldquo;Top 3 Best Neighborhoods in [City] for Families, Retirees &amp; Remote Workers&rdquo;</span>
+        </div>
+        <div style="background:#090d16;padding:16px;border-radius:14px;border:1px solid rgba(255,255,255,.1)">
+          <strong style="color:var(--orange);display:block;font-size:14px">Hook 4: Things to Know Before Moving</strong>
+          <span style="color:#ffffff;font-size:14px">&ldquo;5 Things I Wish I Knew Before Moving to Coastal Florida (Don't Buy Until You Watch This)&rdquo;</span>
+        </div>
+        <div style="background:#090d16;padding:16px;border-radius:14px;border:1px solid rgba(255,255,255,.1)">
+          <strong style="color:var(--orange);display:block;font-size:14px">Hook 5: The Vacation Rental &amp; Condotel Guide</strong>
+          <span style="color:#ffffff;font-size:14px">&ldquo;How to Buy a Cash-Flowing Condotel or STR in Coastal Florida (Rules, Reserves &amp; Financing)&rdquo;</span>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:24px">
+        <a class="button orange" href="/request-access.html" style="background:var(--orange);color:#fff;padding:12px 28px;border-radius:999px;font-weight:900;text-decoration:none;display:inline-block">Connect with James to Build Your Inbound Channel ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script type="module">
+import { db, collection, addDoc, serverTimestamp } from "./js/firebase-init.js";
+
+const form = document.querySelector("#fl-inbound-form");
+const alertBox = document.querySelector("#alert-box");
+const submitBtn = document.querySelector("#submit-btn");
+const unlocked = document.querySelector("#unlocked-takeaway");
+
+form.onsubmit = async (e) => {
+  e.preventDefault();
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Unlocking Blueprint...";
+
+  const fullName = document.querySelector("#fullName").value.trim();
+  const email = document.querySelector("#email").value.trim();
+  const phone = document.querySelector("#phone").value.trim();
+  const market = document.querySelector("#market").value.trim();
+  const currentBrokerage = document.querySelector("#currentBrokerage").value.trim() || "Not provided";
+
+  try {
+    const payload = {
+      fullName,
+      email,
+      phone,
+      market,
+      currentBrokerage,
+      type: "florida-inbound-blueprint",
+      status: "new",
+      createdAt: serverTimestamp()
+    };
+
+    await addDoc(collection(db, "accessRequests"), payload);
+
+    fetch("https://formsubmit.co/ajax/james@jamesjestes.com", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify({
+        _subject: `New Florida Inbound Blueprint Lead: ${fullName} (${market})`,
+        _template: "table",
+        "Full Name": fullName,
+        "Email": email,
+        "Phone": phone || "None provided",
+        "Market": market,
+        "Current Brokerage": currentBrokerage,
+        "Source": "realwolfpack.com/florida"
+      })
+    }).catch(err => console.warn("Background email alert:", err));
+
+    alertBox.style.display = "block";
+    alertBox.style.background = "#dcfce7";
+    alertBox.style.color = "#15803d";
+    alertBox.textContent = "Blueprint Unlocked! Your high-intent hooks and strategy guide are displayed below.";
+    form.style.display = "none";
+    unlocked.style.display = "block";
+  } catch (err) {
+    console.error("Submission error:", err);
+    alertBox.style.display = "block";
+    alertBox.style.background = "#fee2e2";
+    alertBox.style.color = "#991b1b";
+    alertBox.textContent = "There was an error unlocking your blueprint. Please email james@jamesjestes.com.";
+    submitBtn.disabled = false;
+  }
+};
+</script>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-col brand-col">
+      <div class="footer-brand">
+        <span class="brand-monogram">JJ<span>.</span></span>
+        <strong>REAL WOLF PACK</strong>
+      </div>
+      <p class="footer-bio">Personal agent attraction portal and member command base operated by James Jestes, Certified eXp Mentor and Top 3% Realtor nationwide. Connecting agents into Mike Sherrard's 3,300+ Agent Wolf Pack ecosystem with direct veteran mentorship and modern systems.</p>
+      <div class="footer-badges">
+        <span>Top 3% Nationwide</span>
+        <span>15 Yrs Licensed · 25+ Yrs Investing</span>
+        <span>U.S. Military Veteran</span>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore The Model</h4>
+      <ul>
+        <li><a href="/exp-explained.html">eXp Realty Explained</a></li>
+        <li><a href="/compare.html">Brokerage Comparison Matrix</a></li>
+        <li><a href="/calculator.html">Commission Split & Cap Calculator</a></li>
+        <li><a href="/airbnb-agent.html">Short-Term Rentals & Condotels</a></li>
+        <li><a href="/audit.html">15-Minute Tech & Marketing Audit</a></li>
+        <li><a href="/free-pack.html">Free Agent AI Prompt Pack</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Training & Systems</h4>
+      <ul>
+        <li><a href="/training/index.html">Curated Training Library</a></li>
+        <li><a href="/training/real-wolf-pack-business-foundation-page.html">Business Foundation Track</a></li>
+        <li><a href="/training/fast-momentum-series.html">Fast Momentum Track</a></li>
+        <li><a href="/training/organic-lead-gen-series.html">Organic Inbound Track</a></li>
+        <li><a href="/presentation.html">Interactive Zoom Presentation</a></li>
+        <li><a href="/faq.html">Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Organization & Access</h4>
+      <ul>
+        <li><a href="/request-access.html">Apply to Partner with James</a></li>
+        <li><a href="/login.html">Member Sign In / Register</a></li>
+        <li><a href="/privacy.html">Privacy Policy</a></li>
+        <li><a href="/terms.html">Terms of Service</a></li>
+        <li><a href="mailto:james@jamesjestes.com">james@jamesjestes.com</a></li>
+        <li><span style="color:#94a3b8;font-size:13px">Greater Daytona & Coastal Florida</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap footer-bottom">
+    <p class="disclaimer">RealWolfPack.com is an independent agent attraction and member resource portal operated by James Jestes, Broker Associate with eXp Realty. Agent Wolf Pack is an organization of 3,300+ independent real estate agents within eXp Realty founded by Mike Sherrard and Connor Steinbrook. eXp Realty is an Equal Housing Opportunity brokerage. All commission math, splits, and training access are subject to eXp Realty policies.</p>
+    <p class="copyright">© 2026 RealWolfPack.com. All rights reserved. Zero em dashes.</p>
+  </div>
+</footer>
+</body>
+</html>
