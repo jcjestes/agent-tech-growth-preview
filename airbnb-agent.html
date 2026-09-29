@@ -218,6 +218,23 @@ form.onsubmit = async (e) => {
 
     await addDoc(collection(db, "accessRequests"), payload);
 
+    fetch("https://formsubmit.co/ajax/james@jamesjestes.com", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify({
+        _subject: `New STR/Condotel Inquiry: ${payload.fullName} (${payload.location})`,
+        _template: "table",
+        "Full Name": payload.fullName,
+        "Email": payload.email,
+        "Phone": payload.phone,
+        "Location": payload.location,
+        "Current Brokerage": payload.currentBrokerage,
+        "Experience": payload.experience,
+        "Notes": payload.notes || "None provided",
+        "Source": "realwolfpack.com/airbnb-agent.html"
+      })
+    }).catch(err => console.warn("Background email alert:", err));
+
     alertBox.className = "alert success";
     alertBox.textContent = "Thank you! Your inquiry was received. James will connect with you to discuss short-term rental and condotel strategies.";
     form.reset();
