@@ -113,6 +113,7 @@ const RWP_MEMBER_HEADER = `<header class="site-header member-header">
       <a class="nav-link-direct" href="/members/ai-prompts.html">AI Prompts</a>
       <a class="nav-link-direct" href="/members/scripts.html">Toolkits</a>
       <a class="nav-link-direct" href="/members/master-playbook.html">Playbook</a>
+      <a class="nav-link-direct" href="/members/profile.html">My Link</a>
       
       <div class="nav-actions">
         <a class="btn-nav-outline" href="/members/admin.html" id="nav-admin-link">Admin Panel</a>

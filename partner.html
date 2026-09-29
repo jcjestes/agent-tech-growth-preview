@@ -302,6 +302,31 @@
 
 <main class="wrap" style="padding-bottom:80px">
 
+  
+  <!-- Dynamic Co-Sponsor Spotlight Card (Populated from Firestore if slug exists) -->
+  <div id="co-sponsor-card" style="display:none;background:#ffffff;border:2px solid var(--orange);border-radius:24px;padding:28px 32px;margin:0 0 36px;box-shadow:0 14px 40px rgba(16,47,108,.08)">
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:20px;justify-content:space-between">
+      <div style="display:flex;align-items:center;gap:18px">
+        <div id="coSponsorAvatar" style="width:68px;height:68px;border-radius:50%;background:var(--blue-dark);color:#ffffff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:26px;flex-shrink:0;overflow:hidden;box-shadow:0 8px 20px rgba(16,47,108,.2)">
+          <span id="coSponsorInitials">JJ</span>
+          <img id="coSponsorPhoto" src="" style="width:100%;height:100%;object-fit:cover;display:none" alt="Sponsor Headshot">
+        </div>
+        <div>
+          <span style="color:var(--orange);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.08em">YOUR DIRECT SPONSOR &amp; PARTNER</span>
+          <h2 id="coSponsorName" style="color:var(--blue-dark);font-size:1.6rem;margin:2px 0 4px">Agent Name</h2>
+          <p id="coSponsorMarket" style="color:#64748b;font-size:14px;margin:0">Market / Area</p>
+        </div>
+      </div>
+      <div style="display:flex;gap:10px">
+        <a id="coSponsorCallBtn" href="tel:" style="display:none;background:var(--blue);color:#ffffff;padding:10px 18px;border-radius:999px;font-size:13.5px;font-weight:800;text-decoration:none">Call Sponsor 📞</a>
+        <a id="coSponsorTextBtn" href="sms:" style="display:none;background:var(--orange);color:#ffffff;padding:10px 18px;border-radius:999px;font-size:13.5px;font-weight:800;text-decoration:none">Text Sponsor 💬</a>
+      </div>
+    </div>
+    <div id="coSponsorBioWrap" style="margin-top:16px;padding-top:14px;border-top:1px solid #e2e8f0;display:none">
+      <p id="coSponsorBio" style="color:#334155;font-size:14.5px;line-height:1.55;margin:0"></p>
+    </div>
+  </div>
+
   <!-- Overview Summary Box -->
   <div style="text-align:center;max-width:760px;margin:0 auto 36px">
     <span class="badge" style="background:#e9f3ff;color:var(--blue-dark);font-size:11px;font-weight:800;padding:4px 12px;border-radius:999px">THE COMPLETE VALUE STACK</span>
@@ -496,8 +521,66 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <script type="module">
-import { db, collection, addDoc, serverTimestamp } from "./js/firebase-init.js";
+import { db, collection, addDoc, doc, getDoc, serverTimestamp } from "./js/firebase-init.js";
 import { sendLeadNotification } from "./js/lead-notify.js";
+
+// Check if agent slug exists in Firestore agentProfiles
+document.addEventListener('DOMContentLoaded', async () => {
+  const params = new URLSearchParams(window.location.search);
+  const agentParam = params.get('agent') || params.get('sponsor') || params.get('ref');
+  if (!agentParam) return;
+
+  const slug = agentParam.toLowerCase().replace(/[^a-z0-9-_]/g, '');
+  try {
+    const profSnap = await getDoc(doc(db, "agentProfiles", slug));
+    if (profSnap.exists()) {
+      const data = profSnap.data();
+      const card = document.getElementById('co-sponsor-card');
+      const nameEl = document.getElementById('coSponsorName');
+      const marketEl = document.getElementById('coSponsorMarket');
+      const bioEl = document.getElementById('coSponsorBio');
+      const bioWrap = document.getElementById('coSponsorBioWrap');
+      const callBtn = document.getElementById('coSponsorCallBtn');
+      const textBtn = document.getElementById('coSponsorTextBtn');
+      const photoEl = document.getElementById('coSponsorPhoto');
+      const initialsEl = document.getElementById('coSponsorInitials');
+
+      if (card) card.style.display = 'block';
+      if (nameEl) nameEl.textContent = data.fullName;
+      if (marketEl) marketEl.textContent = data.market || "eXp Realty Partner";
+      
+      if (data.bio) {
+        if (bioEl) bioEl.textContent = data.bio;
+        if (bioWrap) bioWrap.style.display = 'block';
+      }
+
+      if (data.phone) {
+        const cleanPhone = data.phone.replace(/[^0-9+]/g, '');
+        if (callBtn) { callBtn.href = `tel:${cleanPhone}`; callBtn.style.display = 'inline-flex'; }
+        if (textBtn) { textBtn.href = `sms:${cleanPhone}`; textBtn.style.display = 'inline-flex'; }
+      }
+
+      if (data.headshotUrl && data.headshotUrl.startsWith('http')) {
+        photoEl.src = data.headshotUrl;
+        photoEl.style.display = 'block';
+        initialsEl.style.display = 'none';
+      } else {
+        const inits = data.fullName.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
+        initialsEl.textContent = inits;
+        initialsEl.style.display = 'block';
+        photoEl.style.display = 'none';
+      }
+
+      // Update sponsor badge and form heading with full name
+      const sponsorText = document.getElementById('sponsor-text');
+      const formHeading = document.getElementById('form-heading');
+      if (sponsorText) sponsorText.textContent = `● In Partnership with ${data.fullName} & James Jestes`;
+      if (formHeading) formHeading.textContent = `Connect with ${data.fullName} & James Jestes`;
+    }
+  } catch (err) {
+    console.warn("Agent profile lookup note:", err);
+  }
+});
 
 const form = document.querySelector("#partner-form");
 const alertBox = document.querySelector("#partner-alert");
