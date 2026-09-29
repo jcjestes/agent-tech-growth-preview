@@ -66,6 +66,10 @@ const PROTECTED_RESOURCES = {
   "organic-04": {
     url: "https://drive.google.com/file/d/1m1YFEy3QA0e6MgpYWN3zzvl1bkdGCIgM/view?usp=sharing",
     label: "Watch Training 04"
+  },
+  "organic-05": {
+    url: "https://drive.google.com/file/d/1VqGeUTsFG8Ag7eyMV0WDOkpGKa4vsGYR/view?usp=sharing",
+    label: "Watch Training 05"
   }
 };
 

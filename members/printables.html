@@ -91,4 +91,8 @@
 </footer><script type="module">
 import { initContentGate } from "../js/content-gate.js";
 initContentGate();
-</script></body></html>
+</script><script type="module">
+  import { initAuthGuard } from "/js/auth-guard.js";
+  initAuthGuard({ requireAuth: true, requireMember: true });
+</script>
+</body></html>

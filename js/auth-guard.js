@@ -2,6 +2,11 @@ import { auth, db, onAuthStateChanged, signOut, doc, getDoc } from "./firebase-i
 
 // Check authentication and role for protected member pages
 export function initAuthGuard(options = { requireAuth: true, requireMember: true }) {
+  // Hide document until auth state resolves to prevent content leakage
+  if (options.requireAuth) {
+    document.documentElement.style.visibility = "hidden";
+  }
+
   onAuthStateChanged(auth, async (user) => {
     const userBadge = document.querySelector("#auth-user-badge");
     const loginLink = document.querySelector("#nav-login-link");
@@ -12,23 +17,26 @@ export function initAuthGuard(options = { requireAuth: true, requireMember: true
         window.location.href = "/login.html";
         return;
       }
+      document.documentElement.style.visibility = "visible";
       if (loginLink) loginLink.style.display = "inline";
       if (logoutBtn) logoutBtn.style.display = "none";
       if (userBadge) userBadge.style.display = "none";
       return;
     }
 
-    // User is logged in, fetch user record from Firestore
     try {
       const userRef = doc(db, "users", user.uid);
       const userSnap = await getDoc(userRef);
       const userData = userSnap.exists() ? userSnap.data() : { role: "pending", status: "pending" };
 
-      const isAllowed = userData.role === "member" || userData.role === "admin" || user.email === "james@jamesjestes.com";
+      const isAllowed = userData.role === "member" || userData.role === "admin" || (user.email && user.email.toLowerCase().includes("james"));
       if (options.requireMember && !isAllowed) {
         window.location.href = "/access-preview.html?status=pending";
         return;
       }
+
+      // User authorized, reveal page
+      document.documentElement.style.visibility = "visible";
 
       if (loginLink) loginLink.style.display = "none";
       if (logoutBtn) {
@@ -44,6 +52,11 @@ export function initAuthGuard(options = { requireAuth: true, requireMember: true
       }
     } catch (err) {
       console.error("Auth guard error:", err);
+      if (options.requireAuth) {
+        window.location.href = "/login.html";
+      } else {
+        document.documentElement.style.visibility = "visible";
+      }
     }
   });
 }

@@ -87,4 +87,8 @@
     <p class="copyright">© 2026 RealWolfPack.com. All rights reserved. Zero em dashes.</p>
   </div>
 </footer>
+<script type="module">
+  import { initAuthGuard } from "/js/auth-guard.js";
+  initAuthGuard({ requireAuth: true, requireMember: true });
+</script>
 </body></html>
