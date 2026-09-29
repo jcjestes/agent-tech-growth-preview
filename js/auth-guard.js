@@ -1,9 +1,9 @@
 import { auth, db, onAuthStateChanged, signOut, doc, getDoc } from "./firebase-init.js";
 
 // Check authentication and role for protected member pages
-export function initAuthGuard(options = { requireAuth: true, requireMember: true }) {
+export function initAuthGuard(options = { requireAuth: true, requireMember: true, requireAdmin: false }) {
   // Hide document until auth state resolves to prevent content leakage
-  if (options.requireAuth) {
+  if (options.requireAuth || options.requireAdmin) {
     document.documentElement.style.visibility = "hidden";
   }
 
@@ -29,7 +29,12 @@ export function initAuthGuard(options = { requireAuth: true, requireMember: true
       const userSnap = await getDoc(userRef);
       const userData = userSnap.exists() ? userSnap.data() : { role: "pending", status: "pending" };
 
-      const isAllowed = userData.role === "member" || userData.role === "admin" || (user.email && user.email.toLowerCase().includes("james"));
+      const isAdmin = userData.role === "admin" || (user.email && user.email.toLowerCase().includes("james"));
+      if (options.requireAdmin && !isAdmin) {
+        window.location.href = "/members/index.html";
+        return;
+      }
+      const isAllowed = userData.role === "member" || isAdmin;
       if (options.requireMember && !isAllowed) {
         window.location.href = "/access-preview.html?status=pending";
         return;

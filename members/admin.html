@@ -47,7 +47,46 @@
     </table>
   </div>
 </section>
-<!-- Tab 3: Post Announcement --><section id="panel-announce" class="panel" style="display:none;max-width:680px"><h2>Broadcast Organization Announcement</h2><p style="color:var(--muted);margin-top:0">Posts an announcement to the member dashboard and communication hub.</p><form id="announce-form"><div class="field"><label for="annTitle">Title *</label><input id="annTitle" required placeholder="e.g. This Week's Mastermind: Live Call Link"></div><div class="field"><label for="annAudience">Audience</label><select id="annAudience"><option value="all">All Organization Members</option><option value="new">New Agents Track</option><option value="florida">Florida / Local Agents</option></select></div><div class="field"><label for="annBody">Announcement Body *</label><textarea id="annBody" required placeholder="Write your update, call reminder, or new resource announcement..."></textarea></div><button type="submit" class="btn" style="padding:14px 24px;font-size:15px">Publish Announcement</button></form></section></main></div><script type="module">
+<!-- Tab 3: Post Announcement --><section id="panel-announce" class="panel" style="display:none;max-width:680px"><h2>Broadcast Organization Announcement</h2><p style="color:var(--muted);margin-top:0">Posts an announcement to the member dashboard and communication hub.</p><form id="announce-form"><div class="field"><label for="annTitle">Title *</label><input id="annTitle" required placeholder="e.g. This Week's Mastermind: Live Call Link"></div><div class="field"><label for="annAudience">Audience</label><select id="annAudience"><option value="all">All Organization Members</option><option value="new">New Agents Track</option><option value="florida">Florida / Local Agents</option></select></div><div class="field"><label for="annBody">Announcement Body *</label><textarea id="annBody" required placeholder="Write your update, call reminder, or new resource announcement..."></textarea></div><button type="submit" class="btn" style="padding:14px 24px;font-size:15px">Publish Announcement</button></form></section>
+  <!-- TAB: CREATOR SOPS (ADMIN ONLY) -->
+  <div id="panel-sops" class="panel" style="display:none">
+    <div style="margin-bottom:24px">
+      <span class="badge" style="background:rgba(245,130,31,.15);color:var(--orange);font-size:11px;font-weight:900;padding:4px 10px;border-radius:999px">INTERNAL CREATOR HQ</span>
+      <h2 style="color:var(--dark);font-size:24px;margin:8px 0 4px">James's Private Recording SOPs & Content Engine</h2>
+      <p style="color:var(--muted);font-size:14px;margin:0">These internal playbooks and recording guides are exclusive to your admin profile and completely hidden from regular organization members.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px">
+      <div style="background:#f8fafc;border:2px solid rgba(245,130,31,.35);border-radius:20px;padding:24px;display:flex;flex-direction:column;justify-content:space-between">
+        <div>
+          <span style="font-size:28px;display:block;margin-bottom:6px">🎥</span>
+          <h3 style="color:var(--dark);font-size:18px;margin:0 0 6px">Florida Inbound Video #1 Recording SOP</h3>
+          <p style="color:#64748b;font-size:13.5px;line-height:1.55;margin:0 0 16px">The step-by-step teleprompter script, talk track, and 1-to-5 social distribution checklist for "Moving to Palm Coast & Flagler Beach in 2026". Follow this on screen while filming.</p>
+        </div>
+        <a class="btn" href="/members/florida-case-study-sop.html" style="background:var(--orange);color:#fff;text-align:center;padding:10px 18px;border-radius:12px;font-weight:800;text-decoration:none">Launch Recording SOP ↗</a>
+      </div>
+
+      <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:20px;padding:24px;display:flex;flex-direction:column;justify-content:space-between">
+        <div>
+          <span style="font-size:28px;display:block;margin-bottom:6px">🌴</span>
+          <h3 style="color:var(--dark);font-size:18px;margin:0 0 6px">Unlisted Florida Educational Landing Page</h3>
+          <p style="color:#64748b;font-size:13.5px;line-height:1.55;margin:0 0 16px">The private educational funnel at <code>realwolfpack.com/florida</code> for Flagler, Volusia, and St. Johns co-broke agents. Completely unlinked from public menus.</p>
+        </div>
+        <a class="btn" href="/florida.html" target="_blank" style="background:var(--dark);color:#fff;text-align:center;padding:10px 18px;border-radius:12px;font-weight:800;text-decoration:none">Preview Florida Page ↗</a>
+      </div>
+
+      <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:20px;padding:24px;display:flex;flex-direction:column;justify-content:space-between">
+        <div>
+          <span style="font-size:28px;display:block;margin-bottom:6px">🎙️</span>
+          <h3 style="color:var(--dark);font-size:18px;margin:0 0 6px">AI Voice Studio Operations SOP</h3>
+          <p style="color:#64748b;font-size:13.5px;line-height:1.55;margin:0 0 16px">Internal desktop guide for VoiceStudio voice cloning, sample audio synthesis, and automated dubbing workflows.</p>
+        </div>
+        <a class="btn" href="/members/ai-voice-studio.html" style="background:#f1f5f9;color:var(--dark);text-align:center;padding:10px 18px;border-radius:12px;font-weight:800;text-decoration:none;border:1px solid #cbd5e1">Open VoiceStudio SOP ↗</a>
+      </div>
+    </div>
+  </div>
+
+</main></div><script type="module">
 import { 
   auth, 
   db, 
@@ -76,6 +115,10 @@ const panelMembers = document.querySelector("#panel-members");
 const panelAnnounce = document.querySelector("#panel-announce");
 const tabSupport = document.querySelector("#btn-tab-support");
 const panelSupport = document.querySelector("#panel-support");
+const tabSops = document.querySelector("#btn-tab-sops");
+const panelSops = document.querySelector("#panel-sops");
+
+if (tabSops) tabSops.onclick = () => switchTab("sops");
 
 if (tabSupport) tabSupport.onclick = () => switchTab("support");
 if (tabLeads) tabLeads.onclick = () => switchTab("leads");
@@ -91,6 +134,8 @@ function switchTab(tab) {
   if (panelMembers) panelMembers.style.display = tab === "members" ? "block" : "none";
   if (panelSupport) panelSupport.style.display = tab === "support" ? "block" : "none";
   if (panelAnnounce) panelAnnounce.style.display = tab === "announce" ? "block" : "none";
+  if (tabSops) tabSops.classList.toggle("active", tab === "sops");
+  if (panelSops) panelSops.style.display = tab === "sops" ? "block" : "none";
 }
 
 if (adminSignout) {
