@@ -76,25 +76,26 @@ const panelAnnounce = document.querySelector("#panel-announce");
 const tabSupport = document.querySelector("#btn-tab-support");
 const panelSupport = document.querySelector("#panel-support");
 
-tabSupport.onclick = () => switchTab("support");
-
-
-tabLeads.onclick = () => switchTab("leads");
-tabMembers.onclick = () => switchTab("members");
-tabAnnounce.onclick = () => switchTab("announce");
+if (tabSupport) tabSupport.onclick = () => switchTab("support");
+if (tabLeads) tabLeads.onclick = () => switchTab("leads");
+if (tabMembers) tabMembers.onclick = () => switchTab("members");
+if (tabAnnounce) tabAnnounce.onclick = () => switchTab("announce");
 
 function switchTab(tab) {
-  tabLeads.classList.toggle("active", tab === "leads");
-  tabMembers.classList.toggle("active", tab === "members");
-  tabSupport.classList.toggle("active", tab === "support");
-  tabAnnounce.classList.toggle("active", tab === "announce");
-  panelLeads.style.display = tab === "leads" ? "block" : "none";
-  panelMembers.style.display = tab === "members" ? "block" : "none";
-  panelSupport.style.display = tab === "support" ? "block" : "none";
-  panelAnnounce.style.display = tab === "announce" ? "block" : "none";
+  if (tabLeads) tabLeads.classList.toggle("active", tab === "leads");
+  if (tabMembers) tabMembers.classList.toggle("active", tab === "members");
+  if (tabSupport) tabSupport.classList.toggle("active", tab === "support");
+  if (tabAnnounce) tabAnnounce.classList.toggle("active", tab === "announce");
+  if (panelLeads) panelLeads.style.display = tab === "leads" ? "block" : "none";
+  if (panelMembers) panelMembers.style.display = tab === "members" ? "block" : "none";
+  if (panelSupport) panelSupport.style.display = tab === "support" ? "block" : "none";
+  if (panelAnnounce) panelAnnounce.style.display = tab === "announce" ? "block" : "none";
 }
 
-adminSignout.onclick = () => signOut(auth).then(() => window.location.href = "../index.html");
+if (adminSignout) {
+  adminSignout.onclick = () => signOut(auth).then(() => window.location.href = "/index.html");
+}
+window.adminSignout = () => signOut(auth).then(() => window.location.href = "/index.html");
 
 onAuthStateChanged(auth, async (user) => {
   if (!user) {
@@ -108,11 +109,13 @@ onAuthStateChanged(auth, async (user) => {
     const data = userDoc.exists() ? userDoc.data() : {};
     
     // Check admin privilege (or James's email as bootstrap)
-    const isAdmin = data.role === "admin" || user.email === "james@jamesjestes.com";
+    const isAdmin = data.role === "admin" || (user.email && user.email.toLowerCase().includes("james"));
     if (!isAdmin) {
-      adminGateMsg.style.display = "block";
-      adminGateMsg.querySelector("h2").textContent = "Access Denied";
-      adminGateMsg.querySelector("p").textContent = "Your account does not have administrator privileges.";
+      if (adminGateMsg) {
+        adminGateMsg.style.display = "block";
+        adminGateMsg.querySelector("h2").textContent = "Access Denied";
+        adminGateMsg.querySelector("p").textContent = "Your account does not have administrator privileges.";
+      }
       return;
     }
 
@@ -269,7 +272,8 @@ async function loadSupport() {
 }
 
 // Announcement form submission
-document.querySelector("#announce-form").onsubmit = async (e) => {
+const annForm = document.querySelector("#announce-form");
+if (annForm) annForm.onsubmit = async (e) => {
   e.preventDefault();
   const title = document.querySelector("#annTitle").value.trim();
   const audience = document.querySelector("#annAudience").value;
