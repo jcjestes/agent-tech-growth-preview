@@ -199,6 +199,7 @@
   </div>
 </footer><script type="module">
 import { db, collection, addDoc, serverTimestamp } from "./js/firebase-init.js";
+import { sendLeadNotification } from "./js/lead-notify.js";
 
 const form = document.querySelector("#audit-form");
 const alertBox = document.querySelector("#alert-box");
@@ -233,10 +234,7 @@ form.onsubmit = async (e) => {
 
     await addDoc(collection(db, "accessRequests"), payload);
 
-    fetch("https://formsubmit.co/ajax/james@jamesjestes.com", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "Accept": "application/json" },
-      body: JSON.stringify({
+    sendLeadNotification({
         _subject: `New 15-Minute Tech Audit Request: ${fullName} (${location})`,
         _template: "table",
         "Full Name": fullName,
@@ -246,8 +244,7 @@ form.onsubmit = async (e) => {
         "Current Brokerage": currentBrokerage,
         "Current CRM": currentCRM,
         "Biggest Frustration": frustration || "None provided"
-      })
-    }).catch(err => console.warn("Background email alert:", err));
+      });
 
     alertBox.className = "alert success";
     alertBox.textContent = "Thank you! Your audit request was received. James will review your details and reach out within 24 hours to schedule your session.";

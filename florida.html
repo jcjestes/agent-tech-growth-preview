@@ -563,6 +563,7 @@
 
 <script type="module">
 import { db, collection, addDoc, serverTimestamp } from "./js/firebase-init.js";
+import { sendLeadNotification } from "./js/lead-notify.js";
 
 const form = document.querySelector("#fl-inbound-form");
 const alertBox = document.querySelector("#alert-box");
@@ -594,10 +595,7 @@ form.onsubmit = async (e) => {
 
     await addDoc(collection(db, "accessRequests"), payload);
 
-    fetch("https://formsubmit.co/ajax/james@jamesjestes.com", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "Accept": "application/json" },
-      body: JSON.stringify({
+    sendLeadNotification({
         _subject: `New Florida Inbound Blueprint Lead: ${fullName} (${market})`,
         _template: "table",
         "Full Name": fullName,
@@ -606,8 +604,7 @@ form.onsubmit = async (e) => {
         "Market": market,
         "Current Brokerage": currentBrokerage,
         "Source": "realwolfpack.com/florida"
-      })
-    }).catch(err => console.warn("Background email alert:", err));
+      });
 
     alertBox.style.display = "block";
     alertBox.style.background = "#dcfce7";
