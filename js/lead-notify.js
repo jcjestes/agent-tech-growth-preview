@@ -1,8 +1,7 @@
 // Universal Speed-to-Lead Alert Dispatcher for Real Wolf Pack
-// Dual-writes lead payloads to personal Google Apps Script Webhook
-// with graceful fallback.
+// Dispatches lead payloads to James's personal Google Apps Script Webhook.
 
-export const NOTIFY_WEBHOOK_URL = ""; // Drop your Google Apps Script Web App URL here
+export const NOTIFY_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbxuFPDdYZXZKuWceyxxkSZhAlCVe0oJKQdHNu9aijYKRqHM0fofsPhF9UHmDgxid8BdJw/exec";
 
 export async function sendLeadNotification(payload) {
   if (!NOTIFY_WEBHOOK_URL) {
