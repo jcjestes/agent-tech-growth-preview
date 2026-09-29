@@ -3,135 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Florida Inbound Case Study SOP | Real Wolf Pack</title>
+  <title>Florida Inbound Case Study & Launch SOP | Real Wolf Pack</title>
+  <meta name="robots" content="noindex, nofollow">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="/css/main.css">
   <script src="/js/components.js" defer></script>
   <style>
-    .sop-hero {
-      background: linear-gradient(135deg, #102f6c 0%, #090d16 100%);
-      color: #ffffff;
-      padding: 44px 0;
-      border-radius: 0 0 36px 36px;
-      border-bottom: 2px solid rgba(245,130,31,.4);
-      margin-bottom: 36px;
-    }
-    .sop-hero h1 {
-      font-size: clamp(32px, 5.5vw, 56px);
-      line-height: .95;
-      margin: 10px 0 14px;
-      color: #ffffff;
-      letter-spacing: -.03em;
-    }
-    .sop-hero p {
-      font-size: 17px;
-      color: #cbd5e1;
-      max-width: 760px;
-      margin: 0;
-      line-height: 1.6;
-    }
-    .sop-step-card {
-      background: #ffffff;
-      border: 1px solid rgba(25,70,157,.14);
-      border-radius: 28px;
-      padding: 36px;
-      margin-bottom: 28px;
-      box-shadow: 0 14px 40px rgba(16,47,108,.06);
-    }
-    .sop-step-card h2 {
-      color: var(--blue-dark);
-      font-size: 1.6rem;
-      margin: 0 0 14px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      letter-spacing: -.03em;
-    }
-    .sop-num {
-      background: var(--sand);
-      color: var(--blue-dark);
-      width: 40px;
-      height: 40px;
-      border-radius: 12px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-      font-weight: 900;
-      flex-shrink: 0;
-    }
-    .sop-step-card p {
-      color: #475569;
-      font-size: 16px;
-      line-height: 1.65;
-      margin: 0 0 16px;
-    }
-    .copy-block {
-      background: #090d16;
-      color: #f1f5f9;
-      border-radius: 18px;
-      padding: 22px;
-      font-size: 14.5px;
-      line-height: 1.6;
-      border: 1px solid rgba(255,255,255,.1);
-      margin: 14px 0 20px;
-      position: relative;
-    }
-    .copy-block-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 12px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid rgba(255,255,255,.1);
-    }
-    .copy-block-tag {
-      color: var(--orange);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-    .copy-code-btn {
-      background: rgba(255,255,255,.12);
-      color: #ffffff;
-      border: 1px solid rgba(255,255,255,.2);
-      border-radius: 8px;
-      padding: 5px 12px;
-      font-size: 12px;
-      font-weight: 800;
-      cursor: pointer;
-      transition: all .2s ease;
-    }
-    .copy-code-btn:hover {
-      background: var(--orange);
-      color: #ffffff;
-      border-color: var(--orange);
-    }
-    .copy-code-btn.copied {
-      background: #16a34a !important;
-      border-color: #16a34a !important;
-    }
-    .callout-gold {
-      background: #fffcf8;
-      border-left: 4px solid var(--orange);
-      border-radius: 0 16px 16px 0;
-      padding: 18px 20px;
-      margin: 16px 0;
-    }
-    .callout-gold strong {
-      color: var(--dark);
-      display: block;
-      font-size: 15px;
-      margin-bottom: 4px;
-    }
-    .callout-gold p {
-      color: #475569;
-      font-size: 14px;
-      margin: 0;
-      line-height: 1.5;
-    }
+    .sop-hero { background: linear-gradient(135deg, #102f6c 0%, #090d16 100%); color: #fff; padding: 48px 0; border-radius: 0 0 36px 36px; border-bottom: 2px solid rgba(245,130,31,.4); margin-bottom: 36px; }
+    .sop-hero h1 { font-size: clamp(32px, 5vw, 54px); line-height: .96; margin: 10px 0 14px; color: #fff; letter-spacing: -.03em; }
+    .sop-hero p { font-size: 17px; color: #cbd5e1; max-width: 780px; margin: 0; line-height: 1.6; }
+    .sop-step-card { background: #fff; border: 1px solid rgba(25,70,157,.14); border-radius: 28px; padding: 36px; margin-bottom: 32px; box-shadow: 0 14px 40px rgba(16,47,108,.06); }
+    .sop-step-card h2 { color: var(--blue-dark); font-size: 1.65rem; margin: 0 0 16px; display: flex; align-items: center; gap: 12px; letter-spacing: -.03em; }
+    .sop-num { background: var(--sand); color: var(--blue-dark); width: 42px; height: 42px; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 900; flex-shrink: 0; }
+    .sop-step-card p { color: #475569; font-size: 16px; line-height: 1.65; margin: 0 0 16px; }
+    .instruction-list { list-style: none; padding: 0; margin: 16px 0; display: flex; flex-direction: column; gap: 12px; }
+    .instruction-item { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px; padding: 16px 20px; display: flex; gap: 14px; align-items: flex-start; }
+    .inst-badge { background: var(--blue-dark); color: #fff; font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 6px; flex-shrink: 0; margin-top: 2px; }
+    .inst-body strong { display: block; color: var(--dark); font-size: 15px; margin-bottom: 3px; }
+    .inst-body p { color: #64748b; font-size: 14px; line-height: 1.5; margin: 0; }
+    .copy-block { background: #090d16; color: #f1f5f9; border-radius: 20px; padding: 22px; font-size: 14px; line-height: 1.6; border: 1px solid rgba(255,255,255,.1); margin: 16px 0 24px; position: relative; }
+    .copy-block-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .copy-block-tag { color: var(--orange); font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .copy-code-btn { background: rgba(255,255,255,.12); color: #fff; border: 1px solid rgba(255,255,255,.2); border-radius: 8px; padding: 5px 14px; font-size: 12px; font-weight: 800; cursor: pointer; transition: all .2s ease; }
+    .copy-code-btn:hover { background: var(--orange); color: #fff; border-color: var(--orange); }
+    .copy-code-btn.copied { background: #16a34a !important; border-color: #16a34a !important; }
+    .callout-gold { background: #fffcf8; border-left: 4px solid var(--orange); border-radius: 0 16px 16px 0; padding: 18px 20px; margin: 18px 0; }
+    .callout-gold strong { color: var(--dark); display: block; font-size: 15.5px; margin-bottom: 4px; }
+    .callout-gold p { color: #475569; font-size: 14px; margin: 0; line-height: 1.55; }
   </style>
 </head>
 <body>
@@ -165,54 +64,61 @@
     </nav>
   </div>
 </header>
-
 <section class="sop-hero">
   <div class="wrap">
     <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:5px 14px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.08em;color:#ffd0a3">
-      <span>● REAL WOLF PACK OPERATIONAL SOP</span>
+      <span>● CREATOR OPERATIONAL PLAYBOOK</span>
     </div>
-    <h1>Florida Inbound Case Study: Step-by-Step Recording SOP</h1>
-    <p>Follow this exact checklist on your screen while recording. By executing this workflow, you build both a live buyer attraction engine for your local business and the signature masterclass video for Real Wolf Pack agents.</p>
+    <h1>The Florida Inbound Engine: Step-by-Step Recording &amp; Launch SOP</h1>
+    <p>Follow this exact click-by-click checklist while recording your screen. Executing this workflow produces both an active buyer-attraction asset for your Florida real estate business and the signature masterclass video for Real Wolf Pack agents.</p>
   </div>
 </section>
-
 <main class="wrap" style="padding-bottom:80px">
-
-  <!-- STEP 1: Pre-Recording Setup -->
   <article class="sop-step-card">
-    <h2><span class="sop-num">01</span> Pre-Recording Setup (5 Minutes)</h2>
-    <p>Before hitting record, ensure your recording tools and talking points are open on your desktop:</p>
-    
-    <div class="callout-gold">
-      <strong>1. Screen Recorder:</strong> Open Loom, OBS, or QuickTime. Ensure your microphone input is set to your broadcast mic (Shure SM7B or wireless lapel) and webcam bubble is visible in the bottom corner.
-    </div>
-    <div class="callout-gold">
-      <strong>2. Open Two Browser Tabs:</strong>
-      <p>Tab 1: <code>realwolfpack.com/members/ai-prompts.html</code> (The 120 AI Mega Prompt Vault)</p>
-      <p>Tab 2: Claude (claude.ai) or ChatGPT (chatgpt.com)</p>
-    </div>
-    <div class="callout-gold">
-      <strong>3. Video Filming Setup:</strong> Mount your smartphone or camera on a tripod at eye level with clean audio and natural window light facing you.
+    <h2><span class="sop-num">01</span> Equipment &amp; Desktop Staging (Before Hitting Record)</h2>
+    <p>Get everything set up in advance so your screen recording flows smoothly without pauses or searching for windows:</p>
+    <div class="instruction-list">
+      <div class="instruction-item"><span class="inst-badge">AUDIO</span><div class="inst-body"><strong>1. Microphone Check &amp; Background Noise:</strong><p>Plug in your broadcast microphone (Shure SM7B or wireless lapel). Turn off ceiling fans or loud air conditioning in the room. Record a 5-second test clip to ensure levels are clean and crisp.</p></div></div>
+      <div class="instruction-item"><span class="inst-badge">SCREEN</span><div class="inst-body"><strong>2. Screen Recorder Layout (Loom or OBS):</strong><p>Set your recording to Full Desktop (1080p, 60fps). Place your circular webcam bubble in the lower-left corner of the screen so it does not cover navigation bars or menus.</p></div></div>
+      <div class="instruction-item"><span class="inst-badge">TABS</span><div class="inst-body"><strong>3. Pre-Open These 6 Browser Tabs in Advance:</strong><p>• Tab 1: realwolfpack.com/members/ai-prompts.html (The 120 AI Mega Prompt Vault)<br>• Tab 2: Claude (claude.ai) or ChatGPT (chatgpt.com)<br>• Tab 3: YouTube Studio upload tab (studio.youtube.com)<br>• Tab 4: Your Facebook Business Page &amp; 1 Local Community Group<br>• Tab 5: X (Twitter) compose window (x.com)<br>• Tab 6: LinkedIn homepage post window (linkedin.com)</p></div></div>
     </div>
   </article>
-
-  <!-- STEP 2: The Script & Talking Points -->
   <article class="sop-step-card">
-    <h2><span class="sop-num">02</span> The Video #1 Script &amp; Talking Points (Ready to Read)</h2>
-    <p>Use these talking points on camera. Speak naturally as a local coastal Florida resident sharing honest perspective with out-of-state buyers:</p>
-
+    <h2><span class="sop-num">02</span> The AI Scripting Session (Record Screen: 5 Minutes)</h2>
+    <p>Hit record on Loom/OBS. This segment shows agents how to use the AI Prompt Vault to generate their video hook and talking points in under five minutes.</p>
+    <div class="callout-gold"><strong>What to Speak on Microphone During This Step:</strong><p>"Notice how I do not ask AI to write generic robot fluff. I pull up our Real Wolf Pack AI Prompt Vault, grab Play #33 for Hyperlocal Video Scripts, and feed in the exact local Florida variables: our cinnamon coquina sand, 15-year roof insurance rules, and no-high-rise building heights. AI gives us the structure; we provide the authentic local knowledge."</p></div>
     <div class="copy-block">
-      <div class="copy-block-top">
-        <span class="copy-block-tag">VIDEO TITLE &amp; HOOK SCRIPT</span>
-        <button class="copy-code-btn" onclick="copyBlock('hook-text', this)">📋 Copy Script</button>
-      </div>
-      <div id="hook-text">TITLE: Moving to Palm Coast & Flagler Beach in 2026: The Honest Truth (Pros, Cons & What They Don't Tell You)
+      <div class="copy-block-top"><span class="copy-block-tag">PLAY #33 PROMPT (COPY TO CLAUDE OR CHATGPT)</span><button class="copy-code-btn" onclick="copyBlock('ai-prompt-script', this)">📋 Copy Prompt</button></div>
+      <div id="ai-prompt-script">Act as a top-producing real estate content strategist specializing in relocation buyers.
+Help me outline an 8 to 10 minute YouTube video for out-of-state buyers moving to coastal Florida.
+
+Topic: Moving to Palm Coast & Flagler Beach in 2026: The Honest Truth (Pros, Cons & Surprises)
+Target Audience: Out-of-state buyers, retirees, remote executives from NY, OH, NJ, and CA.
+Key Local Realities to Highlight:
+1. Flagler Beach has strict building height limits: no high-rise concrete canyons, cinnamon coquina sand.
+2. Palm Coast is master-planned: 125+ miles of bike trails and saltwater canals, but very few commercial storefronts on neighborhood parkways.
+3. Florida property insurance: 15-year roof rule, 4-point inspections, and wind mitigation credits.
+4. Taxes: Zero state income tax, but explain millage rates and utilities on a $350k to $500k home.
+5. Who should NOT move here: People wanting 24/7 nightclub nightlife or 12-lane highways.
+
+Output Requirements:
+- A high-stakes, 15-second opening hook that stops the scroll.
+- 5 conversational bullet points I can glance at while talking naturally.
+- A natural, non-pushy closing call to action inviting viewers to call/text my cell.</div>
+    </div>
+  </article>
+  <article class="sop-step-card">
+    <h2><span class="sop-num">03</span> Filming the Anchor Video (10 Minutes)</h2>
+    <p>Switch to your smartphone or camera on your tripod. Deliver the script conversationally directly into the camera lens as if talking to a friend over coffee:</p>
+    <div class="copy-block">
+      <div class="copy-block-top"><span class="copy-block-tag">VERBATIM TALKING POINTS SCRIPT</span><button class="copy-code-btn" onclick="copyBlock('camera-script', this)">📋 Copy Script</button></div>
+      <div id="camera-script">TITLE: Moving to Palm Coast & Flagler Beach in 2026: The Honest Truth (Pros, Cons & What They Don't Tell You)
 
 [0:00 - 0:45] THE HOOK:
 "Thinking about moving to Palm Coast or Flagler Beach in 2026? Before you pack up your U-Haul and leave New York, Ohio, or New Jersey, there are five things you absolutely have to know about living here that most real estate agents will never tell you. I'm James Jestes, a local Realtor and investor who actually lives right here on the oceanfront in Flagler Beach. In this video, I'm breaking down the honest pros, the real cons, and what it actually costs to live in our part of coastal Florida."
 
-[0:45 - 2:30] POINT 1: THE VIBE & BUILDING HEIGHT LIMITS
-- Flagler Beach has strict building height restrictions: no giant concrete high-rises blocking the sun.
+[0:45 - 2:30] POINT 1: THE VIBE & BUILDING HEIGHT LIMITS (FLAGLER VS PALM COAST)
+- Flagler Beach has strict building height restrictions: no giant high-rise concrete canyons blocking the sun.
 - Cinnamon-colored coquina sand, local mom-and-pop seaside restaurants, relaxed coastal feel.
 - Palm Coast contrast: Master-planned, 125+ miles of paved bike trails, European saltwater canals, and clean residential parkways with no commercial strip malls on neighborhood roads.
 
@@ -233,19 +139,36 @@
 "If you are planning a move to Flagler County, Palm Coast, or the coastal strip, don't navigate it alone. My team and I help out-of-state buyers make a smooth transition every single week. Send me a text or call at the number in the description below, and we will help you find the right neighborhood."</div>
     </div>
   </article>
-
-  <!-- STEP 3: The 1-to-5 Social Multiplier -->
   <article class="sop-step-card">
-    <h2><span class="sop-num">03</span> The 1-to-5 Multiplier Execution (Screen Recording)</h2>
-    <p>While screen recording with Loom or OBS, upload your video to YouTube, and then copy and paste these exact assets live on camera to show agents how one piece of content feeds five platforms:</p>
-
-    <!-- Post A: Facebook -->
+    <h2><span class="sop-num">04</span> YouTube Upload &amp; Inbound Architecture (5 Minutes)</h2>
+    <p>Upload your video to YouTube Studio while keeping your screen recorder running. Show how the description box acts as a lead generation funnel:</p>
     <div class="copy-block">
-      <div class="copy-block-top">
-        <span class="copy-block-tag">SPOKE 1: FACEBOOK PAGE &amp; COMMUNITY GROUPS</span>
-        <button class="copy-code-btn" onclick="copyBlock('fb-post', this)">📋 Copy Post</button>
-      </div>
-      <div id="fb-post">Thinking about making the move to Palm Coast or Flagler Beach this year? 🌴
+      <div class="copy-block-top"><span class="copy-block-tag">YOUTUBE DESCRIPTION TEMPLATE</span><button class="copy-code-btn" onclick="copyBlock('yt-desc', this)">📋 Copy Description</button></div>
+      <div id="yt-desc">Thinking about moving to Palm Coast or Flagler Beach, Florida?
+Reach out to James Jestes and the team directly! We would love to help you navigate your move.
+
+📲 Call or Text: 386-315-4744
+📧 Email: james@jamesjestes.com
+🌐 Explore Our Organization: https://realwolfpack.com/
+📥 Free Relocation & Inbound Guide: https://realwolfpack.com/florida
+
+TIMESTAMPS:
+0:00 - Moving to Palm Coast & Flagler Beach Honest Truth
+0:45 - Building Height Limits & Cinnamon Sand
+2:30 - The Florida Property Insurance Reality
+4:15 - Cost of Living & Property Taxes
+6:00 - Who Should NOT Move to Coastal Florida
+7:30 - How to Connect with James Jestes
+
+#PalmCoastRealEstate #FlaglerBeach #MovingToFlorida #FloridaRelocation</div>
+    </div>
+  </article>
+  <article class="sop-step-card">
+    <h2><span class="sop-num">05</span> The 1-to-5 Multiplier Execution (Screen Recording: 8 Minutes)</h2>
+    <p>Now comes the high-leverage demonstration: show yourself taking that one YouTube video link and distributing it to Facebook, X, LinkedIn, and your database email in eight minutes:</p>
+    <div class="copy-block">
+      <div class="copy-block-top"><span class="copy-block-tag">SPOKE 1: FACEBOOK PAGE &amp; COMMUNITY GROUPS</span><button class="copy-code-btn" onclick="copyBlock('fb-copy', this)">📋 Copy Post</button></div>
+      <div id="fb-copy">Thinking about making the move to Palm Coast or Flagler Beach this year? 🌴
 
 Before you buy, there are 5 critical things out-of-state buyers need to understand about our local building rules, insurance realities, and lifestyle.
 
@@ -255,14 +178,9 @@ Watch the full video here: [PASTE YOUR YOUTUBE LINK]
 
 If you are planning a visit or have questions about specific neighborhoods, drop a comment below or send me a direct message!</div>
     </div>
-
-    <!-- Post B: X Thread -->
     <div class="copy-block">
-      <div class="copy-block-top">
-        <span class="copy-block-tag">SPOKE 2: X (TWITTER) 5-POST VIRAL THREAD</span>
-        <button class="copy-code-btn" onclick="copyBlock('x-thread', this)">📋 Copy Thread</button>
-      </div>
-      <div id="x-thread">1/ Thinking about moving to Coastal Florida in 2026? 🌴 Here are 5 things nobody tells you about Palm Coast & Flagler Beach before you pack the U-Haul 🧵👇
+      <div class="copy-block-top"><span class="copy-block-tag">SPOKE 2: X (TWITTER) 5-TWEET VIRAL THREAD</span><button class="copy-code-btn" onclick="copyBlock('x-copy', this)">📋 Copy Thread</button></div>
+      <div id="x-copy">1/ Thinking about moving to Coastal Florida in 2026? 🌴 Here are 5 things nobody tells you about Palm Coast & Flagler Beach before you pack the U-Haul 🧵👇
 
 2/ No High-Rises. Flagler Beach has strict building height limits. That means unobstructed ocean views, cinnamon coquina sand, and local seaside diners instead of commercial concrete mega-resorts.
 
@@ -274,14 +192,9 @@ If you are planning a visit or have questions about specific neighborhoods, drop
 
 6/ I broke down all the costs, neighborhood comparisons, and lifestyle realities in a full 8-minute deep-dive video here: [PASTE YOUR YOUTUBE LINK]</div>
     </div>
-
-    <!-- Post C: LinkedIn -->
     <div class="copy-block">
-      <div class="copy-block-top">
-        <span class="copy-block-tag">SPOKE 3: LINKEDIN EXECUTIVE MIGRATION POST</span>
-        <button class="copy-code-btn" onclick="copyBlock('li-post', this)">📋 Copy Post</button>
-      </div>
-      <div id="li-post">High-net-worth professionals and remote executives continue to migrate from the Northeast to Northeast Florida at an accelerating pace.
+      <div class="copy-block-top"><span class="copy-block-tag">SPOKE 3: LINKEDIN EXECUTIVE MIGRATION POST</span><button class="copy-code-btn" onclick="copyBlock('li-copy', this)">📋 Copy Post</button></div>
+      <div id="li-copy">High-net-worth professionals and remote executives continue to migrate from the Northeast to Northeast Florida at an accelerating pace.
 
 While zero state income tax is the headline benefit, the real operational decision comes down to lifestyle, infrastructure, and coastal property regulations.
 
@@ -289,14 +202,9 @@ I just released a detailed market guide examining the economic and lifestyle rea
 
 Full video breakdown linked in the comments below. #FloridaRealEstate #Relocation #CoastalLiving</div>
     </div>
-
-    <!-- Post D: Email Check-in -->
     <div class="copy-block">
-      <div class="copy-block-top">
-        <span class="copy-block-tag">SPOKE 4: PAST CLIENT &amp; SPHERE (SOI) 1-CLICK EMAIL</span>
-        <button class="copy-code-btn" onclick="copyBlock('soi-email', this)">📋 Copy Email</button>
-      </div>
-      <div id="soi-email">Subject: Quick update on coastal Florida real estate
+      <div class="copy-block-top"><span class="copy-block-tag">SPOKE 4: PAST CLIENT &amp; SPHERE (SOI) 1-CLICK EMAIL</span><button class="copy-code-btn" onclick="copyBlock('email-copy', this)">📋 Copy Email</button></div>
+      <div id="email-copy">Subject: Quick update on coastal Florida real estate
 
 Hi [First Name],
 
@@ -312,25 +220,14 @@ Broker Associate | eXp Realty
 386-315-4744</div>
     </div>
   </article>
-
-  <!-- STEP 4: Embedding into realwolfpack.com/florida -->
   <article class="sop-step-card">
-    <h2><span class="sop-num">04</span> Embedding the Recording into RealWolfPack.com</h2>
-    <p>Once you finish recording your walkthrough video:</p>
-    
-    <div class="callout-gold">
-      <strong>1. Save Your Walkthrough Video:</strong> Export your screen recording from Loom or YouTube as unlisted or public.
-    </div>
-    <div class="callout-gold">
-      <strong>2. Embed on the Florida Page:</strong> Hand me your video link or drop it into <code>public/florida.html</code>. I will embed it into the <em>Watch Over My Shoulder</em> stage on <code>realwolfpack.com/florida</code>.
-    </div>
-    <div class="callout-gold">
-      <strong>3. Add to the Member Training Hub:</strong> The video will be added as Module 01 of the Florida Inbound Masterclass inside the Member Dashboard.
-    </div>
+    <h2><span class="sop-num">06</span> Finalizing Your Inbound Asset &amp; Co-Broke Outreach</h2>
+    <p>Once you finish recording your walkthrough:</p>
+    <div class="callout-gold"><strong>1. Embed on realwolfpack.com/florida:</strong><p>Send me your screen recording link (from Loom or YouTube). I will embed it into the "Watch Over My Shoulder" section on realwolfpack.com/florida.</p></div>
+    <div class="callout-gold"><strong>2. Add to Member Training Hub:</strong><p>The screen recording will also be published inside the Member Hub as Module 01 of the Florida Inbound Masterclass.</p></div>
+    <div class="callout-gold"><strong>3. The Closing Day Co-Broke Text Script:</strong><p>Send this to any local agent you close a transaction with in Florida:</p><div style="background:#090d16;color:#ffd0a3;padding:14px;border-radius:12px;margin-top:8px;font-size:13.5px;line-height:1.5">"Hey [First Name], loved working with you on [Property Address]! I put together a 1-page breakdown on how we are attracting out-of-state cash buyers to the coast without buying Zillow leads. Thought you might like it: check it out at <strong>realwolfpack.com/florida</strong>."</div></div>
   </article>
-
 </main>
-
 <script>
 function copyBlock(id, btn) {
   const el = document.getElementById(id);
@@ -338,21 +235,18 @@ function copyBlock(id, btn) {
   const text = el.innerText || el.textContent;
   navigator.clipboard.writeText(text).then(() => {
     const orig = btn.innerHTML;
-    btn.innerHTML = '<span>✓ Copied!</span>';
-    btn.classList.add('copied');
+    btn.innerHTML = "<span>✓ Copied!</span>";
+    btn.classList.add("copied");
     setTimeout(() => {
       btn.innerHTML = orig;
-      btn.classList.remove('copied');
+      btn.classList.remove("copied");
     }, 2000);
   }).catch(err => {
-    console.error('Copy failed:', err);
+    console.error("Copy failed:", err);
   });
 }
 window.copyBlock = copyBlock;
 </script>
-
-
-
 <footer class="site-footer">
   <div class="wrap footer-grid">
     <div class="footer-col brand-col">
