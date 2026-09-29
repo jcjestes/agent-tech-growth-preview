@@ -238,7 +238,7 @@ form.onsubmit = async (e) => {
     }).catch(err => console.warn("Background email alert:", err));
 
     alertBox.className = "alert success";
-    alertBox.textContent = "Success! Your starter pack is ready below.";
+    alertBox.innerHTML = "<strong>Access Unlocked!</strong> Your AI Prompt Pack is ready below. Bookmark this page or explore our complete member vault.";
     form.style.display = "none";
     vault.style.display = "block";
   } catch (err) {

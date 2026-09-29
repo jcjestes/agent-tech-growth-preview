@@ -221,10 +221,15 @@ authForm.onsubmit = async (e) => {
       const userDoc = await getDoc(doc(db, "users", cred.user.uid));
       const data = userDoc.exists() ? userDoc.data() : { role: "pending" };
 
-      if (data.role === "member" || data.role === "admin") {
-        window.location.href = "members/index.html";
+      // Super Admin bypass for James
+      if ((cred.user.email && cred.user.email.toLowerCase().includes("james")) || data.role === "admin") {
+        window.location.href = "/members/admin.html";
+        return;
+      }
+      if (data.role === "member") {
+        window.location.href = "/members/index.html";
       } else {
-        window.location.href = "access-preview.html?status=pending";
+        window.location.href = "/access-preview.html?status=pending";
       }
     } else {
       authSubmit.textContent = "Creating account...";
