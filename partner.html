@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Partner with Our Organization | Real Wolf Pack</title>
+  <meta name="description" content="Discover the mentorship, AI systems, and cloud brokerage model provided when you join our organization inside Agent Wolf Pack at eXp Realty.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="/js/components.js" defer></script>
+
+  <!-- OpenGraph Social Share Card -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Real Wolf Pack">
+  <meta property="og:title" content="Partner with Our Organization | Real Wolf Pack">
+  <meta property="og:description" content="Discover the mentorship, AI prompt vault, live weekly masterminds, and cloud brokerage model when you join our organization inside Agent Wolf Pack.">
+  <meta property="og:url" content="https://realwolfpack.com/partner">
+  <meta property="og:image" content="https://realwolfpack.com/img/og-social-share.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Partner with Our Organization - Real Wolf Pack">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Partner with Our Organization | Real Wolf Pack">
+  <meta name="twitter:description" content="Discover the mentorship, AI prompt vault, live weekly masterminds, and cloud brokerage model.">
+  <meta name="twitter:image" content="https://realwolfpack.com/img/og-social-share.jpg">
+
+  <style>
+    .partner-hero {
+      background: linear-gradient(135deg, #102f6c 0%, #090d16 100%);
+      color: #ffffff;
+      padding: 50px 0 56px;
+      border-radius: 0 0 36px 36px;
+      border-bottom: 2px solid rgba(245,130,31,.4);
+      margin-bottom: 40px;
+    }
+    .partner-hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      align-items: stretch;
+    }
+    @media (min-width: 900px) {
+      .partner-hero-grid {
+        grid-template-columns: 1.15fr .85fr;
+      }
+    }
+    .partner-hero h1 {
+      font-size: clamp(32px, 5vw, 54px);
+      line-height: 1.02;
+      margin: 14px 0 16px;
+      color: #ffffff;
+      letter-spacing: -.03em;
+    }
+    .partner-hero h1 em {
+      font-style: normal;
+      color: var(--orange);
+    }
+    .partner-hero p.lead-sub {
+      font-size: 17.5px;
+      color: #cbd5e1;
+      line-height: 1.6;
+      margin: 0 0 24px;
+    }
+    .sponsor-badge-banner {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245,130,31,.18);
+      border: 1px solid var(--orange);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .04em;
+      color: #ffd0a3;
+      margin-bottom: 8px;
+    }
+    .hero-stage-card-partner {
+      position: relative;
+      width: 100%;
+      min-height: 290px;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 2px solid rgba(245,130,31,.45);
+      box-shadow: 0 20px 50px rgba(16,47,108,.3);
+      display: flex;
+    }
+    .hero-stage-card-partner img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-partner-overlay {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      right: 16px;
+      background: rgba(9,13,22,.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 14px;
+      padding: 12px 16px;
+      color: #ffffff;
+      font-size: 13px;
+    }
+    .tier-box-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin: 36px 0;
+    }
+    @media (min-width: 800px) {
+      .tier-box-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .tier-card {
+      background: #ffffff;
+      border: 1px solid rgba(25,70,157,.14);
+      border-radius: 22px;
+      padding: 30px;
+      box-shadow: 0 12px 35px rgba(16,47,108,.06);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .tier-card-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .tier-icon-circle {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: var(--sand);
+      color: var(--blue-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+    .tier-card h3 {
+      font-size: 1.35rem;
+      color: var(--blue-dark);
+      margin: 0;
+    }
+    .tier-card p {
+      color: #53657b;
+      font-size: 15px;
+      line-height: 1.6;
+      margin: 0 0 16px;
+    }
+    .tier-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .tier-bullets li {
+      font-size: 14px;
+      color: #334155;
+      padding-left: 22px;
+      position: relative;
+      line-height: 1.45;
+    }
+    .tier-bullets li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--orange);
+      font-weight: 900;
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand-link" href="/" aria-label="Real Wolf Pack Home">
+      <span class="brand-monogram">JJ<span>.</span></span>
+      <div class="brand-text">
+        <strong>REAL WOLF PACK</strong>
+        <small>JAMES JESTES · eXp REALTY</small>
+      </div>
+    </a>
+    
+    <button class="nav-toggle" aria-label="Toggle navigation menu" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </button>
+    
+    <nav class="site-nav" id="site-nav">
+      <!-- The Model Dropdown -->
+      <div class="nav-dropdown">
+        <button class="nav-drop-btn" onclick="toggleDropdown(this)">
+          The Model <span class="drop-arrow">▾</span>
+        </button>
+        <div class="nav-drop-menu">
+          <a class="drop-item" href="/exp-explained.html">
+            <span class="drop-icon">📊</span>
+            <div>
+              <strong>eXp Realty Explained</strong>
+              <small>80/20 split, $16k cap & cloud model</small>
+            </div>
+          </a>
+          <a class="drop-item" href="/compare.html">
+            <span class="drop-icon">⚖️</span>
+            <div>
+              <strong>Brokerage Comparison</strong>
+              <small>Side-by-side vs traditional franchises</small>
+            </div>
+          </a>
+          <a class="drop-item" href="/calculator.html">
+            <span class="drop-icon">🧮</span>
+            <div>
+              <strong>Cap Calculator</strong>
+              <small>Calculate your exact annual savings</small>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Strategy & Niches Dropdown -->
+      <div class="nav-dropdown">
+        <button class="nav-drop-btn" onclick="toggleDropdown(this)">
+          Strategy & Niches <span class="drop-arrow">▾</span>
+        </button>
+        <div class="nav-drop-menu">
+          <a class="drop-item" href="/airbnb-agent.html">
+            <span class="drop-icon">🌊</span>
+            <div>
+              <strong>STR & Condotels</strong>
+              <small>Salt Air Sessions investor workflows</small>
+            </div>
+          </a>
+          <a class="drop-item" href="/audit.html">
+            <span class="drop-icon">⚡</span>
+            <div>
+              <strong>15-Minute Tech Audit</strong>
+              <small>Free 1-on-1 CRM & pipeline diagnostic</small>
+            </div>
+          </a>
+          <a class="drop-item" href="/free-pack.html">
+            <span class="drop-icon">📦</span>
+            <div>
+              <strong>Free AI Prompt Pack</strong>
+              <small>108 real estate AI prompts & playbooks</small>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Direct Links -->
+      <a class="nav-link-direct" href="/training/index.html">Training Hub</a>
+      <a class="nav-link-direct" href="/about.html">About James</a>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <a class="btn-nav-outline" href="/login.html">Member Login</a>
+        <a class="btn-nav-primary" href="/request-access.html">Join The Pack ↗</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="partner-hero">
+  <div class="wrap">
+    <div class="partner-hero-grid">
+      <div>
+        <div id="sponsor-badge" class="sponsor-badge-banner" style="display:none">
+          <span id="sponsor-text">● Special Invitation to Partner with Our Organization</span>
+        </div>
+        <div id="default-badge" class="sponsor-badge-banner">
+          <span>● THE JAMES JESTES ORGANIZATION &amp; AGENT WOLF PACK</span>
+        </div>
+        
+        <h1 id="hero-title">Everything you get when you <em>partner with our organization.</em></h1>
+        <p class="lead-sub" id="hero-sub">We believe real estate agents shouldn't have to choose between strong local mentorship and cutting-edge digital growth. When you join our organization at eXp Realty, you receive direct personal mentorship, a 3,300+ agent global mastermind network, and modern AI toolkits at zero extra cost.</p>
+        
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <a class="btn" href="#connect-form">Schedule a Private Conversation ↓</a>
+          <a class="btn secondary" href="/calculator.html">Cap Calculator ↗</a>
+        </div>
+      </div>
+
+      <div class="hero-stage-card-partner">
+        <img src="/img/wolf-pack-network-grid.webp" alt="Agent Wolf Pack Global Network">
+        <div class="hero-partner-overlay">
+          <strong style="display:block;color:var(--orange)">The Two-Tier Advantage</strong>
+          <span>Local 1-on-1 mentorship backed by Mike Sherrard's 3,300+ Agent Wolf Pack.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap" style="padding-bottom:80px">
+
+  <!-- Overview Summary Box -->
+  <div style="text-align:center;max-width:760px;margin:0 auto 36px">
+    <span class="badge" style="background:#e9f3ff;color:var(--blue-dark);font-size:11px;font-weight:800;padding:4px 12px;border-radius:999px">THE COMPLETE VALUE STACK</span>
+    <h2 style="color:var(--dark);font-size:2rem;margin:10px 0 8px">A Better Way to Build Your Real Estate Business</h2>
+    <p style="color:var(--muted);font-size:16px;margin:0">Traditional brokerages take a big chunk of your commission check and give you an empty cubicle and outdated advice. Here is what changes when you step into our organization:</p>
+  </div>
+
+  <!-- The 4 Value Pillars -->
+  <div class="tier-box-grid">
+
+    <!-- Pillar 1: Direct Mentorship -->
+    <div class="tier-card">
+      <div>
+        <div class="tier-card-header">
+          <span class="tier-icon-circle">🤝</span>
+          <div>
+            <span style="color:var(--orange);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.08em">PILLAR 01: DIRECT BACKING</span>
+            <h3>Personal Mentorship &amp; Support</h3>
+          </div>
+        </div>
+        <p>You never have to navigate tricky deals alone. You get hands-on strategic support from James Jestes and your direct organizational leadership.</p>
+        <ul class="tier-bullets">
+          <li>Direct cell phone and text access for urgent contract and negotiation questions</li>
+          <li>Purchase agreement and listing presentation strategy reviews</li>
+          <li>Certified eXp Mentor support for newer agents completing their first transactions</li>
+          <li>Coastal Florida condo, condotel, and vacation rental expertise</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Pillar 2: Agent Wolf Pack Movement -->
+    <div class="tier-card">
+      <div>
+        <div class="tier-card-header">
+          <span class="tier-icon-circle">🐺</span>
+          <div>
+            <span style="color:var(--orange);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.08em">PILLAR 02: GLOBAL NETWORK</span>
+            <h3>The Agent Wolf Pack Movement</h3>
+          </div>
+        </div>
+        <p>Instant access to Mike Sherrard and Connor Steinbrook's 3,300+ agent global organization, renowned worldwide for modern social media attraction.</p>
+        <ul class="tier-bullets">
+          <li>Multiple live interactive Zoom masterminds every week with top 1% producers</li>
+          <li>Full access to Mike Sherrard's Social Agent Academy and YouTube Accelerator</li>
+          <li>On-demand replay library with hundreds of closed deal case studies</li>
+          <li>Supportive, high-energy community that shares what is working right now</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Pillar 3: Proprietary AI & Tools -->
+    <div class="tier-card">
+      <div>
+        <div class="tier-card-header">
+          <span class="tier-icon-circle">🤖</span>
+          <div>
+            <span style="color:var(--orange);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.08em">PILLAR 03: TURNKEY SYSTEMS</span>
+            <h3>120 AI Prompts &amp; Strategy Toolkits</h3>
+          </div>
+        </div>
+        <p>Save 10+ hours every week with our proprietary tech and AI systems built specifically for producing real estate agents.</p>
+        <ul class="tier-bullets">
+          <li><strong>120 Real Estate AI Mega Prompt Vault:</strong> Interactive 1-click prompts for listings, CMAs, and scripts</li>
+          <li><strong>35,000-Member Facebook Community Access:</strong> Leverage Florida Real Estate &amp; Open Houses for listing exposure</li>
+          <li>Turnkey Open House, Expired Listing, and SOI Revival playbooks</li>
+          <li>Speed-to-lead SMS and email nurture sequences ready to paste into your CRM</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Pillar 4: The eXp Brokerage Vehicle -->
+    <div class="tier-card">
+      <div>
+        <div class="tier-card-header">
+          <span class="tier-icon-circle">📈</span>
+          <div>
+            <span style="color:var(--orange);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.08em">PILLAR 04: FINANCIAL LEVERAGE</span>
+            <h3>The eXp Realty Cloud Advantage</h3>
+          </div>
+        </div>
+        <p>eXp Realty provides the financial vehicle that makes true wealth possible with zero franchise fees and zero royalty cuts.</p>
+        <ul class="tier-bullets">
+          <li><strong>80/20 Commission Split with a low $16,000 Cap:</strong> Keep 100% beyond your cap</li>
+          <li><strong>Canva Enterprise Included Free ($0 Fee):</strong> Full enterprise tier with live MLS photo sync via eXp Listings app</li>
+          <li><strong>BoldTrail CRM &amp; Custom MLS Website:</strong> Automated lead tracking and branded consumer search portal</li>
+          <li><strong>SkySlope.com:</strong> Digital transaction coordination and listing compliance platform</li>
+          <li><strong>Equity Stock &amp; Revenue Share:</strong> Build long-term wealth beyond personal production</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Lead Capture Form: Connect with our Organization -->
+  <section class="panel" id="connect-form" style="background:linear-gradient(135deg, #102f6c 0%, #090d16 100%);color:#ffffff;border-radius:28px;padding:44px 32px;margin:48px 0;border:2px solid rgba(245,130,31,.4);box-shadow:0 20px 50px rgba(16,47,108,.3)">
+    <div style="text-align:center;max-width:680px;margin:0 auto 28px">
+      <span class="badge" style="background:rgba(245,130,31,.2);color:#ffd0a3;font-size:11px;font-weight:800;padding:4px 12px;border-radius:999px">CONFIDENTIAL CONVERSATION</span>
+      <h2 id="form-heading" style="color:#ffffff;font-size:2rem;margin:10px 0 10px">Schedule a Private Partnership Conversation</h2>
+      <p id="form-subheading" style="color:#cbd5e1;font-size:16px;line-height:1.55;margin:0">Whether you are newly licensed or a seasoned top producer, we will walk you through the math, show you our tools live, and see if partnering with our organization is the right next step for your career.</p>
+    </div>
+
+    <div id="partner-alert" class="alert" style="display:none;padding:14px;border-radius:12px;margin-bottom:20px;text-align:center;font-weight:700"></div>
+
+    <form id="partner-form" style="max-width:640px;margin:0 auto">
+      <input type="hidden" id="referredByAgent" value="">
+      <div style="display:grid;grid-template-columns:1fr;gap:14px">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <div>
+            <label style="color:#cbd5e1;font-size:13px;font-weight:700;display:block;margin-bottom:6px" for="fullName">Your Full Name *</label>
+            <input id="fullName" required placeholder="Full name" style="width:100%;padding:13px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-size:15px;outline:none;font-family:inherit">
+          </div>
+          <div>
+            <label style="color:#cbd5e1;font-size:13px;font-weight:700;display:block;margin-bottom:6px" for="email">Email Address *</label>
+            <input id="email" type="email" required placeholder="agent@example.com" style="width:100%;padding:13px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-size:15px;outline:none;font-family:inherit">
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <div>
+            <label style="color:#cbd5e1;font-size:13px;font-weight:700;display:block;margin-bottom:6px" for="phone">Phone Number (For Text Confirmation) *</label>
+            <input id="phone" type="tel" required placeholder="(386) 555-0199" style="width:100%;padding:13px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-size:15px;outline:none;font-family:inherit">
+          </div>
+          <div>
+            <label style="color:#cbd5e1;font-size:13px;font-weight:700;display:block;margin-bottom:6px" for="location">Market / City &amp; State *</label>
+            <input id="location" required placeholder="e.g. Orlando, FL" style="width:100%;padding:13px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-size:15px;outline:none;font-family:inherit">
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <div>
+            <label style="color:#cbd5e1;font-size:13px;font-weight:700;display:block;margin-bottom:6px" for="currentBrokerage">Current Brokerage</label>
+            <input id="currentBrokerage" placeholder="Current office or firm" style="width:100%;padding:13px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-size:15px;outline:none;font-family:inherit">
+          </div>
+          <div>
+            <label style="color:#cbd5e1;font-size:13px;font-weight:700;display:block;margin-bottom:6px" for="experienceLevel">Experience Level</label>
+            <select id="experienceLevel" style="width:100%;padding:13px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.2);background:#090d16;color:#fff;font-size:15px;outline:none;font-family:inherit">
+              <option value="new">Brand New / In Licensing</option>
+              <option value="1-3">1 - 3 Years in Business</option>
+              <option value="4-10">4 - 10 Years in Business</option>
+              <option value="10+">10+ Years / Top Producer</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label style="color:#cbd5e1;font-size:13px;font-weight:700;display:block;margin-bottom:6px" for="message">What is your biggest business goal or question right now?</label>
+          <textarea id="message" placeholder="e.g. Looking for better video systems, want to understand eXp splits, need direct mentorship..." style="width:100%;min-height:90px;padding:13px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-size:15px;outline:none;font-family:inherit"></textarea>
+        </div>
+
+        <div style="margin-top:14px;text-align:center">
+          <button id="partner-submit-btn" type="submit" style="background:var(--orange);color:#ffffff;border:none;border-radius:999px;padding:15px 36px;font-size:16px;font-weight:900;cursor:pointer;box-shadow:0 6px 20px rgba(245,130,31,.4);width:100%">Submit Partnership Request ↗</button>
+          <small style="display:block;color:#94a3b8;font-size:12px;margin-top:10px">100% Confidential · Zero Sales Pressure · Direct Communication</small>
+        </div>
+      </div>
+    </form>
+  </section>
+</main>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+  const agentParam = params.get('agent') || params.get('sponsor') || params.get('ref');
+  
+  if (agentParam) {
+    const formattedAgent = decodeURIComponent(agentParam).replace(/\+/g, ' ');
+    const sponsorBadge = document.getElementById('sponsor-badge');
+    const defaultBadge = document.getElementById('default-badge');
+    const sponsorText = document.getElementById('sponsor-text');
+    const formHeading = document.getElementById('form-heading');
+    const formSubheading = document.getElementById('form-subheading');
+    const refInput = document.getElementById('referredByAgent');
+
+    if (sponsorBadge && sponsorText) {
+      sponsorText.textContent = `● Invited to Explore Our Organization by ${formattedAgent}`;
+      sponsorBadge.style.display = 'inline-flex';
+      if (defaultBadge) defaultBadge.style.display = 'none';
+    }
+
+    if (formHeading) {
+      formHeading.textContent = `Connect with ${formattedAgent} & James Jestes`;
+    }
+
+    if (formSubheading) {
+      formSubheading.textContent = `Submit your info below to set up a private, 15-minute conversation with ${formattedAgent} and James Jestes to explore partnering with our organization.`;
+    }
+
+    if (refInput) {
+      refInput.value = formattedAgent;
+    }
+  }
+});
+</script>
+
+<script type="module">
+import { db, collection, addDoc, serverTimestamp } from "./js/firebase-init.js";
+import { sendLeadNotification } from "./js/lead-notify.js";
+
+const form = document.querySelector("#partner-form");
+const alertBox = document.querySelector("#partner-alert");
+const submitBtn = document.querySelector("#partner-submit-btn");
+
+form.onsubmit = async (e) => {
+  e.preventDefault();
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Submitting Request...";
+
+  const fullName = document.querySelector("#fullName").value.trim();
+  const email = document.querySelector("#email").value.trim();
+  const phone = document.querySelector("#phone").value.trim();
+  const location = document.querySelector("#location").value.trim();
+  const currentBrokerage = document.querySelector("#currentBrokerage").value.trim() || "Not provided";
+  const experienceLevel = document.querySelector("#experienceLevel").value;
+  const message = document.querySelector("#message").value.trim();
+  const referredByAgent = document.querySelector("#referredByAgent").value || "Direct Organization Lead";
+
+  try {
+    const payload = {
+      fullName,
+      email,
+      phone,
+      location,
+      currentBrokerage,
+      experienceLevel,
+      message,
+      referredByAgent,
+      type: "downline-partner-inquiry",
+      status: "new",
+      createdAt: serverTimestamp()
+    };
+
+    await addDoc(collection(db, "accessRequests"), payload);
+
+    sendLeadNotification({
+      _subject: `New Partner Lead: ${fullName} (Invited by: ${referredByAgent})`,
+      _template: "table",
+      "Full Name": fullName,
+      "Email": email,
+      "Phone": phone,
+      "Location": location,
+      "Current Brokerage": currentBrokerage,
+      "Experience": experienceLevel,
+      "Invited By Agent": referredByAgent,
+      "Notes": message || "None provided",
+      "Source": "realwolfpack.com/partner"
+    });
+
+    alertBox.style.display = "block";
+    alertBox.style.background = "#dcfce7";
+    alertBox.style.color = "#15803d";
+    alertBox.innerHTML = `<strong>Thank You!</strong> Your request was received. ${referredByAgent !== 'Direct Organization Lead' ? referredByAgent + ' and ' : ''}James Jestes will reach out directly to schedule your conversation.`;
+    form.reset();
+  } catch (err) {
+    console.error("Partner form error:", err);
+    alertBox.style.display = "block";
+    alertBox.style.background = "#fee2e2";
+    alertBox.style.color = "#991b1b";
+    alertBox.textContent = "There was an issue submitting your request. Please email james@jamesjestes.com directly.";
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Submit Partnership Request ↗";
+  }
+};
+</script>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-col brand-col">
+      <div class="footer-brand">
+        <span class="brand-monogram">JJ<span>.</span></span>
+        <strong>REAL WOLF PACK</strong>
+      </div>
+      <p class="footer-bio">Personal agent attraction portal and member command base operated by James Jestes, Certified eXp Mentor and Top Producing Realtor. Connecting agents into Mike Sherrard's 3,300+ Agent Wolf Pack ecosystem with direct veteran mentorship and modern systems.</p>
+      <div class="footer-badges">
+        <span>Top Producing Realtor</span>
+        <span>15 Yrs Licensed · 25+ Yrs Investing</span>
+        <span>U.S. Military Veteran</span>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore The Model</h4>
+      <ul>
+        <li><a href="/exp-explained.html">eXp Realty Explained</a></li>
+        <li><a href="/compare.html">Brokerage Comparison Matrix</a></li>
+        <li><a href="/calculator.html">Commission Split & Cap Calculator</a></li>
+        <li><a href="/airbnb-agent.html">Short-Term Rentals & Condotels</a></li>
+        <li><a href="/audit.html">15-Minute Tech & Marketing Audit</a></li>
+        <li><a href="/free-pack.html">Free Agent AI Prompt Pack</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Training & Systems</h4>
+      <ul>
+        <li><a href="/training/index.html">Curated Training Library</a></li>
+        <li><a href="/training/real-wolf-pack-business-foundation-page.html">Business Foundation Track</a></li>
+        <li><a href="/training/fast-momentum-series.html">Fast Momentum Track</a></li>
+        <li><a href="/training/organic-lead-gen-series.html">Organic Inbound Track</a></li>
+        <li><a href="/presentation.html">Interactive Zoom Presentation</a></li>
+        <li><a href="/faq.html">Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Organization & Access</h4>
+      <ul>
+        <li><a href="/request-access.html">Apply to Partner with James</a></li>
+        <li><a href="/login.html">Member Sign In / Register</a></li>
+        <li><a href="/privacy.html">Privacy Policy</a></li>
+        <li><a href="/terms.html">Terms of Service</a></li>
+        <li><a href="mailto:james@jamesjestes.com">james@jamesjestes.com</a></li>
+        <li><span style="color:#94a3b8;font-size:13px">Greater Daytona & Coastal Florida</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap footer-bottom">
+    <p class="disclaimer">RealWolfPack.com is an independent agent attraction and member resource portal operated by James Jestes, Broker Associate with eXp Realty. Agent Wolf Pack is an organization of 3,300+ independent real estate agents within eXp Realty founded by Mike Sherrard and Connor Steinbrook. eXp Realty is an Equal Housing Opportunity brokerage. All commission math, splits, and training access are subject to eXp Realty policies.</p>
+    <p class="copyright">© 2026 RealWolfPack.com. All rights reserved. Zero em dashes.</p>
+  </div>
+</footer>
+</body>
+</html>
