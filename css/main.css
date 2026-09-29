@@ -485,3 +485,239 @@ body {
     font-size: 14.5px;
   }
 }
+
+
+/* ==========================================================================
+   MOBILE-FIRST STAGE & HERO ARCHITECTURE (Default for all phones & tablets)
+   ========================================================================== */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  padding: 1.25rem 0 2.5rem;
+}
+
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero h1 {
+  font-size: clamp(2.3rem, 8vw, 3.8rem);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  margin-bottom: 0.85rem;
+}
+
+.hero p.hero-description, .hero p.lead, .hero p.intro {
+  font-size: 16px;
+  line-height: 1.55;
+  margin-bottom: 1.2rem;
+}
+
+/* Universal Stage Card on Mobile */
+.hero-stage-card, 
+.train-hero-stage-card, 
+.comp-hero-stage-card, 
+.calc-hero-stage-card, 
+.audit-hero-stage-card, 
+.str-hero-stage-card, 
+.dl-hero-stage-card, 
+.vip-hero-stage-card,
+.faq-hero-stage-card,
+.fl-hero-stage-card,
+.guide-portrait-card,
+.community-stage-card {
+  position: relative;
+  width: 100%;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 2px solid rgba(245, 130, 31, 0.4);
+  box-shadow: 0 16px 40px rgba(16, 47, 108, 0.2), 0 0 30px rgba(245, 130, 31, 0.15);
+  background: #090d16;
+  margin-top: 10px;
+}
+
+.hero-stage-media, 
+.train-hero-stage-media, 
+.comp-hero-stage-media, 
+.calc-hero-stage-media, 
+.audit-hero-stage-media, 
+.str-hero-stage-media, 
+.dl-hero-stage-media, 
+.vip-hero-stage-media,
+.faq-hero-stage-media,
+.fl-hero-stage-media,
+.guide-portrait-media,
+.community-stage-media {
+  position: relative;
+  width: 100%;
+  height: 290px;
+  min-height: 290px;
+  max-height: 320px;
+  overflow: hidden;
+}
+
+.hero-stage-image, 
+.train-hero-stage-image, 
+.comp-hero-stage-image, 
+.calc-hero-stage-image, 
+.audit-hero-stage-image, 
+.str-hero-stage-image, 
+.dl-hero-stage-image, 
+.vip-hero-stage-image,
+.faq-hero-stage-image,
+.fl-hero-stage-image,
+.guide-portrait-image,
+.community-stage-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Mobile Badges & Overlays */
+.hero-stage-badge, .str-tag, .audit-tag, .comp-tag, .calc-tag, .vip-tag, .train-tag, .faq-tag, .fl-tag, .guide-location-tag, .community-network-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(9, 13, 22, 0.9);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 230, 118, 0.5);
+  border-radius: 999px;
+  padding: 4px 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #00e676;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  z-index: 2;
+}
+
+.guide-location-tag, .community-network-tag, .str-tag, .audit-tag, .comp-tag, .calc-tag, .vip-tag, .train-tag, .faq-tag, .fl-tag {
+  left: 10px;
+  right: auto;
+}
+
+.hero-stage-overlay, .str-stage-badge, .audit-stage-badge, .comp-stage-badge, .calc-stage-badge, .vip-stage-badge, .train-stage-badge, .faq-stage-badge, .fl-stage-badge, .guide-portrait-badge, .community-stage-badge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 14px 12px 10px;
+  background: linear-gradient(to top, rgba(9, 13, 22, 0.95) 0%, rgba(9, 13, 22, 0.6) 60%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  z-index: 2;
+}
+
+.hero-overlay-pill {
+  background: rgba(9, 13, 22, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  padding: 6px 10px;
+}
+
+.hero-overlay-pill strong {
+  display: block;
+  color: #ffffff;
+  font-size: 11.5px;
+  line-height: 1.2;
+}
+
+.hero-overlay-pill span {
+  display: block;
+  color: #cbd5e1;
+  font-size: 10px;
+  line-height: 1.2;
+}
+
+.hero-overlay-pill.accent strong {
+  color: var(--orange);
+}
+
+/* ==========================================================================
+   DESKTOP STRETCH & SYMMETRY (Screens 900px and wider)
+   ========================================================================== */
+@media (min-width: 900px) {
+  .hero, .hero-2col, .guide-section, .community-layout {
+    grid-template-columns: 1.05fr 0.95fr !important;
+    align-items: stretch !important;
+    gap: 3.5rem !important;
+    padding: 2.5rem 0 4rem !important;
+  }
+  .guide-section {
+    grid-template-columns: 0.95fr 1.05fr !important;
+  }
+  .hero-copy, .hero-text-col, .guide-copy, .community-copy {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  .hero h1 {
+    font-size: clamp(3.2rem, 5.8vw, 5.2rem) !important;
+    line-height: 0.98 !important;
+  }
+  .hero-stage-card, 
+  .train-hero-stage-card, 
+  .comp-hero-stage-card, 
+  .calc-hero-stage-card, 
+  .audit-hero-stage-card, 
+  .str-hero-stage-card, 
+  .dl-hero-stage-card, 
+  .vip-hero-stage-card,
+  .faq-hero-stage-card,
+  .fl-hero-stage-card,
+  .guide-portrait-card,
+  .community-stage-card {
+    height: 100% !important;
+    min-height: 520px !important;
+    border-radius: 36px !important;
+    margin-top: 0 !important;
+  }
+  .hero-stage-media, 
+  .train-hero-stage-media, 
+  .comp-hero-stage-media, 
+  .calc-hero-stage-media, 
+  .audit-hero-stage-media, 
+  .str-hero-stage-media, 
+  .dl-hero-stage-media, 
+  .vip-hero-stage-media,
+  .faq-hero-stage-media,
+  .fl-hero-stage-media,
+  .guide-portrait-media,
+  .community-stage-media {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+  .hero-stage-overlay {
+    padding: 20px 16px 16px !important;
+    flex-direction: row !important;
+    gap: 10px !important;
+  }
+  .hero-overlay-pill {
+    flex: 1 1 calc(50% - 10px) !important;
+    padding: 10px 14px !important;
+    border-radius: 16px !important;
+  }
+  .hero-overlay-pill strong {
+    font-size: 13px !important;
+  }
+  .hero-overlay-pill span {
+    font-size: 11px !important;
+  }
+  .hero-stage-badge, .str-tag, .audit-tag, .comp-tag, .calc-tag, .vip-tag, .train-tag, .faq-tag, .fl-tag, .guide-location-tag, .community-network-tag {
+    top: 18px !important;
+    font-size: 11px !important;
+    padding: 6px 14px !important;
+  }
+}

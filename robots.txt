@@ -5,3 +5,7 @@ Disallow: /members/admin.html
 
 Sitemap: https://real-wolf-pack.web.app/sitemap.xml
 Sitemap: https://realwolfpack.com/sitemap.xml
+
+Disallow: /members/florida-case-study-sop.html
+Disallow: /florida-sop
+Disallow: /florida-sop.html
