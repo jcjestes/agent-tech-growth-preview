@@ -2,157 +2,463 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="refresh" content="0; url=/links">
-  <title>Redirecting to James Jestes Links | Real Wolf Pack</title>
-<link rel="stylesheet" href="/css/main.css">
-<script src="/js/components.js" defer></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>James Jestes | Real Wolf Pack Links</title>
+  <meta name="description" content="Connect with James Jestes, Top 3% Realtor, Certified eXp Mentor, and organization leader within Agent Wolf Pack.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/css/main.css">
+
+  <!-- OpenGraph Social Share Card -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Real Wolf Pack">
+  <meta property="og:title" content="James Jestes | Real Wolf Pack Links">
+  <meta property="og:description" content="Connect with James Jestes: Calculators, AI prompt vault, YouTube podcasts, and Florida real estate opportunities.">
+  <meta property="og:url" content="https://realwolfpack.com/links">
+  <meta property="og:image" content="https://realwolfpack.com/img/og-social-share.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="James Jestes Real Wolf Pack Links">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(180deg, #0d1b3e 0%, #090d16 100%);
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 16px 48px;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    .bio-container {
+      width: 100%;
+      max-width: 520px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .top-brand-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+    .top-brand-bar a {
+      color: #ffffff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 15px;
+      letter-spacing: .02em;
+    }
+    .brand-logo-pill {
+      background: var(--blue-dark);
+      color: var(--orange);
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-weight: 900;
+      font-size: 14px;
+      border: 1px solid rgba(245,130,31,.3);
+    }
+    .home-link-btn {
+      color: #ffd0a3 !important;
+      font-size: 13px !important;
+      font-weight: 700 !important;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.15);
+      transition: all .2s ease;
+    }
+    .home-link-btn:hover {
+      background: rgba(245,130,31,.2);
+      border-color: var(--orange);
+    }
+
+    .profile-card {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .avatar-ring {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 0 auto 16px;
+      padding: 3px;
+      background: linear-gradient(135deg, var(--orange) 0%, var(--blue) 100%);
+      box-shadow: 0 12px 30px rgba(0,0,0,.5), 0 0 24px rgba(245,130,31,.35);
+    }
+    .avatar-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: #090d16;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
+      font-weight: 900;
+      color: #ffffff;
+    }
+    .avatar-inner span {
+      color: var(--orange);
+    }
+    .profile-name {
+      font-size: 28px;
+      font-weight: 900;
+      color: #ffffff;
+      margin: 0 0 6px;
+      letter-spacing: -.02em;
+    }
+    .profile-role {
+      color: var(--orange);
+      font-size: 13.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 10px;
+    }
+    .profile-summary {
+      color: #cbd5e1;
+      font-size: 14.5px;
+      line-height: 1.5;
+      margin: 0 0 16px;
+      max-width: 440px;
+    }
+    
+    .credential-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 24px;
+    }
+    .credential-tags span {
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 999px;
+      padding: 5px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #ffd0a3;
+    }
+
+    .links-group {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .link-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 16px 20px;
+      background: #ffffff;
+      border: 2px solid #ffffff;
+      border-radius: 20px;
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(0,0,0,.25);
+      transition: all .2s ease;
+      position: relative;
+    }
+    .link-row:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(245,130,31,.3);
+      border-color: var(--orange);
+    }
+
+    .link-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-align: left;
+    }
+    .icon-badge {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      background: #f1f5f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+      border: 1px solid #e2e8f0;
+    }
+    .link-text strong {
+      display: block;
+      color: #0f172a;
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 3px;
+    }
+    .link-text small {
+      display: block;
+      color: #475569;
+      font-size: 13.5px;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    .link-arrow {
+      color: var(--orange);
+      font-size: 18px;
+      font-weight: 900;
+      flex-shrink: 0;
+      margin-left: 8px;
+      transition: transform .2s ease;
+    }
+    .link-row:hover .link-arrow {
+      transform: translateX(4px);
+    }
+
+    .link-row.vip-card {
+      background: linear-gradient(135deg, #f5821f 0%, #e06f10 100%);
+      border-color: #f5821f;
+      box-shadow: 0 10px 28px rgba(245,130,31,.4);
+    }
+    .link-row.vip-card:hover {
+      box-shadow: 0 14px 36px rgba(245,130,31,.6);
+      border-color: #ffffff;
+    }
+    .link-row.vip-card .icon-badge {
+      background: rgba(255,255,255,.2);
+      border-color: rgba(255,255,255,.3);
+    }
+    .link-row.vip-card .link-text strong {
+      color: #ffffff;
+      font-size: 16.5px;
+    }
+    .link-row.vip-card .link-text small {
+      color: #fff3e6;
+    }
+    .link-row.vip-card .link-arrow {
+      color: #ffffff;
+    }
+
+    .link-row.subdued {
+      background: rgba(255,255,255,.06);
+      border: 1.5px dashed rgba(255,255,255,.25);
+      box-shadow: none;
+    }
+    .link-row.subdued .icon-badge {
+      background: rgba(255,255,255,.1);
+      border-color: rgba(255,255,255,.15);
+    }
+    .link-row.subdued .link-text strong {
+      color: #ffffff;
+    }
+    .link-row.subdued .link-text small {
+      color: #94a3b8;
+    }
+
+    .bio-footer {
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,.12);
+      text-align: center;
+      width: 100%;
+      color: #94a3b8;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+    .bio-footer a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-weight: 700;
+    }
+  </style>
 </head>
-<body style="background:#090d16;color:#fff;text-align:center;padding:100px 20px;font-family:Arial,sans-serif">
-<header class="site-header">
-  <div class="wrap header-inner">
-    <a class="brand-link" href="/" aria-label="Real Wolf Pack Home">
-      <span class="brand-monogram">JJ<span>.</span></span>
-      <div class="brand-text">
-        <strong>REAL WOLF PACK</strong>
-        <small>JAMES JESTES · eXp REALTY</small>
-      </div>
+<body>
+
+<div class="bio-container">
+
+  <!-- Top Navigation & Brand Header -->
+  <div class="top-brand-bar">
+    <a href="/" aria-label="Real Wolf Pack Home">
+      <span class="brand-logo-pill">JJ.</span>
+      <span>REAL WOLF PACK</span>
     </a>
+    <a class="home-link-btn" href="/">Official Website ↗</a>
+  </div>
+
+  <!-- Profile Section -->
+  <div class="profile-card">
+    <div class="avatar-ring">
+      <div class="avatar-inner">JJ<span>.</span></div>
+    </div>
+    <h1 class="profile-name">James Jestes</h1>
+    <div class="profile-role">Top 3% Realtor · Certified eXp Mentor · Veteran</div>
+    <p class="profile-summary">Broker Associate with eXp Realty · Organization Leader within Agent Wolf Pack (3,300+ agents worldwide) · Greater Daytona Beach &amp; Coastal Florida</p>
     
-    <button class="nav-toggle" aria-label="Toggle navigation menu" onclick="toggleMobileNav()">
-      <span></span><span></span><span></span>
-    </button>
-    
-    <nav class="site-nav" id="site-nav">
-      <!-- The Model Dropdown -->
-      <div class="nav-dropdown">
-        <button class="nav-drop-btn" onclick="toggleDropdown(this)">
-          The Model <span class="drop-arrow">▾</span>
-        </button>
-        <div class="nav-drop-menu">
-          <a class="drop-item" href="/exp-explained.html">
-            <span class="drop-icon">📊</span>
-            <div>
-              <strong>eXp Realty Explained</strong>
-              <small>80/20 split, $16k cap & cloud model</small>
-            </div>
-          </a>
-          <a class="drop-item" href="/compare.html">
-            <span class="drop-icon">⚖️</span>
-            <div>
-              <strong>Brokerage Comparison</strong>
-              <small>Side-by-side vs traditional franchises</small>
-            </div>
-          </a>
-          <a class="drop-item" href="/calculator.html">
-            <span class="drop-icon">🧮</span>
-            <div>
-              <strong>Cap Calculator</strong>
-              <small>Calculate your exact annual savings</small>
-            </div>
-          </a>
+    <div class="credential-tags">
+      <span>Top 3% Nationwide</span>
+      <span>15 Yrs Licensed</span>
+      <span>25+ Yrs Investing</span>
+      <span>U.S. Military Veteran</span>
+      <span>Former Agency Owner</span>
+    </div>
+  </div>
+
+  <!-- Action Links Stack -->
+  <div class="links-group">
+
+    <!-- 1. VIP Partner Application (Featured Sunset Orange) -->
+    <a class="link-row vip-card" href="/request-access.html">
+      <div class="link-left">
+        <div class="icon-badge">🐺</div>
+        <div class="link-text">
+          <strong>Apply to Partner with James</strong>
+          <small>Direct 1-on-1 mentorship &amp; Agent Wolf Pack access</small>
         </div>
       </div>
+      <span class="link-arrow">↗</span>
+    </a>
 
-      <!-- Strategy & Niches Dropdown -->
-      <div class="nav-dropdown">
-        <button class="nav-drop-btn" onclick="toggleDropdown(this)">
-          Strategy & Niches <span class="drop-arrow">▾</span>
-        </button>
-        <div class="nav-drop-menu">
-          <a class="drop-item" href="/airbnb-agent.html">
-            <span class="drop-icon">🌊</span>
-            <div>
-              <strong>STR & Condotels</strong>
-              <small>Salt Air Sessions investor workflows</small>
-            </div>
-          </a>
-          <a class="drop-item" href="/audit.html">
-            <span class="drop-icon">⚡</span>
-            <div>
-              <strong>15-Minute Tech Audit</strong>
-              <small>Free 1-on-1 CRM & pipeline diagnostic</small>
-            </div>
-          </a>
-          <a class="drop-item" href="/free-pack.html">
-            <span class="drop-icon">📦</span>
-            <div>
-              <strong>Free AI Prompt Pack</strong>
-              <small>108 real estate AI prompts & playbooks</small>
-            </div>
-          </a>
+    <!-- 2. Free AI Prompt Pack -->
+    <a class="link-row" href="/free-pack.html">
+      <div class="link-left">
+        <div class="icon-badge">🤖</div>
+        <div class="link-text">
+          <strong>Free 108 Real Estate AI Prompt Pack</strong>
+          <small>Turnkey prompts for listing copy, lead nurture &amp; CMAs</small>
         </div>
       </div>
+      <span class="link-arrow">↗</span>
+    </a>
 
-      <!-- Direct Links -->
-      <a class="nav-link-direct" href="/training/index.html">Training Hub</a>
-      <a class="nav-link-direct" href="/about.html">About James</a>
-
-      <!-- Action Buttons -->
-      <div class="nav-actions">
-        <a class="btn-nav-outline" href="/login.html">Member Login</a>
-        <a class="btn-nav-primary" href="/request-access.html">Join The Pack ↗</a>
+    <!-- 3. Commission Cap Calculator -->
+    <a class="link-row" href="/calculator.html">
+      <div class="link-left">
+        <div class="icon-badge">🧮</div>
+        <div class="link-text">
+          <strong>Commission Cap Calculator</strong>
+          <small>Calculate your annual savings with eXp's $16,000 cap</small>
+        </div>
       </div>
-    </nav>
-  </div>
-</header>
-  <p>Redirecting to James Jestes Link Hub...</p>
-  <p><a href="/links.html" style="color:#f5821f;font-weight:900">Click here if not redirected automatically ↗</a></p>
-<footer class="site-footer">
-  <div class="wrap footer-grid">
-    <div class="footer-col brand-col">
-      <div class="footer-brand">
-        <span class="brand-monogram">JJ<span>.</span></span>
-        <strong>REAL WOLF PACK</strong>
+      <span class="link-arrow">↗</span>
+    </a>
+
+    <!-- 4. Facebook Blueprint (New) -->
+    <a class="link-row" href="/facebook">
+      <div class="link-left">
+        <div class="icon-badge">🏡</div>
+        <div class="link-text">
+          <strong>Facebook Marketplace &amp; Groups Blueprint</strong>
+          <small>From owner of 35k member FL community · AI &amp; Canva</small>
+        </div>
       </div>
-      <p class="footer-bio">Personal agent attraction portal and member command base operated by James Jestes, Certified eXp Mentor and Top 3% Realtor nationwide. Connecting agents into Mike Sherrard's 3,300+ Agent Wolf Pack ecosystem with direct veteran mentorship and modern systems.</p>
-      <div class="footer-badges">
-        <span>Top 3% Nationwide</span>
-        <span>15 Yrs Licensed · 25+ Yrs Investing</span>
-        <span>U.S. Military Veteran</span>
+      <span class="link-arrow">↗</span>
+    </a>
+
+    <!-- 5. ForSaleDaytonaBeach.com (Live MLS Search) -->
+    <a class="link-row" href="https://www.forsaledaytonabeach.com" target="_blank" rel="noopener">
+      <div class="link-left">
+        <div class="icon-badge">🔍</div>
+        <div class="link-text">
+          <strong>Search Daytona Beach MLS Listings</strong>
+          <small>Live active inventory &amp; condos on ForSaleDaytonaBeach.com</small>
+        </div>
       </div>
-    </div>
+      <span class="link-arrow">↗</span>
+    </a>
 
-    <div class="footer-col">
-      <h4>Explore The Model</h4>
-      <ul>
-        <li><a href="/exp-explained.html">eXp Realty Explained</a></li>
-        <li><a href="/compare.html">Brokerage Comparison Matrix</a></li>
-        <li><a href="/calculator.html">Commission Split & Cap Calculator</a></li>
-        <li><a href="/airbnb-agent.html">Short-Term Rentals & Condotels</a></li>
-        <li><a href="/audit.html">15-Minute Tech & Marketing Audit</a></li>
-        <li><a href="/free-pack.html">Free Agent AI Prompt Pack</a></li>
-      </ul>
-    </div>
+    <!-- 6. 15-Minute Tech Audit -->
+    <a class="link-row" href="/audit.html">
+      <div class="link-left">
+        <div class="icon-badge">⚡</div>
+        <div class="link-text">
+          <strong>Free 15-Minute Tech &amp; CRM Audit</strong>
+          <small>Confidential 1-on-1 pipeline &amp; tech diagnostic</small>
+        </div>
+      </div>
+      <span class="link-arrow">↗</span>
+    </a>
 
-    <div class="footer-col">
-      <h4>Training & Systems</h4>
-      <ul>
-        <li><a href="/training/index.html">Curated Training Library</a></li>
-        <li><a href="/training/real-wolf-pack-business-foundation-page.html">Business Foundation Track</a></li>
-        <li><a href="/training/fast-momentum-series.html">Fast Momentum Track</a></li>
-        <li><a href="/training/organic-lead-gen-series.html">Organic Inbound Track</a></li>
-        <li><a href="/presentation.html">Interactive Zoom Presentation</a></li>
-        <li><a href="/faq.html">Frequently Asked Questions</a></li>
-      </ul>
-    </div>
+    <!-- 7. Short-Term Rentals & Condotels -->
+    <a class="link-row" href="/airbnb-agent.html">
+      <div class="link-left">
+        <div class="icon-badge">🌊</div>
+        <div class="link-text">
+          <strong>Short-Term Rentals &amp; Condotels</strong>
+          <small>Salt Air Sessions investor workflows &amp; analysis</small>
+        </div>
+      </div>
+      <span class="link-arrow">↗</span>
+    </a>
 
-    <div class="footer-col">
-      <h4>Organization & Access</h4>
-      <ul>
-        <li><a href="/request-access.html">Apply to Partner with James</a></li>
-        <li><a href="/login.html">Member Sign In / Register</a></li>
-        <li><a href="/privacy.html">Privacy Policy</a></li>
-        <li><a href="/terms.html">Terms of Service</a></li>
-        <li><a href="mailto:james@jamesjestes.com">james@jamesjestes.com</a></li>
-        <li><span style="color:#94a3b8;font-size:13px">Greater Daytona & Coastal Florida</span></li>
-      </ul>
-    </div>
+    <!-- 8. Curated Training Hub -->
+    <a class="link-row" href="/training/index.html">
+      <div class="link-left">
+        <div class="icon-badge">🎙️</div>
+        <div class="link-text">
+          <strong>Curated Training Library</strong>
+          <small>Business Foundation, Fast Momentum &amp; Inbound series</small>
+        </div>
+      </div>
+      <span class="link-arrow">↗</span>
+    </a>
+
+    <!-- 9. YouTube Channel -->
+    <a class="link-row" href="https://www.youtube.com/@JamesJestes" target="_blank" rel="noopener">
+      <div class="link-left">
+        <div class="icon-badge">🎥</div>
+        <div class="link-text">
+          <strong>Watch Salt Air Sessions on YouTube</strong>
+          <small>Coastal real estate investing &amp; market breakdowns</small>
+        </div>
+      </div>
+      <span class="link-arrow">↗</span>
+    </a>
+
+    <!-- 10. Direct Text Message -->
+    <a class="link-row" href="sms:+13863154744">
+      <div class="link-left">
+        <div class="icon-badge">📱</div>
+        <div class="link-text">
+          <strong>Text James Directly</strong>
+          <small>(386) 315-4744 · Instant personal communication</small>
+        </div>
+      </div>
+      <span class="link-arrow">↗</span>
+    </a>
+
+    <!-- 11. Member Sign In (Gated) -->
+    <a class="link-row subdued" href="/login.html">
+      <div class="link-left">
+        <div class="icon-badge">🔒</div>
+        <div class="link-text">
+          <strong>Member Sign In</strong>
+          <small>Access private training vaults, prompts &amp; playbooks</small>
+        </div>
+      </div>
+      <span class="link-arrow">↗</span>
+    </a>
+
   </div>
 
-  <div class="wrap footer-bottom">
-    <p class="disclaimer">RealWolfPack.com is an independent agent attraction and member resource portal operated by James Jestes, Broker Associate with eXp Realty. Agent Wolf Pack is an organization of 3,300+ independent real estate agents within eXp Realty founded by Mike Sherrard and Connor Steinbrook. eXp Realty is an Equal Housing Opportunity brokerage. All commission math, splits, and training access are subject to eXp Realty policies.</p>
-    <p class="copyright">© 2026 RealWolfPack.com. All rights reserved. Zero em dashes.</p>
+  <!-- Clean Bio Footer -->
+  <div class="bio-footer">
+    <p>RealWolfPack.com is an independent agent attraction and member hub operated by James Jestes, Broker Associate with eXp Realty. Agent Wolf Pack is an organization of 3,300+ independent agents founded by Mike Sherrard and Connor Steinbrook.</p>
+    <p style="margin-top:8px">© 2026 RealWolfPack.com. All rights reserved. Zero em dashes.</p>
   </div>
-</footer>
+
+</div>
+
 </body>
 </html>
