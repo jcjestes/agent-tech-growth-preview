@@ -1,0 +1,2705 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>108 Real Estate AI Mega Prompts | James Jestes Organization</title>
+  <style>
+    @page { size: letter; margin: 18mm 16mm; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #0f172a;
+      line-height: 1.5;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+    .cover-page {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      box-sizing: border-box;
+      page-break-after: always;
+    }
+    .cover-badge {
+      background: #F5821F;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      padding: 6px 18px;
+      border-radius: 999px;
+      margin-bottom: 24px;
+    }
+    .cover-title {
+      font-size: 38px;
+      color: #102f6c;
+      font-weight: 900;
+      line-height: 1.1;
+      margin: 0 0 16px;
+      letter-spacing: -.03em;
+    }
+    .cover-sub {
+      font-size: 18px;
+      color: #475569;
+      max-width: 580px;
+      line-height: 1.5;
+      margin: 0 0 32px;
+    }
+    .cover-author {
+      border-top: 2px solid #e2e8f0;
+      padding-top: 24px;
+      font-size: 15px;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+    .human-rules-box {
+      background: #f8fafc;
+      border: 2px solid #19469D;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 28px 0;
+      page-break-after: always;
+    }
+    .category-header {
+      background: #102f6c;
+      color: #ffffff;
+      padding: 12px 18px;
+      border-radius: 10px;
+      margin: 28px 0 16px;
+      page-break-before: always;
+    }
+    .category-header h2 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: -.02em;
+    }
+    .prompt-card {
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 18px;
+      page-break-inside: avoid;
+    }
+    .prompt-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 8px;
+    }
+    .prompt-num-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #102f6c;
+    }
+    .prompt-meta {
+      font-size: 12.5px;
+      color: #475569;
+      margin-bottom: 10px;
+      line-height: 1.45;
+    }
+    .prompt-body {
+      background: #090d16;
+      color: #f8fafc;
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-family: ui-monospace, Menlo, Monaco, Consolas, monospace;
+      font-size: 11.5px;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+  </style>
+<link rel="stylesheet" href="/css/main.css">
+<script src="/js/components.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand-link" href="/" aria-label="Real Wolf Pack Home">
+      <span class="brand-monogram">JJ<span>.</span></span>
+      <div class="brand-text">
+        <strong>REAL WOLF PACK</strong>
+        <small>JAMES JESTES · eXp REALTY</small>
+      </div>
+    </a>
+    
+    <button class="nav-toggle" aria-label="Toggle navigation menu" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </button>
+    
+    <nav class="site-nav" id="site-nav">
+      <!-- The Model Dropdown -->
+      <div class="nav-dropdown">
+        <button class="nav-drop-btn" onclick="toggleDropdown(this)">
+          The Model <span class="drop-arrow">▾</span>
+        </button>
+        <div class="nav-drop-menu">
+          <a class="drop-item" href="/exp-explained.html">
+            <span class="drop-icon">📊</span>
+            <div>
+              <strong>eXp Realty Explained</strong>
+              <small>80/20 split, $16k cap & cloud model</small>
+            </div>
+          </a>
+          <a class="drop-item" href="/compare.html">
+            <span class="drop-icon">⚖️</span>
+            <div>
+              <strong>Brokerage Comparison</strong>
+              <small>Side-by-side vs traditional franchises</small>
+            </div>
+          </a>
+          <a class="drop-item" href="/calculator.html">
+            <span class="drop-icon">🧮</span>
+            <div>
+              <strong>Cap Calculator</strong>
+              <small>Calculate your exact annual savings</small>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Strategy & Niches Dropdown -->
+      <div class="nav-dropdown">
+        <button class="nav-drop-btn" onclick="toggleDropdown(this)">
+          Strategy & Niches <span class="drop-arrow">▾</span>
+        </button>
+        <div class="nav-drop-menu">
+          <a class="drop-item" href="/airbnb-agent.html">
+            <span class="drop-icon">🌊</span>
+            <div>
+              <strong>STR & Condotels</strong>
+              <small>Salt Air Sessions investor workflows</small>
+            </div>
+          </a>
+          <a class="drop-item" href="/audit.html">
+            <span class="drop-icon">⚡</span>
+            <div>
+              <strong>15-Minute Tech Audit</strong>
+              <small>Free 1-on-1 CRM & pipeline diagnostic</small>
+            </div>
+          </a>
+          <a class="drop-item" href="/free-pack.html">
+            <span class="drop-icon">📦</span>
+            <div>
+              <strong>Free AI Prompt Pack</strong>
+              <small>108 real estate AI prompts & playbooks</small>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Direct Links -->
+      <a class="nav-link-direct" href="/training/index.html">Training Hub</a>
+      <a class="nav-link-direct" href="/about.html">About James</a>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <a class="btn-nav-outline" href="/login.html">Member Login</a>
+        <a class="btn-nav-primary" href="/request-access.html">Join The Pack ↗</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+  <!-- Cover Page -->
+  <div class="cover-page">
+    <div class="cover-badge">THE 108 REAL ESTATE AI PROMPT VAULT</div>
+    <div class="cover-title">108 Tested AI Prompts That Sound Human &amp; Authentic</div>
+    <div class="cover-sub">Built to eliminate robotic AI clichés, boost conversion, and turn listings into signed buyer calls without sound like a machine.</div>
+    <div class="cover-author">
+      <strong>James Jestes</strong><br>
+      Top Producing Realtor · Certified eXp Mentor · Founder of Real Wolf Pack Organization<br>
+      Greater Daytona Beach &amp; Coastal Florida · RealWolfPack.com
+    </div>
+  </div>
+
+  <!-- The Human Voice Blueprint Page -->
+  <div class="human-rules-box">
+    <h2 style="color:#102f6c;margin-top:0">The Golden Rules for 100% Human AI Real Estate Copy</h2>
+    <p style="font-size:14px;color:#334155">Most agents hate AI copy because it sounds cheesy, robotic, and fake. Every prompt in this vault has been engineered with our <strong>Human Voice Protocol</strong> so outputs sound like a real, experienced local agent talking to a client over coffee.</p>
+    
+    <div style="background:#ffffff;border:1px solid #cbd5e1;border-radius:8px;padding:14px;margin-bottom:14px">
+      <strong style="color:#b91c1c;display:block;margin-bottom:4px">BANNED ROBOT CLICHES (Never Allowed in Our Outputs):</strong>
+      <span style="font-size:13px;color:#475569">"Nestled", "boasts", "oasis", "breathtaking", "rare gem", "tapestry", "sanctuary", "delve", "furthermore", "meticulously maintained", "step inside and be amazed".</span>
+    </div>
+
+    <div style="background:#ffffff;border:1px solid #cbd5e1;border-radius:8px;padding:14px">
+      <strong style="color:#15803d;display:block;margin-bottom:4px">WHAT WE USE INSTEAD:</strong>
+      <span style="font-size:13px;color:#475569">Concrete sensory details (morning light, parking a boat, walking 3 blocks to dinner), real numbers, conversational pacing, and genuine plain English.</span>
+    </div>
+  </div>
+
+  <div class="category-header">
+    <h2>Category: Foundations & Voice (10 Prompts)</h2>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#1: Brand Voice Builder</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Set your tone once so all AI outputs sound like you.<br>
+      <strong>What to Paste:</strong> 2-3 past posts you love, your market, your niche.
+    </div>
+    <div class="prompt-body">You are my real estate marketing assistant. Study the samples below and build a Brand
+Voice Guide.
+Output:
+1) Voice traits (10 bullets)
+2) Words/phrases I use often
+3) Words/phrases to avoid
+4) Formatting rules (length, emojis, punctuation)
+5) Templates in my voice: listing post, buyer tip, seller tip, local post
+6) Write 3 new posts in my voice
+Samples:
+[PASTE 2-3 POSTS]
+My market: [CITY/AREA]
+My niche: [BUYERS/SELLERS/INVESTORS]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#2: One-Sentence Positioning Statement</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Clarify what you do and who you serve in one line.<br>
+      <strong>What to Paste:</strong> Your niche, your market, your differentiator.
+    </div>
+    <div class="prompt-body">Write 10 one-sentence positioning statements for me.
+Rules:
+- Specific niche and location
+- One clear differentiator (speed, strategy, tech, negotiation, local expertise)
+- No generic phrases
+My niche: [NICHE]
+My market: [CITY]
+My differentiator: [EX: AI marketing + strong negotiations]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#3: Client Persona Builder</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Create buyer and seller personas that guide your content and ads.<br>
+      <strong>What to Paste:</strong> Market, price bands, niches.
+    </div>
+    <div class="prompt-body">Build 6 client personas for my real estate business.
+For each persona, include:
+- Who they are
+- Their top 5 worries
+- Their top 5 goals
+- What content they respond to
+- Best channels to reach them
+- The exact words they use in DMs
+My market: [CITY]
+My price ranges: [RANGES]
+My niches: [EX: waterfront, STR, relocation]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#4: Content Pillars and Series Generator</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Build a repeatable content engine.<br>
+      <strong>What to Paste:</strong> Your niche, platforms, posting frequency.
+    </div>
+    <div class="prompt-body">Create 5 content pillars and 3 repeatable weekly series for my real estate business.
+Output:
+- Pillars with examples
+- Series names
+- 12 episode ideas per series
+- Posting schedule that fits [X] posts per week
+My niche: [NICHE]
+Platforms: [FB/IG/YT]
+Posts per week: [NUMBER]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#5: AI Output Quality Checklist</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Prevent generic AI and reduce mistakes.<br>
+      <strong>What to Paste:</strong> Any draft AI wrote.
+    </div>
+    <div class="prompt-body">Audit the draft below for quality.
+Check:
+- Generic phrases and filler
+- Missing specifics
+- Any claims that need verification
+- Any steering risk
+Rewrite it to be:
+- More human
+- More specific
+- Easier to scan
+Draft:
+[PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#6: Your Personal 'Agent System Prompt'</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Create a reusable instruction block for consistent results.<br>
+      <strong>What to Paste:</strong> Your voice, rules, services, compliance rules.
+    </div>
+    <div class="prompt-body">Create a reusable 'System Prompt' for my real estate assistant AI.
+It must include:
+- My voice and tone
+- Formatting rules
+- Compliance rules (no inventing facts)
+- Ask clarifying questions if details are missing
+- Always deliver 3 options when asked to write copy
+My brand notes:
+[PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#7: Hook Library Builder</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Generate hooks that stop the scroll.<br>
+      <strong>What to Paste:</strong> Your niche, city, platform.
+    </div>
+    <div class="prompt-body">Create 50 hooks for real estate content.
+Rules:
+- No clickbait
+- Sounds like a real person
+- Mix: curiosity, contrarian, checklist, story
+Organize by platform: IG, FB, Reels
+My niche: [NICHE]
+My city: [CITY]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#8: Weekly 'CEO Dashboard'</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Track what matters and stay consistent.<br>
+      <strong>What to Paste:</strong> Your lead sources and goals.
+    </div>
+    <div class="prompt-body">Create a simple weekly dashboard for my real estate business.
+Include:
+- Lead metrics
+- Follow-up metrics
+- Content metrics
+- Pipeline metrics
+- One improvement focus for next week
+Also create a 15-minute weekly review script I can follow.
+My lead sources: [LIST]
+My goals: [LIST]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#9: Offer Stack Builder</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Turn your services into a clear offer.<br>
+      <strong>What to Paste:</strong> Your services, niche, outcomes.
+    </div>
+    <div class="prompt-body">Build my Offer Stack.
+Output:
+- Core offer (what I do)
+- Bonuses (what makes it premium)
+- Proof points (what I can say without exaggerating)
+- 3 calls to action
+- 10 FAQs with answers
+My services: [LIST]
+My niche: [NICHE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#10: Ethical Review Request Script</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Get more reviews without sounding awkward.<br>
+      <strong>What to Paste:</strong> Client name and outcome.
+    </div>
+    <div class="prompt-body">Write a short message asking a client for a review.
+Rules:
+- No fake reviews
+- Make it easy
+- Give them 3 bullet ideas to mention
+Tone: friendly, grateful
+Client outcome: [PASTE]
+Platform: [Google/Zillow/etc]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="category-header">
+    <h2>Category: Listings & Campaigns (10 Prompts)</h2>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#11: MLS Remarks That Sell</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Write MLS copy with a strong first 800 characters.<br>
+      <strong>What to Paste:</strong> Full property details, upgrades, restrictions, CTA.
+    </div>
+    <div class="prompt-body">Write MLS remarks for this listing.
+Rules:
+- First 800 characters: strongest hook + top 5 value points
+- Then full remarks: short paragraphs, easy to scan
+- Include upgrades and location benefits
+- End with a clear CTA
+- Do not invent facts
+Property details:
+[PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#12: Feature-to-Benefit Translator</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Turn raw features into buyer value.<br>
+      <strong>What to Paste:</strong> Feature list.
+    </div>
+    <div class="prompt-body">Convert these features into buyer benefits.
+Output:
+- Feature -&gt; Benefit -&gt; Lifestyle payoff
+Keep each line under 18 words.
+Features:
+[PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#13: Listing Photo Captions Pack</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Create captions for a carousel.<br>
+      <strong>What to Paste:</strong> Top features + any quirks.
+    </div>
+    <div class="prompt-body">Write 20 photo captions for a listing carousel.
+Rules:
+- Under 12 words each
+- Benefit-driven
+- No repeated phrases
+Listing details:
+[PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#14: Price Improvement Post</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Announce a price change without sounding desperate.<br>
+      <strong>What to Paste:</strong> Old price, new price, reason/value.
+    </div>
+    <div class="prompt-body">Write 3 price improvement posts.
+Rules:
+- Confident, not desperate
+- Focus on value
+- Simple CTA
+- One version for FB groups, one for IG, one for email
+Old price: [OLD]
+New price: [NEW]
+Highlights: [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#15: Coming Soon Teaser</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Build curiosity and a waitlist.<br>
+      <strong>What to Paste:</strong> Basic details and timeline.
+    </div>
+    <div class="prompt-body">Write 5 'coming soon' teasers for a listing.
+Output:
+- 2 short captions
+- 2 story scripts
+- 1 email teaser
+Include a waitlist CTA.
+Details:
+[PASTE]
+Launch date: [DATE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#16: Open House Promo Pack</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Create a full open house promo set.<br>
+      <strong>What to Paste:</strong> Date, time, address, parking notes.
+    </div>
+    <div class="prompt-body">Create an open house promo pack.
+Output:
+- FB group post (short)
+- IG caption (fun)
+- 5 story frames (script)
+- 2 reminder texts
+- 10 sign rider ideas
+Event info:
+[PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#17: Flyer Copy + Layout Notes</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Give Canva-ready copy and slide plan.<br>
+      <strong>What to Paste:</strong> Key features and CTA.
+    </div>
+    <div class="prompt-body">Create a one-page flyer.
+Output:
+- Headline options (10)
+- Short body copy (90 words)
+- Feature bullets (8)
+- CTA
+- Suggested layout sections for Canva
+Listing details:
+[PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#18: Property Website Copy</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Write clean website sections.<br>
+      <strong>What to Paste:</strong> Listing details + local angle.
+    </div>
+    <div class="prompt-body">Write copy for a single-property website.
+Sections:
+- Hero headline + subhead
+- Highlights
+- The Home
+- The Lifestyle
+- FAQ
+- Contact CTA
+Keep it skimmable.
+Listing info:
+[PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#19: Email Blast for New Listing</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Send to sphere and leads.<br>
+      <strong>What to Paste:</strong> Listing details + CTA.
+    </div>
+    <div class="prompt-body">Write an email blast announcing a new listing.
+Include:
+- 5 subject lines
+- 150-200 word email
+- Clear CTA
+Tone: friendly, confident
+Details:
+[PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#20: One Listing, One Campaign</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Turn a listing into a 14-day content plan.<br>
+      <strong>What to Paste:</strong> Listing details + target buyer.
+    </div>
+    <div class="prompt-body">Build a 14-day listing campaign.
+Include:
+- Pre-launch (3 days)
+- Launch day
+- Week 1 and Week 2 follow-up
+- Content types and prompts for each day
+- One paid ad angle
+- One open house plan
+Listing details:
+[PASTE]
+Target buyer: [TYPE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="category-header">
+    <h2>Category: Social Media Content (10 Prompts)</h2>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#21: 30-Day Content Calendar Generator</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Create a realistic posting plan.<br>
+      <strong>What to Paste:</strong> Market, platforms, schedule.
+    </div>
+    <div class="prompt-body">Create a 30-day content calendar for a real estate agent.
+Output:
+- 3 posts per week minimum
+- Mix: local, education, listings, trust, personal
+- Include exact post prompts
+Platforms: [LIST]
+Time per week: [HOURS]
+Market: [CITY]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#22: Market Update That Is Not Boring</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Turn stats into a story.<br>
+      <strong>What to Paste:</strong> Your market stats and key takeaways.
+    </div>
+    <div class="prompt-body">Turn these market stats into 3 social posts and 1 short video script.
+Rules:
+- No jargon
+- Make it feel like a story with a takeaway
+- Include a simple CTA
+Stats:
+[PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#23: Myth vs Fact Series</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Build authority with repeatable posts.<br>
+      <strong>What to Paste:</strong> Topic list.
+    </div>
+    <div class="prompt-body">Write 12 Myth vs Fact posts for buyers and sellers.
+Each post:
+- Myth line
+- Fact line
+- 2-sentence explanation
+- CTA question
+My market: [CITY]
+Topics: [PASTE OR LET AI CHOOSE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#24: Engagement Poll Pack</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Create polls that lead to DMs.<br>
+      <strong>What to Paste:</strong> Your niche.
+    </div>
+    <div class="prompt-body">Create 20 engagement prompts for IG stories and FB posts.
+Include:
+- Poll question
+- Two answers
+- Follow-up DM question to start a conversation
+Niche: [NICHE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#25: Carousel Outline Builder</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Turn any topic into a 7-slide carousel.<br>
+      <strong>What to Paste:</strong> Topic and audience.
+    </div>
+    <div class="prompt-body">Create a 7-slide carousel outline on this topic.
+Include:
+- Slide headline
+- 2 bullet lines per slide
+- Final CTA slide
+Topic: [TOPIC]
+Audience: [BUYER/SELLER]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#26: Client Win Story Post</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Turn closings into social proof.<br>
+      <strong>What to Paste:</strong> Client story notes.
+    </div>
+    <div class="prompt-body">Turn this client story into 3 posts:
+1) Emotional story
+2) Practical lesson
+3) Market insight
+Rules:
+- No private details
+- Keep it respectful
+Notes:
+[PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#27: Behind-the-Scenes Content</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Show process and build trust.<br>
+      <strong>What to Paste:</strong> What you are doing this week.
+    </div>
+    <div class="prompt-body">Create 10 behind-the-scenes post ideas from my weekly tasks.
+Output:
+- Short caption
+- What photo/video to capture
+- CTA
+My tasks this week:
+[PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#28: Local Business Spotlight Post</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Borrow attention and build community.<br>
+      <strong>What to Paste:</strong> Business type and reason you like it.
+    </div>
+    <div class="prompt-body">Write a local business spotlight post.
+Include:
+- Hook
+- Why locals love it (no exaggerations)
+- One photo caption idea
+- CTA question
+Business: [NAME]
+What I like: [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#29: Comment Reply Generator</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Turn comments into conversations.<br>
+      <strong>What to Paste:</strong> The comment text and goal.
+    </div>
+    <div class="prompt-body">Write 5 replies to this comment.
+Rules:
+- Friendly
+- Short
+- One reply should move to DM naturally
+Comment:
+[PASTE]
+Goal: [BOOK CALL / SEND LISTINGS / INVITE OPEN HOUSE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#30: Weekly Newsletter Template</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Keep in touch without sounding spammy.<br>
+      <strong>What to Paste:</strong> Market, niche, weekly theme.
+    </div>
+    <div class="prompt-body">Create a weekly newsletter template I can reuse.
+Sections:
+- Quick hello (2 sentences)
+- Market minute (simple)
+- Featured listing or neighborhood
+- Tip of the week
+- Local event mention
+- CTA
+My market: [CITY]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="category-header">
+    <h2>Category: Video Scripts & Hooks (10 Prompts)</h2>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#31: 30-Second Reel Script (AIDA)</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Quick reels that convert.<br>
+      <strong>What to Paste:</strong> Listing or topic.
+    </div>
+    <div class="prompt-body">Write a 30-second Reel script using AIDA.
+Include:
+- Hook (first 2 seconds)
+- 3 talking points
+- Simple CTA
+Also provide a shot list.
+Topic or listing:
+[PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#32: B-Roll Voiceover Script</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Use existing footage with a clean narrative.<br>
+      <strong>What to Paste:</strong> B-roll scenes list.
+    </div>
+    <div class="prompt-body">Write a voiceover for my B-roll footage.
+Rules:
+- 45 seconds max
+- Short sentences
+- Clear CTA at end
+B-roll scenes:
+[PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#33: YouTube Property Tour Outline</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Long form structure that keeps attention.<br>
+      <strong>What to Paste:</strong> Listing details.
+    </div>
+    <div class="prompt-body">Create a YouTube property tour outline.
+Include:
+- Cold open hook
+- Quick stats
+- Room-by-room beats
+- Neighborhood lifestyle segment (no invented facts)
+- CTA
+Listing details:
+[PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#34: Hook Generator for Reels</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Stop the scroll in 2 seconds.<br>
+      <strong>What to Paste:</strong> Topic and niche.
+    </div>
+    <div class="prompt-body">Generate 30 Reel hooks for this topic.
+Rules:
+- Sounds human
+- No hype
+- Mix curiosity, checklist, contrarian
+Topic: [TOPIC]
+Niche: [NICHE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#35: Teleprompter Script (Friendly)</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> On-camera scripts that do not sound robotic.<br>
+      <strong>What to Paste:</strong> Topic and length.
+    </div>
+    <div class="prompt-body">Write a teleprompter script in a friendly, natural voice.
+Length: [45s/90s/3min]
+Topic: [TOPIC]
+Include:
+- Hook
+- 3 points
+- CTA
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#36: Thumbnail Text + Title Pack</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Make videos clickable ethically.<br>
+      <strong>What to Paste:</strong> Video topic and audience.
+    </div>
+    <div class="prompt-body">Create:
+- 10 YouTube titles
+- 10 thumbnail text ideas (3-5 words)
+- 1 description (150 words)
+Topic: [TOPIC]
+Audience: [BUYER/SELLER]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#37: Shorts Repurposing Plan</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Turn one video into 8 shorts.<br>
+      <strong>What to Paste:</strong> Long video transcript or outline.
+    </div>
+    <div class="prompt-body">Create 8 short clips from this long video.
+For each clip:
+- Hook
+- Timestamp range (estimate)
+- Caption
+- CTA
+Transcript or outline:
+[PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#38: Listing Walkthrough Shot List</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Film faster with a plan.<br>
+      <strong>What to Paste:</strong> Home layout and highlights.
+    </div>
+    <div class="prompt-body">Create a shot list for a listing walkthrough.
+Include:
+- Exterior
+- Each main room
+- 10 detail shots
+- 5 lifestyle shots
+- 2 CTA shots
+Listing details:
+[PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#39: Video Caption Variations</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Keep captions fresh across platforms.<br>
+      <strong>What to Paste:</strong> Video topic.
+    </div>
+    <div class="prompt-body">Write 5 captions for this video.
+Versions:
+1) Short and punchy
+2) Story
+3) Educational
+4) Humor (light)
+5) Investor angle
+Video topic:
+[PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#40: FAQ Video Series Builder</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Batch a month of videos.<br>
+      <strong>What to Paste:</strong> Your niche and top questions.
+    </div>
+    <div class="prompt-body">Create a 12-episode FAQ video series.
+For each episode:
+- Title
+- Hook
+- 3 points
+- CTA
+Niche: [NICHE]
+Top questions: [PASTE OR LET AI CHOOSE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="category-header">
+    <h2>Category: Hyperlocal & Relocation (10 Prompts)</h2>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#41: Local Intel Brief (One-Page)</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Build local authority fast.<br>
+      <strong>What to Paste:</strong> Neighborhood/city + your notes/links.
+    </div>
+    <div class="prompt-body">Create a one-page Local Intel Brief for [AREA].
+Sections:
+- Identity and vibe (3 bullets)
+- Weekend itinerary (morning/afternoon/night)
+- Parks and recreation (general)
+- Shopping and dining clusters (general)
+- Commute and access notes (general)
+- 'How to research schools' checklist (no claims)
+- Top 10 FAQs buyers ask
+Rules: Do not invent facts or business names unless provided.
+Area: [PASTE]
+My notes/links: [PASTE]</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#42: Neighborhood Comparison Table</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Help relocation clients decide.<br>
+      <strong>What to Paste:</strong> Two or three areas + preferences.
+    </div>
+    <div class="prompt-body">Compare these neighborhoods for a buyer.
+Output a table with:
+- Vibe
+- Best for
+- Commute access
+- Home styles
+- Cautions (what to verify)
+Areas: [LIST]
+Buyer preferences: [PASTE]
+Rules: Do not use demographic claims.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#43: Relocation Guide Lead Magnet Outline</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Create a downloadable guide.<br>
+      <strong>What to Paste:</strong> City and target relocation type.
+    </div>
+    <div class="prompt-body">Outline a relocation guide PDF for [CITY].
+Include:
+- Chapters and page titles
+- Checklists
+- FAQs
+- Suggested maps and visuals
+- CTA to schedule a call
+Target audience: [EX: families, remote workers, retirees]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#44: How to Research Schools (Compliance-Safe)</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Be helpful without steering.<br>
+      <strong>What to Paste:</strong> City and research links if available.
+    </div>
+    <div class="prompt-body">Create a 'How to Research Schools' guide for buyers.
+Rules:
+- No ranking claims
+- No steering
+- Provide a checklist of questions to ask
+- Include placeholders for official links (district, state report cards)
+City: [CITY]</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#45: Local Events Content Mapper</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Tie content to what is happening locally.<br>
+      <strong>What to Paste:</strong> City and month.
+    </div>
+    <div class="prompt-body">Create a 30-day local content plan tied to events.
+Output:
+- Weekly themes
+- 10 post ideas tied to events
+- 5 reels ideas
+- 3 collaboration ideas
+City: [CITY]
+Month: [MONTH]
+Rules: If you do not know events, ask me for a list.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#46: Living Radius Post</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Sell the lifestyle around the home.<br>
+      <strong>What to Paste:</strong> Location notes and priorities.
+    </div>
+    <div class="prompt-body">Write a post describing life within a 10-minute radius of this home.
+Include:
+- Hook
+- 5 lifestyle bullets
+- Tie back to the home
+- CTA
+Location notes: [PASTE]
+Rules: Do not invent business names.
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#47: New Resident Welcome Email</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Delight clients after closing.<br>
+      <strong>What to Paste:</strong> Neighborhood and your local recs.
+    </div>
+    <div class="prompt-body">Write a 'Welcome to the neighborhood' email.
+Include:
+- Utilities checklist
+- Moving tips
+- 5 local suggestions (use placeholders if not provided)
+- Invite them to text you anytime
+Neighborhood: [PASTE]
+My recs (optional): [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#48: Community Story Angle Generator</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Turn boring features into meaning.<br>
+      <strong>What to Paste:</strong> Neighborhood vibe + home features.
+    </div>
+    <div class="prompt-body">Create 5 story angles that connect this home to the community lifestyle.
+Output:
+- Angle title
+- 2-3 sentence story
+Home features: [PASTE]
+Neighborhood vibe: [PASTE]</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#49: Local Business Partnership Pitch</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Get cross-promotion with local businesses.<br>
+      <strong>What to Paste:</strong> Business type and offer.
+    </div>
+    <div class="prompt-body">Write a partnership pitch message to a local business.
+Include:
+- What I will create (content)
+- What they get
+- What I get
+- Simple next step
+Business type: [TYPE]
+Offer idea: [PASTE]</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#50: Monthly 'Local Mini Magazine' Plan</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Badass authority play.<br>
+      <strong>What to Paste:</strong> City and niche.
+    </div>
+    <div class="prompt-body">Create a plan for a monthly 'Local Mini Magazine' PDF (2-4 pages).
+Include:
+- Sections
+- Content sources I should use
+- A repeatable template
+- How to promote it
+City: [CITY]
+Niche: [NICHE]</div>
+  </div>
+
+  <div class="category-header">
+    <h2>Category: Buyer Consults & Offers (10 Prompts)</h2>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#51: Buyer Consultation Agenda</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Run a confident first meeting.<br>
+      <strong>What to Paste:</strong> Buyer type and market.
+    </div>
+    <div class="prompt-body">Create a buyer consultation agenda.
+Include:
+- Questions to ask
+- Process overview (simple)
+- Timeline
+- Next steps
+Buyer type: [FIRST-TIME/RELO/INVESTOR]
+Market: [CITY]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#52: Buyer Needs Questionnaire</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Get clean info fast.<br>
+      <strong>What to Paste:</strong> Nothing, AI builds it.
+    </div>
+    <div class="prompt-body">Create a buyer questionnaire I can send by text or email.
+Include:
+- Budget and financing
+- Location preferences
+- Must-haves vs nice-to-haves
+- Dealbreakers
+- Timing
+- Communication preference
+Keep it short.
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#53: Rate Objection Response</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Handle 'I will wait for rates' calmly.<br>
+      <strong>What to Paste:</strong> Client context.
+    </div>
+    <div class="prompt-body">Write 5 responses to: 'We are waiting for rates.'
+Include:
+- Empathy
+- A practical point (numbers if I provide them)
+- A question to move forward
+My context: [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#54: Offer Strategy Explainer</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Teach without overwhelming.<br>
+      <strong>What to Paste:</strong> Market conditions and buyer situation.
+    </div>
+    <div class="prompt-body">Explain offer strategy in plain language.
+Include:
+- What matters most to sellers
+- 3 levers besides price
+- Risks to watch
+- Next step checklist
+Market conditions: [PASTE]
+Buyer situation: [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#55: Showing Feedback Summarizer</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Turn notes into decisions.<br>
+      <strong>What to Paste:</strong> Showing notes.
+    </div>
+    <div class="prompt-body">Summarize these showing notes.
+Output:
+- What they loved
+- What they disliked
+- Hidden patterns
+- Next 3 best moves
+Notes:
+[PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#56: Post-Showing Follow-Up Sequence</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Keep momentum after tours.<br>
+      <strong>What to Paste:</strong> Buyer interest level and notes.
+    </div>
+    <div class="prompt-body">Write a follow-up sequence after a showing.
+Include:
+- Same-day text
+- Next-day text
+- 3-day check-in
+Tone: helpful, not pushy
+Buyer notes: [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#57: Lead Response Scripts by Channel</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Speed-to-lead replies that book calls.<br>
+      <strong>What to Paste:</strong> Lead source and goal.
+    </div>
+    <div class="prompt-body">Write fast lead response scripts for:
+- FB lead
+- IG DM
+- Text
+- Email
+Goal: book a call or showing in 2 messages.
+Lead type: [BUYER/SELLER]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#58: First-Time Buyer Education Post</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Teach and convert.<br>
+      <strong>What to Paste:</strong> Topic.
+    </div>
+    <div class="prompt-body">Write a first-time buyer post on this topic.
+Structure:
+- Hook
+- 3 simple points
+- One example
+- CTA
+Topic: [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#59: Budget-to-Shortlist Generator</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Turn a budget into a plan.<br>
+      <strong>What to Paste:</strong> Budget, down payment, preferences.
+    </div>
+    <div class="prompt-body">Create a plan based on this buyer budget.
+Output:
+- Estimated monthly payment ranges (only if I provide rate)
+- Search strategy (where to look, what to compromise)
+- Next steps checklist
+Budget details: [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#60: Lender Partner Intro Email</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Make introductions easier.<br>
+      <strong>What to Paste:</strong> Buyer details and lender name.
+    </div>
+    <div class="prompt-body">Write an intro email connecting my buyer to a lender partner.
+Include:
+- Warm intro
+- Buyer goals
+- Next steps
+Buyer: [PASTE]
+Lender: [NAME]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="category-header">
+    <h2>Category: Seller Pricing & Prep (10 Prompts)</h2>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#61: Seller Consultation Agenda</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Run a strong listing appointment.<br>
+      <strong>What to Paste:</strong> Seller situation and goals.
+    </div>
+    <div class="prompt-body">Create a seller consultation agenda.
+Include:
+- Questions
+- Pricing discussion outline
+- Marketing plan outline
+- Timeline
+- Next steps
+Seller situation: [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#62: Room-by-Room Prep Checklist</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Give sellers a clear plan.<br>
+      <strong>What to Paste:</strong> Home type and condition notes.
+    </div>
+    <div class="prompt-body">Create a room-by-room prep checklist for selling.
+Include:
+- Quick wins
+- Photo day checklist
+- Showing day checklist
+Home: [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#63: Pricing Narrative (Explain Like a Pro)</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Explain pricing without drama.<br>
+      <strong>What to Paste:</strong> CMA notes and market conditions.
+    </div>
+    <div class="prompt-body">Write a pricing narrative for a seller.
+Include:
+- How we chose the price
+- What could change it
+- The first 14 days plan
+Use simple language.
+CMA notes: [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#64: Seller Objection Responses</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Handle common objections.<br>
+      <strong>What to Paste:</strong> Objection list.
+    </div>
+    <div class="prompt-body">Write responses to these seller objections.
+For each:
+- Empathy line
+- Clear explanation
+- Next-step question
+Objections:
+[PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#65: Weekly Seller Update Email</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Keep sellers calm and informed.<br>
+      <strong>What to Paste:</strong> Stats: showings, feedback, online views.
+    </div>
+    <div class="prompt-body">Write a weekly seller update email.
+Include:
+- What happened this week
+- What feedback means
+- What we are doing next week
+- One decision question
+Stats and notes:
+[PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#66: Expired Listing Reconnect DM</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Approach expired listings respectfully.<br>
+      <strong>What to Paste:</strong> Property basics and angle.
+    </div>
+    <div class="prompt-body">Write 3 outreach messages to an expired listing owner.
+Rules:
+- Respectful
+- Value-first
+- Offer a 10-minute 'marketing + pricing audit'
+Property context: [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#67: FSBO Value-First Script</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Convert FSBO without pressure.<br>
+      <strong>What to Paste:</strong> FSBO context.
+    </div>
+    <div class="prompt-body">Create:
+- 2 texts
+- 2 DMs
+- 1 call outline
+Goal: book a 10-minute pricing + marketing audit.
+FSBO context: [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#68: Listing Launch Checklist (SOP)</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Never miss a step.<br>
+      <strong>What to Paste:</strong> Your tools and timeline.
+    </div>
+    <div class="prompt-body">Create a listing launch checklist SOP.
+Include:
+- Pre-photo prep
+- Photo day
+- MLS input
+- Social launch
+- Email blast
+- Open house setup
+Tools: [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#69: Repair Request Negotiation Script</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Keep deals together.<br>
+      <strong>What to Paste:</strong> Repair request details.
+    </div>
+    <div class="prompt-body">Write a negotiation response to this repair request.
+Include:
+- Acknowledgement
+- What we can agree to
+- Alternatives (credit, repairs, split)
+- Next step
+Request: [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#70: Seller Lead Magnet: 'Top Mistakes'</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Attract seller leads.<br>
+      <strong>What to Paste:</strong> Market and seller type.
+    </div>
+    <div class="prompt-body">Create a lead magnet outline: '10 Mistakes Sellers Make in [CITY]'.
+Include:
+- 10 mistakes with 2-3 lines each
+- A checklist page
+- CTA to request a pricing plan
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="category-header">
+    <h2>Category: Lead Magnets & Funnels (10 Prompts)</h2>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#71: Lead Magnet Idea Generator</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Brainstorm offers people want.<br>
+      <strong>What to Paste:</strong> Market and niche.
+    </div>
+    <div class="prompt-body">Generate 25 lead magnet ideas for my market.
+For each:
+- Title
+- Who it is for
+- What it solves
+- What is inside
+- Best promo channels
+Market: [CITY]
+Niche: [NICHE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#72: Landing Page Copy</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Convert traffic to leads.<br>
+      <strong>What to Paste:</strong> Offer and audience.
+    </div>
+    <div class="prompt-body">Write a landing page for this lead magnet.
+Include:
+- Headline
+- Subhead
+- 6 benefit bullets
+- Short form fields suggestion
+- FAQ
+- CTA buttons
+Lead magnet: [PASTE]
+Audience: [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#73: Thank-You Page + Delivery Email</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Increase trust after opt-in.<br>
+      <strong>What to Paste:</strong> Lead magnet name and link.
+    </div>
+    <div class="prompt-body">Write:
+1) Thank-you page copy (short)
+2) Delivery email (with subject lines)
+Lead magnet: [NAME]
+Delivery link: [LINK]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#74: 7-Email Nurture Sequence</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Turn leads into appointments.<br>
+      <strong>What to Paste:</strong> Lead magnet and niche.
+    </div>
+    <div class="prompt-body">Create a 7-email nurture sequence for leads who downloaded this.
+Each email:
+- Subject
+- 120-180 words
+- One CTA
+Lead magnet: [PASTE]
+Niche: [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#75: 10-Text Nurture Sequence</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> SMS touches that do not feel spammy.<br>
+      <strong>What to Paste:</strong> Lead type and offer.
+    </div>
+    <div class="prompt-body">Create 10 text messages for lead nurture.
+Rules:
+- Short
+- Value-first
+- Ask questions
+Offer: [PASTE]
+Lead type: [BUYER/SELLER]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#76: Quiz Funnel Builder</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Segment leads automatically.<br>
+      <strong>What to Paste:</strong> Niche and segmentation goal.
+    </div>
+    <div class="prompt-body">Create a quiz funnel.
+Include:
+- Quiz title
+- 8 questions
+- 4 outcomes (segments)
+- What each outcome gets (lead magnet)
+Niche: [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#77: Webinar Outline</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Run a workshop that generates leads.<br>
+      <strong>What to Paste:</strong> Topic and audience.
+    </div>
+    <div class="prompt-body">Create a 45-minute webinar outline.
+Include:
+- Title and hooks
+- Agenda
+- Slides outline
+- Interactive moments
+- CTA to book a call
+Topic: [PASTE]
+Audience: [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#78: Content Upgrade Builder</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Add opt-ins to blog posts.<br>
+      <strong>What to Paste:</strong> Blog topic.
+    </div>
+    <div class="prompt-body">Create a content upgrade for this blog post.
+Output:
+- Upgrade title
+- What is inside
+- Opt-in CTA copy
+- Delivery email copy
+Blog topic: [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#79: Lead Source Tracking Plan</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Know what is working.<br>
+      <strong>What to Paste:</strong> Your platforms.
+    </div>
+    <div class="prompt-body">Create a tracking plan for my lead sources.
+Include:
+- UTM naming system
+- Spreadsheet columns
+- Weekly review routine
+Platforms: [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#80: Offer-to-Follow-Up Map</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Turn offers into scripts.<br>
+      <strong>What to Paste:</strong> Your offers and lead types.
+    </div>
+    <div class="prompt-body">Create a follow-up map for these offers.
+For each offer:
+- First response script
+- Day 1 follow-up
+- Day 3 follow-up
+- Week 1 follow-up
+Offers: [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="category-header">
+    <h2>Category: Ads & Landing Pages (10 Prompts)</h2>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#81: Meta Ad Copy Variations</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Test angles quickly.<br>
+      <strong>What to Paste:</strong> Listing or lead magnet.
+    </div>
+    <div class="prompt-body">Write 12 Meta ad primary texts for this offer.
+Angles:
+- Lifestyle
+- Convenience
+- Problem-solver
+- Social proof
+- Scarcity (ethical)
+Also provide 6 headlines and 6 CTAs.
+Offer: [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#82: UGC-Style Ad Script</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Make ads feel native.<br>
+      <strong>What to Paste:</strong> Offer and audience pain point.
+    </div>
+    <div class="prompt-body">Write a UGC-style video ad script (20-30 seconds).
+Structure:
+- Hook
+- Problem
+- Quick solution
+- CTA
+Offer: [PASTE]
+Audience pain point: [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#83: A/B Test Plan</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Run ads like a pro.<br>
+      <strong>What to Paste:</strong> Budget and goal.
+    </div>
+    <div class="prompt-body">Create an A/B testing plan for Meta ads.
+Include:
+- What to test first
+- Test matrix (creative, hook, audience, CTA)
+- Budget split
+- Success metrics
+Budget: [PASTE]
+Goal: [LEADS/TRAFFIC]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#84: Retargeting Sequence</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Warm leads need different messaging.<br>
+      <strong>What to Paste:</strong> Offer and timeline.
+    </div>
+    <div class="prompt-body">Create a 14-day retargeting sequence.
+Include:
+- Day 1-3 ads
+- Day 4-7 ads
+- Day 8-14 ads
+Each with a message angle and CTA.
+Offer: [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#85: Google Ads Headlines and Descriptions</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Quick search ad assets.<br>
+      <strong>What to Paste:</strong> Service and city.
+    </div>
+    <div class="prompt-body">Write:
+- 15 Google Ads headlines (30 char max)
+- 8 descriptions (90 char max)
+Service: [BUYER AGENT/SELLER AGENT]
+City: [CITY]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#86: YouTube Ad Script (Skippable)</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Drive leads with video ads.<br>
+      <strong>What to Paste:</strong> Offer and hook.
+    </div>
+    <div class="prompt-body">Write a skippable YouTube ad script (30 seconds).
+Include:
+- Hook in first 5 seconds
+- One clear promise
+- CTA
+Offer: [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#87: Landing Page Critique Prompt</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Improve conversions with AI.<br>
+      <strong>What to Paste:</strong> Your draft page copy.
+    </div>
+    <div class="prompt-body">Audit this landing page copy for conversion.
+Output:
+- What is unclear
+- What to shorten
+- Stronger headline options
+- Stronger CTA options
+- Suggested FAQ
+Copy:
+[PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#88: Ad Compliance Check</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Avoid policy problems.<br>
+      <strong>What to Paste:</strong> Your ad copy.
+    </div>
+    <div class="prompt-body">Check this ad copy for compliance and risk.
+Flag:
+- Sensitive attribute targeting language
+- Unverifiable claims
+- Steering risk
+Then rewrite a safer version.
+Copy:
+[PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#89: Listing Boost Plan</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Boost a listing post strategically.<br>
+      <strong>What to Paste:</strong> Listing and goal.
+    </div>
+    <div class="prompt-body">Create a 7-day boosted post plan for this listing.
+Include:
+- Which post to boost
+- Suggested creative types
+- CTA and lead capture method
+- Follow-up scripts
+Listing: [PASTE]
+Goal: [TOURS/LEADS]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#90: Budget Allocation Plan</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Know where to spend time and money.<br>
+      <strong>What to Paste:</strong> Monthly budget and priorities.
+    </div>
+    <div class="prompt-body">Create a monthly marketing budget plan.
+Split into:
+- Content
+- Ads
+- Email
+- Partnerships
+- Tools
+Include a low-budget and mid-budget version.
+Monthly budget: [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="category-header">
+    <h2>Category: CRM & Automation (10 Prompts)</h2>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#91: CRM Pipeline Builder</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Set up stages and messaging.<br>
+      <strong>What to Paste:</strong> Your business model.
+    </div>
+    <div class="prompt-body">Create a CRM pipeline for a real estate agent.
+Include:
+- Stages
+- Entry and exit criteria
+- What message goes out at each stage (email and text)
+Business model: [SOLO/TEAM]
+Niche: [PASTE]</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#92: Speed-to-Lead SOP</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Make response time consistent.<br>
+      <strong>What to Paste:</strong> Your tools and schedule.
+    </div>
+    <div class="prompt-body">Write a speed-to-lead SOP.
+Include:
+- Who responds
+- Time targets
+- Scripts for first contact
+- What happens if no reply
+Tools: [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#93: Lead Scoring Rules</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Prioritize the best leads.<br>
+      <strong>What to Paste:</strong> Your lead sources and criteria.
+    </div>
+    <div class="prompt-body">Create lead scoring rules.
+Include:
+- Score factors (timeline, preapproval, urgency)
+- Score ranges and actions
+- Scripts for each score tier
+Lead sources: [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#94: Call and Meeting Summary Agent</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Turn transcripts into action.<br>
+      <strong>What to Paste:</strong> Transcript text.
+    </div>
+    <div class="prompt-body">Summarize this call transcript.
+Output:
+- Key facts
+- Pain points
+- Timeline
+- Next steps
+- Follow-up messages (text and email)
+Transcript:
+[PASTE]</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#95: Make.com or Zapier Automation Spec</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Describe automations clearly.<br>
+      <strong>What to Paste:</strong> Tools and desired outcome.
+    </div>
+    <div class="prompt-body">Write a step-by-step automation spec for Make.com or Zapier.
+Include:
+- Trigger
+- Filters
+- Actions
+- Data fields mapping
+- Error handling
+Goal: [PASTE]
+Tools: [PASTE]</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#96: AI Assistant for Showing Scheduling</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Reduce back-and-forth.<br>
+      <strong>What to Paste:</strong> Your availability rules.
+    </div>
+    <div class="prompt-body">Create a showing scheduling assistant script.
+Output:
+- Questions to ask
+- Available time windows logic
+- Confirmation text template
+- Reschedule template
+My rules: [PASTE]</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#97: Website Chatbot FAQ Builder</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Build a helpful site concierge.<br>
+      <strong>What to Paste:</strong> Your services and common FAQs.
+    </div>
+    <div class="prompt-body">Create an FAQ knowledge base for a website chatbot.
+Include:
+- 30 FAQs and answers
+- What the bot should NOT answer (legal, exact stats)
+- When to hand off to me
+My services: [PASTE]
+My market: [CITY]</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#98: Market Report Generator Prompt</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Turn data into a clean report.<br>
+      <strong>What to Paste:</strong> Your stats tables.
+    </div>
+    <div class="prompt-body">Turn the data below into a market report.
+Output:
+- 1-paragraph summary
+- Buyer takeaways (5 bullets)
+- Seller takeaways (5 bullets)
+- 3 content snippets for social
+Data:
+[PASTE]</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#99: Content Repurposing Pipeline</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Badass efficiency play.<br>
+      <strong>What to Paste:</strong> One long piece of content.
+    </div>
+    <div class="prompt-body">Repurpose this content into:
+- 5 IG captions
+- 5 FB posts
+- 10 short hooks
+- 1 email
+- 1 video script
+Keep the voice consistent and non-generic.
+Source content:
+[PASTE]</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#100: Weekly AI Admin Assistant</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Save time on admin tasks.<br>
+      <strong>What to Paste:</strong> Your tasks list.
+    </div>
+    <div class="prompt-body">Act as my weekly admin assistant.
+Given my tasks, create:
+- A prioritized list
+- Time blocks
+- Draft messages I need to send
+- Reminders
+Tasks:
+[PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="category-header">
+    <h2>Category: Investors & STRs (8 Prompts)</h2>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#101: Investor Deal Memo</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Summarize deals clearly.<br>
+      <strong>What to Paste:</strong> Property info and assumptions.
+    </div>
+    <div class="prompt-body">Write a 1-page investor deal memo.
+Include:
+- Thesis
+- Assumptions (label as assumptions)
+- Risks
+- Next steps checklist
+Property details: [PASTE]</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#102: Proforma Outline + Disclaimers</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Create a rental projection framework.<br>
+      <strong>What to Paste:</strong> Nightly rate assumptions and costs.
+    </div>
+    <div class="prompt-body">Build a proforma outline for this STR.
+Output:
+- Revenue assumptions (ranges)
+- Expense categories
+- Scenario table (conservative, base, optimistic)
+- Clear disclaimer and what to verify
+Data: [PASTE]</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#103: HOA Document Review Checklist</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Spot risks early.<br>
+      <strong>What to Paste:</strong> HOA docs or notes.
+    </div>
+    <div class="prompt-body">Create an HOA document review checklist for buyers.
+Include:
+- Rental rules
+- Fees and reserves
+- Special assessment risk questions
+- Insurance and repairs responsibility
+Also provide a list of questions to ask the HOA.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#104: Investor Email Blast</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Send deals to your list.<br>
+      <strong>What to Paste:</strong> Deal highlights.
+    </div>
+    <div class="prompt-body">Write an investor email blast.
+Include:
+- 5 subject lines
+- Short deal summary
+- Assumptions section
+- CTA to request numbers
+Deal info: [PASTE]
+
+HUMAN VOICE RULES:
+- Sound like a real local Realtor talking directly to a client over coffee (warm, direct, knowledgeable).
+- Zero robotic clichés: DO NOT use 'nestled', 'boasts', 'oasis', 'breathtaking', 'rare gem', 'meticulously maintained', 'delve', or 'furthermore'.
+- Focus on concrete lifestyle specifics rather than empty adjectives.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#105: Off-Market Owner Outreach</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Ask owners if they would sell.<br>
+      <strong>What to Paste:</strong> Area and property type.
+    </div>
+    <div class="prompt-body">Write 3 outreach messages to off-market owners.
+Tone: respectful, short, human.
+Goal: start a conversation.
+Area: [PASTE]
+Property type: [PASTE]</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#106: 1031 Exchange Explainer</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Help investors understand basics.<br>
+      <strong>What to Paste:</strong> Investor context.
+    </div>
+    <div class="prompt-body">Explain 1031 exchanges in plain language.
+Include:
+- What it is
+- Key timelines (general)
+- What to ask their qualified intermediary
+- Disclaimer: consult pros</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#107: Renovation ROI Checklist</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Plan renovations with purpose.<br>
+      <strong>What to Paste:</strong> Property type and goals.
+    </div>
+    <div class="prompt-body">Create a renovation ROI checklist for this property.
+Include:
+- Must-do items
+- Nice-to-have items
+- Photo impact upgrades
+- Investor ROI notes
+Property: [PASTE]
+Goal: [RENTAL/RESALE]</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-top">
+      <div class="prompt-num-title">#108: STR Rules Research Prompt (Verification-First)</div>
+    </div>
+    <div class="prompt-meta">
+      <strong>When to Use:</strong> Research responsibly.<br>
+      <strong>What to Paste:</strong> City and building.
+    </div>
+    <div class="prompt-body">Create a research plan for STR rules.
+Output:
+- What to verify (city, county, HOA)
+- Official sources to check (placeholders)
+- Questions to ask the city
+- How to summarize findings
+City: [PASTE]
+Building: [PASTE]
+Rules: Do not guess. Ask for sources if missing.</div>
+  </div>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-col brand-col">
+      <div class="footer-brand">
+        <span class="brand-monogram">JJ<span>.</span></span>
+        <strong>REAL WOLF PACK</strong>
+      </div>
+      <p class="footer-bio">Personal agent attraction portal and member command base operated by James Jestes, Certified eXp Mentor and Top Producing Realtor. Connecting agents into Mike Sherrard's 3,300+ Agent Wolf Pack ecosystem with direct veteran mentorship and modern systems.</p>
+      <div class="footer-badges">
+        <span>Top Producing Realtor</span>
+        <span>15 Yrs Licensed · 25+ Yrs Investing</span>
+        <span>U.S. Military Veteran</span>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore The Model</h4>
+      <ul>
+        <li><a href="/exp-explained.html">eXp Realty Explained</a></li>
+        <li><a href="/compare.html">Brokerage Comparison Matrix</a></li>
+        <li><a href="/calculator.html">Commission Split & Cap Calculator</a></li>
+        <li><a href="/airbnb-agent.html">Short-Term Rentals & Condotels</a></li>
+        <li><a href="/audit.html">15-Minute Tech & Marketing Audit</a></li>
+        <li><a href="/free-pack.html">Free Agent AI Prompt Pack</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Training & Systems</h4>
+      <ul>
+        <li><a href="/training/index.html">Curated Training Library</a></li>
+        <li><a href="/training/real-wolf-pack-business-foundation-page.html">Business Foundation Track</a></li>
+        <li><a href="/training/fast-momentum-series.html">Fast Momentum Track</a></li>
+        <li><a href="/training/organic-lead-gen-series.html">Organic Inbound Track</a></li>
+        <li><a href="/presentation.html">Interactive Zoom Presentation</a></li>
+        <li><a href="/faq.html">Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Organization & Access</h4>
+      <ul>
+        <li><a href="/request-access.html">Apply to Partner with James</a></li>
+        <li><a href="/login.html">Member Sign In / Register</a></li>
+        <li><a href="/privacy.html">Privacy Policy</a></li>
+        <li><a href="/terms.html">Terms of Service</a></li>
+        <li><a href="mailto:james@jamesjestes.com">james@jamesjestes.com</a></li>
+        <li><span style="color:#94a3b8;font-size:13px">Greater Daytona & Coastal Florida</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap footer-bottom">
+    <p class="disclaimer">RealWolfPack.com is an independent agent attraction and member resource portal operated by James Jestes, Broker Associate with eXp Realty. Agent Wolf Pack is an organization of 3,300+ independent real estate agents within eXp Realty founded by Mike Sherrard and Connor Steinbrook. eXp Realty is an Equal Housing Opportunity brokerage. All commission math, splits, and training access are subject to eXp Realty policies.</p>
+    <p class="copyright">© 2026 RealWolfPack.com. All rights reserved. Zero em dashes.</p>
+  </div>
+</footer>
+</body>
+</html>
