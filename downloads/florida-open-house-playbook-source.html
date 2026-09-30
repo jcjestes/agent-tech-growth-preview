@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Florida Real Estate &amp; Open Houses - Official Social Playbook</title>
+  <style>
+    @page { size: letter; margin: 18mm 16mm; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #0f172a;
+      line-height: 1.55;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+    .header-banner {
+      border-bottom: 3px solid #F5821F;
+      padding-bottom: 16px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .brand-title {
+      color: #19469D;
+      font-size: 22px;
+      font-weight: 900;
+      margin: 0 0 4px;
+      letter-spacing: -.02em;
+    }
+    .brand-sub {
+      color: #F5821F;
+      font-size: 12.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+    .meta-right {
+      text-align: right;
+      font-size: 11.5px;
+      color: #64748b;
+      line-height: 1.4;
+    }
+    h1 {
+      font-size: 24px;
+      color: #102f6c;
+      margin: 0 0 10px;
+      line-height: 1.2;
+    }
+    h2 {
+      font-size: 17px;
+      color: #102f6c;
+      border-bottom: 1.5px solid #e2e8f0;
+      padding-bottom: 5px;
+      margin: 20px 0 10px;
+    }
+    h3 {
+      font-size: 14px;
+      color: #F5821F;
+      margin: 14px 0 6px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+    p {
+      font-size: 13px;
+      color: #334155;
+      margin: 0 0 10px;
+    }
+    .rule-box {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-left: 4px solid #19469D;
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin: 12px 0;
+      font-size: 12.5px;
+    }
+    .template-box {
+      background: #090d16;
+      color: #f1f5f9;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin: 10px 0 16px;
+      font-family: ui-monospace, Menlo, Monaco, Consolas, monospace;
+      font-size: 11.5px;
+      line-height: 1.45;
+      white-space: pre-wrap;
+    }
+    .page-break {
+      page-break-before: always;
+    }
+    .footer-note {
+      margin-top: 24px;
+      padding-top: 12px;
+      border-top: 1px solid #e2e8f0;
+      font-size: 11px;
+      color: #94a3b8;
+      text-align: center;
+    }
+  </style>
+<link rel="stylesheet" href="/css/main.css">
+<script src="/js/components.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand-link" href="/" aria-label="Real Wolf Pack Home">
+      <span class="brand-monogram">JJ<span>.</span></span>
+      <div class="brand-text">
+        <strong>REAL WOLF PACK</strong>
+        <small>JAMES JESTES · eXp REALTY</small>
+      </div>
+    </a>
+    
+    <button class="nav-toggle" aria-label="Toggle navigation menu" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </button>
+    
+    <nav class="site-nav" id="site-nav">
+      <!-- The Model Dropdown -->
+      <div class="nav-dropdown">
+        <button class="nav-drop-btn" onclick="toggleDropdown(this)">
+          The Model <span class="drop-arrow">▾</span>
+        </button>
+        <div class="nav-drop-menu">
+          <a class="drop-item" href="/exp-explained.html">
+            <span class="drop-icon">📊</span>
+            <div>
+              <strong>eXp Realty Explained</strong>
+              <small>80/20 split, $16k cap & cloud model</small>
+            </div>
+          </a>
+          <a class="drop-item" href="/compare.html">
+            <span class="drop-icon">⚖️</span>
+            <div>
+              <strong>Brokerage Comparison</strong>
+              <small>Side-by-side vs traditional franchises</small>
+            </div>
+          </a>
+          <a class="drop-item" href="/calculator.html">
+            <span class="drop-icon">🧮</span>
+            <div>
+              <strong>Cap Calculator</strong>
+              <small>Calculate your exact annual savings</small>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Strategy & Niches Dropdown -->
+      <div class="nav-dropdown">
+        <button class="nav-drop-btn" onclick="toggleDropdown(this)">
+          Strategy & Niches <span class="drop-arrow">▾</span>
+        </button>
+        <div class="nav-drop-menu">
+          <a class="drop-item" href="/airbnb-agent.html">
+            <span class="drop-icon">🌊</span>
+            <div>
+              <strong>STR & Condotels</strong>
+              <small>Salt Air Sessions investor workflows</small>
+            </div>
+          </a>
+          <a class="drop-item" href="/audit.html">
+            <span class="drop-icon">⚡</span>
+            <div>
+              <strong>15-Minute Tech Audit</strong>
+              <small>Free 1-on-1 CRM & pipeline diagnostic</small>
+            </div>
+          </a>
+          <a class="drop-item" href="/free-pack.html">
+            <span class="drop-icon">📦</span>
+            <div>
+              <strong>Free AI Prompt Pack</strong>
+              <small>108 real estate AI prompts & playbooks</small>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Direct Links -->
+      <a class="nav-link-direct" href="/training/index.html">Training Hub</a>
+      <a class="nav-link-direct" href="/about.html">About James</a>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <a class="btn-nav-outline" href="/login.html">Member Login</a>
+        <a class="btn-nav-primary" href="/request-access.html">Join The Pack ↗</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+  <!-- Page 1 -->
+  <div class="header-banner">
+    <div>
+      <div class="brand-title">FLORIDA REAL ESTATE &amp; OPEN HOUSES</div>
+      <div class="brand-sub">The Official Open House &amp; Social Listing Playbook</div>
+    </div>
+    <div class="meta-right">
+      <strong>Community Resource</strong><br>
+      Host: James Jestes<br>
+      35,000+ Active Members
+    </div>
+  </div>
+
+  <h1>How to Get Real Buyer Inquiries From Your Group Posts</h1>
+  <p>
+    Welcome to the official posting guide for <strong>Florida Real Estate and Open Houses</strong>. As the founder of this community, I see hundreds of agents posting listings and open houses each week. The agents who generate consistent buyer calls follow three foundational rules that work with Facebook's algorithm rather than against it.
+  </p>
+
+  <div class="rule-box">
+    <strong>The 3 Algorithm Rules for Real Estate Posts:</strong><br>
+    <strong>1. Never Put External Links in the Main Caption:</strong> Facebook's algorithm heavily suppresses posts containing off-platform links. Upload 3 to 5 high-res photos directly and put your virtual tour or MLS link in the first comment.<br>
+    <strong>2. Be 100% Transparent on Price and City:</strong> Buyers scroll past "DM for price" posts. Clearly listing the price and neighborhood establishes immediate credibility.<br>
+    <strong>3. Use a Low-Friction DM Trigger Word:</strong> End your post with a specific trigger word (e.g. "Comment DETAILS for floorplans"). When users comment a single word, Facebook boosts the post and you can message them directly.
+  </div>
+
+  <h2>Post Framework 1: The "Pick Your Neighbors" Open House Hook</h2>
+  <p>Use this framework on Thursdays and Fridays to build weekend foot traffic without high sales pressure:</p>
+
+  <div class="template-box">🏡 OPEN HOUSE THIS SATURDAY in [City / Neighborhood]!
+
+If you're already living in [Neighborhood], here is your chance to pick your new neighbors! Or if you've been searching for a [Bed/Bath count] pool home under $[Price], stop by and take a tour.
+
+📍 Address: [Full Property Address]
+⏰ Date &amp; Time: [Saturday, 11:00 AM - 2:00 PM]
+💰 Offered at: $[Price]
+
+✨ Top Features:
+• [Feature 1, e.g. Updated kitchen with quartz counters and stainless appliances]
+• [Feature 2, e.g. Screened lanai with private pool and nature view]
+• [Feature 3, e.g. Low HOA fee including full community lawn care]
+
+Light refreshments provided. Stop by to say hello or drop a comment below with "DETAILS" for room dimensions and the full virtual walkthrough!
+
+Listed by: [Your Name] | [Your Brokerage] | [License #]</div>
+
+  <h2>Post Framework 2: The "Price Improvement" Inbound Hook</h2>
+  <p>Price improvements get massive organic engagement when framed around monthly affordability:</p>
+
+  <div class="template-box">🚨 PRICE ADJUSTMENT in [City / Neighborhood]!
+
+Sellers just adjusted the price by $[Amount Dropped] on this [Bed/Bath count] home in [Neighborhood].
+
+📍 Location: [City, State]
+💰 New Price: $[New Price] (Was $[Old Price])
+📐 Sq Footage: [Total SqFt]
+
+Why this stands out in today's market:
+1. [Key Feature 1, e.g. Just 8 minutes to the beach / oceanfront]
+2. [Key Feature 2, e.g. Brand new 2026 roof and AC unit]
+3. [Key Feature 3, e.g. Low HOA fee including lawn maintenance]
+
+Private showings available all week. Comment "TOUR" or send a direct message for complete property records and seller disclosures!
+
+Listed by: [Your Name] | [Your Brokerage] | [License #]</div>
+
+  <!-- Page 2 -->
+  <div class="page-break"></div>
+
+  <div class="header-banner">
+    <div>
+      <div class="brand-title">FLORIDA REAL ESTATE &amp; OPEN HOUSES</div>
+      <div class="brand-sub">AI Copywriting Prompts for Fast Social Posting</div>
+    </div>
+    <div class="meta-right">
+      <strong>Real Wolf Pack System</strong><br>
+      Founder: James Jestes<br>
+      Top Producing Realtor &amp; eXp Mentor
+    </div>
+  </div>
+
+  <h1>Copy-and-Paste AI Prompts (For ChatGPT, Claude &amp; Gemini)</h1>
+  <p>Paste these tested prompts into your AI tool alongside your MLS property specs to generate high-converting social posts in seconds:</p>
+
+  <h3>Prompt 1: High-CTR Facebook Marketplace Listing Generator</h3>
+  <div class="template-box">You are an elite real estate copywriter. Take the following property specs and write a high-converting Facebook Marketplace listing description:
+
+[PASTE PROPERTY ADDRESS, BEDS/BATHS, SQFT, PRICE, AND TOP 3 FEATURES]
+
+Requirements:
+1. Start with an attention-grabbing first line (under 12 words) highlighting the strongest emotional feature.
+2. Format the key specs with clean emoji bullet points.
+3. Explicitly state the price and neighborhood.
+4. End with a low-pressure Call-to-Action: "Send a direct message with the word TOUR or INFO for private showing availability and full floorplan."
+5. Include compliance note: Listed by [Your Name], [Your Brokerage].</div>
+
+  <h3>Prompt 2: Community Group "Neighbor Spotlight" Hook</h3>
+  <div class="template-box">Write a friendly, non-salesy Facebook Group post for a local community group announcing an upcoming open house or new listing at:
+
+[PASTE PROPERTY ADDRESS &amp; KEY FEATURES]
+
+Tone: Helpful, local neighbor, community-focused.
+Structure:
+- Friendly hook addressing neighbors in [Neighborhood Name].
+- 2 sentences highlighting the best feature of the home.
+- Exact open house date, time, and parking details.
+- Friendly offer to answer questions about neighborhood comps.</div>
+
+  <h3>Prompt 3: Investor &amp; Short-Term Rental Numbers Breakdown</h3>
+  <div class="template-box">Write a data-focused Facebook post aimed at cash flow real estate investors for this coastal property:
+
+[PASTE PRICE, ESTIMATED GROSS ANNUAL REVENUE, HOA FEES, AND RENTAL RULES]
+
+Highlight: Turnkey condition, short-term rental allowances, historical occupancy, and proximity to ocean/attractions.
+Call to Action: "Comment PROFORMA for the complete 12-month revenue statement and expense sheet."</div>
+
+  <h2>How to Build Flyers in Canva Enterprise with Live MLS Sync</h2>
+  <p>
+    As an active agent at eXp Realty, you receive full <strong>Canva Enterprise</strong> included at $0 added software fee. Inside Canva, you have access to the exclusive <strong>eXp Listings app</strong>:
+  </p>
+  <div class="rule-box">
+    <strong>The 3-Minute Flyer Workflow:</strong><br>
+    <strong>1. Open Canva Enterprise:</strong> Log in with 1 click through Okta / eXp Passport.<br>
+    <strong>2. Open the eXp Listings App:</strong> Search your active MLS listing number. It pulls live high-res property photos, pricing, and specs directly onto your canvas.<br>
+    <strong>3. Brand Kit Compliance:</strong> Pre-loaded eXp logos and fonts ensure 100% advertising compliance with zero manual resizing.<br>
+    <strong>4. Export:</strong> Download 1080x1080 for Facebook feeds and 8.5x11 for print sign-in tables.
+  </div>
+
+  <div class="footer-note">
+    © 2026 Real Wolf Pack &amp; Florida Real Estate and Open Houses. Operated by James Jestes, Broker Associate with eXp Realty. Zero em dashes.
+  </div>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-col brand-col">
+      <div class="footer-brand">
+        <span class="brand-monogram">JJ<span>.</span></span>
+        <strong>REAL WOLF PACK</strong>
+      </div>
+      <p class="footer-bio">Personal agent attraction portal and member command base operated by James Jestes, Certified eXp Mentor and Top Producing Realtor. Connecting agents into Mike Sherrard's 3,300+ Agent Wolf Pack ecosystem with direct veteran mentorship and modern systems.</p>
+      <div class="footer-badges">
+        <span>Top Producing Realtor</span>
+        <span>15 Yrs Licensed · 25+ Yrs Investing</span>
+        <span>U.S. Military Veteran</span>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore The Model</h4>
+      <ul>
+        <li><a href="/exp-explained.html">eXp Realty Explained</a></li>
+        <li><a href="/compare.html">Brokerage Comparison Matrix</a></li>
+        <li><a href="/calculator.html">Commission Split & Cap Calculator</a></li>
+        <li><a href="/airbnb-agent.html">Short-Term Rentals & Condotels</a></li>
+        <li><a href="/audit.html">15-Minute Tech & Marketing Audit</a></li>
+        <li><a href="/free-pack.html">Free Agent AI Prompt Pack</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Training & Systems</h4>
+      <ul>
+        <li><a href="/training/index.html">Curated Training Library</a></li>
+        <li><a href="/training/real-wolf-pack-business-foundation-page.html">Business Foundation Track</a></li>
+        <li><a href="/training/fast-momentum-series.html">Fast Momentum Track</a></li>
+        <li><a href="/training/organic-lead-gen-series.html">Organic Inbound Track</a></li>
+        <li><a href="/presentation.html">Interactive Zoom Presentation</a></li>
+        <li><a href="/faq.html">Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Organization & Access</h4>
+      <ul>
+        <li><a href="/request-access.html">Apply to Partner with James</a></li>
+        <li><a href="/login.html">Member Sign In / Register</a></li>
+        <li><a href="/privacy.html">Privacy Policy</a></li>
+        <li><a href="/terms.html">Terms of Service</a></li>
+        <li><a href="mailto:james@jamesjestes.com">james@jamesjestes.com</a></li>
+        <li><span style="color:#94a3b8;font-size:13px">Greater Daytona & Coastal Florida</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap footer-bottom">
+    <p class="disclaimer">RealWolfPack.com is an independent agent attraction and member resource portal operated by James Jestes, Broker Associate with eXp Realty. Agent Wolf Pack is an organization of 3,300+ independent real estate agents within eXp Realty founded by Mike Sherrard and Connor Steinbrook. eXp Realty is an Equal Housing Opportunity brokerage. All commission math, splits, and training access are subject to eXp Realty policies.</p>
+    <p class="copyright">© 2026 RealWolfPack.com. All rights reserved. Zero em dashes.</p>
+  </div>
+</footer>
+</body>
+</html>

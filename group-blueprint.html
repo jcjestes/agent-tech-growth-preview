@@ -500,8 +500,11 @@ form.onsubmit = async (e) => {
     alertBox.style.display = "block";
     alertBox.style.background = "#dcfce7";
     alertBox.style.color = "#15803d";
-    alertBox.innerHTML = "<strong>Success!</strong> Your AI Prompt Pack is unlocked. Check your email for your direct download link.";
-    form.reset();
+    alertBox.innerHTML = `<strong>Access Unlocked!</strong> Your playbook and prompt pack are ready.<br>
+      <div style="margin-top:14px">
+        <a href="/downloads/Florida-Open-House-Social-Playbook.pdf" download class="btn" style="background:#15803d;color:#fff;padding:12px 24px;border-radius:999px;font-weight:900;text-decoration:none;display:inline-block">Download Official PDF Playbook 📥</a>
+      </div>`;
+    form.style.display = "none";
   } catch (err) {
     console.error("Group blueprint form error:", err);
     alertBox.style.display = "block";
