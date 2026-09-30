@@ -721,3 +721,128 @@ body {
     padding: 6px 14px !important;
   }
 }
+
+/* ==========================================================================
+   MOBILE-FIRST UNIVERSAL IMAGE STAGE STANDARD (MAX-WIDTH: 899px)
+   ========================================================================== */
+@media (max-width: 899px) {
+  .hero-stage-card, 
+  .guide-portrait-card,
+  .train-hero-stage-card,
+  .training-hero-stage-card,
+  .about-hero-image-card, 
+  .comp-hero-stage-card, 
+  .calc-hero-stage-card, 
+  .audit-hero-stage-card, 
+  .str-hero-stage-card, 
+  .dl-hero-stage-card, 
+  .vip-hero-stage-card,
+  .faq-hero-stage-card,
+  .fl-hero-stage-card,
+  .pack-hero-stage-card,
+  .fin-hero-stage-card,
+  .hero-stage-bp,
+  .hero-stage-card-fb,
+  .hero-stage-card-partner,
+  .community-stage-card {
+    position: relative !important;
+    width: 100% !important;
+    height: 280px !important;
+    min-height: 280px !important;
+    max-height: 280px !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    margin: 16px 0 !important;
+    display: block !important;
+  }
+
+  .hero-stage-media,
+  .guide-portrait-media,
+  .train-hero-stage-media,
+  .comp-hero-stage-media,
+  .calc-hero-stage-media,
+  .audit-hero-stage-media,
+  .str-hero-stage-media,
+  .dl-hero-stage-media,
+  .vip-hero-stage-media,
+  .faq-hero-stage-media,
+  .fl-hero-stage-media,
+  .pack-hero-stage-media,
+  .fin-hero-stage-media,
+  .community-stage-media {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .hero-stage-image,
+  .guide-portrait-image,
+  .train-hero-stage-image,
+  .comp-hero-stage-image,
+  .calc-hero-stage-image,
+  .audit-hero-stage-image,
+  .str-hero-stage-image,
+  .dl-hero-stage-image,
+  .vip-hero-stage-image,
+  .faq-hero-stage-image,
+  .fl-hero-stage-image,
+  .pack-hero-stage-image,
+  .fin-hero-stage-image,
+  .hero-stage-bp img,
+  .hero-stage-card-fb img,
+  .hero-stage-card-partner img {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+
+  .calc-stage-badge,
+  .audit-stage-badge,
+  .comp-stage-badge,
+  .fin-stage-badge,
+  .faq-stage-badge,
+  .vip-stage-badge,
+  .str-stage-badge,
+  .pack-stage-badge,
+  .fl-stage-badge,
+  .hero-stage-overlay,
+  .hero-overlay-bp,
+  .hero-badge-overlay,
+  .hero-partner-overlay,
+  .guide-stage-overlay {
+    position: absolute !important;
+    bottom: 8px !important;
+    left: 8px !important;
+    right: 8px !important;
+    padding: 8px 12px !important;
+    background: rgba(9,13,22,.88) !important;
+    backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(255,255,255,.15) !important;
+    border-radius: 12px !important;
+    color: #ffffff !important;
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+  }
+
+  .calc-stage-badge strong,
+  .audit-stage-badge strong,
+  .comp-stage-badge strong,
+  .fin-stage-badge strong,
+  .faq-stage-badge strong,
+  .vip-stage-badge strong,
+  .str-stage-badge strong,
+  .pack-stage-badge strong,
+  .fl-stage-badge strong,
+  .hero-stage-overlay strong,
+  .hero-overlay-bp strong,
+  .hero-badge-overlay strong,
+  .hero-partner-overlay strong {
+    font-size: 12px !important;
+    display: block !important;
+    margin-bottom: 2px !important;
+  }
+}
