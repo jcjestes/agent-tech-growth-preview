@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Florida Open House &amp; Social Listing Playbook | Real Wolf Pack</title>
+  <meta name="description" content="The complete digital playbook for real estate agents marketing open houses and listings on Facebook. Curated by group founder James Jestes (35,000+ members).">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="/js/components.js" defer></script>
+
+  <!-- OpenGraph Social Share Card -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Real Wolf Pack">
+  <meta property="og:title" content="Florida Open House &amp; Social Listing Playbook | Real Wolf Pack">
+  <meta property="og:description" content="The complete digital playbook for real estate agents marketing open houses and listings on Facebook. Curated by group founder James Jestes (35,000+ members).">
+  <meta property="og:url" content="https://realwolfpack.com/open-house-playbook">
+  <meta property="og:image" content="https://realwolfpack.com/img/og-social-share.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Florida Open House &amp; Social Listing Playbook">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <style>
+    .playbook-hero {
+      background: linear-gradient(135deg, #102f6c 0%, #090d16 100%);
+      color: #ffffff;
+      padding: 60px 0 68px;
+      border-radius: 0 0 40px 40px;
+      border-bottom: 2px solid rgba(245,130,31,.4);
+      margin-bottom: 48px;
+      text-align: center;
+    }
+    .playbook-hero h1 {
+      font-size: clamp(34px, 5.5vw, 56px);
+      line-height: 1.05;
+      margin: 16px auto 18px;
+      max-width: 860px;
+      color: #ffffff;
+      letter-spacing: -.03em;
+    }
+    .playbook-hero h1 em {
+      font-style: normal;
+      color: var(--orange);
+    }
+    .playbook-hero p.lead {
+      font-size: 18.5px;
+      color: #cbd5e1;
+      line-height: 1.65;
+      max-width: 720px;
+      margin: 0 auto 28px;
+    }
+    .quick-nav-bar {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .quick-nav-btn {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.2);
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-size: 13.5px;
+      font-weight: 700;
+      transition: all .2s ease;
+    }
+    .quick-nav-btn:hover {
+      background: rgba(245,130,31,.25);
+      border-color: var(--orange);
+      color: #ffd0a3;
+    }
+    
+    /* Playbook Layout Container */
+    .playbook-body {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 16px 80px;
+    }
+    
+    /* Author Byline Box */
+    .author-byline {
+      background: #ffffff;
+      border: 1px solid rgba(25,70,157,.14);
+      border-radius: 20px;
+      padding: 24px 28px;
+      margin-bottom: 48px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      box-shadow: 0 10px 30px rgba(16,47,108,.05);
+    }
+    
+    /* Spacious Content Sections */
+    .guide-section {
+      margin-bottom: 56px;
+    }
+    .guide-section-header {
+      margin-bottom: 24px;
+    }
+    .guide-section-header h2 {
+      font-size: 2rem;
+      color: var(--blue-dark);
+      margin: 8px 0 8px;
+      letter-spacing: -.02em;
+    }
+    .guide-section-header p {
+      font-size: 16px;
+      color: #53657b;
+      line-height: 1.6;
+      margin: 0;
+    }
+    
+    /* Spacious Rule Cards */
+    .spacious-rule-card {
+      background: #ffffff;
+      border: 1px solid rgba(25,70,157,.12);
+      border-radius: 20px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 25px rgba(16,47,108,.04);
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .spacious-rule-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: var(--sand);
+      color: var(--blue-dark);
+      font-weight: 900;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .spacious-rule-card h3 {
+      font-size: 1.25rem;
+      color: var(--blue-dark);
+      margin: 0 0 8px;
+    }
+    .spacious-rule-card p {
+      font-size: 15px;
+      color: #475569;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* Spacious Framework Post Card */
+    .framework-card {
+      background: #ffffff;
+      border: 1px solid rgba(25,70,157,.14);
+      border-radius: 24px;
+      padding: 36px 32px;
+      margin-bottom: 36px;
+      box-shadow: 0 12px 35px rgba(16,47,108,.06);
+    }
+    .framework-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .framework-card-top h3 {
+      font-size: 1.35rem;
+      color: var(--blue-dark);
+      margin: 0;
+    }
+    .framework-tag {
+      background: var(--sand);
+      color: var(--blue-dark);
+      font-size: 11.5px;
+      font-weight: 800;
+      padding: 5px 14px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+    .framework-rationale {
+      font-size: 15px;
+      color: #475569;
+      line-height: 1.6;
+      margin: 0 0 20px;
+    }
+    
+    /* Beautiful Preformatted Post Container with Generous Spacing */
+    .post-code-box {
+      background: #f8fafc;
+      border: 2px solid #e2e8f0;
+      border-left: 6px solid var(--orange);
+      border-radius: 16px;
+      padding: 26px 28px;
+      position: relative;
+    }
+    .post-code-box pre {
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 14.5px;
+      line-height: 1.7;
+      color: #1e293b;
+      white-space: pre-wrap;
+      word-break: break-word;
+      margin: 0;
+    }
+    .copy-post-btn {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: var(--orange);
+      color: #ffffff;
+      border: none;
+      border-radius: 10px;
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(245,130,31,.35);
+      transition: all .2s ease;
+    }
+    .copy-post-btn:hover {
+      background: #e06f10;
+      transform: translateY(-1px);
+    }
+
+    /* Print Styles for Perfect 1-Click Hard Copy */
+    @media print {
+      body { background: #fff !important; color: #000 !important; }
+      .site-header, .site-footer, .quick-nav-bar, .copy-post-btn, .partner-cta-box { display: none !important; }
+      .playbook-hero { background: none !important; color: #000 !important; padding: 0 !important; border: none !important; margin-bottom: 24px !important; }
+      .playbook-hero h1 { color: #102f6c !important; font-size: 24px !important; }
+      .playbook-hero p.lead { color: #475569 !important; font-size: 14px !important; }
+      .framework-card { border: 1px solid #ccc !important; box-shadow: none !important; page-break-inside: avoid !important; }
+      .post-code-box { background: #f9f9f9 !important; border-left: 4px solid #F5821F !important; }
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand-link" href="/" aria-label="Real Wolf Pack Home">
+      <span class="brand-monogram">JJ<span>.</span></span>
+      <div class="brand-text">
+        <strong>REAL WOLF PACK</strong>
+        <small>JAMES JESTES · eXp REALTY</small>
+      </div>
+    </a>
+    
+    <button class="nav-toggle" aria-label="Toggle navigation menu" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </button>
+    
+    <nav class="site-nav" id="site-nav">
+      <!-- The Model Dropdown -->
+      <div class="nav-dropdown">
+        <button class="nav-drop-btn" onclick="toggleDropdown(this)">
+          The Model <span class="drop-arrow">▾</span>
+        </button>
+        <div class="nav-drop-menu">
+          <a class="drop-item" href="/exp-explained.html">
+            <span class="drop-icon">📊</span>
+            <div>
+              <strong>eXp Realty Explained</strong>
+              <small>80/20 split, $16k cap & cloud model</small>
+            </div>
+          </a>
+          <a class="drop-item" href="/compare.html">
+            <span class="drop-icon">⚖️</span>
+            <div>
+              <strong>Brokerage Comparison</strong>
+              <small>Side-by-side vs traditional franchises</small>
+            </div>
+          </a>
+          <a class="drop-item" href="/calculator.html">
+            <span class="drop-icon">🧮</span>
+            <div>
+              <strong>Cap Calculator</strong>
+              <small>Calculate your exact annual savings</small>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Strategy & Niches Dropdown -->
+      <div class="nav-dropdown">
+        <button class="nav-drop-btn" onclick="toggleDropdown(this)">
+          Strategy & Niches <span class="drop-arrow">▾</span>
+        </button>
+        <div class="nav-drop-menu">
+          <a class="drop-item" href="/airbnb-agent.html">
+            <span class="drop-icon">🌊</span>
+            <div>
+              <strong>STR & Condotels</strong>
+              <small>Salt Air Sessions investor workflows</small>
+            </div>
+          </a>
+          <a class="drop-item" href="/audit.html">
+            <span class="drop-icon">⚡</span>
+            <div>
+              <strong>15-Minute Tech Audit</strong>
+              <small>Free 1-on-1 CRM & pipeline diagnostic</small>
+            </div>
+          </a>
+          <a class="drop-item" href="/free-pack.html">
+            <span class="drop-icon">📦</span>
+            <div>
+              <strong>Free AI Prompt Pack</strong>
+              <small>108 real estate AI prompts & playbooks</small>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Direct Links -->
+      <a class="nav-link-direct" href="/training/index.html">Training Hub</a>
+      <a class="nav-link-direct" href="/about.html">About James</a>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <a class="btn-nav-outline" href="/login.html">Member Login</a>
+        <a class="btn-nav-primary" href="/request-access.html">Join The Pack ↗</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="playbook-hero">
+  <div class="wrap">
+    <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(245,130,31,.2);border:1px solid var(--orange);padding:6px 18px;border-radius:999px;font-size:12.5px;font-weight:800;color:#ffd0a3;margin-bottom:12px">
+      <span>● OFFICIAL COMMUNITY GUIDE</span>
+    </div>
+    <h1>Florida Real Estate &amp; Open Houses: <em>The Social Listing Playbook</em></h1>
+    <p class="lead">How producing Florida agents format their open house and listing posts to stop Facebook from suppressing their reach, generate real buyer inquiries, and build flyers in Canva Enterprise with live MLS sync.</p>
+    
+    <div class="quick-nav-bar">
+      <a class="quick-nav-btn" href="#rules">Algorithm Rules ↓</a>
+      <a class="quick-nav-btn" href="#frameworks">3 Post Frameworks ↓</a>
+      <a class="quick-nav-btn" href="#ai-prompts">AI Copy Prompts ↓</a>
+      <a class="quick-nav-btn" href="#canva-workflow">Canva MLS Workflow ↓</a>
+      <button class="quick-nav-btn" onclick="window.print()" style="cursor:pointer">Print / Save as PDF 🖨️</button>
+    </div>
+  </div>
+</section>
+
+<div class="playbook-body">
+
+  <!-- Author Byline -->
+  <div class="author-byline">
+    <div style="display:flex;align-items:center;gap:16px">
+      <div style="width:54px;height:54px;border-radius:50%;background:var(--blue-dark);color:var(--orange);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:22px">JJ.</div>
+      <div>
+        <strong style="color:var(--blue-dark);font-size:17px;display:block">Curated by James Jestes</strong>
+        <span style="color:#64748b;font-size:14px">Founder of Florida Real Estate &amp; Open Houses (35k Members) · Top Producing Realtor · Certified eXp Mentor</span>
+      </div>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <span class="badge" style="background:#f1f5f9;color:#334155;font-size:12px;font-weight:700;padding:6px 12px;border-radius:8px">15 Yrs Licensed</span>
+      <span class="badge" style="background:#f1f5f9;color:#334155;font-size:12px;font-weight:700;padding:6px 12px;border-radius:8px">25+ Yrs Investing</span>
+      <span class="badge" style="background:#f1f5f9;color:#334155;font-size:12px;font-weight:700;padding:6px 12px;border-radius:8px">U.S. Military Veteran</span>
+    </div>
+  </div>
+
+  <!-- SECTION 1: THE ALGORITHM REALITY -->
+  <section class="guide-section" id="rules">
+    <div class="guide-section-header">
+      <span class="badge" style="background:#e9f3ff;color:var(--blue-dark);font-size:11px;font-weight:800;padding:4px 12px;border-radius:999px">PART 01</span>
+      <h2>The Facebook Algorithm Reality (Why 90% of Posts Get Buried)</h2>
+      <p>As the founder of Florida Real Estate and Open Houses, I review hundreds of posts every week. The single biggest reason great properties get zero comments is because the agent drops a naked MLS link in the caption. Here is how Facebook's feed algorithm actually works:</p>
+    </div>
+
+    <div class="spacious-rule-card">
+      <div class="spacious-rule-badge">1</div>
+      <div>
+        <h3>Rule 1: Never Put Outbound Links in the Caption</h3>
+        <p>Facebook is an advertising business that keeps users inside their app. When you paste an external MLS link or Zillow URL in the main caption, Facebook classifies it as an outbound exit link and suppresses the reach by up to 90%. Instead, upload 4 native photos and place your virtual tour or MLS search portal in the <strong>first comment</strong>.</p>
+      </div>
+    </div>
+
+    <div class="spacious-rule-card">
+      <div class="spacious-rule-badge">2</div>
+      <div>
+        <h3>Rule 2: State the Price and City Transparently</h3>
+        <p>Hiding the price with "DM for price" triggers immediate skepticism. 90% of qualified local buyers scroll past because they assume it is overpriced. Clear price transparency establishes you as an honest, confident professional.</p>
+      </div>
+    </div>
+
+    <div class="spacious-rule-card">
+      <div class="spacious-rule-badge">3</div>
+      <div>
+        <h3>Rule 3: Use a Single-Word Comment Trigger</h3>
+        <p>Instead of "Hope to see you there!", end your post with: <em>"Drop a comment with the word DETAILS for room dimensions, average electric bills, and private tour availability."</em> When 10 to 20 users leave a single-word comment, Facebook interprets the post as viral community content and pushes it into thousands of member feeds!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: THE 3 POST FRAMEWORKS -->
+  <section class="guide-section" id="frameworks">
+    <div class="guide-section-header">
+      <span class="badge" style="background:rgba(245,130,31,.15);color:var(--orange);font-size:11px;font-weight:900;padding:4px 12px;border-radius:999px;text-transform:uppercase;letter-spacing:.08em">PART 02</span>
+      <h2>3 High-Converting Post Frameworks That Actually Sound Human</h2>
+      <p>Notice the complete absence of cheesy real estate clichés. These frameworks sound like an authentic local expert sharing real lifestyle insights with a neighbor.</p>
+    </div>
+
+    <!-- Framework 1 -->
+    <div class="framework-card">
+      <div class="framework-card-top">
+        <div>
+          <span style="color:var(--orange);font-size:11.5px;font-weight:900;text-transform:uppercase;letter-spacing:.08em">FRAMEWORK 01</span>
+          <h3>The "Candid Neighborhood Walkthrough" Hook</h3>
+        </div>
+        <span class="framework-tag">Best for Open Houses</span>
+      </div>
+      <p class="framework-rationale"><strong>When to post:</strong> Thursday or Friday morning. Instead of shouting "Come see my open house!", it addresses a real buyer frustration (like finding a single-story pool home with no HOA) and shares honest takeaways from walking through the property.</p>
+      
+      <div class="post-code-box">
+        <button class="copy-post-btn" onclick="copyBoxText('post-f1')">Copy Framework</button>
+        <pre id="post-f1">If you have been looking for a single-story pool home in [City / Neighborhood] that doesn't have an HOA breathing down your neck, you already know how rare they are right now.
+
+We are holding an open house this Saturday from [11:00 AM to 2:00 PM] at [Address].
+
+A couple honest takeaways from walking this property:
+- The backyard is completely private. You sit on the screened lanai looking at mature palms and green space, not straight into your neighbor's living room.
+- The kitchen was redone properly: real soft-close wood cabinets, quartz counters, and a layout where you can cook while friends hang out around the island.
+- The oversized garage has room for a boat, golf cart, or workshop with no HOA telling you no.
+
+Offered at $[Price].
+
+If you live in the neighborhood, stop by to say hello (cold drinks and snacks on the counter). If you want the survey, room dimensions, or seller disclosures before the weekend, drop a comment with "INFO" and I'll message it right to you.
+
+Listed by: [Your Name] | [Your Brokerage] | [License #]</pre>
+      </div>
+    </div>
+
+    <!-- Framework 2 -->
+    <div class="framework-card">
+      <div class="framework-card-top">
+        <div>
+          <span style="color:var(--orange);font-size:11.5px;font-weight:900;text-transform:uppercase;letter-spacing:.08em">FRAMEWORK 02</span>
+          <h3>The "Market Reality Check" Price Drop Hook</h3>
+        </div>
+        <span class="framework-tag">Best for Price Reductions</span>
+      </div>
+      <p class="framework-rationale"><strong>When to post:</strong> Immediately following a price reduction. By connecting the price drop to monthly mortgage savings and move-in ready peace of mind, buyers stop and recalculate their monthly numbers.</p>
+      
+      <div class="post-code-box">
+        <button class="copy-post-btn" onclick="copyBoxText('post-f2')">Copy Framework</button>
+        <pre id="post-f2">The sellers listened to the market. We just adjusted the price by $[Amount Dropped] on this [Bed/Bath count] home in [Neighborhood, City], bringing it to $[New Price].
+
+At this new number, this is officially one of the lowest price-per-square-foot homes in [Area] that has a private pool and brand-new roof.
+
+Why this matters for your monthly budget:
+- At the old price, buyers were hesitating on the rate math. At $[New Price], the monthly payment drops by roughly $[Estimated Savings] / month.
+- It is genuinely move-in ready: new 2026 roof, updated HVAC, and zero deferred maintenance for you to worry about.
+- Located just [Number] minutes from [Beach / Downtown / A-rated schools].
+
+We are scheduling private walkthroughs all week before the weekend open house.
+
+If you want the seller disclosures, average monthly utility costs, or survey sent over, leave a comment with "WALKTHROUGH" or message me directly.
+
+Listed by: [Your Name] | [Your Brokerage] | [License #]</pre>
+      </div>
+    </div>
+
+    <!-- Framework 3 -->
+    <div class="framework-card">
+      <div class="framework-card-top">
+        <div>
+          <span style="color:var(--orange);font-size:11.5px;font-weight:900;text-transform:uppercase;letter-spacing:.08em">FRAMEWORK 03</span>
+          <h3>The "Candid Numbers Breakdown" for Condotels &amp; STRs</h3>
+        </div>
+        <span class="framework-tag">Best for Cash Flow Investors</span>
+      </div>
+      <p class="framework-rationale"><strong>When to post:</strong> Anytime you have a condo, condotel, or vacation property. Investors don't want fluff or adjectives; they want rental regulations, management flexibility, and trailing gross revenue numbers.</p>
+      
+      <div class="post-code-box">
+        <button class="copy-post-btn" onclick="copyBoxText('post-f3')">Copy Framework</button>
+        <pre id="post-f3">Most buyers looking at coastal condos in [City / Area] run into the exact same two headaches: strict 30-day rental caps or massive hidden special assessments.
+
+This unit at [Building / Condo Name] is one of the rare exceptions.
+
+Here is the straightforward breakdown:
+- Daily short-term rentals are 100% allowed (self-manage on Airbnb/VRBO or use on-site front desk management).
+- Historical gross revenue: This floorplan averaged $[Historical Gross Amount] gross over the last 12 months.
+- The view: You are on the [Floor #] floor with direct ocean views from the living room and balcony.
+- Completely furnished turnkey: heated oceanfront pool, fitness room, and direct beach access.
+
+Offered at $[Price].
+
+If you want the 12-month trailing revenue statement, monthly HOA line-item breakdown, and pro forma numbers, comment "PROFORMA" below and I'll send the PDF directly to you.
+
+Listed by: [Your Name] | [Your Brokerage] | [License #]</pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: AI COPY PROMPTS -->
+  <section class="guide-section" id="ai-prompts">
+    <div class="guide-section-header">
+      <span class="badge" style="background:#e9f3ff;color:var(--blue-dark);font-size:11px;font-weight:800;padding:4px 12px;border-radius:999px">PART 03</span>
+      <h2>Tested AI Prompts That Sound 100% Human</h2>
+      <p>Paste these prompts into ChatGPT, Claude, or Gemini alongside your raw MLS property notes to generate authentic, high-converting social copy in under 30 seconds.</p>
+    </div>
+
+    <!-- AI Prompt 1 -->
+    <div class="framework-card">
+      <div class="framework-card-top">
+        <div>
+          <span style="color:var(--orange);font-size:11.5px;font-weight:900;text-transform:uppercase;letter-spacing:.08em">AI PROMPT 01</span>
+          <h3>High-CTR Facebook Marketplace Listing Generator</h3>
+        </div>
+        <span class="framework-tag">Marketplace Hook</span>
+      </div>
+      <p class="framework-rationale">Engineered with our <strong>Human Voice Protocol</strong> to ban generic real estate clichés and focus on tangible everyday lifestyle specifics.</p>
+      
+      <div class="post-code-box">
+        <button class="copy-post-btn" onclick="copyBoxText('ai-p1')">Copy Prompt</button>
+        <pre id="ai-p1">You are an elite real estate copywriter. Take the following property specs and write a high-converting Facebook Marketplace listing description:
+
+[PASTE PROPERTY ADDRESS, PRICE, BEDS/BATHS, SQFT, AND TOP 3 FEATURES]
+
+RULES FOR OUTPUT:
+1. Zero robotic AI clichés: NEVER use "nestled", "boasts", "oasis", "breathtaking", "rare gem", or "delve".
+2. Write in a warm, direct, first-person tone. Sounds like a knowledgeable local agent texting a friend.
+3. Highlight 3 practical lifestyle details (e.g. natural morning light, backyard privacy, room for a boat).
+4. End with a low-friction trigger word: "Send a message with the word DETAILS for room dimensions and private tour availability."
+5. Include standard license compliance: Listed by [Name], [Brokerage].</pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: CANVA ENTERPRISE WORKFLOW -->
+  <section class="guide-section" id="canva-workflow">
+    <div class="guide-section-header">
+      <span class="badge" style="background:#e9f3ff;color:var(--blue-dark);font-size:11px;font-weight:800;padding:4px 12px;border-radius:999px">PART 04</span>
+      <h2>The 3-Minute Canva Enterprise &amp; Live MLS Sync Workflow</h2>
+      <p>At eXp Realty, every active agent receives <strong>full Canva Enterprise free ($0 fee)</strong>. Here is how to create a master listing flyer that you update in 3 minutes without manually downloading photos or retyping specs.</p>
+    </div>
+
+    <div class="spacious-rule-card">
+      <div class="spacious-rule-badge">1</div>
+      <div>
+        <h3>Step 1: Single Sign-On Access</h3>
+        <p>Log in with one tap through Okta / eXp Passport into your full corporate Canva Enterprise dashboard (saving you $120 to $150 per year out of pocket).</p>
+      </div>
+    </div>
+
+    <div class="spacious-rule-card">
+      <div class="spacious-rule-badge">2</div>
+      <div>
+        <h3>Step 2: Launch the "eXp Listings" In-App Tool</h3>
+        <p>In the Canva sidebar, open the exclusive <strong>eXp Listings app</strong>. Type in your MLS number. Canva connects to your live MLS board and instantly imports all high-resolution photos, pricing, beds/baths, and remarks directly onto your canvas with 1 click.</p>
+      </div>
+    </div>
+
+    <div class="spacious-rule-card">
+      <div class="spacious-rule-badge">3</div>
+      <div>
+        <h3>Step 3: Pre-Loaded Brand Kit Compliance</h3>
+        <p>Official eXp logos, fonts, and required state advertising disclaimers lock into place automatically. Export 1080x1080 for Facebook feeds and 8.5x11 for open house print tables.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: PARTNER WITH JAMES -->
+  <section class="partner-cta-box" style="background:linear-gradient(135deg, #102f6c 0%, #090d16 100%);color:#ffffff;border-radius:28px;padding:44px 36px;margin-top:40px;border:2px solid rgba(245,130,31,.4);box-shadow:0 20px 50px rgba(16,47,108,.3)">
+    <div style="text-align:center;max-width:680px;margin:0 auto 28px">
+      <span class="badge" style="background:rgba(245,130,31,.2);color:#ffd0a3;font-size:11px;font-weight:800;padding:4px 12px;border-radius:999px">ORGANIZATION PARTNERSHIP</span>
+      <h2 style="color:#ffffff;font-size:2rem;margin:10px 0 10px;letter-spacing:-.02em">Build Your Business with Modern Systems</h2>
+      <p style="color:#cbd5e1;font-size:15.5px;line-height:1.6;margin:0">
+        If you want direct 1-on-1 mentorship from James Jestes, 80/20 splits with a low $16,000 cap, free Canva Enterprise with live MLS sync, BoldTrail CRM, and entry into the 3,300+ Agent Wolf Pack, let's connect.
+      </p>
+    </div>
+
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a class="btn" href="/request-access.html" style="background:var(--orange);color:#fff">Schedule Private Strategy Call ↗</a>
+      <a class="btn secondary" href="/calculator.html">Calculate Your Cap Savings ↗</a>
+    </div>
+  </section>
+
+</div>
+
+<script>
+function copyBoxText(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  navigator.clipboard.writeText(el.innerText).then(() => {
+    const btn = el.parentElement.querySelector('.copy-post-btn');
+    if (btn) {
+      const orig = btn.innerText;
+      btn.innerText = "Copied!";
+      btn.style.background = "#15803d";
+      setTimeout(() => {
+        btn.innerText = orig;
+        btn.style.background = "var(--orange)";
+      }, 2000);
+    }
+  });
+}
+window.copyBoxText = copyBoxText;
+</script>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-col brand-col">
+      <div class="footer-brand">
+        <span class="brand-monogram">JJ<span>.</span></span>
+        <strong>REAL WOLF PACK</strong>
+      </div>
+      <p class="footer-bio">Personal agent attraction portal and member command base operated by James Jestes, Certified eXp Mentor and Top Producing Realtor. Connecting agents into Mike Sherrard's 3,300+ Agent Wolf Pack ecosystem with direct veteran mentorship and modern systems.</p>
+      <div class="footer-badges">
+        <span>Top Producing Realtor</span>
+        <span>15 Yrs Licensed · 25+ Yrs Investing</span>
+        <span>U.S. Military Veteran</span>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore The Model</h4>
+      <ul>
+        <li><a href="/exp-explained.html">eXp Realty Explained</a></li>
+        <li><a href="/compare.html">Brokerage Comparison Matrix</a></li>
+        <li><a href="/calculator.html">Commission Split & Cap Calculator</a></li>
+        <li><a href="/airbnb-agent.html">Short-Term Rentals & Condotels</a></li>
+        <li><a href="/audit.html">15-Minute Tech & Marketing Audit</a></li>
+        <li><a href="/free-pack.html">Free Agent AI Prompt Pack</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Training & Systems</h4>
+      <ul>
+        <li><a href="/training/index.html">Curated Training Library</a></li>
+        <li><a href="/training/real-wolf-pack-business-foundation-page.html">Business Foundation Track</a></li>
+        <li><a href="/training/fast-momentum-series.html">Fast Momentum Track</a></li>
+        <li><a href="/training/organic-lead-gen-series.html">Organic Inbound Track</a></li>
+        <li><a href="/presentation.html">Interactive Zoom Presentation</a></li>
+        <li><a href="/faq.html">Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Organization & Access</h4>
+      <ul>
+        <li><a href="/request-access.html">Apply to Partner with James</a></li>
+        <li><a href="/login.html">Member Sign In / Register</a></li>
+        <li><a href="/privacy.html">Privacy Policy</a></li>
+        <li><a href="/terms.html">Terms of Service</a></li>
+        <li><a href="mailto:james@jamesjestes.com">james@jamesjestes.com</a></li>
+        <li><span style="color:#94a3b8;font-size:13px">Greater Daytona & Coastal Florida</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap footer-bottom">
+    <p class="disclaimer">RealWolfPack.com is an independent agent attraction and member resource portal operated by James Jestes, Broker Associate with eXp Realty. Agent Wolf Pack is an organization of 3,300+ independent real estate agents within eXp Realty founded by Mike Sherrard and Connor Steinbrook. eXp Realty is an Equal Housing Opportunity brokerage. All commission math, splits, and training access are subject to eXp Realty policies.</p>
+    <p class="copyright">© 2026 RealWolfPack.com. All rights reserved. Zero em dashes.</p>
+  </div>
+</footer>
+</body>
+</html>
