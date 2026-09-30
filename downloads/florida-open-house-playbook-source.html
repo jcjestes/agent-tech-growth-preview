@@ -4,99 +4,29 @@
   <meta charset="utf-8">
   <title>Florida Real Estate &amp; Open Houses - Official Social Playbook</title>
   <style>
-    @page { size: letter; margin: 18mm 16mm; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: #0f172a;
-      line-height: 1.55;
-      margin: 0;
-      padding: 0;
-      -webkit-font-smoothing: antialiased;
-    }
-    .header-banner {
-      border-bottom: 3px solid #F5821F;
-      padding-bottom: 16px;
-      margin-bottom: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    .brand-title {
-      color: #19469D;
-      font-size: 22px;
-      font-weight: 900;
-      margin: 0 0 4px;
-      letter-spacing: -.02em;
-    }
-    .brand-sub {
-      color: #F5821F;
-      font-size: 12.5px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-    }
-    .meta-right {
-      text-align: right;
-      font-size: 11.5px;
-      color: #64748b;
-      line-height: 1.4;
-    }
-    h1 {
-      font-size: 24px;
-      color: #102f6c;
-      margin: 0 0 10px;
-      line-height: 1.2;
-    }
-    h2 {
-      font-size: 17px;
-      color: #102f6c;
-      border-bottom: 1.5px solid #e2e8f0;
-      padding-bottom: 5px;
-      margin: 20px 0 10px;
-    }
-    h3 {
-      font-size: 14px;
-      color: #F5821F;
-      margin: 14px 0 6px;
-      text-transform: uppercase;
-      letter-spacing: .05em;
-    }
-    p {
-      font-size: 13px;
-      color: #334155;
-      margin: 0 0 10px;
-    }
-    .rule-box {
-      background: #f8fafc;
-      border: 1px solid #cbd5e1;
-      border-left: 4px solid #19469D;
-      border-radius: 8px;
-      padding: 12px 14px;
-      margin: 12px 0;
-      font-size: 12.5px;
-    }
-    .template-box {
-      background: #090d16;
-      color: #f1f5f9;
-      border-radius: 8px;
-      padding: 12px 16px;
-      margin: 10px 0 16px;
-      font-family: ui-monospace, Menlo, Monaco, Consolas, monospace;
-      font-size: 11.5px;
-      line-height: 1.45;
-      white-space: pre-wrap;
-    }
-    .page-break {
-      page-break-before: always;
-    }
-    .footer-note {
-      margin-top: 24px;
-      padding-top: 12px;
-      border-top: 1px solid #e2e8f0;
-      font-size: 11px;
-      color: #94a3b8;
-      text-align: center;
-    }
+    @page { size: letter; margin: 16mm 16mm 18mm; }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #0f172a; line-height: 1.6; margin: 0; font-size: 13px; }
+    .page { page-break-after: always; height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
+    .page:last-child { page-break-after: avoid; }
+    .doc-header { border-bottom: 2.5px solid #F5821F; padding-bottom: 12px; margin-bottom: 18px; display: flex; justify-content: space-between; align-items: flex-end; }
+    .brand-group { display: flex; align-items: center; gap: 12px; }
+    .brand-logo { background: #102f6c; color: #F5821F; font-weight: 900; font-size: 18px; padding: 6px 12px; border-radius: 8px; }
+    .brand-title { font-size: 18px; font-weight: 900; color: #102f6c; margin: 0; }
+    .brand-sub { font-size: 11px; font-weight: 800; color: #F5821F; text-transform: uppercase; margin: 2px 0 0; }
+    .doc-meta { text-align: right; font-size: 11.5px; color: #64748b; }
+    h1 { font-size: 22px; color: #102f6c; margin: 0 0 10px; }
+    h2 { font-size: 16px; color: #102f6c; margin: 16px 0 8px; display: flex; align-items: center; gap: 8px; }
+    h2 span.tag { background: #F5E9D0; color: #102f6c; font-size: 10px; font-weight: 900; padding: 3px 8px; border-radius: 999px; }
+    .rule-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 10px 14px; margin-bottom: 8px; display: flex; gap: 10px; }
+    .rule-badge { width: 22px; height: 22px; border-radius: 50%; background: #102f6c; color: #fff; font-weight: 900; font-size: 11px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .post-template-card { background: #f8fafc; border: 1.5px solid #cbd5e1; border-left: 5px solid #F5821F; border-radius: 12px; padding: 14px 18px; margin: 8px 0 14px; }
+    .post-template-title { font-size: 12px; font-weight: 800; color: #F5821F; text-transform: uppercase; margin-bottom: 6px; }
+    .post-template-body { font-size: 12px; line-height: 1.5; color: #1e293b; white-space: pre-wrap; font-family: inherit; }
+    .prompt-container { background: #0f172a; border-radius: 10px; padding: 14px 16px; color: #f1f5f9; margin: 8px 0 12px; }
+    .prompt-container .prompt-tag { color: #F5821F; font-size: 11px; font-weight: 900; text-transform: uppercase; margin-bottom: 4px; display: block; }
+    .prompt-container pre { margin: 0; font-family: monospace; font-size: 11px; line-height: 1.45; white-space: pre-wrap; }
+    .doc-footer { border-top: 1px solid #e2e8f0; padding-top: 8px; margin-top: 14px; display: flex; justify-content: space-between; font-size: 11px; color: #94a3b8; }
   </style>
 <link rel="stylesheet" href="/css/main.css">
 <script src="/js/components.js" defer></script>
@@ -189,36 +119,40 @@
     </nav>
   </div>
 </header>
-
-  <!-- Page 1 -->
-  <div class="header-banner">
+  <div class="page">
     <div>
-      <div class="brand-title">FLORIDA REAL ESTATE &amp; OPEN HOUSES</div>
-      <div class="brand-sub">The Official Open House &amp; Social Listing Playbook</div>
-    </div>
-    <div class="meta-right">
-      <strong>Community Resource</strong><br>
-      Host: James Jestes<br>
-      35,000+ Active Members
-    </div>
-  </div>
+      <div class="doc-header">
+        <div class="brand-group">
+          <span class="brand-logo">JJ.</span>
+          <div>
+            <div class="brand-title">FLORIDA REAL ESTATE &amp; OPEN HOUSES</div>
+            <div class="brand-sub">The Official Open House &amp; Social Listing Playbook</div>
+          </div>
+        </div>
+        <div class="doc-meta"><strong>Community Guide</strong><br>Founder: James Jestes<br>35,000+ Active Members</div>
+      </div>
+      <h1>How to Turn Listing Posts into Real Buyer Calls</h1>
+      <p style="color:#475569;margin-bottom:12px">As the founder of <strong>Florida Real Estate and Open Houses</strong>, I see hundreds of agents post listings and open houses every week. The single biggest mistake is copying an MLS link and hoping buyers click. Facebook suppresses external links by up to 90%. To get real inquiries, you must post natively on-platform.</p>
+      
+      <div class="rule-card">
+        <span class="rule-badge">1</span>
+        <div><strong>The 4-Photo Native Carousel:</strong> Upload photos directly to Facebook. Photo 1: Bright curb shot or water view. Photo 2: Kitchen island. Photo 3: Primary suite. Photo 4: Outdoor living / pool. Never use dark or distorted angles.</div>
+      </div>
+      <div class="rule-card">
+        <span class="rule-badge">2</span>
+        <div><strong>State the Exact Price and City Clearly:</strong> Never write "DM for price". 90% of qualified buyers keep scrolling because it feels deceptive. Full transparency builds instant authority.</div>
+      </div>
+      <div class="rule-card">
+        <span class="rule-badge">3</span>
+        <div><strong>The First-Comment Link Strategy:</strong> Put your 3D tour, floorplans, or MLS search website link in the first comment. In your post caption, write: "Full photo gallery and floorplans linked in the first comment below."</div>
+      </div>
 
-  <h1>How to Get Real Buyer Inquiries From Your Group Posts</h1>
-  <p>
-    Welcome to the official posting guide for <strong>Florida Real Estate and Open Houses</strong>. As the founder of this community, I see hundreds of agents posting listings and open houses each week. The agents who generate consistent buyer calls follow three foundational rules that work with Facebook's algorithm rather than against it.
-  </p>
+      <h2>Framework 01: The "Candid Neighborhood Walkthrough" Hook <span class="tag">Open House</span></h2>
+      <p style="font-size:12px;color:#64748b;margin-bottom:6px">Use on Thursdays and Fridays to build genuine foot traffic without sounding like a corporate ad:</p>
 
-  <div class="rule-box">
-    <strong>The 3 Algorithm Rules for Real Estate Posts:</strong><br>
-    <strong>1. Never Put External Links in the Main Caption:</strong> Facebook's algorithm heavily suppresses posts containing off-platform links. Upload 3 to 5 high-res photos directly and put your virtual tour or MLS link in the first comment.<br>
-    <strong>2. Be 100% Transparent on Price and City:</strong> Buyers scroll past "DM for price" posts. Clearly listing the price and neighborhood establishes immediate credibility.<br>
-    <strong>3. Use a Low-Friction DM Trigger Word:</strong> End your post with a specific trigger word (e.g. "Comment DETAILS for floorplans"). When users comment a single word, Facebook boosts the post and you can message them directly.
-  </div>
-
-  <h2>Post Framework 1: The "Candid Neighborhood Walkthrough" Hook</h2>
-  <p>Use this framework on Thursdays and Fridays to build weekend foot traffic without sounding like a corporate ad:</p>
-
-  <div class="template-box">If you have been looking for a single-story pool home in [City / Neighborhood] that doesn't have an HOA breathing down your neck, you already know how rare they are right now.
+      <div class="post-template-card">
+        <div class="post-template-title">Copy-and-Paste Post Framework</div>
+        <div class="post-template-body">If you have been looking for a single-story pool home in [City / Neighborhood] that doesn't have an HOA breathing down your neck, you already know how rare they are right now.
 
 We are holding an open house this Saturday from [11:00 AM to 2:00 PM] at [Address].
 
@@ -227,21 +161,39 @@ A couple honest takeaways from walking this property:
 - The kitchen was redone properly: real soft-close wood cabinets, quartz counters, and a layout where you can cook while friends hang out around the island.
 - The oversized garage has room for a boat, golf cart, or workshop with no HOA telling you no.
 
-Offered at $[Price].
+Offered at [Price].
 
 If you live in the neighborhood, stop by to say hello (cold drinks and snacks on the counter). If you want the survey, room dimensions, or seller disclosures before the weekend, drop a comment with "INFO" and I'll message it right to you.
 
 Listed by: [Your Name] | [Your Brokerage] | [License #]</div>
+      </div>
+    </div>
+    <div class="doc-footer"><span>Page 1 of 3 · Florida Real Estate &amp; Open Houses</span><span>RealWolfPack.com · Zero em dashes</span></div>
+  </div>
+  <div class="page">
+    <div>
+      <div class="doc-header">
+        <div class="brand-group">
+          <span class="brand-logo">JJ.</span>
+          <div>
+            <div class="brand-title">FLORIDA REAL ESTATE &amp; OPEN HOUSES</div>
+            <div class="brand-sub">Price Improvements &amp; Investor Strategies</div>
+          </div>
+        </div>
+        <div class="doc-meta"><strong>Frameworks 02 &amp; 03</strong><br>Curated by James Jestes<br>Top Producing Realtor &amp; Mentor</div>
+      </div>
 
-  <h2>Post Framework 2: The "Market Reality Check" Price Drop Hook</h2>
-  <p>Price adjustments get massive engagement when framed around monthly budget savings and zero deferred maintenance:</p>
+      <h2>Framework 02: The "Market Reality Check" Price Drop Hook <span class="tag">Active Buyers</span></h2>
+      <p style="font-size:12px;color:#64748b;margin-bottom:6px">Frame the price drop around monthly budget math and zero deferred maintenance:</p>
 
-  <div class="template-box">The sellers listened to the market. We just adjusted the price by $[Amount Dropped] on this [Bed/Bath count] home in [Neighborhood, City], bringing it to $[New Price].
+      <div class="post-template-card">
+        <div class="post-template-title">Copy-and-Paste Post Framework</div>
+        <div class="post-template-body">The sellers listened to the market. We just adjusted the price by [Amount Dropped] on this [Bed/Bath count] home in [Neighborhood, City], bringing it to [New Price].
 
 At this new number, this is officially one of the lowest price-per-square-foot homes in [Area] that has a private pool and brand-new roof.
 
 Why this matters for your monthly budget:
-- At the old price, buyers were hesitating on the rate math. At $[New Price], the monthly payment drops by roughly $[Estimated Savings] / month.
+- At the old price, buyers were hesitating on the rate math. At [New Price], the monthly payment drops by roughly [Estimated Savings] / month.
 - It is genuinely move-in ready: new 2026 roof, updated HVAC, and zero deferred maintenance for you to worry about.
 - Located just [Number] minutes from [Beach / Downtown / A-rated schools].
 
@@ -250,73 +202,90 @@ We are scheduling private walkthroughs all week before the weekend open house.
 If you want the seller disclosures, average monthly utility costs, or survey sent over, leave a comment with "WALKTHROUGH" or message me directly.
 
 Listed by: [Your Name] | [Your Brokerage] | [License #]</div>
+      </div>
 
-  <!-- Page 2 -->
-  <div class="page-break"></div>
+      <h2>Framework 03: The "Candid Numbers Breakdown" <span class="tag">Condotels &amp; STRs</span></h2>
+      <p style="font-size:12px;color:#64748b;margin-bottom:6px">Investors want rental allowances, management options, and trailing gross revenue:</p>
 
-  <div class="header-banner">
+      <div class="post-template-card">
+        <div class="post-template-title">Copy-and-Paste Post Framework</div>
+        <div class="post-template-body">Most buyers looking at coastal condos in [City / Area] run into the exact same two headaches: strict 30-day rental caps or massive hidden special assessments.
+
+This unit at [Building / Condo Name] is one of the rare exceptions.
+
+Here is the straightforward breakdown:
+- Daily short-term rentals are 100% allowed (self-manage on Airbnb/VRBO or use on-site front desk management).
+- Historical gross revenue: This floorplan averaged [Historical Gross Amount] gross over the last 12 months.
+- The view: You are on the [Floor #] floor with direct ocean views from the living room and balcony.
+- Completely furnished turnkey: heated oceanfront pool, fitness room, and direct beach access.
+
+Offered at [Price].
+
+If you want the 12-month trailing revenue statement, monthly HOA line-item breakdown, and pro forma numbers, comment "PROFORMA" below and I'll send the PDF directly to you.
+
+Listed by: [Your Name] | [Your Brokerage] | [License #]</div>
+      </div>
+    </div>
+    <div class="doc-footer"><span>Page 2 of 3 · Florida Real Estate &amp; Open Houses</span><span>RealWolfPack.com · Zero em dashes</span></div>
+  </div>
+  <div class="page">
     <div>
-      <div class="brand-title">FLORIDA REAL ESTATE &amp; OPEN HOUSES</div>
-      <div class="brand-sub">AI Copywriting Prompts for Fast Social Posting</div>
+      <div class="doc-header">
+        <div class="brand-group">
+          <span class="brand-logo">JJ.</span>
+          <div>
+            <div class="brand-title">FLORIDA REAL ESTATE &amp; OPEN HOUSES</div>
+            <div class="brand-sub">AI Prompts &amp; Canva Enterprise MLS Sync</div>
+          </div>
+        </div>
+        <div class="doc-meta"><strong>Modern Systems</strong><br>Real Wolf Pack Organization<br>eXp Realty Cloud Ecosystem</div>
+      </div>
+
+      <h1>AI Copy Prompts &amp; Canva Enterprise Workflow</h1>
+      <p style="color:#475569;margin-bottom:8px">Stop staring at a blank screen. Paste this tested prompt into ChatGPT, Claude, or Gemini alongside your MLS property specs:</p>
+
+      <div class="prompt-container">
+        <span class="prompt-tag">AI Prompt: High-CTR Facebook Marketplace Listing Description</span>
+        <pre>You are an elite real estate copywriter. Take the following property specs and write a high-converting Facebook Marketplace listing description:
+[PASTE SPECS: ADDRESS, PRICE, BEDS/BATHS, SQFT, AND TOP 3 FEATURES]
+
+RULES FOR OUTPUT:
+1. Zero robotic clichés: NEVER use "nestled", "boasts", "oasis", "breathtaking", "rare gem", or "delve".
+2. Write in a warm, direct, first-person tone. Sounds like a knowledgeable local agent texting a friend.
+3. Highlight 3 practical lifestyle details (privacy, storage, kitchen layout, natural light).
+4. End with a low-friction trigger word: "Send a message with the word DETAILS for room dimensions and private tour availability."
+5. Include standard license compliance: Listed by [Name], [Brokerage].</pre>
+      </div>
+
+      <h2>How to Build Flyers in Canva Enterprise with Live MLS Sync</h2>
+      <p style="color:#334155;margin-bottom:8px">At eXp Realty, every active agent receives <strong>Canva Enterprise included free (/usr/bin/bash fee)</strong>. You never have to manually download 30 photos or retype listing data:</p>
+
+      <div class="rule-card">
+        <span class="rule-badge">1</span>
+        <div><strong>Open Canva via Okta Single Sign-On:</strong> Access your full Canva Enterprise dashboard through eXp Passport with zero extra passwords.</div>
+      </div>
+      <div class="rule-card">
+        <span class="rule-badge">2</span>
+        <div><strong>Launch the Exclusive "eXp Listings" In-App Tool:</strong> Type your MLS listing number into the Canva sidebar. It automatically imports all high-res MLS photos, pricing, beds/baths, and remarks directly onto your design canvas with 1 click.</div>
+      </div>
+      <div class="rule-card">
+        <span class="rule-badge">3</span>
+        <div><strong>Pre-Loaded Brand Kit Compliance:</strong> eXp logos, fonts, and state-compliant disclaimers lock into place automatically. Export 1080x1080 for Facebook and 8.5x11 for open house print tables in under 3 minutes.</div>
+      </div>
+
+      <div style="background:#f8fafc;border:2px solid #102f6c;border-radius:12px;padding:12px 16px;margin-top:10px;display:flex;align-items:center;justify-content:space-between">
+        <div>
+          <strong style="color:#102f6c;font-size:13px;display:block">Want to Partner with James Jestes inside Agent Wolf Pack?</strong>
+          <span style="font-size:11.5px;color:#64748b">Get 1-on-1 mentorship, 80/20 split (6k cap), BoldTrail CRM, and our 120 AI prompt vault.</span>
+        </div>
+        <div style="text-align:right">
+          <strong style="color:#F5821F;font-size:12.5px;display:block">james@jamesjestes.com</strong>
+          <span style="font-size:11px;color:#102f6c">RealWolfPack.com</span>
+        </div>
+      </div>
     </div>
-    <div class="meta-right">
-      <strong>Real Wolf Pack System</strong><br>
-      Founder: James Jestes<br>
-      Top Producing Realtor &amp; eXp Mentor
-    </div>
+    <div class="doc-footer"><span>Page 3 of 3 · Florida Real Estate &amp; Open Houses</span><span>RealWolfPack.com · Zero em dashes</span></div>
   </div>
-
-  <h1>Copy-and-Paste AI Prompts (For ChatGPT, Claude &amp; Gemini)</h1>
-  <p>Paste these tested prompts into your AI tool alongside your MLS property specs to generate high-converting social posts in seconds:</p>
-
-  <h3>Prompt 1: High-CTR Facebook Marketplace Listing Generator</h3>
-  <div class="template-box">You are an elite real estate copywriter. Take the following property specs and write a high-converting Facebook Marketplace listing description:
-
-[PASTE PROPERTY ADDRESS, BEDS/BATHS, SQFT, PRICE, AND TOP 3 FEATURES]
-
-Requirements:
-1. Start with an attention-grabbing first line (under 12 words) highlighting the strongest emotional feature.
-2. Format the key specs with clean emoji bullet points.
-3. Explicitly state the price and neighborhood.
-4. End with a low-pressure Call-to-Action: "Send a direct message with the word TOUR or INFO for private showing availability and full floorplan."
-5. Include compliance note: Listed by [Your Name], [Your Brokerage].</div>
-
-  <h3>Prompt 2: Community Group "Neighbor Spotlight" Hook</h3>
-  <div class="template-box">Write a friendly, non-salesy Facebook Group post for a local community group announcing an upcoming open house or new listing at:
-
-[PASTE PROPERTY ADDRESS &amp; KEY FEATURES]
-
-Tone: Helpful, local neighbor, community-focused.
-Structure:
-- Friendly hook addressing neighbors in [Neighborhood Name].
-- 2 sentences highlighting the best feature of the home.
-- Exact open house date, time, and parking details.
-- Friendly offer to answer questions about neighborhood comps.</div>
-
-  <h3>Prompt 3: Investor &amp; Short-Term Rental Numbers Breakdown</h3>
-  <div class="template-box">Write a data-focused Facebook post aimed at cash flow real estate investors for this coastal property:
-
-[PASTE PRICE, ESTIMATED GROSS ANNUAL REVENUE, HOA FEES, AND RENTAL RULES]
-
-Highlight: Turnkey condition, short-term rental allowances, historical occupancy, and proximity to ocean/attractions.
-Call to Action: "Comment PROFORMA for the complete 12-month revenue statement and expense sheet."</div>
-
-  <h2>How to Build Flyers in Canva Enterprise with Live MLS Sync</h2>
-  <p>
-    As an active agent at eXp Realty, you receive full <strong>Canva Enterprise</strong> included at $0 added software fee. Inside Canva, you have access to the exclusive <strong>eXp Listings app</strong>:
-  </p>
-  <div class="rule-box">
-    <strong>The 3-Minute Flyer Workflow:</strong><br>
-    <strong>1. Open Canva Enterprise:</strong> Log in with 1 click through Okta / eXp Passport.<br>
-    <strong>2. Open the eXp Listings App:</strong> Search your active MLS listing number. It pulls live high-res property photos, pricing, and specs directly onto your canvas.<br>
-    <strong>3. Brand Kit Compliance:</strong> Pre-loaded eXp logos and fonts ensure 100% advertising compliance with zero manual resizing.<br>
-    <strong>4. Export:</strong> Download 1080x1080 for Facebook feeds and 8.5x11 for print sign-in tables.
-  </div>
-
-  <div class="footer-note">
-    © 2026 Real Wolf Pack &amp; Florida Real Estate and Open Houses. Operated by James Jestes, Broker Associate with eXp Realty. Zero em dashes.
-  </div>
-
 <footer class="site-footer">
   <div class="wrap footer-grid">
     <div class="footer-col brand-col">
